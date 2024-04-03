@@ -1,0 +1,10 @@
+[Prompt]
+I am seeking data augmentation for sentences that contain two events with a prevent relationship between them, where each sentence comprises two events in which one is preventing the other from happening.
+Below are the definitions for the tags in the sentence:
+event1: the event that prevents the next event from happening, to be enclosed between <ARG0> and </ARG0>.
+Event2: The event that is prevented from happening, to be enclosed between <ARG1> and </ARG1>.
+Signal: Words that transition the preventing event event1 to the prevented event event2, to be enclosed between <SIG0> and </SIG0>.
+For example:
+
+[Request]
+generate examples with prevent relations following the same scheme as the previous examples. sentences should describe common sense situations.
