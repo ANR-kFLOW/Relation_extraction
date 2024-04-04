@@ -30,7 +30,7 @@ python run_st2.py \
   --test_file <test.csv> \
   --weight_decay 0.005 \
   --use_best_model
-''' 
+```
 ### 2. CommonSenseDataAugmentation
 
 The `CommonSenseDataAugmentation` folder hosts code for leveraging Language Models (LLMs) to generate common-sense data for event relations such as enable and prevent.
