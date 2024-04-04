@@ -53,9 +53,11 @@ The `Refining` folder contains resources for future refinements.
 
 The `Scripts` folder contains various data processing scripts utilized in the project.
 
-## Getting Started
+## Aknowledgement 
+This work has been partially supported by the French National Research Agency (ANR) within the kFLOW project (Grant n°ANR-21-CE23-0028).
 
-TBW
+## Contact 
+youssra.rebboud@eurecom.fr
 
 
 
