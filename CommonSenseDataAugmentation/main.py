@@ -128,6 +128,7 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         df = pd.concat([df, new_sentences_df], ignore_index=True)
 
         df.to_csv('prevention_new.csv', index=False)
+        print(res)
 
         return True, res
 
@@ -195,7 +196,7 @@ if __name__ == '__main__':
 
         args.verbose,
         args.output,
-       
+
         args.n_examples
     )
 
