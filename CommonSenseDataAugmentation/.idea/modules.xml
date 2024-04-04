@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CommonSenseDataAugmentation.iml" filepath="$PROJECT_DIR$/.idea/CommonSenseDataAugmentation.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/llm4ke/.idea/llm4ke.iml" filepath="$USER_HOME$/PycharmProjects/llm4ke/.idea/llm4ke.iml" />
     </modules>
   </component>
 </project>
