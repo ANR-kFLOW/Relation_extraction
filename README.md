@@ -35,6 +35,12 @@ python run_st2.py \
 
 The `CommonSenseDataAugmentation` folder hosts code for leveraging Language Models (LLMs) to generate common-sense data for event relations such as enable and prevent.
 
+To run the program, execute the follwing commannd 
+```bash
+CUDA_VISIBLE_DEVICES='3' python main.py --verbose -x 1
+```
+x is the number of example 
+
 ### 3. Data
 
 The `Data` folder stores datasets used in the project. These datasets are either constructed by LLMs or obtained previously.
