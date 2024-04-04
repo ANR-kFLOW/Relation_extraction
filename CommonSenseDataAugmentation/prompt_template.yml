@@ -8,3 +8,5 @@ Body: >
     Signal: Words that transition the preventing event event1 to the prevented event event2, to be enclosed between <SIG0> and </SIG0>.
 
     {examples}
+  generate examples with prevent relations following the same scheme as the following examples. sentences should describe common sense. do not generate more than the requested sentences, no definition needed'''
+

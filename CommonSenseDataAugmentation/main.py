@@ -40,7 +40,7 @@ os.environ["HUGGINGFACE_HUB_CACHE"] = "/data/huggingface/"
 
 available_llms = {
     "dpo": "yunconglong/Truthful_DPO_TomGrc_FusionNet_7Bx2_MoE_13B",
-    "zephyr": "HuggingFaceH4/zephyr-7b-beta",
+    "zephyr": "TheBloke/zephyr-7B-beta-AWQ",
 
 }
 
@@ -68,6 +68,7 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
     df_examples = pd.read_csv('clean.csv')
     df = pd.DataFrame()
     while 1:
+        print('entered')
         random_examples_explicit = df_examples.sample(n=n_examples)
         #    random_examples_implit = df_implit.sample(n=2)
         #    combined_df = pd.concat([random_examples_explicit, random_examples_implit])
@@ -91,13 +92,14 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         input_dict = {}
         for x in PROMPT_TEMPLATE.input:
             input_dict[x] = ont_input[x]
+        print('input_dict', input_dict)
 
         tokenizer = AutoTokenizer.from_pretrained(available_llms[llm_model])
 
         model = AutoModelForCausalLM.from_pretrained(
             available_llms[llm_model],
             device_map='sequential',
-            load_in_8bit=True,
+
             use_safetensors=True
         )
 
@@ -114,12 +116,13 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         prompt = PromptTemplate(
             input_variables=["prompt"] + PROMPT_TEMPLATE.input, template=PROMPT_TEMPLATE.get()
         )
+        print('prompt', prompt)
         chain = prompt | llm | output_parser
 
         # Call LLM
         logging.info("PROMPT:CALL_LLM:%s:engine=%s", 'START', llm)
         config = {"callbacks": [CustomHandler()]} if verbose else {}
-        res = chain(config=config)
+        res = chain.invoke(input_dict,config=config)
         logging.info("PROMPT:CALL_LLM:%s:res=%s", 'DONE', res)
 
         # Parse output to get the generated sentences
@@ -128,7 +131,7 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         df = pd.concat([df, new_sentences_df], ignore_index=True)
 
         df.to_csv('prevention_new.csv', index=False)
-        print(res)
+        print('res',res)
 
         return True, res
 
