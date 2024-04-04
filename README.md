@@ -1,5 +1,5 @@
 # Relation_Extraction
-TBW
+This repository contains data (data) and methods for Event relation extraction(CNC), Data augmnetation using LLMs(CommonSenseDataAugmentation)
 
 ## Overview
 
