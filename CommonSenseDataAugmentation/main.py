@@ -19,21 +19,19 @@ import os
 import re
 import time
 from argparse import ArgumentParser
-from os import path
 from pathlib import Path
 import pandas as pd
 import yaml
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
-from langchain_community.llms import Ollama
+
 from langchain_core.callbacks.base import BaseCallbackHandler
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts.prompt import PromptTemplate
-from langchain_openai import ChatOpenAI
-from rdflib import Graph, RDF, RDFS, OWL
+
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 from LocalTemplate import LocalTemplate
-from utils import flatten
+print('done')
 
 # === Init ====================================================================
 
@@ -53,7 +51,6 @@ class CustomHandler(BaseCallbackHandler):
         print(f"********** Prompt **************\n{formatted_prompts}\n********** End Prompt **************")
 
 
-
 def run(llm_model, verbose=False, output_path='/out', n_examples=0):
     """Processing entry point: load the ontology, the prompting template, then call the LLM and save the results.
 
@@ -67,9 +64,9 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
 
     template_path = f'prompt_template.yml'
     PROMPT_TEMPLATE = LocalTemplate.load(template_path)
-    logging.debug("LOAD:PROMPT_TEMPLATE:template=%s",PROMPT_TEMPLATE)
+    logging.debug("LOAD:PROMPT_TEMPLATE:template=%s", PROMPT_TEMPLATE)
     df_examples = pd.read_csv('clean.csv')
-    df=pd.DataFrame()
+    df = pd.DataFrame()
     while 1:
         random_examples_explicit = df_examples.sample(n=n_examples)
         #    random_examples_implit = df_implit.sample(n=2)
@@ -87,7 +84,6 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
 
         logging.debug("LOAD:CQS:n_examples=%s:examples=%s", n_examples, examples)
 
-
         ont_input = {
 
             'examples': examples
@@ -95,7 +91,6 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         input_dict = {}
         for x in PROMPT_TEMPLATE.input:
             input_dict[x] = ont_input[x]
-
 
         tokenizer = AutoTokenizer.from_pretrained(available_llms[llm_model])
 
@@ -124,7 +119,7 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         # Call LLM
         logging.info("PROMPT:CALL_LLM:%s:engine=%s", 'START', llm)
         config = {"callbacks": [CustomHandler()]} if verbose else {}
-        res = chain( config=config)
+        res = chain(config=config)
         logging.info("PROMPT:CALL_LLM:%s:res=%s", 'DONE', res)
 
         # Parse output to get the generated sentences
@@ -132,10 +127,7 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
         new_sentences_df = pd.DataFrame({'Sentences': sentences})
         df = pd.concat([df, new_sentences_df], ignore_index=True)
 
-
-
         df.to_csv('prevention_new.csv', index=False)
-
 
         return True, res
 
@@ -145,14 +137,11 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
 if __name__ == '__main__':
     # Get tasks from prompt templates
 
-
     # Define argument parser
     parser = ArgumentParser(
         prog='DA for Common Sense',
         description='DA for Common sense knowledge for event relations: enable and prevent'
     )
-
-
 
     parser.add_argument(
         '-o',
@@ -168,7 +157,6 @@ if __name__ == '__main__':
         choices=available_llms
     )
 
-
     parser.add_argument(
         '-x',
         '--n_examples',
@@ -177,15 +165,12 @@ if __name__ == '__main__':
         default=2
     )
 
-
     parser.add_argument(
         '--verbose',
         help='Print the full prompt',
         default=False,
         action='store_true'
     )
-
-
 
     parser.add_argument(
         "--log",
@@ -199,25 +184,19 @@ if __name__ == '__main__':
     # Instanciate argument parser
     args = parser.parse_args()
     _llm = args.llm
-    
 
-    # # Configure logger
-    # logging.basicConfig(format=loggingFormatString, level=args.log)
-    #
-    # # Call the processing function
-    # logging.info("INIT")
-    # run_response = run(
-    #     args.task,
-    #     args.input,
-    #     _llm,
-    #     args.name,
-    #     args.n_cqs,
-    #     args.include_description,
-    #     args.verbose,
-    #     args.output,
-    #     args.id,
-    #     args.local_llm,
-    #     args.n_examples
-    # )
-    #
-    # logging.info("DONE")
+
+
+    # Call the processing function
+    logging.info("INIT")
+    run_response = run(
+
+        _llm,
+
+        args.verbose,
+        args.output,
+       
+        args.n_examples
+    )
+
+    logging.info("DONE")
