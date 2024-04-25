@@ -31,7 +31,7 @@ from langchain_core.prompts.prompt import PromptTemplate
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 from LocalTemplate import LocalTemplate
-print('done')
+
 
 # === Init ====================================================================
 
@@ -57,7 +57,6 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
 
     :param llm_model:
     :param output_path:
-    :param id:
     :param n_examples:
     :return:
     """
@@ -67,16 +66,12 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
     logging.debug("LOAD:PROMPT_TEMPLATE:template=%s", PROMPT_TEMPLATE)
     df_examples = pd.read_csv('clean.csv')
     df = pd.DataFrame()
-    while 1:
-        print('entered')
+    input_batches = []
+    counter = 0
+    while counter < 1:
+        counter += 1
+
         random_examples_explicit = df_examples.sample(n=n_examples)
-        #    random_examples_implit = df_implit.sample(n=2)
-        #    combined_df = pd.concat([random_examples_explicit, random_examples_implit])
-
-        # random_selection = df.sample(n=5)
-        # print('len df', len(df))
-
-        # Storing selected sentences in a list
         combined_text = ""
         for i, text in enumerate(random_examples_explicit['text'], start=1):
             combined_text += f"{i}. {text}\n"
@@ -89,51 +84,59 @@ def run(llm_model, verbose=False, output_path='/out', n_examples=0):
 
             'examples': examples
         }
+
         input_dict = {}
         for x in PROMPT_TEMPLATE.input:
             input_dict[x] = ont_input[x]
-        print('input_dict', input_dict)
 
-        tokenizer = AutoTokenizer.from_pretrained(available_llms[llm_model])
+        input_batches.append(input_dict)
 
-        model = AutoModelForCausalLM.from_pretrained(
+
+    tokenizer = AutoTokenizer.from_pretrained(available_llms[llm_model])
+
+    model = AutoModelForCausalLM.from_pretrained(
             available_llms[llm_model],
             device_map='sequential',
 
             use_safetensors=True
         )
 
-        pipe = pipeline(
+    pipe = pipeline(
             "text-generation",
             model=model,
             tokenizer=tokenizer,
             max_new_tokens=512
         )
 
-        llm = HuggingFacePipeline(pipeline=pipe)
+    llm = HuggingFacePipeline(pipeline=pipe)
 
-        output_parser = StrOutputParser()
-        prompt = PromptTemplate(
+    output_parser = StrOutputParser()
+    prompt = PromptTemplate(
             input_variables=["prompt"] + PROMPT_TEMPLATE.input, template=PROMPT_TEMPLATE.get()
+
         )
-        print('prompt', prompt)
-        chain = prompt | llm | output_parser
+    logging.debug("PROMPT:PREPARE:input_batches=%s", input_batches)
+    print('prompt', prompt)
+    print(input_batches)
+    chain = prompt | llm | output_parser
 
-        # Call LLM
-        logging.info("PROMPT:CALL_LLM:%s:engine=%s", 'START', llm)
-        config = {"callbacks": [CustomHandler()]} if verbose else {}
-        res = chain.invoke(input_dict,config=config)
-        logging.info("PROMPT:CALL_LLM:%s:res=%s", 'DONE', res)
+    # Call LLM
+    logging.info("PROMPT:CALL_LLM:%s:engine=%s", 'START', llm)
+    config = {"callbacks": [CustomHandler()]} if verbose else {}
+    res = chain.batch(input_batches,config=config)
+    logging.info("PROMPT:CALL_LLM:%s:res=%s", 'DONE', res)
+    print('res', res)
 
-        # Parse output to get the generated sentences
-        sentences = re.split(r'\n\s?\d+\.\s*', res)[1:]
-        new_sentences_df = pd.DataFrame({'Sentences': sentences})
-        df = pd.concat([df, new_sentences_df], ignore_index=True)
+    # Parse output to get the generated sentences
+    sentences = re.split(r'\n\s?\d+\.\s*', res)[1:]
 
-        df.to_csv('prevention_new.csv', index=False)
-        print('res',res)
+    new_sentences_df = pd.DataFrame({'Sentences': sentences})
+    df = pd.concat([df, new_sentences_df], ignore_index=True)
 
-        return True, res
+    df.to_csv('prevention_new.csv', index=False)
+
+
+    return True, res
 
 
 # === Main ====================================================================
@@ -164,7 +167,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '-x',
         '--n_examples',
-        help='Number of example competency questions to provide in input',
+        help='Number of example sentences',
         type=int,
         default=2
     )
@@ -176,14 +179,6 @@ if __name__ == '__main__':
         action='store_true'
     )
 
-    parser.add_argument(
-        "--log",
-        type=int,
-        choices=[10, 20, 30, 40, 50],
-        action="store",
-        default=20,
-        help="Verbosity (default: INFO) : DEBUG = 10, INFO = 20, WARNING = 30, ERROR = 40, CRITICAL = 50",
-    )
 
     # Instanciate argument parser
     args = parser.parse_args()
