@@ -1,0 +1,1447 @@
+Answers:
+0. The official claim that <ARG1>the abductions</ARG1> <SIG0>are the outcome of</SIG0> <ARG0>the Naxalites ’ falling support base</ARG0> , only helps to divert attention from the core issue .
+1. <ARG0>The official claim that the abductions are the outcome of the Naxalites ’ falling support base</ARG0> , <SIG0>only helps to</SIG0> <ARG1>divert attention from the core issue</ARG1> .
+
+Prediction:
+['The official claim that <ARG1>the abductions are the outcome of <ARG0>the Naxalites ’ falling support base</ARG0> , <SIG0>only helps to</SIG0> divert attention from the core issue</ARG1> .', 'The official claim that <ARG1>the abductions are the outcome of <ARG0>the Naxalites ’ falling support base</ARG0> , <SIG0>only helps to</SIG0> divert attention from the core issue</ARG1> .']
+===============================
+Answers:
+0. <ARG1>Leaders of both the organisations including the President of the KPKCS Bhimshetty Yempalli and Secretaryof the KPRS Gouramma Patil staged a dharna outside the Vikas Soudha , housing all the government offices in Gulbarga city on Friday</ARG1> <ARG0><SIG0>demanding</SIG0> the regularisation of the unauthorised cultivation</ARG0> which would help tens of thousands of landless agricultural labourers as a one-time measure .
+1. Leaders of both the organisations including the President of the KPKCS Bhimshetty Yempalli and Secretaryof the KPRS Gouramma Patil staged a dharna outside the Vikas Soudha , housing all the government offices in Gulbarga city on Friday demanding <ARG0>the regularisation of the unauthorised cultivation</ARG0> <ARG1><SIG0>which would help</SIG0> tens of thousands of landless agricultural labourers as a one-time measure</ARG1> .
+
+Prediction:
+['<ARG1>Leaders of both the organisations including the President of the KPKCS Bhimshetty Yempalli and Secretaryof the KPRS Gouramma Patil staged a dharna outside the Vikas Soudha , housing all the government offices in Gulbarga city on Friday</ARG1> <SIG0><ARG0>demanding</SIG0> the regularisation of the unauthorised cultivation which would help tens of thousands of landless agricultural labourers as a one-time measure</ARG0> .', '<ARG1>Leaders of both the organisations including the President of the KPKCS Bhimshetty Yempalli and Secretaryof the KPRS Gouramma Patil staged a dharna outside the Vikas Soudha , housing all the government offices in Gulbarga city on Friday</ARG1> <SIG0><ARG0>demanding</SIG0> the regularisation of the unauthorised cultivation which would help tens of thousands of landless agricultural labourers as a one-time measure</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Hundreds join second protest in Kunming</ARG1> <SIG0>over</SIG0> <ARG0>oil refinery Protesters in Kunming</ARG0> defy warnings by police , but disperse after question and answer session
+
+Prediction:
+['<ARG1>Hundreds join second protest in Kunming</ARG1> <SIG0>over</SIG0> <ARG0>oil refinery Protesters in Kunming defy warnings by police</ARG0> , but disperse after question and answer session', '<ARG1>Hundreds join second protest in Kunming</ARG1> <SIG0>over</SIG0> <ARG0>oil refinery Protesters in Kunming defy warnings by police</ARG0> , but disperse after question and answer session']
+===============================
+Answers:
+0. Junk-fund holders have barely <ARG1>broken</ARG1> even this year, as fat interest payments barely <ARG0>managed</ARG0> to offset declining prices.
+
+Prediction:
+['Junk-fund holders have barely <ARG1>broken</ARG1> even this year, as fat interest <ARG0>payments</ARG0> barely <SIG0>managed to offset</SIG0> declining prices. ', 'Junk-fund holders have barely <ARG1>broken</ARG1> even this year, as fat interest <ARG0>payments</ARG0> barely <SIG0>managed to offset</SIG0> declining prices. ']
+===============================
+Answers:
+0. Meanwhile , <ARG1>a PIL has been filed in the Orissa High Court</ARG1> <ARG0><SIG0>appealing for</SIG0> declaring the cease-work illegal</ARG0> .
+
+Prediction:
+['Meanwhile , <ARG1>a PIL has been filed in the Orissa High Court</ARG1> appealing <SIG0>for</SIG0> <ARG0>declaring the cease-work illegal</ARG0> .', 'Meanwhile , <ARG1>a PIL has been filed in the Orissa High Court</ARG1> appealing <SIG0>for</SIG0> <ARG0>declaring the cease-work illegal</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Zulu has been charged</ARG1> <SIG0>with</SIG0> <ARG0>assaulting police director Jonathan Ndlovu during an IFP election rally at Hlabisa soccer stadium three weeks ago</ARG0> .
+
+Prediction:
+['<ARG1>Zulu has been charged</ARG1> <SIG0>with</SIG0> <ARG0>assaulting police director Jonathan Ndlovu during an IFP election rally at Hlabisa soccer stadium three weeks ago</ARG0> .', '<ARG1>Zulu has been charged</ARG1> <SIG0>with</SIG0> <ARG0>assaulting police director Jonathan Ndlovu during an IFP election rally at Hlabisa soccer stadium three weeks ago</ARG0> .']
+===============================
+Answers:
+0. Crossland Savings Banks stock <ARG1>plummeted</ARG1> after management recommended a suspension of dividend payments on both its common and preferred stock because Crossland may not <ARG0>meet</ARG0> the new government capital criteria effective Dec. 7.
+
+Prediction:
+["Crossland Savings Bank's stock <ARG1>plummeted</ARG1> after management recommended a suspension of dividend payments on both its common and preferred stock <SIG0>because</SIG0> Crossland may not <ARG0>meet</ARG0> the new government capital criteria effective Dec. 7.", "Crossland Savings Bank's stock <ARG1>plummeted</ARG1> after management recommended a suspension of dividend payments on both its common and preferred stock <SIG0>because</SIG0> Crossland may not <ARG0>meet</ARG0> the new government capital criteria effective Dec. 7."]
+===============================
+Answers:
+0. Morolong said <ARG1>another group of ANC members would also face disciplinary measures</ARG1> after <ARG0>it disrupted a meeting on Wednesday</ARG0> .
+
+Prediction:
+['Morolong said <ARG1>another group of ANC members would also face disciplinary measures</ARG1> <SIG0>after</SIG0> <ARG0>it disrupted a meeting on Wednesday</ARG0> .', 'Morolong said <ARG1>another group of ANC members would also face disciplinary measures</ARG1> <SIG0>after</SIG0> <ARG0>it disrupted a meeting on Wednesday</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The High Court granted bail</ARG1> <SIG0>on the ground that</SIG0> <ARG0>he did not participate in the direct assault</ARG0> .
+
+Prediction:
+['<ARG1>The High Court granted bail</ARG1> <SIG0>on the ground that</SIG0> <ARG0>he did not participate in the direct assault</ARG0> .', '<ARG1>The High Court granted bail</ARG1> <SIG0>on the ground that</SIG0> <ARG0>he did not participate in the direct assault</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Objecting to this</ARG1> , <ARG0>counsel for Sasikala , one of the accused in the case , C Manishankhar and senior counsel B Kumar submitted that they had work in Chennai court on those days</ARG0> and the matter be therefore taken up on either July 11 or July 12 , to which Chowta pointed out that proceedings were not possible on those days in the wake of the state Bar Council strike and on July 13 and Acharya had to be present in Delhi as he is also a member of the Central Law Commission .
+1. Objecting to this , counsel for Sasikala , one of the accused in the case , C Manishankhar and senior counsel B Kumar submitted that they had work in Chennai court on those days and the matter be therefore taken up on either July 11 or July 12 , to which Chowta pointed out that <ARG1>proceedings were not possible on those days</ARG1> <SIG0>in the wake of</SIG0> <ARG0>the state Bar Council strike and on July 13 and Acharya had to be present in Delhi</ARG0> as he is also a member of the Central Law Commission .
+2. Objecting to this , counsel for Sasikala , one of the accused in the case , C Manishankhar and senior counsel B Kumar submitted that they had work in Chennai court on those days and the matter be therefore taken up on either July 11 or July 12 , to which Chowta pointed out that proceedings were not possible on those days in the wake of the state Bar Council strike and <ARG1>on July 13 and Acharya had to be present in Delhi</ARG1> <SIG0>as</SIG0> <ARG0>he is also a member of the Central Law Commission</ARG0> .
+
+Prediction:
+['Objecting to this , counsel for Sasikala , one of the accused in the case , C Manishankhar and senior counsel B Kumar submitted that they had work in Chennai court on those days and the matter be therefore taken up on either July 11 or July 12 , to which Chowta pointed out that <ARG1>proceedings were not possible on those days</ARG1> in the wake of the state Bar Council strike and on July 13 and Acharya had to be present in Delhi <SIG0>as</SIG0> <ARG0>he is also a member of the Central Law Commission</ARG0> .', 'Objecting to this , counsel for Sasikala , one of the accused in the case , C Manishankhar and senior counsel B Kumar submitted that they had work in Chennai court on those days and the matter be therefore taken up on either July 11 or July 12 , to which Chowta pointed out that <ARG1>proceedings were not possible on those days</ARG1> in the wake of the state Bar Council strike and on July 13 and Acharya had to be present in Delhi <SIG0>as</SIG0> <ARG0>he is also a member of the Central Law Commission</ARG0> .', 'Objecting to this , counsel for Sasikala , one of the accused in the case , C Manishankhar and senior counsel B Kumar submitted that they had work in Chennai court on those days and the matter be therefore taken up on either July 11 or July 12 , to which Chowta pointed out that proceedings were not possible on those days in the wake of the state Bar Council strike and on July 13 and Acharya had to be present in Delhi as he is also a member of the Central Law Commission .']
+===============================
+Answers:
+0. In anticipation of the start-up of its new factory, the company said a larger-than-normal chassis supply  has  been <ARG0>built</ARG0>  to <ARG1>carry</ARG1> it through the transition period.
+
+Prediction:
+['In anticipation of the start-up of its new factory, the company said a larger-than-normal chassis supply  has <ARG0></ARG0> been <SIG0>built</SIG0>  to carry <ARG1>it through</ARG1> the transition period. ', 'In anticipation of the start-up of its new factory, the company said a larger-than-normal chassis supply  has <ARG0></ARG0> been <SIG0>built</SIG0>  to carry <ARG1>it through</ARG1> the transition period. ']
+===============================
+Answers:
+0. The Texas legislature <ARG1>adopted</ARG1> the plan in 2003 after three contentious special sessions <ARG0>called</ARG0> by Republican Gov.
+
+Prediction:
+['The Texas legislature <SIG0><ARG1>adopted</ARG1></SIG0> the plan in 2003 after three contentious special sessions <ARG0>called</ARG0> by Republican Gov.', 'The Texas legislature <SIG0><ARG1>adopted</ARG1></SIG0> the plan in 2003 after three contentious special sessions <ARG0>called</ARG0> by Republican Gov.']
+===============================
+Answers:
+0. As <ARG1>the popular uprising</ARG1> <ARG0>against the law</ARG0> thrust Hong Kong into the spotlight , much of the attention focused on how it could erode the city ’ s civil liberties and put dissidents at risk .
+1. As <ARG0>the popular uprising</ARG0> against the law <ARG1><SIG0>thrust</SIG0> Hong Kong into the spotlight</ARG1> , much of the attention focused on how it could erode the city ’ s civil liberties and put dissidents at risk .
+2. As the popular uprising against the law thrust Hong Kong into the spotlight , much of the attention focused on how <ARG0>it</ARG0> <ARG1><SIG0>could erode</SIG0> the city ’ s civil liberties and <SIG1>put</SIG1> dissidents at risk</ARG1> .
+
+Prediction:
+['<SIG0>As</SIG0> <ARG0>the popular uprising against the law</ARG0> thrust Hong Kong into the spotlight , <ARG1>much of the attention focused on how it could erode the city ’ s civil liberties and put dissidents at risk</ARG1> .', '<SIG0>As</SIG0> <ARG0>the popular uprising against the law</ARG0> thrust Hong Kong into the spotlight , <ARG1>much of the attention focused on how it could erode the city ’ s civil liberties and put dissidents at risk</ARG1> .', 'As the popular uprising against the law thrust Hong Kong into the spotlight , much of the attention focused on how it could erode the city ’ s civil liberties and put dissidents at risk .']
+===============================
+Answers:
+0. Pramod Mishra , president of Koshal Kranti Dal , blamed <ARG0>the administration</ARG0> <SIG0>for</SIG0> <ARG1>the incident</ARG1> .
+
+Prediction:
+['<ARG1>Pramod Mishra , president of Koshal Kranti Dal , blamed the administration</ARG1> <SIG0>for</SIG0> <ARG0>the incident</ARG0> .', '<ARG1>Pramod Mishra , president of Koshal Kranti Dal , blamed the administration</ARG1> <SIG0>for</SIG0> <ARG0>the incident</ARG0> .']
+===============================
+Answers:
+0. BJP condemns terror strikes in J & K ; , says Pak continuing with proxy war - Indian Express Press Trust Of India , Press Trust Of India : New Delhi , Thu Sep 26 2013 , 11:19 hrs BJP spokesperson Prakash Javadekar said that <ARG1>Pakistan land is being used</ARG1> <ARG0><SIG0>to</SIG0> attack and conduct terror attacks in India</ARG0> .
+
+Prediction:
+['BJP condemns terror strikes in J & K ; , says Pak continuing with proxy war - Indian Express Press Trust Of India , Press Trust Of India : New Delhi , Thu Sep 26 2013 , 11:19 hrs BJP spokesperson Prakash Javadekar said that <ARG1>Pakistan land is being used</ARG1> <SIG0><ARG0>to</SIG0> attack and conduct terror attacks in India</ARG0> .', 'BJP condemns terror strikes in J & K ; , says Pak continuing with proxy war - Indian Express Press Trust Of India , Press Trust Of India : New Delhi , Thu Sep 26 2013 , 11:19 hrs BJP spokesperson Prakash Javadekar said that <ARG1>Pakistan land is being used</ARG1> <SIG0><ARG0>to</SIG0> attack and conduct terror attacks in India</ARG0> .']
+===============================
+Answers:
+0. <SIG0>Because of</SIG0> <ARG0>the protest</ARG0> , <ARG1>the Deputy Commissioner assured the farmers that the procurement would be continued through the night on Tuesday</ARG1> .
+
+Prediction:
+['<SIG0>Because of</SIG0> <ARG0>the protest</ARG0> , <ARG1>the Deputy Commissioner assured the farmers that the procurement would be continued through the night on Tuesday</ARG1> .', '<SIG0>Because of</SIG0> <ARG0>the protest</ARG0> , <ARG1>the Deputy Commissioner assured the farmers that the procurement would be continued through the night on Tuesday</ARG1> .']
+===============================
+Answers:
+0. Student support not needed for disciplinary code review , HKU governing council says Working group ’ s comment counters suggestion by review panel in aftermath of <ARG1>student protests</ARG1> <SIG0>over</SIG0> <ARG0>controversial issues</ARG0>
+
+Prediction:
+['Student support not needed for disciplinary code review , HKU governing council says <ARG1>Working group ’ s comment counters suggestion by review panel in aftermath of <ARG0>student protests</ARG1> <SIG0>over</SIG0> controversial issues</ARG0>', 'Student support not needed for disciplinary code review , HKU governing council says <ARG1>Working group ’ s comment counters suggestion by review panel in aftermath of <ARG0>student protests</ARG1> <SIG0>over</SIG0> controversial issues</ARG0>']
+===============================
+Answers:
+0. If <ARG0>they</ARG0> can <SIG0>ban</SIG0> president Trump, all conservative <ARG1>voices</ARG1> could be next, House Minority Leader Kevin McCarthy tweeted.
+
+Prediction:
+['"If they can <SIG0><ARG0>ban</ARG0></SIG0> president Trump, <ARG1>all conservative voices could be next," House Minority Leader Kevin McCarthy tweeted.</ARG1>', '"If they can <SIG0><ARG0>ban</ARG0></SIG0> president Trump, <ARG1>all conservative voices could be next," House Minority Leader Kevin McCarthy tweeted.</ARG1>']
+===============================
+Answers:
+0. <ARG1>Rajendran of the Thamizh Desiya Podhuvudamai Katchi , were arrested in Thanjavur , while 10 persons , including MDMK rural district secretary , Tiruchi , were held in Tiruchi</ARG1> <SIG0>in connection with</SIG0> <ARG0>the stone-throwing incident</ARG0> .
+
+Prediction:
+['Rajendran of the Thamizh Desiya Podhuvudamai Katchi , were arrested in Thanjavur , while <ARG1>10 persons , including MDMK rural district secretary , Tiruchi , were held in Tiruchi</ARG1> <SIG0>in connection with</SIG0> <ARG0>the stone-throwing incident</ARG0> .', 'Rajendran of the Thamizh Desiya Podhuvudamai Katchi , were arrested in Thanjavur , while <ARG1>10 persons , including MDMK rural district secretary , Tiruchi , were held in Tiruchi</ARG1> <SIG0>in connection with</SIG0> <ARG0>the stone-throwing incident</ARG0> .']
+===============================
+Answers:
+0. Irans candidate-vetting Guardian <ARG0>Council</ARG0> on Tuesday <SIG0>approve</SIG0>d seven hopefuls to <ARG1>run</ARG1> in the June 18 poll to succeed Rouhani, a moderate who under the constitution must step down after his second consecutive term.
+
+Prediction:
+["Iran's candidate-vetting Guardian Council on Tuesday <SIG0><ARG0>approved</ARG0></SIG0> seven hopefuls to run in the June 18 poll to succeed Rouhani, a moderate who under the constitution must <ARG1>step</ARG1> down after his second consecutive term.", "Iran's candidate-vetting Guardian Council on Tuesday <SIG0><ARG0>approved</ARG0></SIG0> seven hopefuls to run in the June 18 poll to succeed Rouhani, a moderate who under the constitution must <ARG1>step</ARG1> down after his second consecutive term."]
+===============================
+Answers:
+0. The trio, all involved in management of the cable car, are accused of deliberately <ARG0>deactivating</ARG0> the emergency brake that could have <SIG0>stop</SIG0>ped it <ARG1>slamming</ARG1> into the side of the Mottarone mountain when the cable snapped on Sunday afternoon.
+
+Prediction:
+['The trio, all involved in management of the cable car, are accused of deliberately deactivating the emergency <ARG0>brake</ARG0> that could have <SIG0>stopped</SIG0> it <ARG1>slamming into the side of the Mottarone mountain when the cable snapped</ARG1> on Sunday afternoon.', 'The trio, all involved in management of the cable car, are accused of deliberately deactivating the emergency <ARG0>brake</ARG0> that could have <SIG0>stopped</SIG0> it <ARG1>slamming into the side of the Mottarone mountain when the cable snapped</ARG1> on Sunday afternoon.']
+===============================
+Answers:
+0. <ARG1>Suspicion and anger grow</ARG1> <SIG0>over</SIG0> <ARG0>activist 's death</ARG0>
+
+Prediction:
+["<ARG1>Suspicion and anger grow</ARG1> <SIG0>over</SIG0> <ARG0>activist 's death</ARG0>", "<ARG1>Suspicion and anger grow</ARG1> <SIG0>over</SIG0> <ARG0>activist 's death</ARG0>"]
+===============================
+Answers:
+0. <ARG1>The trouble started</ARG1> <SIG0>with</SIG0> <ARG0>the shifting of the Palode sub-registrar office from a rented building in Perungamala panchayat , where it had been functioning for several years , to a newly built government-owned building about 100 metres away , in Nandiyodu panchayat</ARG0> .
+
+Prediction:
+['<ARG1>The trouble</ARG1> <SIG0>started with</SIG0> <ARG0>the shifting of the Palode sub-registrar office from a rented building in Perungamala panchayat , where it had been functioning for several years , to a newly built government-owned building about 100 metres away , in Nandiyodu panchayat</ARG0> .', '<ARG1>The trouble</ARG1> <SIG0>started with</SIG0> <ARG0>the shifting of the Palode sub-registrar office from a rented building in Perungamala panchayat , where it had been functioning for several years , to a newly built government-owned building about 100 metres away , in Nandiyodu panchayat</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Kopane handed over a memorandum to the municipality</ARG1> <ARG0><SIG0>demanding</SIG0> answers as to why Matlakeng residents were struggling to access water daily</ARG0> .
+
+Prediction:
+['<ARG1>Kopane handed over a memorandum to the municipality</ARG1> <SIG0><ARG0>demanding</SIG0> answers as to why Matlakeng residents were struggling to access water daily</ARG0> .', '<ARG1>Kopane handed over a memorandum to the municipality</ARG1> <SIG0><ARG0>demanding</SIG0> answers as to why Matlakeng residents were struggling to access water daily</ARG0> .']
+===============================
+Answers:
+0. <ARG1>China says Islamic extremists and separatists are behind such attacks</ARG1> <SIG0>although</SIG0> <ARG0>human rights activists suspect much of the violence is driven by resentment at Communist party rule among the region ’ s predominantly Muslim ethnic Uighur population</ARG0> .
+1. China says Islamic extremists and separatists are behind such attacks although human rights activists suspect <ARG1>much of the violence</ARG1> <SIG0>is driven by</SIG0> <ARG0>resentment at Communist party rule among the region ’ s predominantly Muslim ethnic Uighur population</ARG0> .
+
+Prediction:
+['China says Islamic extremists and separatists are behind such attacks although human rights activists suspect <ARG1>much of the violence</ARG1> <SIG0>is driven by</SIG0> <ARG0>resentment at Communist party rule among the region ’ s predominantly Muslim ethnic Uighur population</ARG0> .', 'China says Islamic extremists and separatists are behind such attacks although human rights activists suspect <ARG1>much of the violence</ARG1> <SIG0>is driven by</SIG0> <ARG0>resentment at Communist party rule among the region ’ s predominantly Muslim ethnic Uighur population</ARG0> .']
+===============================
+Answers:
+0. <ARG1>There was a tense stand-off</ARG1> when <ARG0>thousands of mineworkers marched on the premises of Amplats 's smelters on Wednesday</ARG0> .
+
+Prediction:
+["<ARG1>There was a tense stand-off</ARG1> <SIG0>when</SIG0> <ARG0>thousands of mineworkers marched on the premises of Amplats 's smelters on Wednesday</ARG0> .", "<ARG1>There was a tense stand-off</ARG1> <SIG0>when</SIG0> <ARG0>thousands of mineworkers marched on the premises of Amplats 's smelters on Wednesday</ARG0> ."]
+===============================
+Answers:
+0. <ARG0>The end to the platinum strike</ARG0> <SIG0>has <ARG1>brought</SIG0> a stop to the hardships that South Africa has suffered in the last few months</ARG1> , Lonmin CEO Ben Magara said on Tuesday .
+
+Prediction:
+['<ARG0>The end to the platinum strike</ARG0> <SIG0>has brought</SIG0> a stop to <ARG1>the hardships</ARG1> that South Africa has suffered in the last few months , Lonmin CEO Ben Magara said on Tuesday .', '<ARG0>The end to the platinum strike</ARG0> <SIG0>has brought</SIG0> a stop to <ARG1>the hardships</ARG1> that South Africa has suffered in the last few months , Lonmin CEO Ben Magara said on Tuesday .']
+===============================
+Answers:
+0. KERALA Picketing held April 21 , 2010 00:00 IST KALPETTA : <ARG1>Congress activists picketed State government offices at six centres in the district on Tuesday</ARG1> <ARG0><SIG0>as a part of</SIG0> a State-wide agitation by the Kerala Pradesh Congress Committee</ARG0> against the rise in prices of essential commodities .
+1. KERALA Picketing held April 21 , 2010 00:00 IST KALPETTA : Congress activists picketed State government offices at six centres in the district on Tuesday as a part of <ARG1>a State-wide agitation by the Kerala Pradesh Congress Committee</ARG1> <ARG0>against the rise in prices of essential commodities</ARG0> .
+
+Prediction:
+['KERALA Picketing held April 21 , 2010 00:00 IST KALPETTA : <ARG1>Congress activists picketed State government offices at six centres in the district on Tuesday</ARG1> <SIG0>as a part of</SIG0> a State-wide agitation by the Kerala Pradesh Congress Committee <ARG0>against the rise in prices of essential commodities</ARG0> .', 'KERALA Picketing held April 21 , 2010 00:00 IST KALPETTA : <ARG1>Congress activists picketed State government offices at six centres in the district on Tuesday</ARG1> <SIG0>as a part of</SIG0> a State-wide agitation by the Kerala Pradesh Congress Committee <ARG0>against the rise in prices of essential commodities</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Makwaiba also criticised the Freedom Front leader Pieter Mulder</ARG1> <SIG0>for</SIG0> <ARG0>comments that the strike was linked to the succession race in the African National Congress</ARG0> .
+
+Prediction:
+['Makwaiba also criticised the Freedom Front leader Pieter Mulder</ARG1> <SIG0>for</SIG0> <ARG0>comments that <ARG1>the strike was linked to the succession race in the African National Congress</ARG0> .', 'Makwaiba also criticised the Freedom Front leader Pieter Mulder</ARG1> <SIG0>for</SIG0> <ARG0>comments that <ARG1>the strike was linked to the succession race in the African National Congress</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The decision of the unions affiliated to the Hind Mazdoor Kisan Panchayat to end the agitation</ARG1> came after <ARG0>a 45 - minute long meeting between Chief Minister Manohar Joshi and four union representatives Sharad Rao , Dada Samant , Vithalrao Gaikwad and Narayan Phenani at the CM 's residence late on Wednesday night</ARG0> .
+
+Prediction:
+["<ARG1>The decision of the unions affiliated to the Hind Mazdoor Kisan Panchayat</ARG1> <SIG0><ARG0>to</SIG0> end the agitation</ARG0> came after a 45 - minute long meeting between Chief Minister Manohar Joshi and four union representatives Sharad Rao , Dada Samant , Vithalrao Gaikwad and Narayan Phenani at the CM 's residence late on Wednesday night .", "<ARG1>The decision of the unions affiliated to the Hind Mazdoor Kisan Panchayat</ARG1> <SIG0><ARG0>to</SIG0> end the agitation</ARG0> came after a 45 - minute long meeting between Chief Minister Manohar Joshi and four union representatives Sharad Rao , Dada Samant , Vithalrao Gaikwad and Narayan Phenani at the CM 's residence late on Wednesday night ."]
+===============================
+Answers:
+0. <ARG1>On the same day TNCC President Thangkabalu led a fast in Chennai</ARG1> <ARG0><SIG0>in favor of</SIG0> total prohibition including toddy</ARG0> .
+
+Prediction:
+['On the same day <ARG1>TNCC President Thangkabalu led a fast in Chennai</ARG1> <SIG0><ARG0>in favor of</SIG0> total prohibition including toddy</ARG0> .', 'On the same day <ARG1>TNCC President Thangkabalu led a fast in Chennai</ARG1> <SIG0><ARG0>in favor of</SIG0> total prohibition including toddy</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Angry BJP workers staged road blockade at Jogiapalli for around three hours</ARG1> <ARG0><SIG0>to</SIG0> protest against this police action</ARG0> .
+
+Prediction:
+['<ARG1>Angry BJP workers staged road blockade at Jogiapalli for around three hours</ARG1> <SIG0><ARG0>to</SIG0> protest against this police action</ARG0> .', '<ARG1>Angry BJP workers staged road blockade at Jogiapalli for around three hours</ARG1> <SIG0><ARG0>to</SIG0> protest against this police action</ARG0> .']
+===============================
+Answers:
+0. When the education authorities conducted the meet on Friday afternoon , <ARG0>physical education students and teachers staged a protest</ARG0> <SIG0>by</SIG0> <ARG1>sitting on the tracks at the meet grounds</ARG1> .
+
+Prediction:
+['When the education authorities conducted the meet on Friday afternoon , <ARG1>physical education students and teachers staged a protest</ARG1> <SIG0>by</SIG0> <ARG0>sitting on the tracks at the meet grounds</ARG0> .', 'When the education authorities conducted the meet on Friday afternoon , <ARG1>physical education students and teachers staged a protest</ARG1> <SIG0>by</SIG0> <ARG0>sitting on the tracks at the meet grounds</ARG0> .']
+===============================
+Answers:
+0. September 05 , 2010 00:00 IST <ARG1>Gram Panchayat Employees ' and Workers ' Union members launched relay hunger strike in front of the Collectorate on Saturday</ARG1> <ARG0><SIG0>demanding</SIG0> implementation of G.O. No. 39</ARG0> to upgrade the posts of village servants as Village Revenue Officers and promote eligible ones as Panchayat Secretaries .
+1. September 05 , 2010 00:00 IST Gram Panchayat Employees ' and Workers ' Union members launched relay hunger strike in front of the Collectorate on Saturday <ARG1>demanding implementation of G.O. No. 39</ARG1> <ARG0><SIG0>to</SIG0> upgrade the posts of village servants as Village Revenue Officers and promote eligible ones as Panchayat Secretaries</ARG0> .
+
+Prediction:
+["September 05 , 2010 00:00 IST <ARG1>Gram Panchayat Employees ' and Workers ' Union members launched relay hunger strike in front of the Collectorate on Saturday</ARG1> <SIG0>demanding</SIG0> implementation of G.O. No. 39 <ARG0>to upgrade the posts of village servants as Village Revenue Officers and promote eligible ones as Panchayat Secretaries</ARG0> .", "September 05 , 2010 00:00 IST <ARG1>Gram Panchayat Employees ' and Workers ' Union members launched relay hunger strike in front of the Collectorate on Saturday</ARG1> <SIG0>demanding</SIG0> implementation of G.O. No. 39 <ARG0>to upgrade the posts of village servants as Village Revenue Officers and promote eligible ones as Panchayat Secretaries</ARG0> ."]
+===============================
+Answers:
+0. Briefing journalists from Pretoria , Radebe said <ARG1>the disruptions at universities</ARG1> <SIG0>due to</SIG0> <ARG0>the # FeesMustFall protests which have shut down universities</ARG0> will have a dire effect on matriculants , students and ultimately the economy .
+1. Briefing journalists from Pretoria , Radebe said <ARG0>the disruptions at universities</ARG0> due to the # FeesMustFall protests which have shut down universities will have <ARG1>a dire effect on matriculants , students and ultimately the economy</ARG1> .
+
+Prediction:
+['Briefing journalists from Pretoria , Radebe said <ARG1>the disruptions at universities</ARG1> <SIG0>due to</SIG0> <ARG0>the # FeesMustFall protests which have shut down universities</ARG0> will have a dire effect on matriculants , students and ultimately the economy .', 'Briefing journalists from Pretoria , Radebe said <ARG1>the disruptions at universities</ARG1> <SIG0>due to</SIG0> <ARG0>the # FeesMustFall protests which have shut down universities</ARG0> will have a dire effect on matriculants , students and ultimately the economy .']
+===============================
+Answers:
+0. <ARG0><SIG0>Banking up on</SIG0> the Health Minister ’ s assurance</ARG0> , <ARG1>the students , who were on the warpath against the CRS and bond system retracted from the agitations on April 23 , 2012</ARG1> .
+
+Prediction:
+['Banking up on the Health Minister ’ s assurance , <ARG1>the students , who were on the warpath <SIG0><ARG0>against</SIG0> the CRS and bond system</ARG0></ARG1> retracted from the agitations on April 23 , 2012 .', 'Banking up on the Health Minister ’ s assurance , <ARG1>the students , who were on the warpath <SIG0><ARG0>against</SIG0> the CRS and bond system</ARG0></ARG1> retracted from the agitations on April 23 , 2012 .']
+===============================
+Answers:
+0. General Mills, meanwhile , finds itself <ARG1>constrained</ARG1> from boosting sales further because its plants are <ARG0>operating</ARG0> at capacity.
+
+Prediction:
+['General Mills, meanwhile , finds itself <ARG1>constrained</ARG1> from boosting sales further <SIG0>because</SIG0> its plants are <ARG0>operating</ARG0> at capacity. ', 'General Mills, meanwhile , finds itself <ARG1>constrained</ARG1> from boosting sales further <SIG0>because</SIG0> its plants are <ARG0>operating</ARG0> at capacity. ']
+===============================
+Answers:
+0. <ARG1>The employees of the airline , who were on strike since September 29 , agreed to resume work</ARG1> <SIG0>on</SIG0> <ARG0>the management 's promise to clear three months dues before Diwali</ARG0> .
+
+Prediction:
+["<ARG1>The employees of the airline , who were on strike since September 29 , agreed to resume work</ARG1> <SIG0>on</SIG0> <ARG0>the management 's promise to clear three months dues before Diwali</ARG0> .", "<ARG1>The employees of the airline , who were on strike since September 29 , agreed to resume work</ARG1> <SIG0>on</SIG0> <ARG0>the management 's promise to clear three months dues before Diwali</ARG0> ."]
+===============================
+Answers:
+0. Addressing a press conference TRS leader B. Goverdhan Reddy and others said <ARG1>the march was a success</ARG1> <SIG0>despite</SIG0> <ARG0>the hurdles created by the government</ARG0> .
+
+Prediction:
+['Addressing a press conference TRS leader B. Goverdhan Reddy and others said <ARG1>the march was a success</ARG1> <SIG0>despite</SIG0> <ARG0>the hurdles created by the government</ARG0> .', 'Addressing a press conference TRS leader B. Goverdhan Reddy and others said <ARG1>the march was a success</ARG1> <SIG0>despite</SIG0> <ARG0>the hurdles created by the government</ARG0> .']
+===============================
+Answers:
+0. " In Moga , <ARG1>various local units of bank employees ' associations held protest rallies</ARG1> <ARG0><SIG0>to</SIG0> show solidarity with their central bodies</ARG0> .
+
+Prediction:
+['" In Moga , <ARG1>various local units of bank employees \' associations held protest rallies</ARG1> <SIG0><ARG0>to</SIG0> show solidarity with their central bodies</ARG0> .', '" In Moga , <ARG1>various local units of bank employees \' associations held protest rallies</ARG1> <SIG0><ARG0>to</SIG0> show solidarity with their central bodies</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Upset</ARG1> <SIG0>with</SIG0> <ARG0>Probe into AIADMK Man 's Murder</ARG0> , Wife Stages Stir
+1. <ARG0>Upset with Probe into AIADMK Man 's Murder</ARG0> , <ARG1>Wife Stages Stir</ARG1>
+
+Prediction:
+["<ARG0>Upset <SIG0>with</SIG0> Probe into AIADMK Man 's Murder</ARG0> , <ARG1>Wife Stages Stir</ARG1>", "<ARG0>Upset <SIG0>with</SIG0> Probe into AIADMK Man 's Murder</ARG0> , <ARG1>Wife Stages Stir</ARG1>"]
+===============================
+Answers:
+0. <ARG1>Two more youths were arrested later</ARG1> <SIG0>for</SIG0> <ARG0>allegedly being involved in the blast</ARG0> .
+
+Prediction:
+['<ARG1>Two more youths were arrested later</ARG1> <SIG0>for</SIG0> <ARG0>allegedly being involved in the blast</ARG0> .', '<ARG1>Two more youths were arrested later</ARG1> <SIG0>for</SIG0> <ARG0>allegedly being involved in the blast</ARG0> .']
+===============================
+Answers:
+0. Manipur is going to the polls on March 4 and 8 and <SIG0>due to</SIG0> <ARG0>the ongoing economic blockade</ARG0> , <ARG1>it has been kept in the most sensitive category</ARG1> , an official said , adding that elections were being held in two phases for the first time in the State ..
+
+Prediction:
+['Manipur is going to the polls on March 4 and 8 and <SIG0>due to</SIG0> <ARG0>the ongoing economic blockade</ARG0> , <ARG1>it has been kept in the most sensitive category</ARG1> , an official said , adding that elections were being held in two phases for the first time in the State ..', 'Manipur is going to the polls on March 4 and 8 and <SIG0>due to</SIG0> <ARG0>the ongoing economic blockade</ARG0> , <ARG1>it has been kept in the most sensitive category</ARG1> , an official said , adding that elections were being held in two phases for the first time in the State ..']
+===============================
+Answers:
+0. <ARG1>The protests</ARG1> <ARG0><SIG0>were initially focused on</SIG0> a bill that that would make it easier to extradite people to China from the semi-autonomous city</ARG0> .
+
+Prediction:
+['<ARG1>The protests were initially focused</ARG1> on <ARG0>a bill that that would <SIG0>make</SIG0> it easier to extradite people to China from the semi-autonomous city</ARG0> .', '<ARG1>The protests were initially focused</ARG1> on <ARG0>a bill that that would <SIG0>make</SIG0> it easier to extradite people to China from the semi-autonomous city</ARG0> .']
+===============================
+Answers:
+0. <ARG1>A woman was killed in her sleep</ARG1> when <ARG0>the bombs rocked parts of Soweto</ARG0> , south of Johannesburg , on Wednesday morning last week .
+
+Prediction:
+['<ARG1>A woman was killed in her sleep</ARG1> <SIG0>when</SIG0> <ARG0>the bombs rocked parts of Soweto , south of Johannesburg , on Wednesday morning last week</ARG0> .', '<ARG1>A woman was killed in her sleep</ARG1> <SIG0>when</SIG0> <ARG0>the bombs rocked parts of Soweto , south of Johannesburg , on Wednesday morning last week</ARG0> .']
+===============================
+Answers:
+0. 12th March 2009 03:09 AM HYDERABAD : Expressing sympathy to the family members of <ARG1>Special Police Officer ( SPO ) K Subrahmanyam Raju who died</ARG1> in <ARG0>the attack on Gandhi Bhavan by MRPS activists recently</ARG0> , Pradesh Congress Committee president D Srinivas today announced an ex gratia of Rs 10 lakh to the bereaved family .
+1. 12th March 2009 03:09 AM HYDERABAD : <ARG0>Expressing sympathy to the family members of Special Police Officer ( SPO ) K Subrahmanyam Raju who died in the attack on Gandhi Bhavan by MRPS activists recently</ARG0> , <ARG1>Pradesh Congress Committee president D Srinivas today announced an ex gratia of Rs 10 lakh to the bereaved family</ARG1> .
+
+Prediction:
+['12th March 2009 03:09 AM HYDERABAD : <SIG0><ARG0>Expressing</SIG0> sympathy to the family members of Special Police Officer ( SPO ) K Subrahmanyam Raju who died in the attack on Gandhi Bhavan by MRPS activists recently</ARG0> , <ARG1>Pradesh Congress Committee president D Srinivas today announced an ex gratia of Rs 10 lakh to the bereaved family</ARG1> .', '12th March 2009 03:09 AM HYDERABAD : <SIG0><ARG0>Expressing</SIG0> sympathy to the family members of Special Police Officer ( SPO ) K Subrahmanyam Raju who died in the attack on Gandhi Bhavan by MRPS activists recently</ARG0> , <ARG1>Pradesh Congress Committee president D Srinivas today announced an ex gratia of Rs 10 lakh to the bereaved family</ARG1> .']
+===============================
+Answers:
+0. NALGONDA : <ARG1>The divisional level meeting convened to distribute pattas to beneficiaries under the fifth phase of the land distribution programme in Bhongir on Thursday was marred</ARG1> <SIG0>by</SIG0> <ARG0>protests</ARG0> , as Minister for Information Technology Komatireddy Venkat Reddy distributed pattas .
+1. NALGONDA : <ARG1>The divisional level meeting convened</ARG1> <ARG0><SIG0>to</SIG0> distribute pattas to beneficiaries</ARG0> under the fifth phase of the land distribution programme in Bhongir on Thursday was marred by protests , as Minister for Information Technology Komatireddy Venkat Reddy distributed pattas .
+2. NALGONDA : The divisional level meeting convened <ARG1>to distribute pattas to beneficiaries</ARG1> <SIG0>under</SIG0> <ARG0>the fifth phase of the land distribution programme</ARG0> in Bhongir on Thursday was marred by protests , as Minister for Information Technology Komatireddy Venkat Reddy distributed pattas .
+
+Prediction:
+['NALGONDA : <ARG1>The divisional level meeting convened <SIG0>to</SIG0> distribute pattas to beneficiaries under the fifth phase of the land distribution programme in Bhongir on Thursday was marred by protests</ARG1> , as <ARG0>Minister for Information Technology Komatireddy Venkat Reddy distributed pattas</ARG0> .', 'NALGONDA : <ARG1>The divisional level meeting convened <SIG0>to</SIG0> distribute pattas to beneficiaries under the fifth phase of the land distribution programme in Bhongir on Thursday was marred by protests</ARG1> , as <ARG0>Minister for Information Technology Komatireddy Venkat Reddy distributed pattas</ARG0> .', 'NALGONDA : The divisional level meeting convened to distribute pattas to beneficiaries under the fifth phase of the land distribution programme in Bhongir on Thursday was marred by protests , as Minister for Information Technology Komatireddy Venkat Reddy distributed pattas .']
+===============================
+Answers:
+0. <ARG0>The end to hunger strike</ARG0> <SIG0>came as</SIG0> <ARG1>a relief to the jail administration .</ARG1>
+
+Prediction:
+['<ARG0>The end to hunger strike</ARG0> <SIG0><ARG1>came as a relief to</SIG0> the jail administration</ARG1> .', '<ARG0>The end to hunger strike</ARG0> <SIG0><ARG1>came as a relief to</SIG0> the jail administration</ARG1> .']
+===============================
+Answers:
+0. <ARG1>A civilian was also abducted along with the troopers</ARG1> <ARG0>either <SIG1>on suspicion of</SIG1> being a policeman or <SIG0>for</SIG0> interfering in the abduction</ARG0> , he added .
+
+Prediction:
+['<ARG1>A civilian was also abducted along with the troopers</ARG1> either <SIG0>on suspicion of</SIG0> being a policeman or for <ARG0>interfering in the abduction</ARG0> , he added .', '<ARG1>A civilian was also abducted along with the troopers</ARG1> either <SIG0>on suspicion of</SIG0> being a policeman or for <ARG0>interfering in the abduction</ARG0> , he added .']
+===============================
+Answers:
+0. Thousands of Australian sports fans were told to self-isolate and get <ARG0>tested</ARG0> for coronavirus Wednesday after an infected spectator attended a match in Melbourne and the city raced to <SIG0>avoid</SIG0> another <ARG1>lockdown</ARG1>.
+
+Prediction:
+['Thousands of Australian sports fans were told to <ARG0>self-isolate</ARG0> and get tested for coronavirus Wednesday after an infected spectator attended a match in Melbourne and the city raced to <SIG0>avoid</SIG0> another <ARG1>lockdown.</ARG1>', 'Thousands of Australian sports fans were told to <ARG0>self-isolate</ARG0> and get tested for coronavirus Wednesday after an infected spectator attended a match in Melbourne and the city raced to <SIG0>avoid</SIG0> another <ARG1>lockdown.</ARG1>']
+===============================
+Answers:
+0. <ARG1>They also had organised a human chain protest , recently</ARG1> <ARG0><SIG0>to</SIG0> draw public attention on the issue</ARG0> ” he shared .
+
+Prediction:
+['<ARG1>They also had organised a human chain protest</ARG1> , recently <SIG0><ARG0>to</SIG0> draw public attention on the issue</ARG0> ” he shared .', '<ARG1>They also had organised a human chain protest</ARG1> , recently <SIG0><ARG0>to</SIG0> draw public attention on the issue</ARG0> ” he shared .']
+===============================
+Answers:
+0. We wo n't tolerate attacks on our drivers , say KZN trucking companies ANA Reporter DURBAN , June 3 ( ANA ) – <ARG1>Trucking companies said on Monday they would not tolerate attacks on their drivers</ARG1> , <SIG0>following</SIG0> <ARG0>the torching of 17 trucks in KwaZulu-Natal at the weekend</ARG0> .
+
+Prediction:
+["We wo n't tolerate attacks on our drivers , say KZN trucking companies ANA Reporter DURBAN , June 3 ( ANA ) – <ARG1>Trucking companies said on Monday they would not tolerate attacks on their drivers</ARG1> , <SIG0>following</SIG0> <ARG0>the torching of 17 trucks in KwaZulu-Natal at the weekend</ARG0> .", "We wo n't tolerate attacks on our drivers , say KZN trucking companies ANA Reporter DURBAN , June 3 ( ANA ) – <ARG1>Trucking companies said on Monday they would not tolerate attacks on their drivers</ARG1> , <SIG0>following</SIG0> <ARG0>the torching of 17 trucks in KwaZulu-Natal at the weekend</ARG0> ."]
+===============================
+Answers:
+0. 22nd September 2011 11:15 AM AGRA : The crude improvised explosive device ( IED ) used in <ARG0>the Sep 17 Agra blast</ARG0> that <ARG1>injured four people</ARG1> was " unique " in its design , investigators said Thursday , adding that local welders had been contacted and a lead from Haldwani was also being followed .
+
+Prediction:
+['22nd September 2011 11:15 AM AGRA : <ARG0>The crude improvised explosive device ( IED ) used in the Sep 17 Agra blast</ARG0></ARG1> <SIG0><ARG1>that injured</SIG0> four people was " unique " in its design , investigators said Thursday , adding that local welders had been contacted and a lead from Haldwani was also being followed .', '22nd September 2011 11:15 AM AGRA : <ARG0>The crude improvised explosive device ( IED ) used in the Sep 17 Agra blast</ARG0></ARG1> <SIG0><ARG1>that injured</SIG0> four people was " unique " in its design , investigators said Thursday , adding that local welders had been contacted and a lead from Haldwani was also being followed .']
+===============================
+Answers:
+0. <ARG1>About 20 volunteers dressed in period British military uniforms have been gathering on the streets of the city over the past month</ARG1> <ARG0><SIG0>to</SIG0> mark the 75th anniversary of Black Christmas</ARG0> , when in 1941 British forces in Hong Kong surrendered to the Japanese , the first ever for a Crown colony .
+
+Prediction:
+['<ARG1>About 20 volunteers dressed in period British military uniforms have been gathering on the streets of the city over the past month</ARG1> <SIG0><ARG0>to</SIG0> mark the 75th anniversary of Black Christmas</ARG0> , when in 1941 British forces in Hong Kong surrendered to the Japanese , the first ever for a Crown colony .', '<ARG1>About 20 volunteers dressed in period British military uniforms have been gathering on the streets of the city over the past month</ARG1> <SIG0><ARG0>to</SIG0> mark the 75th anniversary of Black Christmas</ARG0> , when in 1941 British forces in Hong Kong surrendered to the Japanese , the first ever for a Crown colony .']
+===============================
+Answers:
+0. Gorur Villagers Block City-Mangaluru 30th November 2014 06:24 AM BENGALURU : <ARG1>Thousands of villagers from Gorur on Saturday staged a protest in front of the Solur police station and blocked the busy Bengaluru-Mangaluru National Highway</ARG1> <ARG0><SIG0>condemning</SIG0> the police caning on Friday</ARG0> .
+
+Prediction:
+['Gorur Villagers Block City-Mangaluru 30th November 2014 06:24 AM BENGALURU : <ARG1>Thousands of villagers from Gorur on Saturday staged a protest in front of the Solur police station and blocked the busy Bengaluru-Mangaluru National Highway</ARG1> <SIG0><ARG0>condemning</SIG0> the police caning on Friday</ARG0> .', 'Gorur Villagers Block City-Mangaluru 30th November 2014 06:24 AM BENGALURU : <ARG1>Thousands of villagers from Gorur on Saturday staged a protest in front of the Solur police station and blocked the busy Bengaluru-Mangaluru National Highway</ARG1> <SIG0><ARG0>condemning</SIG0> the police caning on Friday</ARG0> .']
+===============================
+Answers:
+0. It also was considering a <ARG0>restructuring</ARG0> to <ARG1>help</ARG1> boost the stock price.
+
+Prediction:
+['It also was considering a <ARG0>restructuring</ARG0> to <SIG0>help</SIG0> <ARG1>boost</ARG1> the stock price.', 'It also was considering a <ARG0>restructuring</ARG0> to <SIG0>help</SIG0> <ARG1>boost</ARG1> the stock price.']
+===============================
+Answers:
+0. <ARG1>The ANC in KwaZulu-Natal strongly condemns the misbehaviour of IFP members</ARG1> <ARG0>who interrupted our campaign trail led by ANC Deputy President Jacob Zuma at Dokodweni and Mandeni on the north coast today</ARG0> .
+
+Prediction:
+['<ARG1>The ANC in KwaZulu-Natal strongly condemns <ARG0>the misbehaviour of IFP members who interrupted our campaign trail</ARG1> <SIG0>led by</SIG0> ANC Deputy President Jacob Zuma at Dokodweni and Mandeni on the north coast today</ARG0> .', '<ARG1>The ANC in KwaZulu-Natal strongly condemns <ARG0>the misbehaviour of IFP members who interrupted our campaign trail</ARG1> <SIG0>led by</SIG0> ANC Deputy President Jacob Zuma at Dokodweni and Mandeni on the north coast today</ARG0> .']
+===============================
+Answers:
+0. ﻿The caller alleged that <ARG1>the blasts could be the handiwork of vested interests</ARG1> <ARG0><SIG0>to</SIG0> sabotage a fresh move by the People ’ s Committee for Peace Initiative in Assam ( PCPIA ) , a conglomerate of civil society groups for brokering peace dialogue between the ULFA and the government</ARG0> .
+
+Prediction:
+['\ufeffThe caller alleged that <ARG1>the blasts could be the handiwork of vested interests</ARG1> <SIG0><ARG0>to</SIG0> sabotage a fresh move by the People ’ s Committee for Peace Initiative in Assam ( PCPIA ) , a conglomerate of civil society groups for brokering peace dialogue between the ULFA and the government</ARG0> .', '\ufeffThe caller alleged that <ARG1>the blasts could be the handiwork of vested interests</ARG1> <SIG0><ARG0>to</SIG0> sabotage a fresh move by the People ’ s Committee for Peace Initiative in Assam ( PCPIA ) , a conglomerate of civil society groups for brokering peace dialogue between the ULFA and the government</ARG0> .']
+===============================
+Answers:
+0. The series  Valley of the Wolves  first <ARG0>aired</ARG0> in 2003 on Turkish television, followed by a 2006 movie of the same name that stirred controversy with its portrayal of American soldiers in Iraq and what some <ARG1>described</ARG1> as thinly-veiled anti-Semitism.
+
+Prediction:
+['The series " Valley of the Wolves " first aired in 2003 on Turkish television, followed by a 2006 movie of the same name that <SIG0><ARG1>stirred</ARG1></SIG0> controversy with its <ARG0>portrayal</ARG0> of American soldiers in Iraq and what some described as thinly-veiled anti-Semitism.', 'The series " Valley of the Wolves " first aired in 2003 on Turkish television, followed by a 2006 movie of the same name that <SIG0><ARG1>stirred</ARG1></SIG0> controversy with its <ARG0>portrayal</ARG0> of American soldiers in Iraq and what some described as thinly-veiled anti-Semitism.']
+===============================
+Answers:
+0. <ARG0>Known</ARG0> for its slogan  do nt do evil,  Googles new position <ARG1>drew</ARG1> praise from supporters of free speech, who in the past have been critical of the search engine for agreeing to government censorship as a condition for opening its doors in China.
+
+Prediction:
+['Known for its slogan " do n\'t do evil, " Google\'s new position <SIG0>drew</SIG0> praise</ARG1> from supporters of free speech, who in the past have been critical of the search engine for agreeing to government <ARG0>censorship</ARG0> as a condition for <ARG1>opening its doors in China."', 'Known for its slogan " do n\'t do evil, " Google\'s new position <SIG0>drew</SIG0> praise</ARG1> from supporters of free speech, who in the past have been critical of the search engine for agreeing to government <ARG0>censorship</ARG0> as a condition for <ARG1>opening its doors in China."']
+===============================
+Answers:
+0. <ARG1>These services were affected in the last two days</ARG1> <SIG0>following</SIG0> <ARG0>stone throwing had operated from the Palakkad depot on Friday , while five operated on Saturday</ARG0> .
+
+Prediction:
+['<ARG1>These services were affected in the last two days</ARG1> <SIG0>following</SIG0> <ARG0>stone throwing</ARG0> had operated from the Palakkad depot on Friday , while five operated on Saturday .', '<ARG1>These services were affected in the last two days</ARG1> <SIG0>following</SIG0> <ARG0>stone throwing</ARG0> had operated from the Palakkad depot on Friday , while five operated on Saturday .']
+===============================
+Answers:
+0. May 31 , 2014 00:00 IST <ARG1>KSRP deployed</ARG1> <ARG0><SIG0>to</SIG0> stop protest</ARG0>
+
+Prediction:
+['May 31 , 2014 00:00 IST <ARG1>KSRP deployed</ARG1> <SIG0><ARG0>to</SIG0> stop protest</ARG0>', 'May 31 , 2014 00:00 IST <ARG1>KSRP deployed</ARG1> <SIG0><ARG0>to</SIG0> stop protest</ARG0>']
+===============================
+Answers:
+0. Similar banners were also found between Sunki and Ampavalli where Maoists also <ARG1>blocked road</ARG1> <SIG0>by</SIG0> <ARG0>felling trees</ARG0> .
+
+Prediction:
+['<ARG1>Similar banners were also found between Sunki and Ampavalli where Maoists also blocked road</ARG1> <SIG0>by</SIG0> <ARG0>felling trees</ARG0> .', '<ARG1>Similar banners were also found between Sunki and Ampavalli where Maoists also blocked road</ARG1> <SIG0>by</SIG0> <ARG0>felling trees</ARG0> .']
+===============================
+Answers:
+0. A group of farmers pointed protesting residents with guns when they were walking home from court , and <ARG1>other group of farmers attacked journalist</ARG1> after <ARG0>a farm house was looted and torched</ARG0> .
+
+Prediction:
+['A group of farmers pointed protesting residents with guns when they were walking home from court , and <ARG1>other group of farmers attacked journalist</ARG1> <SIG0>after</SIG0> <ARG0>a farm house was looted and torched</ARG0> .', 'A group of farmers pointed protesting residents with guns when they were walking home from court , and <ARG1>other group of farmers attacked journalist</ARG1> <SIG0>after</SIG0> <ARG0>a farm house was looted and torched</ARG0> .']
+===============================
+Answers:
+0. Tirupur : AIADMK , DMK activists clash October 21 , 2011 00:00 IST <ARG1>The Vellakoil police on Wednesday night registered cases against three activists each of the DMK and the AIADMK</ARG1> <ARG0><SIG0>on the charges of</SIG0> assaulting each other near a polling booth in Veerasolapuram panchayat</ARG0> .
+
+Prediction:
+['Tirupur : AIADMK , DMK activists clash October 21 , 2011 00:00 IST <ARG1>The Vellakoil police on Wednesday night registered cases against three activists each of the DMK and the AIADMK</ARG1> <SIG0>on the charges of</SIG0> <ARG0>assaulting each other near a polling booth in Veerasolapuram panchayat</ARG0> .', 'Tirupur : AIADMK , DMK activists clash October 21 , 2011 00:00 IST <ARG1>The Vellakoil police on Wednesday night registered cases against three activists each of the DMK and the AIADMK</ARG1> <SIG0>on the charges of</SIG0> <ARG0>assaulting each other near a polling booth in Veerasolapuram panchayat</ARG0> .']
+===============================
+Answers:
+0. The SEC has alleged that Mr. Antar aimed to <ARG0>pump</ARG0> up the companys stock price through false financial statements in order to <ARG1>sell</ARG1> his stake and reap huge profits.
+
+Prediction:
+["The SEC has alleged that Mr. Antar aimed to <ARG0>pump</ARG0> up the company's stock price through false financial statements in order to sell</ARG1> his stake and <SIG0><ARG1>reap</SIG0> huge profits.", "The SEC has alleged that Mr. Antar aimed to <ARG0>pump</ARG0> up the company's stock price through false financial statements in order to sell</ARG1> his stake and <SIG0><ARG1>reap</SIG0> huge profits."]
+===============================
+Answers:
+0. <ARG1>Lawyer held</ARG1> <SIG0>for</SIG0> <ARG0>marking anniversary of Tiananmen protests</ARG0> allowed to see attorneys
+
+Prediction:
+['Lawyer held <SIG0>for</SIG0> marking anniversary of Tiananmen <ARG0>protests</ARG0> <ARG1>allowed to see attorneys</ARG1>', 'Lawyer held <SIG0>for</SIG0> marking anniversary of Tiananmen <ARG0>protests</ARG0> <ARG1>allowed to see attorneys</ARG1>']
+===============================
+Answers:
+0. Political Prisoners ' Rights Day today 13th September 2013 08:33 AM <ARG0>The Committee for the Release of Political Prisoners ( CRPP ) is observing September 13 as Political Prisoners Rights Day</ARG0> , <ARG1>commemorating the sacrifice of Shaheed Jitin Das and organising a memorial programme for Maoist idealogue Ganti Prasadam , in Hyderabad on the occasion</ARG1> .
+
+Prediction:
+["Political Prisoners ' Rights Day today 13th September 2013 08:33 AM <ARG1>The Committee for the Release of Political Prisoners ( CRPP ) is observing September 13 as Political Prisoners Rights Day</ARG1> , <SIG0><ARG0>commemorating</SIG0> the sacrifice of Shaheed Jitin Das and organising a memorial programme for Maoist idealogue Ganti Prasadam , in Hyderabad on the occasion</ARG0> .", "Political Prisoners ' Rights Day today 13th September 2013 08:33 AM <ARG1>The Committee for the Release of Political Prisoners ( CRPP ) is observing September 13 as Political Prisoners Rights Day</ARG1> , <SIG0><ARG0>commemorating</SIG0> the sacrifice of Shaheed Jitin Das and organising a memorial programme for Maoist idealogue Ganti Prasadam , in Hyderabad on the occasion</ARG0> ."]
+===============================
+Answers:
+0. Sources said that <ARG1>the kidnapped leaders were released in the deep forests of the agency area on the Andhra-Odisha border</ARG1> <SIG0>following</SIG0> <ARG0>negotiations between the Maoists and various tribal organisations</ARG0> .
+
+Prediction:
+['Sources said that <ARG1>the kidnapped leaders were released in the deep forests of the agency area on the Andhra-Odisha border</ARG1> <SIG0>following</SIG0> <ARG0>negotiations between the Maoists and various tribal organisations</ARG0> .', 'Sources said that <ARG1>the kidnapped leaders were released in the deep forests of the agency area on the Andhra-Odisha border</ARG1> <SIG0>following</SIG0> <ARG0>negotiations between the Maoists and various tribal organisations</ARG0> .']
+===============================
+Answers:
+0. In addition to the estimated 45,000 Marines to ultimately bepart of Operation Desert Shield, Stealth fighter planes and theaircraft carrier John F. Kennedy  are  also <ARG0>headed</ARG0> to Saudi Arabia  to protect it from Iraqi <ARG1>expansionism</ARG1>.
+
+Prediction:
+['In addition to the estimated 45,000 Marines to ultimately bepart of Operation Desert Shield, Stealth fighter planes and theaircraft carrier John F. Kennedy  are <ARG0></ARG0> also headed to Saudi <SIG0><ARG1>Arabia</ARG1></SIG0>  to protect it from Iraqi expansionism.   ', 'In addition to the estimated 45,000 Marines to ultimately bepart of Operation Desert Shield, Stealth fighter planes and theaircraft carrier John F. Kennedy  are <ARG0></ARG0> also headed to Saudi <SIG0><ARG1>Arabia</ARG1></SIG0>  to protect it from Iraqi expansionism.   ']
+===============================
+Answers:
+0. In other incidents of violence on Saturday , <ARG1>four persons were injured and over 20 vehicles set ablaze</ARG1> when <ARG0>clashes broke out between CPM and Trinamool Congress supporters in Siuri under Birbhum Lok Sabha constituency</ARG0> .
+
+Prediction:
+['In other incidents of violence on Saturday , <ARG1>four persons were injured and over 20 vehicles set ablaze</ARG1> <SIG0>when</SIG0> <ARG0>clashes broke out between CPM and Trinamool Congress supporters in Siuri under Birbhum Lok Sabha constituency</ARG0> .', 'In other incidents of violence on Saturday , <ARG1>four persons were injured and over 20 vehicles set ablaze</ARG1> <SIG0>when</SIG0> <ARG0>clashes broke out between CPM and Trinamool Congress supporters in Siuri under Birbhum Lok Sabha constituency</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Police opened fire</ARG1> , killing 34 striking workers and wounding 78 while <ARG0><SIG0>trying to</SIG0> disperse a group gathered on a hill near Lonmin 's platinum mine in Marikana on August 16</ARG0> .
+1. <ARG0>Police opened fire</ARG0> , <ARG1><SIG0>killing</SIG0> 34 striking workers and <SIG1>wounding</SIG1> 78</ARG1> while trying to disperse a group gathered on a hill near Lonmin 's platinum mine in Marikana on August 16 .
+
+Prediction:
+["Police opened fire</ARG1> , <ARG1>killing 34 striking workers and wounding 78 while <SIG0><ARG0>trying to</SIG0> disperse a group gathered on a hill near Lonmin 's platinum mine in Marikana on August 16</ARG0> .", "Police opened fire</ARG1> , <ARG1>killing 34 striking workers and wounding 78 while <SIG0><ARG0>trying to</SIG0> disperse a group gathered on a hill near Lonmin 's platinum mine in Marikana on August 16</ARG0> ."]
+===============================
+Answers:
+0. <ARG1>﻿Police arrested leaders of various political parties</ARG1> <ARG0>who squatted on the highway</ARG0> in response to ' Sadak Bandh ' called by Telangana Joint Action Committee ( JAC ) to urge the central government to immediately carve out a Telangana state .
+1. ﻿Police arrested <ARG1>leaders of various political parties who squatted on the highway</ARG1> <SIG0>in response to</SIG0> <ARG0>' Sadak Bandh ' called by Telangana Joint Action Committee ( JAC )</ARG0> to urge the central government to immediately carve out a Telangana state .
+2. ﻿Police arrested leaders of various political parties who squatted on the highway in response to <ARG1>' Sadak Bandh ' called by Telangana Joint Action Committee ( JAC )</ARG1> <ARG0><SIG0>to</SIG0> urge the central government to immediately carve out a Telangana state</ARG0> .
+
+Prediction:
+["\ufeffPolice arrested leaders of various political parties who squatted on the highway</ARG1> <SIG0>in response to</SIG0> <ARG1>' Sadak Bandh ' called by Telangana Joint Action Committee ( JAC ) <ARG0>to urge the central government to immediately carve out a Telangana state</ARG0> .", "\ufeffPolice arrested leaders of various political parties who squatted on the highway</ARG1> <SIG0>in response to</SIG0> <ARG1>' Sadak Bandh ' called by Telangana Joint Action Committee ( JAC ) <ARG0>to urge the central government to immediately carve out a Telangana state</ARG0> .", "\ufeffPolice arrested leaders of various political parties who squatted on the highway in response to ' Sadak Bandh ' called by Telangana Joint Action Committee ( JAC ) to urge the central government to immediately carve out a Telangana state ."]
+===============================
+Answers:
+0. <ARG1>Millions have taken to the streets to protest</ARG1> <ARG0>against the proposed law allowing for the extradition of individuals for trial in mainland China , where the opaque court system is controlled by the Communist party</ARG0> .
+1. <ARG1>Millions have taken to the streets</ARG1> <ARG0><SIG0>to</SIG0> protest against the proposed law allowing for the extradition of individuals for trial in mainland China , where the opaque court system is controlled by the Communist party</ARG0> .
+
+Prediction:
+['<ARG1>Millions have taken to the streets <SIG0><ARG0>to</SIG0> protest</ARG1> against the proposed law allowing for the extradition of individuals for trial in mainland China</ARG0> , where the opaque court system is controlled by the Communist party .', '<ARG1>Millions have taken to the streets <SIG0><ARG0>to</SIG0> protest</ARG1> against the proposed law allowing for the extradition of individuals for trial in mainland China</ARG0> , where the opaque court system is controlled by the Communist party .']
+===============================
+Answers:
+0. <ARG1>Police have arrested as many as 181 persons</ARG1> <SIG0>since</SIG0> <ARG0>the protests</ARG0> began and were taken to an undisclosed place for inquiry and released 86 persons , all under 18 years of age .
+1. Police have arrested as many as 181 persons since the protests began and <ARG1>were taken to an undisclosed place</ARG1> <SIG0>for</SIG0> <ARG0>inquiry</ARG0> and released 86 persons , all under 18 years of age .
+
+Prediction:
+['Police have arrested as many as 181 persons since <ARG0>the protests began</ARG0> and were taken to an undisclosed place for inquiry and <SIG0><ARG1>released</SIG0> 86 persons , all under 18 years of age</ARG1> .', 'Police have arrested as many as 181 persons since <ARG0>the protests began</ARG0> and were taken to an undisclosed place for inquiry and <SIG0><ARG1>released</SIG0> 86 persons , all under 18 years of age</ARG1> .']
+===============================
+Answers:
+0. Stating that <ARG1>the Telangana agitation had spread to the nook and corner of the region</ARG1> <SIG0>because of</SIG0> <ARG0>the fast taken up by TRS president K. Chandrasekhar Rao last year</ARG0> , Mr. Kodandaram said that change of guard in the government would not help in stalling the ongoing agitation for separate State .
+
+Prediction:
+['Stating that <ARG1>the Telangana agitation had spread to the nook and corner of the region</ARG1> <SIG0>because of</SIG0> <ARG0>the fast taken up by TRS president K. Chandrasekhar Rao last year</ARG0> , Mr. Kodandaram said that change of guard in the government would not help in stalling the ongoing agitation for separate State .', 'Stating that <ARG1>the Telangana agitation had spread to the nook and corner of the region</ARG1> <SIG0>because of</SIG0> <ARG0>the fast taken up by TRS president K. Chandrasekhar Rao last year</ARG0> , Mr. Kodandaram said that change of guard in the government would not help in stalling the ongoing agitation for separate State .']
+===============================
+Answers:
+0. Officials here at police headquarters said that <ARG1>Mi -17 chopper , which took off from Jagdalpur town to Sukma district to airlift some troopers seriously injured in a gunfight with Maoists , went missing</ARG1> after <ARG0>rebels attacked it</ARG0> .
+1. Officials here at police headquarters said that <ARG1>Mi -17 chopper , which took off from Jagdalpur town to Sukma district</ARG1> <SIG0>to</SIG0> <ARG0>airlift some troopers</ARG0> seriously injured in a gunfight with Maoists , went missing after rebels attacked it .
+
+Prediction:
+['Officials here at police headquarters said that <ARG1>Mi -17 chopper , which took off from Jagdalpur town to Sukma district <SIG0>to</SIG0> airlift some troopers seriously injured in a gunfight with Maoists</ARG0> , went missing</ARG1> after <ARG0>rebels attacked it .', 'Officials here at police headquarters said that <ARG1>Mi -17 chopper , which took off from Jagdalpur town to Sukma district <SIG0>to</SIG0> airlift some troopers seriously injured in a gunfight with Maoists</ARG0> , went missing</ARG1> after <ARG0>rebels attacked it .']
+===============================
+Answers:
+0. <ARG1>Two men have been charged</ARG1> <SIG0>for</SIG0> <ARG0>their murders</ARG0> .
+
+Prediction:
+['<ARG1>Two men have been charged</ARG1> <SIG0>for</SIG0> <ARG0>their murders</ARG0> .', '<ARG1>Two men have been charged</ARG1> <SIG0>for</SIG0> <ARG0>their murders</ARG0> .']
+===============================
+Answers:
+0. KARNATAKA Action sought March 12 , 2009 00:00 IST Bijapur : <ARG1>Members of Mahila Jana Sangha and Dalit Sangharsha Samiti picketed the office of the Superintendent of Police</ARG1> <ARG0><SIG0>demanding</SIG0> action against women police officials</ARG0> who allegedly harassed Savitri Chalwadi in Manguli village of the district on Tuesday .
+1. KARNATAKA Action sought March 12 , 2009 00:00 IST Bijapur : Members of Mahila Jana Sangha and Dalit Sangharsha Samiti picketed the office of the Superintendent of Police <ARG1>demanding action against women police officials</ARG1> <ARG0>who allegedly harassed Savitri Chalwadi in Manguli village of the district on Tuesday</ARG0> .
+
+Prediction:
+['KARNATAKA Action sought March 12 , 2009 00:00 IST Bijapur : <ARG1>Members of Mahila Jana Sangha and Dalit Sangharsha Samiti picketed the office of the Superintendent of Police</ARG1> <SIG0><ARG0>demanding</SIG0> action against women police officials who allegedly harassed Savitri Chalwadi in Manguli village of the district on Tuesday</ARG0> .', 'KARNATAKA Action sought March 12 , 2009 00:00 IST Bijapur : <ARG1>Members of Mahila Jana Sangha and Dalit Sangharsha Samiti picketed the office of the Superintendent of Police</ARG1> <SIG0><ARG0>demanding</SIG0> action against women police officials who allegedly harassed Savitri Chalwadi in Manguli village of the district on Tuesday</ARG0> .']
+===============================
+Answers:
+0. But the new <ARG0>pact</ARG0> will <ARG1>force</ARG1> huge debt on the new firm and could still fail to thwart rival suitor McCaw Cellular.
+
+Prediction:
+['But the new <ARG0>pact</ARG0> will <SIG0>force</SIG0> huge debt on the new firm and could still <ARG1>fail</ARG1> to thwart rival suitor McCaw Cellular.', 'But the new <ARG0>pact</ARG0> will <SIG0>force</SIG0> huge debt on the new firm and could still <ARG1>fail</ARG1> to thwart rival suitor McCaw Cellular.']
+===============================
+Answers:
+0. ANDHRA PRADESH Unusual day for IT , call centre employees June 06 , 2008 00:00 IST Harried lot : <ARG1>IT employees arguing with an autorickshaw driver</ARG1> <SIG0>for</SIG0> <ARG0>demanding double fare near Cyber Gateway</ARG0> as more than 25,000 cabs and private buses went off the road on Thursday .
+1. ANDHRA PRADESH Unusual day for IT , call centre employees June 06 , 2008 00:00 IST Harried lot : IT employees arguing with an autorickshaw driver for <ARG1>demanding double fare near Cyber Gateway</ARG1> <SIG0>as</SIG0> <ARG0>more than 25,000 cabs and private buses went off the road on Thursday</ARG0> .
+
+Prediction:
+['ANDHRA PRADESH Unusual day for IT , call centre employees June 06 , 2008 00:00 IST Harried lot : <ARG1>IT employees arguing with an autorickshaw driver</ARG1> <SIG0>for</SIG0> <ARG0>demanding double fare near Cyber Gateway</ARG0> as more than 25,000 cabs and private buses went off the road on Thursday .', 'ANDHRA PRADESH Unusual day for IT , call centre employees June 06 , 2008 00:00 IST Harried lot : <ARG1>IT employees arguing with an autorickshaw driver</ARG1> <SIG0>for</SIG0> <ARG0>demanding double fare near Cyber Gateway</ARG0> as more than 25,000 cabs and private buses went off the road on Thursday .']
+===============================
+Answers:
+0. <ARG1>﻿The popular social network has been blocked</ARG1> since <ARG0>ethnic riots in China ’ s far west in 2009</ARG0> and Instagram was banned during pro-democracy protests in Hong Kong in 2014 .
+1. ﻿The popular social network has been blocked since ethnic riots in China ’ s far west in 2009 and <ARG1>Instagram was banned</ARG1> during <ARG0>pro-democracy protests in Hong Kong in 2014</ARG0> .
+
+Prediction:
+['<ARG1>\ufeffThe popular social network has been blocked</ARG1> <SIG0>since</SIG0> <ARG0>ethnic riots in China ’ s far west in 2009 and Instagram was banned during pro-democracy protests in Hong Kong in 2014</ARG0> .', '<ARG1>\ufeffThe popular social network has been blocked</ARG1> <SIG0>since</SIG0> <ARG0>ethnic riots in China ’ s far west in 2009 and Instagram was banned during pro-democracy protests in Hong Kong in 2014</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The KGMOA has started boycotting all VIP duties , outside duties , training and camps from Monday</ARG1> <ARG0><SIG0>as part of</SIG0> intensifying the agitation</ARG0> .
+
+Prediction:
+['<ARG1>The KGMOA has started boycotting all VIP duties , outside duties , training and camps from Monday</ARG1> <SIG0>as part of</SIG0> <ARG0>intensifying the agitation</ARG0> .', '<ARG1>The KGMOA has started boycotting all VIP duties , outside duties , training and camps from Monday</ARG1> <SIG0>as part of</SIG0> <ARG0>intensifying the agitation</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Today 's incident</ARG1> , comes barely days after <ARG0>the massacre of 23 Kashmiri Pandits by militants at Wandhama in the Ganderbal area of the Kashmir Valley</ARG0> , and has cast a shadow over the February 16 Lok Sabhapolls in the state .
+1. <ARG0>Today 's incident</ARG0> , comes barely days after the massacre of 23 Kashmiri Pandits by militants at Wandhama in the Ganderbal area of the Kashmir Valley , and <ARG1>has cast a shadow over the February 16 Lok Sabhapolls in the state</ARG1> .
+
+Prediction:
+["<ARG0>Today 's incident</ARG0> , comes barely days after the massacre of 23 Kashmiri Pandits by militants at Wandhama in the Ganderbal area of the Kashmir Valley , and <SIG0><ARG1>has cast</SIG0> a shadow over the February 16 Lok Sabhapolls in the state</ARG1> .", "<ARG0>Today 's incident</ARG0> , comes barely days after the massacre of 23 Kashmiri Pandits by militants at Wandhama in the Ganderbal area of the Kashmir Valley , and <SIG0><ARG1>has cast</SIG0> a shadow over the February 16 Lok Sabhapolls in the state</ARG1> ."]
+===============================
+Answers:
+0. <ARG0>Both of these issues remain deeply unpopular among city residents and previous government attempts to enact security legislation and national education</ARG0> <SIG0>sparked</SIG0> <ARG1>mass protests .</ARG1>
+
+Prediction:
+['Both of these issues remain deeply unpopular among city residents and <ARG0>previous government attempts to enact security legislation and national education</ARG0> <SIG0>sparked</SIG0> <ARG1>mass protests</ARG1> .', 'Both of these issues remain deeply unpopular among city residents and <ARG0>previous government attempts to enact security legislation and national education</ARG0> <SIG0>sparked</SIG0> <ARG1>mass protests</ARG1> .']
+===============================
+Answers:
+0. - Indian Express Agencies , Agencies : Bangalore , Fri Jul 27 2012 , 15:59 hrs <ARG1>Karnataka Assembly today witnessed a brief dharna by the entire opposition members</ARG1> <ARG0><SIG0>protesting</SIG0> the government move to pass the Finance Bill without tabling the annual and performance reports of various departments</ARG0> .
+
+Prediction:
+['- Indian Express Agencies , Agencies : Bangalore , Fri Jul 27 2012 , 15:59 hrs <ARG1>Karnataka Assembly today witnessed a brief dharna by the entire opposition members</ARG1> <SIG0><ARG0>protesting</SIG0> the government move to pass the Finance Bill without tabling the annual and performance reports of various departments</ARG0> .', '- Indian Express Agencies , Agencies : Bangalore , Fri Jul 27 2012 , 15:59 hrs <ARG1>Karnataka Assembly today witnessed a brief dharna by the entire opposition members</ARG1> <SIG0><ARG0>protesting</SIG0> the government move to pass the Finance Bill without tabling the annual and performance reports of various departments</ARG0> .']
+===============================
+Answers:
+0. “ If <ARG0>peaceful marches</ARG0> <ARG1><SIG0>that disrupt</SIG0> the road for an afternoon or so</ARG1> don ’ t work , maybe it spills over to blockading more roads , maybe for long .
+1. “ <SIG0>If</SIG0> <ARG0>peaceful marches that disrupt the road for an afternoon or so don ’ t work</ARG0> , <ARG1>maybe it spills over to blockading more roads , maybe for long</ARG1> .
+
+Prediction:
+['“ <SIG0>If</SIG0> <ARG0>peaceful marches that disrupt the road for an afternoon or so don ’ t work</ARG0> , <ARG1>maybe it spills over to blockading more roads , maybe for long</ARG1> .', '“ <SIG0>If</SIG0> <ARG0>peaceful marches that disrupt the road for an afternoon or so don ’ t work</ARG0> , <ARG1>maybe it spills over to blockading more roads , maybe for long</ARG1> .']
+===============================
+Answers:
+0. The <ARG0>oil giant</ARG0> announced that Gregory Goff and Kaisa Hietala had <SIG0>secure</SIG0>d enough votes to join ExxonMobils <ARG1>board</ARG1>, along with several incumbent directors who were reelected.
+
+Prediction:
+["The oil giant announced that Gregory Goff and Kaisa Hietala had <SIG0><ARG0>secured</ARG0></SIG0> enough votes to <ARG1>join</ARG1> ExxonMobil's board, along with several incumbent directors who were reelected.", "The oil giant announced that Gregory Goff and Kaisa Hietala had <SIG0><ARG0>secured</ARG0></SIG0> enough votes to <ARG1>join</ARG1> ExxonMobil's board, along with several incumbent directors who were reelected."]
+===============================
+Answers:
+0. <ARG1>Google also contributed to the protest</ARG1> <SIG0>by</SIG0> <ARG0>putting up the image of a candle on its home page</ARG0> .
+
+Prediction:
+['<ARG1>Google also contributed to the protest</ARG0></ARG1> <SIG0>by</SIG0> <ARG0>putting up the image of a candle on its home page .', '<ARG1>Google also contributed to the protest</ARG0></ARG1> <SIG0>by</SIG0> <ARG0>putting up the image of a candle on its home page .']
+===============================
+Answers:
+0. The <ARG0>move</ARG0> has been seen as part of efforts to <SIG0>shield</SIG0> the increasingly unpopular ruling United Russia party from real <ARG1>competition</ARG1> ahead of parliamentary elections in September.
+
+Prediction:
+['The <ARG0>move</ARG0> has been seen as part of efforts to <SIG0>shield</ARG1></SIG0> the increasingly unpopular ruling United Russia party from real <ARG1>competition ahead of parliamentary elections in September.', 'The <ARG0>move</ARG0> has been seen as part of efforts to <SIG0>shield</ARG1></SIG0> the increasingly unpopular ruling United Russia party from real <ARG1>competition ahead of parliamentary elections in September.']
+===============================
+Answers:
+0. Institut Merieux S.A., which offered 942 million Canadian dollars (US$801.2 million), or C$37 a share for Connaught, said it would <ARG1>extend</ARG1> its bid, due to <ARG0>expire</ARG0> last Thursday, to Nov. 6.
+
+Prediction:
+['Institut Merieux S.A., which offered 942 million Canadian dollars (US$801.2 million), or C$37 a share for Connaught, said it would <SIG0><ARG1><ARG0>extend</ARG0></ARG1></SIG0> its bid, due to expire last Thursday, to Nov. 6.    ', 'Institut Merieux S.A., which offered 942 million Canadian dollars (US$801.2 million), or C$37 a share for Connaught, said it would <SIG0><ARG1><ARG0>extend</ARG0></ARG1></SIG0> its bid, due to expire last Thursday, to Nov. 6.    ']
+===============================
+Answers:
+0. <ARG1>In India , actions around the Copenhagen talks are being organised by Climate Satyagraha Camp , a civil society coalition</ARG1> <ARG0><SIG0>to</SIG0> give Indians a voice to the Climate Summit in Copenhagen</ARG0> .
+
+Prediction:
+['In India , actions around the Copenhagen talks are being organised by <ARG1>Climate Satyagraha Camp , a civil society coalition</ARG1> <SIG0><ARG0>to</SIG0> give Indians a voice to the Climate Summit in Copenhagen</ARG0> .', 'In India , actions around the Copenhagen talks are being organised by <ARG1>Climate Satyagraha Camp , a civil society coalition</ARG1> <SIG0><ARG0>to</SIG0> give Indians a voice to the Climate Summit in Copenhagen</ARG0> .']
+===============================
+Answers:
+0. <ARG1>They were also protesting</ARG1> <SIG0>about</SIG0> <ARG0>the government 's refusal to make available finances to improve the infrastructure and services of the public rail system</ARG0> .
+1. They were also protesting about the government 's refusal <ARG1>to make available finances</ARG1> <ARG0><SIG0>to</SIG0> improve the infrastructure and services of the public rail system</ARG0> .
+
+Prediction:
+["<ARG1>They were also protesting</ARG1> <SIG0>about</SIG0> <ARG0>the government 's refusal to make available finances to improve the infrastructure and services of the public rail system</ARG0> .", "<ARG1>They were also protesting</ARG1> <SIG0>about</SIG0> <ARG0>the government 's refusal to make available finances to improve the infrastructure and services of the public rail system</ARG0> ."]
+===============================
+Answers:
+0. Dr Joshi said , “ <ARG1>The protest</ARG1> <SIG0>was <ARG0>to</SIG0> make the government realise the hazards of allowing stone crushers to function in an agriculturally rich area</ARG0> .
+
+Prediction:
+['Dr Joshi said , “ <ARG1>The protest</ARG1> <SIG0>was <ARG0>to</SIG0> make the government realise the hazards of allowing stone crushers to function in an agriculturally rich area</ARG0> .', 'Dr Joshi said , “ <ARG1>The protest</ARG1> <SIG0>was <ARG0>to</SIG0> make the government realise the hazards of allowing stone crushers to function in an agriculturally rich area</ARG0> .']
+===============================
+Answers:
+0. After <ARG0>triggering the blasts in a public place</ARG0> , <ARG1>the ULFA is in a denial mode , fearing public outcry against it</ARG1> , ” he said .
+
+Prediction:
+['After <ARG0>triggering the blasts in a public place , <ARG1>the ULFA is in a denial mode</ARG1> , <SIG0>fearing</SIG0> public outcry against it</ARG0> , ” he said .', 'After <ARG0>triggering the blasts in a public place , <ARG1>the ULFA is in a denial mode</ARG1> , <SIG0>fearing</SIG0> public outcry against it</ARG0> , ” he said .']
+===============================
+Answers:
+0. Presbyter of Church Injured in Attack in Salem 31st August 2015 09:53 AM SALEM : <ARG1>A 55 - year-old presbyter of a church at Hasthampatty near here was injured</ARG1> after <ARG0>he was allegedly assaulted by another group in the shrine during Sunday mass</ARG0> , police said here today .
+
+Prediction:
+['Presbyter of Church Injured in Attack in Salem 31st August 2015 09:53 AM SALEM : <ARG1>A 55 - year-old presbyter of a church at Hasthampatty near here was injured</ARG1> <SIG0>after</SIG0> <ARG0>he was allegedly assaulted by another group in the shrine during Sunday mass</ARG0> , police said here today .', 'Presbyter of Church Injured in Attack in Salem 31st August 2015 09:53 AM SALEM : <ARG1>A 55 - year-old presbyter of a church at Hasthampatty near here was injured</ARG1> <SIG0>after</SIG0> <ARG0>he was allegedly assaulted by another group in the shrine during Sunday mass</ARG0> , police said here today .']
+===============================
+Answers:
+0. The charges were <ARG1>offset</ARG1> in part by a <ARG0>gain</ARG0> from the sale of the companys construction division.
+
+Prediction:
+["The charges were offset in part by a <SIG0><ARG1>gain</ARG1></SIG0> from the <ARG0>sale</ARG0> of the company's construction division.", "The charges were offset in part by a <SIG0><ARG1>gain</ARG1></SIG0> from the <ARG0>sale</ARG0> of the company's construction division."]
+===============================
+Answers:
+0. Alabama issued a warning to drivers Thursday night, <ARG1>urging</ARG1> them to stay off icy roads as driving conditions were  <ARG0>becoming</ARG0> dangerous  with numerous accidents reported.
+
+Prediction:
+['Alabama <ARG0>issued</ARG0> a warning to drivers Thursday night, <SIG0>urging</SIG0> them to <ARG1>stay</ARG1> off icy roads as driving conditions were " becoming dangerous " with numerous accidents reported.', 'Alabama <ARG0>issued</ARG0> a warning to drivers Thursday night, <SIG0>urging</SIG0> them to <ARG1>stay</ARG1> off icy roads as driving conditions were " becoming dangerous " with numerous accidents reported.']
+===============================
+Answers:
+0. <ARG0>As many as 6,000 fishing boats , including mechanised boats and fibre boats from the region had stopped venturing into the sea from January 13</ARG0> <SIG0>due to which</SIG0> <ARG1>the inflow of fish into the city ’ s market decreased</ARG1> .
+
+Prediction:
+['<ARG1><ARG0>As many as 6,000 fishing boats , including mechanised boats and fibre boats from the region had stopped venturing into the sea from January 13</ARG0> <SIG0>due to</SIG0> which the inflow of fish into the city ’ s market decreased</ARG1> .', '<ARG1><ARG0>As many as 6,000 fishing boats , including mechanised boats and fibre boats from the region had stopped venturing into the sea from January 13</ARG0> <SIG0>due to</SIG0> which the inflow of fish into the city ’ s market decreased</ARG1> .']
+===============================
+Answers:
+0. Police are <SIG0>authorise</SIG0>d to carry out random spot <ARG0>checks</ARG0> to ensure that <ARG1>quarantine</ARG1> rules are respected, with non-compliance punished with fines of up to 1,500 euros ($1,800).
+
+Prediction:
+['Police are authorised to carry out random spot <ARG0>checks</ARG0> to ensure that quarantine rules are respected, with <ARG1>non-compliance</ARG1> <SIG0>punished</SIG0> with fines of up to 1,500 euros ($1,800).', 'Police are authorised to carry out random spot <ARG0>checks</ARG0> to ensure that quarantine rules are respected, with <ARG1>non-compliance</ARG1> <SIG0>punished</SIG0> with fines of up to 1,500 euros ($1,800).']
+===============================
+Answers:
+0. <ARG1>This agitation</ARG1> <SIG0>is in response to</SIG0> <ARG0>the government 's apathy towards the staff of the two corporations who are on work-to-rule stir</ARG0> .
+
+Prediction:
+["<ARG1>This agitation</ARG1> is <SIG0>in response to</SIG0> <ARG0>the government 's apathy towards the staff of the two corporations who are on work-to-rule stir</ARG0> .", "<ARG1>This agitation</ARG1> is <SIG0>in response to</SIG0> <ARG0>the government 's apathy towards the staff of the two corporations who are on work-to-rule stir</ARG0> ."]
+===============================
+Answers:
+0. On July 8 , <ARG0>Kuttinambi , a secretary of the Rameswaram unit of the Hindu Munnani , was found murdered with head injuries</ARG0> <SIG0>sparking</SIG0> <ARG1>tension in the area</ARG1> .
+
+Prediction:
+['On July 8 , <ARG1>Kuttinambi , a secretary of the Rameswaram unit of the Hindu Munnani , was found murdered</ARG1> with <ARG0>head injuries</ARG0> <SIG0>sparking</SIG0> tension in the area .', 'On July 8 , <ARG1>Kuttinambi , a secretary of the Rameswaram unit of the Hindu Munnani , was found murdered</ARG1> with <ARG0>head injuries</ARG0> <SIG0>sparking</SIG0> tension in the area .']
+===============================
+Answers:
+0. <ARG1>Wednesday 's demonstration was the second one organised</ARG1> <ARG0><SIG0>with the help of</SIG0> the Bharatiya Vidyarti Sena ( BVS )</ARG0> .
+
+Prediction:
+["<ARG1>Wednesday 's demonstration was the second one organised</ARG1> <SIG0>with</SIG0> the help of <ARG0>the Bharatiya Vidyarti Sena ( BVS )</ARG0> .", "<ARG1>Wednesday 's demonstration was the second one organised</ARG1> <SIG0>with</SIG0> the help of <ARG0>the Bharatiya Vidyarti Sena ( BVS )</ARG0> ."]
+===============================
+Answers:
+0. <ARG0>Those climbers who hung the banner on Lion Rock</ARG0> <ARG1><SIG0>boosted</SIG0> people 's spirits</ARG1> , and though it was only up for a day , it will stay in people 's hearts forever .
+1. Those climbers who hung the banner on Lion Rock boosted people 's spirits , and <SIG0>though</SIG0> <ARG0>it was only up for a day</ARG0> , <ARG1>it will stay in people 's hearts forever</ARG1> .
+2. Those climbers who hung the banner on Lion Rock <ARG0>boosted people 's spirits</ARG0> , and though it was only up for a day , <ARG1>it will stay in people 's hearts forever</ARG1> .
+
+Prediction:
+["<ARG0>Those climbers who hung the banner on Lion Rock</ARG0> <SIG0><ARG1>boosted</SIG0> people 's spirits</ARG1> , and though it was only up for a day , it will stay in people 's hearts forever .", "<ARG0>Those climbers who hung the banner on Lion Rock</ARG0> <SIG0><ARG1>boosted</SIG0> people 's spirits</ARG1> , and though it was only up for a day , it will stay in people 's hearts forever .", "Those climbers who hung the banner on Lion Rock boosted people 's spirits , and though it was only up for a day , it will stay in people 's hearts forever ."]
+===============================
+Answers:
+0. A day after the snap protest by the Karnataka State Reserve Police ( KSRP ) personnel extending support to their chief P. Ravindranath , who has now been transferred , <ARG1>senior officials on Thursday chalked out a strategy</ARG1> <ARG0><SIG0>to</SIG0> prevent them from continuing the protest</ARG0> by deploying all the 1,200 KSRP personnel on various duties .
+1. A day after the snap protest by the Karnataka State Reserve Police ( KSRP ) personnel extending support to their chief P. Ravindranath , who has now been transferred , senior officials on Thursday chalked out a strategy <ARG0>to prevent them from continuing the protest</ARG0> <SIG0>by</SIG0> <ARG1>deploying all the 1,200 KSRP personnel on various duties</ARG1> .
+
+Prediction:
+['A day after the snap protest by the Karnataka State Reserve Police ( KSRP ) personnel extending support to their chief P. Ravindranath , who has now been transferred , <ARG1>senior officials on Thursday chalked out a strategy <SIG0>to</SIG0> prevent them from continuing the protest</ARG1> by <ARG0>deploying all the 1,200 KSRP personnel on various duties</ARG0> .', 'A day after the snap protest by the Karnataka State Reserve Police ( KSRP ) personnel extending support to their chief P. Ravindranath , who has now been transferred , <ARG1>senior officials on Thursday chalked out a strategy <SIG0>to</SIG0> prevent them from continuing the protest</ARG1> by <ARG0>deploying all the 1,200 KSRP personnel on various duties</ARG0> .']
+===============================
+Answers:
+0. The Bhim Army and other Dalit groups were refused permission to <ARG1>organise a rally</ARG1> <ARG0>against atrocities on May 9</ARG0> sparking off violence and vandalism , with several vehicles and buses burnt .
+1. <ARG0>The Bhim Army and other Dalit groups were refused permission to organise a rally against atrocities on May 9</ARG0> <SIG0>sparking off</SIG0> <ARG1>violence and vandalism , with several vehicles and buses burnt</ARG1> .
+
+Prediction:
+['<ARG0>The Bhim Army and other Dalit groups were refused permission to organise a rally against atrocities on May 9</ARG0> <SIG0>sparking off</SIG0> <ARG1>violence and vandalism , with several vehicles and buses burnt</ARG1> .', '<ARG0>The Bhim Army and other Dalit groups were refused permission to organise a rally against atrocities on May 9</ARG0> <SIG0>sparking off</SIG0> <ARG1>violence and vandalism , with several vehicles and buses burnt</ARG1> .']
+===============================
+Answers:
+0. They said <ARG1>the strikes would continue in the coming days</ARG1> <ARG0><SIG0>to</SIG0> express solidarity with their leader</ARG0> .
+
+Prediction:
+['They said <ARG1>the strikes would continue in the coming days</ARG1> <SIG0><ARG0>to</SIG0> express solidarity with their leader</ARG0> .', 'They said <ARG1>the strikes would continue in the coming days</ARG1> <SIG0><ARG0>to</SIG0> express solidarity with their leader</ARG0> .']
+===============================
+Answers:
+0. KOLLAM : Neglect of Kollam alleged August 06 , 2011 00:00 IST UDF government has declared war on people : Chandrappan <ARG1>The district unit of the Left Democratic Front ( LDF ) staged a dharna at the Press Club Maidan here on Friday</ARG1> <ARG0><SIG0>to</SIG0> register its protest against the alleged neglect of the district in the revised Budget presented by Finance Minister K.M. Mani</ARG0> .
+
+Prediction:
+['KOLLAM : Neglect of Kollam alleged August 06 , 2011 00:00 IST UDF government has declared war on people : Chandrappan <ARG1>The district unit of the Left Democratic Front ( LDF ) staged a dharna at the Press Club Maidan here on Friday <SIG0><ARG0>to</SIG0> register its protest</ARG1> against the alleged neglect of the district in the revised Budget presented by Finance Minister K.M. Mani</ARG0> .', 'KOLLAM : Neglect of Kollam alleged August 06 , 2011 00:00 IST UDF government has declared war on people : Chandrappan <ARG1>The district unit of the Left Democratic Front ( LDF ) staged a dharna at the Press Club Maidan here on Friday <SIG0><ARG0>to</SIG0> register its protest</ARG1> against the alleged neglect of the district in the revised Budget presented by Finance Minister K.M. Mani</ARG0> .']
+===============================
+Answers:
+0. The quarter-to-quarter comparison was also <ARG1>enhanced</ARG1> by <ARG0>charges</ARG0> taken in the year-earlier period, including $11 million related to the modernization of a pulp and newsprint mill in Alabama.
+
+Prediction:
+['The quarter-to-quarter comparison was also <SIG0><ARG1>enhanced</ARG1></SIG0> by charges <ARG0>taken in the year-earlier period, including $11 million related to the modernization</ARG0> of a pulp and newsprint mill in Alabama. ', 'The quarter-to-quarter comparison was also <SIG0><ARG1>enhanced</ARG1></SIG0> by charges <ARG0>taken in the year-earlier period, including $11 million related to the modernization</ARG0> of a pulp and newsprint mill in Alabama. ']
+===============================
+Answers:
+0. IN SCHOOL Meghalaya June 02 , 2014 00:00 IST 13 Curfew was on Saturday relaxed for eight hours in Meghalaya ’ s West Garo Hills district , two days after <ARG1>it was imposed</ARG1> <SIG0>following</SIG0> <ARG0>mob violence</ARG0> over the death of a suspected militant in police custody , officials said .
+1. IN SCHOOL Meghalaya June 02 , 2014 00:00 IST 13 Curfew was on Saturday relaxed for eight hours in Meghalaya ’ s West Garo Hills district , two days after it was imposed following <ARG1>mob violence</ARG1> <SIG0>over</SIG0> <ARG0>the death of a suspected militant in police custody</ARG0> , officials said .
+
+Prediction:
+['IN SCHOOL Meghalaya June 02 , 2014 00:00 IST 13 <ARG1>Curfew was on Saturday relaxed for eight hours in Meghalaya ’ s West Garo Hills district , two days after it was imposed</ARG1> <SIG0>following</SIG0> <ARG0>mob violence over the death of a suspected militant in police custody</ARG0> , officials said .', 'IN SCHOOL Meghalaya June 02 , 2014 00:00 IST 13 <ARG1>Curfew was on Saturday relaxed for eight hours in Meghalaya ’ s West Garo Hills district , two days after it was imposed</ARG1> <SIG0>following</SIG0> <ARG0>mob violence over the death of a suspected militant in police custody</ARG0> , officials said .']
+===============================
+Answers:
+0. Iraq clearly is trying to <ARG0>woo</ARG0> back more Arab support in case the conflict drags on, hoping that its neighbors eventually will <ARG1>help</ARG1> it survive a prolonged war of economic attrition with the West.
+
+Prediction:
+['Iraq clearly is trying to woo back more Arab support in case the conflict <ARG1>drags on, hoping that its <ARG0>neighbors</ARG0> eventually will <SIG0>help</SIG0> it survive a prolonged war of economic attrition with the West.</ARG1> ', 'Iraq clearly is trying to woo back more Arab support in case the conflict <ARG1>drags on, hoping that its <ARG0>neighbors</ARG0> eventually will <SIG0>help</SIG0> it survive a prolonged war of economic attrition with the West.</ARG1> ']
+===============================
+Answers:
+0. <ARG0><SIG0>To</SIG0> mark the awareness week that commenced on March 16</ARG0> , <ARG1>Collector T.P. Rajesh flagged off a rally here on Tuesday</ARG1> .
+
+Prediction:
+['<SIG0><ARG0>To</SIG0> mark the awareness week that commenced on March 16</ARG0> , <ARG1>Collector T.P. Rajesh flagged off a rally here on Tuesday</ARG1> .', '<SIG0><ARG0>To</SIG0> mark the awareness week that commenced on March 16</ARG0> , <ARG1>Collector T.P. Rajesh flagged off a rally here on Tuesday</ARG1> .']
+===============================
+Answers:
+0. The indefinite auto , <ARG1>taxi strike was launched on Thursday by various trade unions</ARG1> <ARG0><SIG0>seeking</SIG0> a fare hike</ARG0> .
+1. The indefinite auto , <ARG1>taxi strike was launched on Thursday</ARG1> <SIG0>by</SIG0> <ARG0>various trade unions seeking a fare hike</ARG0> .
+
+Prediction:
+['<ARG1>The indefinite auto , taxi strike was launched on Thursday by various trade unions</ARG1> <SIG0><ARG0>seeking</SIG0> a fare hike</ARG0> .', '<ARG1>The indefinite auto , taxi strike was launched on Thursday by various trade unions</ARG1> <SIG0><ARG0>seeking</SIG0> a fare hike</ARG0> .']
+===============================
+Answers:
+0. And the U.S. is <ARG0>taking</ARG0> similar steps to <ARG1>ensure</ARG1> that its naval force is adequate to carry out a blockade of Iraq and support a war if necessary.
+
+Prediction:
+['And the U.S. is taking similar <ARG0>steps</ARG0> to <SIG0>ensure</SIG0> that its naval force is adequate to carry out a blockade of Iraq and <ARG1>support</ARG1> a war if necessary.', 'And the U.S. is taking similar <ARG0>steps</ARG0> to <SIG0>ensure</SIG0> that its naval force is adequate to carry out a blockade of Iraq and <ARG1>support</ARG1> a war if necessary.']
+===============================
+Answers:
+0. PUBLISHED : Wednesday , 25 June , 2014 , 8:11pm <ARG1>Seven detained</ARG1> after <ARG0>arson attack kills Shandong villager in latest China land dispute violence</ARG0>
+1. PUBLISHED : Wednesday , 25 June , 2014 , 8:11pm Seven detained after <ARG0>arson attack</ARG0> <ARG1>kills Shandong villager</ARG1> in latest China land dispute violence
+
+Prediction:
+['PUBLISHED : Wednesday , 25 June , 2014 , 8:11pm <ARG1>Seven detained after <ARG0>arson attack</ARG0> <SIG0>kills</SIG0> Shandong villager</ARG1> in latest China land dispute violence', 'PUBLISHED : Wednesday , 25 June , 2014 , 8:11pm <ARG1>Seven detained after <ARG0>arson attack</ARG0> <SIG0>kills</SIG0> Shandong villager</ARG1> in latest China land dispute violence']
+===============================
+Answers:
+0. <ARG1>Bimbola village turned into a battle field</ARG1> <SIG0>as</SIG0> <ARG0>rival groups wielding guns took the centre stage</ARG0> .
+
+Prediction:
+['<ARG1>Bimbola village turned into a battle field</ARG1> <SIG0>as</SIG0> <ARG0>rival groups wielding guns took the centre stage</ARG0> .', '<ARG1>Bimbola village turned into a battle field</ARG1> <SIG0>as</SIG0> <ARG0>rival groups wielding guns took the centre stage</ARG0> .']
+===============================
+Answers:
+0. The protesters , during the gathering on Wednesday said they were not willing to listen to any government official and <ARG1>demanded that Ramaphosa come out</ARG1> <ARG0><SIG0>to</SIG0> address them on how he is planning to stop the scourge of abuse directed at women and children in the country</ARG0> .
+
+Prediction:
+['The protesters , during the gathering on Wednesday said they were not willing to listen to any government official and <ARG1>demanded that Ramaphosa come out</ARG1> <SIG0><ARG0>to</SIG0> address them on how he is planning to stop the scourge of abuse directed at women and children in the country</ARG0> .', 'The protesters , during the gathering on Wednesday said they were not willing to listen to any government official and <ARG1>demanded that Ramaphosa come out</ARG1> <SIG0><ARG0>to</SIG0> address them on how he is planning to stop the scourge of abuse directed at women and children in the country</ARG0> .']
+===============================
+Answers:
+0. <ARG0><SIG0>Protesting</SIG0> the unethical ban</ARG0> , <ARG1>hundreds of Bengal traders launched an agitation on Monday and threatened to intensify it , if the matter is not resolved soon</ARG1> .
+1. Protesting the unethical ban , hundreds of Bengal traders launched an agitation on Monday and <ARG1>threatened to intensify it</ARG1> , <SIG0>if</SIG0> <ARG0>the matter is not resolved soon</ARG0> .
+
+Prediction:
+['<ARG0>Protesting the unethical ban , <ARG1>hundreds of Bengal traders launched an agitation on Monday and threatened to intensify it</ARG1> , <SIG0>if</SIG0> the matter is not resolved soon</ARG0> .', '<ARG0>Protesting the unethical ban , <ARG1>hundreds of Bengal traders launched an agitation on Monday and threatened to intensify it</ARG1> , <SIG0>if</SIG0> the matter is not resolved soon</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Their names have been registered</ARG1> <ARG0><SIG0>so that</SIG0> they can be called to participate in the relay fast</ARG0> , " said K D Pawar of Bhrashtachar Virodhi Janandolan , coordinating the agitation in the city .
+1. Their names have been registered so that <ARG1>they can be called</ARG1> <ARG0><SIG0>to</SIG0> participate in the relay fast</ARG0> , " said K D Pawar of Bhrashtachar Virodhi Janandolan , coordinating the agitation in the city .
+
+Prediction:
+['<ARG0>Their names have been registered <SIG0>so that</SIG0> <ARG1>they can be called</ARG1> to participate in the relay fast</ARG0> , " said K D Pawar of Bhrashtachar Virodhi Janandolan , coordinating the agitation in the city .', '<ARG0>Their names have been registered <SIG0>so that</SIG0> <ARG1>they can be called</ARG1> to participate in the relay fast</ARG0> , " said K D Pawar of Bhrashtachar Virodhi Janandolan , coordinating the agitation in the city .']
+===============================
+Answers:
+0. ANDHRA PRADESH Congress office in Vidyut Bhavan flayed June 17 , 2007 00:00 IST KADAPA : <ARG1>Members of the United Electricity Employees Union staged dharna before the Collectorate on Saturday</ARG1> <ARG0><SIG0>decrying</SIG0> allotment of one acre of land on Vidyut Bhavan premises to the Congress office</ARG0> .
+
+Prediction:
+['ANDHRA PRADESH Congress office in Vidyut Bhavan flayed June 17 , 2007 00:00 IST KADAPA : <ARG1>Members of the United Electricity Employees Union staged dharna before the Collectorate on Saturday</ARG1> <SIG0><ARG0>decrying</SIG0> allotment of one acre of land on Vidyut Bhavan premises to the Congress office</ARG0> .', 'ANDHRA PRADESH Congress office in Vidyut Bhavan flayed June 17 , 2007 00:00 IST KADAPA : <ARG1>Members of the United Electricity Employees Union staged dharna before the Collectorate on Saturday</ARG1> <SIG0><ARG0>decrying</SIG0> allotment of one acre of land on Vidyut Bhavan premises to the Congress office</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Indefinite curfew continued in Danilimda and Shahpur</ARG1> , <ARG0>where several incidents of arson had been reported on Sunday</ARG0> .
+
+Prediction:
+['<SIG0><ARG0>Indefinite</SIG0> curfew continued in Danilimda and Shahpur</ARG0></ARG1> , where <ARG1>several incidents of arson had been reported on Sunday .', '<SIG0><ARG0>Indefinite</SIG0> curfew continued in Danilimda and Shahpur</ARG0></ARG1> , where <ARG1>several incidents of arson had been reported on Sunday .']
+===============================
+Answers:
+0. Virudhunagar <ARG1>Hundreds of members of the Tamil Nadu Nadar Peravai and a few cadres of All India Moovendar Munnani Kazhagam were arrested at different places in the district on Wednesday</ARG1> when <ARG0>they proceeded to tap toddy</ARG0> .
+
+Prediction:
+['Virudhunagar <ARG1>Hundreds of members of the Tamil Nadu Nadar Peravai and a few cadres of All India Moovendar Munnani Kazhagam were arrested at different places in the district on Wednesday</ARG1> <SIG0>when</SIG0> <ARG0>they proceeded to tap toddy</ARG0> .', 'Virudhunagar <ARG1>Hundreds of members of the Tamil Nadu Nadar Peravai and a few cadres of All India Moovendar Munnani Kazhagam were arrested at different places in the district on Wednesday</ARG1> <SIG0>when</SIG0> <ARG0>they proceeded to tap toddy</ARG0> .']
+===============================
+Answers:
+0. NEW DELHI : <ARG1>Atiq Ahmed , expelled Samajwadi Party MP who was wanted by the Uttar Pradesh police</ARG1> <ARG0><SIG0>in connection with</SIG0> some criminal cases including the murder of Bahujan Samaj Party MLA Raju Pal in 2005</ARG0> , was arrested at Pitampura here on Thursday .
+1. NEW DELHI : <ARG0>Atiq Ahmed , expelled Samajwadi Party MP who was wanted by the Uttar Pradesh police in connection with some criminal cases including the murder of Bahujan Samaj Party MLA Raju Pal in 2005</ARG0> , <ARG1>was arrested at Pitampura here on Thursday</ARG1> .
+
+Prediction:
+['NEW DELHI : <ARG1>Atiq Ahmed , expelled Samajwadi Party MP who was wanted by the Uttar Pradesh police</ARG1> <SIG0>in connection with</SIG0> <ARG0>some criminal cases including the murder of Bahujan Samaj Party MLA Raju Pal in 2005</ARG0> , was arrested at Pitampura here on Thursday .', 'NEW DELHI : <ARG1>Atiq Ahmed , expelled Samajwadi Party MP who was wanted by the Uttar Pradesh police</ARG1> <SIG0>in connection with</SIG0> <ARG0>some criminal cases including the murder of Bahujan Samaj Party MLA Raju Pal in 2005</ARG0> , was arrested at Pitampura here on Thursday .']
+===============================
+Answers:
+0. <ARG1>Trouble erupted on March 8</ARG1> , when <ARG0>the devotees found the Adhi Veeramahaliamman idol removed from the pedestal with some damage on it</ARG0> .
+
+Prediction:
+['<ARG1>Trouble erupted on March 8</ARG1> , when <ARG0>the devotees found the Adhi Veeramahaliamman idol removed from the pedestal <SIG0>with</SIG0> some damage on it</ARG0> .', '<ARG1>Trouble erupted on March 8</ARG1> , when <ARG0>the devotees found the Adhi Veeramahaliamman idol removed from the pedestal <SIG0>with</SIG0> some damage on it</ARG0> .']
+===============================
+Answers:
+0. On Tuesday , <ARG1>a group of aviation staff called for a protest at Hong Kong airport on Friday</ARG1> <ARG0><SIG0>to</SIG0> condemn the government and police</ARG0> for “ ignoring the random attacks on citizens in Yuen Long ” .
+1. On Tuesday , a group of aviation staff called for a protest at Hong Kong airport on Friday <ARG1>to condemn the government and police</ARG1> <SIG0>for</SIG0> <ARG0>“ ignoring the random attacks on citizens in Yuen Long ”</ARG0> .
+
+Prediction:
+['On Tuesday , <ARG1>a group of aviation staff called for a protest at Hong Kong airport on Friday <SIG0><ARG0>to</SIG0> condemn the government and police</ARG1> for “ ignoring the random attacks on citizens in Yuen Long ”</ARG0> .', 'On Tuesday , <ARG1>a group of aviation staff called for a protest at Hong Kong airport on Friday <SIG0><ARG0>to</SIG0> condemn the government and police</ARG1> for “ ignoring the random attacks on citizens in Yuen Long ”</ARG0> .']
+===============================
+Answers:
+0. There was also <SIG0>allegation that</SIG0> <ARG1>some of the Congress workers , who came to interrupt the fest</ARG1> , <ARG0>were in an inebriated state</ARG0> .
+
+Prediction:
+['There was also allegation that <ARG1><ARG0>some of the Congress workers , who came <SIG0>to</SIG0> interrupt the fest</ARG0> , were in an inebriated state</ARG1> .', 'There was also allegation that <ARG1><ARG0>some of the Congress workers , who came <SIG0>to</SIG0> interrupt the fest</ARG0> , were in an inebriated state</ARG1> .']
+===============================
+Answers:
+0. After cabling world leadersabout his intention to give Saddam Hussein a final deadlineto exit Kuwait, he <ARG1>offered</ARG1> him a week to withdraw fully  , instead of the four days he originally considered, because of<ARG0>objections</ARG0> from some European partners that four days seemedpunitive and unrealistic.
+
+Prediction:
+['After <ARG0>cabling world leadersabout his intention to give Saddam Hussein a final deadlineto exit Kuwait, he offered him a week to <ARG1>withdraw fully</ARG1>  , instead of the four days he originally <SIG0>considered, because</ARG0></SIG0> ofobjections from some European partners that four days seemedpunitive and unrealistic.   ', 'After <ARG0>cabling world leadersabout his intention to give Saddam Hussein a final deadlineto exit Kuwait, he offered him a week to <ARG1>withdraw fully</ARG1>  , instead of the four days he originally <SIG0>considered, because</ARG0></SIG0> ofobjections from some European partners that four days seemedpunitive and unrealistic.   ']
+===============================
+Answers:
+0. <ARG1>The umbrella movement protests did not achieve “ what the demonstrators wanted</ARG1> and of course <ARG0>they didn ’ t have a well thought out strategy</ARG0> ” .
+
+Prediction:
+['<ARG1><ARG0>The umbrella movement protests <SIG0>did not achieve</SIG0> “ what the demonstrators wanted and of course they didn ’ t have a well thought out strategy</ARG0> ”</ARG1> .', '<ARG1><ARG0>The umbrella movement protests <SIG0>did not achieve</SIG0> “ what the demonstrators wanted and of course they didn ’ t have a well thought out strategy</ARG0> ”</ARG1> .']
+===============================
+Answers:
+0. <ARG1>A group , comprising leaders of the Communist Party of India ( Marxist ) and the Democratic Youth Federation of India , had roughed up a journalist</ARG1> who <ARG0>had put out a report to that effect</ARG0> .
+
+Prediction:
+['<ARG1>A group , comprising leaders of the Communist Party of India ( Marxist ) and the Democratic Youth Federation of India , had roughed up a journalist</ARG1> <ARG0>who <SIG0>had</SIG0> put out a report to that effect</ARG0> .', '<ARG1>A group , comprising leaders of the Communist Party of India ( Marxist ) and the Democratic Youth Federation of India , had roughed up a journalist</ARG1> <ARG0>who <SIG0>had</SIG0> put out a report to that effect</ARG0> .']
+===============================
+Answers:
+0. When <ARG1>we got up</ARG1> <ARG0><SIG0>to</SIG0> go home</ARG0> the police acted violently towards us even though our protest was peaceful .
+1. When <ARG0>we got up</ARG0> to go home <ARG1>the police acted violently towards us</ARG1> even though our protest was peaceful .
+2. When we got up to go home <ARG1>the police acted violently towards us</ARG1> <SIG0>even though</SIG0> <ARG0>our protest was peaceful</ARG0> .
+
+Prediction:
+['When we got up to go home <ARG1>the police acted violently towards us</ARG1> <SIG0>even though</SIG0> <ARG0>our protest was peaceful</ARG0> .', 'When we got up to go home <ARG1>the police acted violently towards us</ARG1> <SIG0>even though</SIG0> <ARG0>our protest was peaceful</ARG0> .', 'When we got up to go home the police acted violently towards us even though our protest was peaceful .']
+===============================
+Answers:
+0. <ARG0>The company obtained a court interdict on Wednesday</ARG0> <ARG1>permitting it to dismiss over 900 miners who have embarked on an unprotected strike</ARG1> .
+
+Prediction:
+['<ARG0>The company obtained a court interdict on Wednesday</ARG0> <SIG0><ARG1>permitting</SIG0> it to dismiss over 900 miners who have embarked on an unprotected strike</ARG1> .', '<ARG0>The company obtained a court interdict on Wednesday</ARG0> <SIG0><ARG1>permitting</SIG0> it to dismiss over 900 miners who have embarked on an unprotected strike</ARG1> .']
+===============================
+Answers:
+0. ---   Unisys posted a $648.2 million <ARG1>loss</ARG1> for the third quarter as it moved quickly to take write-offs for various problems and <ARG0>prepare</ARG0> for a turnaround.
+
+Prediction:
+['---   Unisys posted a <ARG1>$648.2</ARG1> million loss for the third quarter <ARG0>as</ARG0> it moved <SIG0>quickly</SIG0> to take write-offs for various problems and prepare for a turnaround.', '---   Unisys posted a <ARG1>$648.2</ARG1> million loss for the third quarter <ARG0>as</ARG0> it moved <SIG0>quickly</SIG0> to take write-offs for various problems and prepare for a turnaround.']
+===============================
+Answers:
+0. Describing the incident as " a dastardly and anti-democratic act " , Singh said , " <ARG1>Government will take firm action</ARG1> <ARG0>against the perpetrators of violence of any kind</ARG0> . "
+
+Prediction:
+['Describing the incident as " a dastardly and anti-democratic act " , Singh said , " <ARG1>Government will take firm action</ARG1> <SIG0><ARG0>against</SIG0> the perpetrators of violence of any kind</ARG0> . "', 'Describing the incident as " a dastardly and anti-democratic act " , Singh said , " <ARG1>Government will take firm action</ARG1> <SIG0><ARG0>against</SIG0> the perpetrators of violence of any kind</ARG0> . "']
+===============================
+Answers:
+0. <ARG1>Eskom technicians were allegedly chased away</ARG1> <SIG0>by</SIG0> <ARG0>protesting masses</ARG0> when they tried to respond to the troubled substation .
+
+Prediction:
+['<ARG1>Eskom technicians were allegedly chased away by protesting masses</ARG1> <SIG0>when</SIG0> <ARG0>they tried to respond to the troubled substation</ARG0> .', '<ARG1>Eskom technicians were allegedly chased away by protesting masses</ARG1> <SIG0>when</SIG0> <ARG0>they tried to respond to the troubled substation</ARG0> .']
+===============================
+Answers:
+0. Will <ARG0>the unprecedented protests</ARG0> <ARG1><SIG1>embolden</SIG1> them to fight for their beliefs in future , or <SIG0>convince</SIG0> them that resistance to Beijing ’ s will is futile</ARG1> ?
+1. Will the unprecedented protests <ARG1>embolden them to fight</ARG1> <SIG0>for</SIG0> <ARG0>their beliefs in future</ARG0> , or convince them that resistance to Beijing ’ s will is futile ?
+
+Prediction:
+['Will <ARG0>the unprecedented protests</ARG0> <SIG0>embolden</SIG0> them to fight for their beliefs in future , or convince them that <ARG1>resistance to Beijing ’ s will is futile</ARG1> ?', 'Will <ARG0>the unprecedented protests</ARG0> <SIG0>embolden</SIG0> them to fight for their beliefs in future , or convince them that <ARG1>resistance to Beijing ’ s will is futile</ARG1> ?']
+===============================
+Answers:
+0. Days after <ARG1>Hong Kong ’ s first major protest</ARG1> <ARG0>against its stalled extradition law</ARG0> , a property firm decided to take a £2.5m hit and abandon an option to develop a slice of prime city land , blaming “ social contradiction and economic instability ” .
+1. Days after Hong Kong ’ s first major protest against its stalled extradition law , <ARG1>a property firm decided to take a £2.5m hit and abandon an option to develop a slice of prime city land</ARG1> , <ARG0><SIG0>blaming</SIG0> “ social contradiction and economic instability ”</ARG0> .
+
+Prediction:
+['Days after Hong Kong ’ s first major protest <ARG0>against its stalled extradition law</ARG0> , <ARG1>a property firm decided to take a £2.5m hit and abandon an option to develop a slice of prime city land</ARG1> , <SIG0>blaming</SIG0> “ social contradiction and economic instability ” .', 'Days after Hong Kong ’ s first major protest <ARG0>against its stalled extradition law</ARG0> , <ARG1>a property firm decided to take a £2.5m hit and abandon an option to develop a slice of prime city land</ARG1> , <SIG0>blaming</SIG0> “ social contradiction and economic instability ” .']
+===============================
+Answers:
+0. <ARG0>But with the agitation in full swing and disturbances on the campus</ARG0> , <ARG1>they were further postponed</ARG1> .
+
+Prediction:
+['But <SIG0>with</SIG0> <ARG0>the agitation in full swing and disturbances on the campus</ARG0> , <ARG1>they were further postponed</ARG1> .', 'But <SIG0>with</SIG0> <ARG0>the agitation in full swing and disturbances on the campus</ARG0> , <ARG1>they were further postponed</ARG1> .']
+===============================
+Answers:
+0. Canadas largest department store operator said the rights <ARG0>offering</ARG0> will entitle holders of its ordinary shares, except residents in the U.S. and Britain, to <ARG1>subscribe</ARG1> for two additional shares for every five shares held at a price of C$31.25 a share.
+
+Prediction:
+["Canada's largest department store operator said the rights <ARG0>offering</ARG0> will <SIG0>entitle</SIG0> holders of its ordinary shares, except residents in the U.S. and Britain, to <ARG1>subscribe</ARG1> for two additional shares for every five shares held at a price of C$31.25 a share. ", "Canada's largest department store operator said the rights <ARG0>offering</ARG0> will <SIG0>entitle</SIG0> holders of its ordinary shares, except residents in the U.S. and Britain, to <ARG1>subscribe</ARG1> for two additional shares for every five shares held at a price of C$31.25 a share. "]
+===============================
+Answers:
+0. " <ARG1>We have searched several jungle areas in Narayanpur and its neighbouring Kanker district</ARG1> <SIG0>in a bid <ARG0>to</SIG0> trace out the abducted cops and civilian</ARG0> .
+
+Prediction:
+['" <ARG1>We have searched several jungle areas in Narayanpur and its neighbouring Kanker district</ARG1> <SIG0><ARG0>in a bid to</SIG0> trace out the abducted cops and civilian</ARG0> .', '" <ARG1>We have searched several jungle areas in Narayanpur and its neighbouring Kanker district</ARG1> <SIG0><ARG0>in a bid to</SIG0> trace out the abducted cops and civilian</ARG0> .']
+===============================
+Answers:
+0. CMP TIRUPATI : <ARG0>The all-India general strike called by trade unions on Wednesday</ARG0> <ARG1><SIG0>badly hit</SIG0> the working of the PSU banks , LIC and the General Insurance Companies in Chittoor district</ARG1> .
+
+Prediction:
+['CMP TIRUPATI : <ARG0>The all-India general strike called by trade unions on Wednesday</ARG0> <SIG0><ARG1>badly hit</SIG0> the working of the PSU banks , LIC and the General Insurance Companies in Chittoor district</ARG1> .', 'CMP TIRUPATI : <ARG0>The all-India general strike called by trade unions on Wednesday</ARG0> <SIG0><ARG1>badly hit</SIG0> the working of the PSU banks , LIC and the General Insurance Companies in Chittoor district</ARG1> .']
+===============================
+Answers:
+0. Agri SA calls for calm in Coligny Molaole Montsho COLIGNY , May 8 ( ANA ) - Agricultural body Agri SA on Monday , slammed <ARG1>the violence that flared up in Coligny , in the North West</ARG1> , after <ARG0>two farmers accused of the murder of Matlhomola Jonas Mosweu were granted bail</ARG0> .
+
+Prediction:
+['Agri SA calls for calm in Coligny Molaole Montsho COLIGNY , May 8 ( ANA ) - Agricultural body Agri SA on Monday , slammed <ARG1>the violence that flared up in Coligny , in the North West</ARG1> , after <ARG0>two farmers <SIG0>accused of</SIG0> the murder of Matlhomola Jonas Mosweu were granted bail</ARG0> .', 'Agri SA calls for calm in Coligny Molaole Montsho COLIGNY , May 8 ( ANA ) - Agricultural body Agri SA on Monday , slammed <ARG1>the violence that flared up in Coligny , in the North West</ARG1> , after <ARG0>two farmers <SIG0>accused of</SIG0> the murder of Matlhomola Jonas Mosweu were granted bail</ARG0> .']
+===============================
+Answers:
+0. Critics say <ARG1>the protests</ARG1> <SIG0>were partly due to</SIG0> <ARG0>hardline policies , with lamas bearing the brunt of restrictions on religious practice</ARG0> .
+
+Prediction:
+['Critics say <ARG1>the protests</ARG1> were partly due to <ARG0>hardline policies , <SIG0>with</SIG0> lamas bearing the brunt of restrictions on religious practice</ARG0> .', 'Critics say <ARG1>the protests</ARG1> were partly due to <ARG0>hardline policies , <SIG0>with</SIG0> lamas bearing the brunt of restrictions on religious practice</ARG0> .']
+===============================
+Answers:
+0. <ARG0>Police teargassing</ARG0> <SIG0>was answered with</SIG0> <ARG1>a few gunshots in the air from one of the houses</ARG1> .
+
+Prediction:
+['<ARG1>Police teargassing was answered</ARG1> <SIG0>with</SIG0> <ARG0>a few gunshots in the air from one of the houses</ARG0> .', '<ARG1>Police teargassing was answered</ARG1> <SIG0>with</SIG0> <ARG0>a few gunshots in the air from one of the houses</ARG0> .']
+===============================
+Answers:
+0. On online forums there were claims that <ARG1>police decided to allow the previously banned protest in Mongkok</ARG1> <SIG0>in order <ARG0>to</SIG0> surround demonstrators and arrest them en masse</ARG0> .
+
+Prediction:
+['On online forums there were claims that <ARG1>police decided to allow the previously banned protest in Mongkok</ARG1> <SIG0><ARG0>in order to</SIG0> surround demonstrators and arrest them en masse</ARG0> .', 'On online forums there were claims that <ARG1>police decided to allow the previously banned protest in Mongkok</ARG1> <SIG0><ARG0>in order to</SIG0> surround demonstrators and arrest them en masse</ARG0> .']
+===============================
+Answers:
+0. Profit also <ARG1>suffered</ARG1> because of intense <ARG0>discounting</ARG0> in its long-haul trucking business, the company said.
+
+Prediction:
+['Profit also <SIG0><ARG1>suffered</ARG1> because of</SIG0> "intense" <ARG0>discounting</ARG0> in its long-haul trucking business, the company said.    ', 'Profit also <SIG0><ARG1>suffered</ARG1> because of</SIG0> "intense" <ARG0>discounting</ARG0> in its long-haul trucking business, the company said.    ']
+===============================
+Answers:
+0. Cineplex Odeon Corp. directors said the companys chairman and chief executive, Garth Drabinsky, is considering <ARG0>bidding</ARG0> 780.6 million Canadian dollars (US$666 million) to <ARG1>acquire</ARG1> the company.
+
+Prediction:
+["Cineplex Odeon Corp. directors said the company's chairman and chief executive, Garth Drabinsky, is considering <ARG0>bidding</ARG0> 780.6 million Canadian dollars (US$666 million) to <SIG0><ARG1>acquire</ARG1></SIG0> the company.    ", "Cineplex Odeon Corp. directors said the company's chairman and chief executive, Garth Drabinsky, is considering <ARG0>bidding</ARG0> 780.6 million Canadian dollars (US$666 million) to <SIG0><ARG1>acquire</ARG1></SIG0> the company.    "]
+===============================
+Answers:
+0. <SIG0>As</SIG0> <ARG0>the city witnessed a terror strike only four months ago</ARG0> , <ARG1>the security establishment left no stones unturned to ensure an incident-free celebrations</ARG1> .
+1. As the city witnessed a terror strike only four months ago , <ARG1>the security establishment left no stones unturned</ARG1> <ARG0><SIG0>to</SIG0> ensure an incident-free celebrations</ARG0> .
+
+Prediction:
+['<SIG0>As</SIG0> <ARG0>the city witnessed a terror strike only four months ago , <ARG1>the security establishment left no stones unturned to ensure an incident-free celebrations</ARG0></ARG1> .', '<SIG0>As</SIG0> <ARG0>the city witnessed a terror strike only four months ago , <ARG1>the security establishment left no stones unturned to ensure an incident-free celebrations</ARG0></ARG1> .']
+===============================
+Answers:
+0. Hong Kong Baptist University protest Contrite but undeterred , suspended students look back on Hong Kong Baptist University Mandarin saga Andrew Chan denies pro-independence leanings , while Lau Tsz-kei refuses to apologise for <ARG0>angry protest</ARG0> which <ARG1><SIG0>sparked</SIG0> weeks of acrimony on campus</ARG1>
+
+Prediction:
+['Hong Kong Baptist University protest Contrite but undeterred , suspended students look back on Hong Kong Baptist University Mandarin saga Andrew Chan denies pro-independence leanings , while Lau Tsz-kei refuses to apologise</ARG1> <SIG0>for <ARG0>angry protest</ARG0> <ARG1>which sparked</SIG0> weeks of acrimony on campus', 'Hong Kong Baptist University protest Contrite but undeterred , suspended students look back on Hong Kong Baptist University Mandarin saga Andrew Chan denies pro-independence leanings , while Lau Tsz-kei refuses to apologise</ARG1> <SIG0>for <ARG0>angry protest</ARG0> <ARG1>which sparked</SIG0> weeks of acrimony on campus']
+===============================
+Answers:
+0. <ARG1>The strike began on September 9</ARG1> , <ARG0>with Numsa <SIG0>demanding</SIG0> a double-digit percentage increase</ARG0> .
+
+Prediction:
+['<ARG1>The strike began on September 9</ARG1> , <SIG0>with</SIG0> <ARG0>Numsa demanding a double-digit percentage increase</ARG0> .', '<ARG1>The strike began on September 9</ARG1> , <SIG0>with</SIG0> <ARG0>Numsa demanding a double-digit percentage increase</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The semi-autonomous city has been shaken</ARG1> <SIG0>by</SIG0> <ARG0>historic demonstrations in the past month</ARG0> , when protesters have demanded the withdrawal of a bill that would allow extraditions to the Chinese mainland .
+1. The semi-autonomous city has been shaken by <ARG1>historic demonstrations in the past month</ARG1> , when <ARG0>protesters have demanded the withdrawal of a bill that would allow extraditions to the Chinese mainland</ARG0> .
+
+Prediction:
+['The semi-autonomous city has been shaken</ARG1> <SIG0>by</SIG0> <ARG1>historic demonstrations in the past month , when <ARG0>protesters have demanded the withdrawal of a bill that would allow extraditions to the Chinese mainland</ARG0> .', 'The semi-autonomous city has been shaken</ARG1> <SIG0>by</SIG0> <ARG1>historic demonstrations in the past month , when <ARG0>protesters have demanded the withdrawal of a bill that would allow extraditions to the Chinese mainland</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The fight started</ARG1> when <ARG0>rebels ambushed a police team Thursday morning</ARG0> , an official of the Anti-Naxal Squad said here .
+
+Prediction:
+['<ARG1>The fight started</ARG1> <SIG0>when</SIG0> <ARG0>rebels ambushed a police team Thursday morning</ARG0> , an official of the Anti-Naxal Squad said here .', '<ARG1>The fight started</ARG1> <SIG0>when</SIG0> <ARG0>rebels ambushed a police team Thursday morning</ARG0> , an official of the Anti-Naxal Squad said here .']
+===============================
+Answers:
+0. <ARG1>A high level team of the party led by State vice-president of the BJP , Nalini Mohanty is to visit Jogiapalli on Friday</ARG1> <ARG0><SIG0>to</SIG0> enquire about the incident and meet the injured party workers .</ARG0>
+
+Prediction:
+['<ARG1>A high level team of the party led by State vice-president of the BJP , Nalini Mohanty is to visit Jogiapalli on Friday</ARG1> <SIG0><ARG0>to</SIG0> enquire about the incident and meet the injured party workers</ARG0> .', '<ARG1>A high level team of the party led by State vice-president of the BJP , Nalini Mohanty is to visit Jogiapalli on Friday</ARG1> <SIG0><ARG0>to</SIG0> enquire about the incident and meet the injured party workers</ARG0> .']
+===============================
+Answers:
+0. An hour later , <ARG1>about 100 residents held a road roko</ARG1> , <ARG0><SIG0>seeking</SIG0> an apology and <SIG1>sought</SIG1> SI Deepa ’ s transfer</ARG0> .
+
+Prediction:
+['An hour later , <ARG1>about 100 residents held a road roko</ARG1> , <SIG0><ARG0>seeking</SIG0> an apology</ARG0> and sought SI Deepa ’ s transfer .', 'An hour later , <ARG1>about 100 residents held a road roko</ARG1> , <SIG0><ARG0>seeking</SIG0> an apology</ARG0> and sought SI Deepa ’ s transfer .']
+===============================
+Answers:
+0. On August 16 , 2012 , <ARG1>police shot dead 34 people , almost all striking mineworkers</ARG1> , while <ARG0>trying to disperse and disarm them</ARG0> .
+
+Prediction:
+['<ARG1>On August 16 , 2012 , police shot dead 34 people , almost all striking mineworkers</ARG1> , <SIG0>while</SIG0> <ARG0>trying to disperse and disarm them</ARG0> .', '<ARG1>On August 16 , 2012 , police shot dead 34 people , almost all striking mineworkers</ARG1> , <SIG0>while</SIG0> <ARG0>trying to disperse and disarm them</ARG0> .']
+===============================
+Answers:
+0. The company said <ARG1>negotiations were continuing between management and NUM officials</ARG1> with <SIG0>in a bid <ARG0>to</SIG0> bring an end to the strike</ARG0> .
+
+Prediction:
+['The company said <ARG1>negotiations were continuing between management and NUM officials with</ARG1> <SIG0><ARG0>in a bid to</SIG0> bring an end to the strike</ARG0> .', 'The company said <ARG1>negotiations were continuing between management and NUM officials with</ARG1> <SIG0><ARG0>in a bid to</SIG0> bring an end to the strike</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The management of GVK-EMRI , which operates the 108 ambulance service , and representatives of its drivers and nurses , reached a temporary agreement</ARG1> <ARG0><SIG0>to</SIG0> end the strike in larger public interest</ARG0> after the Karnataka High Court intervened .
+
+Prediction:
+['<ARG1>The management of GVK-EMRI , which operates the 108 ambulance service , and representatives of its drivers and nurses , reached a temporary agreement</ARG1> <SIG0>to</SIG0> end the strike in larger public interest after <ARG0>the Karnataka High Court intervened</ARG0> .', '<ARG1>The management of GVK-EMRI , which operates the 108 ambulance service , and representatives of its drivers and nurses , reached a temporary agreement</ARG1> <SIG0>to</SIG0> end the strike in larger public interest after <ARG0>the Karnataka High Court intervened</ARG0> .']
+===============================
+Answers:
+0. But the locals said <ARG1>clashes between the residents and the Army started in the morning</ARG1> when <ARG0>the latter stopped the movement of fruit trucks in Rafiabad and Sopore</ARG0> , asking the drivers to ply only during the shutdown period .
+1. But the locals said clashes between the residents and the Army started in the morning when <ARG1>the latter stopped the movement of fruit trucks in Rafiabad and Sopore</ARG1> , <ARG0><SIG0>asking</SIG0> the drivers to ply only during the shutdown period</ARG0> .
+
+Prediction:
+['But the locals said <ARG1>clashes between the residents and the Army started in the morning</ARG1> when <ARG0>the latter stopped the movement of fruit trucks in Rafiabad and Sopore , <SIG0>asking</SIG0> the drivers to ply only during the shutdown period</ARG0> .', 'But the locals said <ARG1>clashes between the residents and the Army started in the morning</ARG1> when <ARG0>the latter stopped the movement of fruit trucks in Rafiabad and Sopore , <SIG0>asking</SIG0> the drivers to ply only during the shutdown period</ARG0> .']
+===============================
+Answers:
+0. We are focusing on creating a large, sustainable ecosystem where our o9 global <ARG0>organization</ARG0> will <SIG0>serve</SIG0> as an enabler of a much larger pool of skills and capabilities across <ARG1>partners</ARG1>, both consulting and technology.
+
+Prediction:
+['"We are focusing on creating a large, sustainable <ARG0>ecosystem</ARG0> where our o9 global organization will <SIG0>serve</SIG0> as an enabler of a much larger pool of <ARG1>skills and capabilities</ARG1> across partners, both consulting and technology.', '"We are focusing on creating a large, sustainable <ARG0>ecosystem</ARG0> where our o9 global organization will <SIG0>serve</SIG0> as an enabler of a much larger pool of <ARG1>skills and capabilities</ARG1> across partners, both consulting and technology.']
+===============================
+Answers:
+0. <ARG0>Efforts to persuade the farmers to relent failed to yield result</ARG0> and <ARG1>the irate farmers continued their protest till late in the evening</ARG1> .
+
+Prediction:
+['<ARG0>Efforts <SIG0>to</SIG0> persuade the farmers to relent</ARG0> failed to yield result and <ARG1>the irate farmers continued their protest till late in the evening</ARG1> .', '<ARG0>Efforts <SIG0>to</SIG0> persuade the farmers to relent</ARG0> failed to yield result and <ARG1>the irate farmers continued their protest till late in the evening</ARG1> .']
+===============================
+Answers:
+0. Hailey Leung , a university student who has been attending the protests this summer , said : “ The fear of the gangs is definitely stronger than the fear of the use of violence of the police. ” Her parents have been supportive of the protests but , <SIG0>since</SIG0> <ARG0>the violence in Yuen Long</ARG0> , <ARG1>they have asked her not to attend</ARG1> .
+
+Prediction:
+['Hailey Leung , a university student who has been attending the protests this summer , said : “ The fear of the gangs is definitely stronger than the fear of the use of violence of the police. ” Her parents have been supportive of the protests but , <SIG0>since</SIG0> <ARG0>the violence in Yuen Long</ARG0> , <ARG1>they have asked her not to attend</ARG1> .', 'Hailey Leung , a university student who has been attending the protests this summer , said : “ The fear of the gangs is definitely stronger than the fear of the use of violence of the police. ” Her parents have been supportive of the protests but , <SIG0>since</SIG0> <ARG0>the violence in Yuen Long</ARG0> , <ARG1>they have asked her not to attend</ARG1> .']
+===============================
+Answers:
+0. In another incident , <ARG1>Udumalpet police booked cases against Mustalif and Hakkim , the DMDK and AIADMK candidates contesting as councillors in Ward 8 of Udumalpet Municipality , respectively</ARG1> , <SIG0>for</SIG0> <ARG0>engaging in similar clashes</ARG0> .
+
+Prediction:
+['In another incident , Udumalpet police booked cases against Mustalif and Hakkim , <ARG1>the DMDK and AIADMK candidates contesting as councillors in Ward 8 of Udumalpet Municipality , respectively</ARG1> , <SIG0>for</SIG0> <ARG0>engaging in similar clashes</ARG0> .', 'In another incident , Udumalpet police booked cases against Mustalif and Hakkim , <ARG1>the DMDK and AIADMK candidates contesting as councillors in Ward 8 of Udumalpet Municipality , respectively</ARG1> , <SIG0>for</SIG0> <ARG0>engaging in similar clashes</ARG0> .']
+===============================
+Answers:
+0. “ <ARG1>We are sorry</ARG1> that <ARG0>the public would have been inconvenienced by this strike</ARG0> but it was unavoidable due to the non-serious approach of the IBA and government to avert the strike by improving their offer on wage increase and discussing our concerns on the banking sector reforms , ” he said .
+1. “ We are sorry that <ARG1>the public would have been inconvenienced</ARG1> <SIG0>by</SIG0> <ARG0>this strike</ARG0> but it was unavoidable due to the non-serious approach of the IBA and government to avert the strike by improving their offer on wage increase and discussing our concerns on the banking sector reforms , ” he said .
+2. “ We are sorry that the public would have been inconvenienced by this strike but <ARG1>it was unavoidable</ARG1> <SIG0>due to</SIG0> <ARG0>the non-serious approach of the IBA and government to avert the strike by improving their offer on wage increase and discussing our concerns on the banking sector reforms</ARG0> , ” he said .
+
+Prediction:
+['“ We are sorry that the public would have been inconvenienced</ARG1> by this strike but <ARG1>it was unavoidable <SIG0>due to</SIG0> <ARG0>the non-serious approach of the IBA and government to avert the strike by improving their offer on wage increase and discussing our concerns on the banking sector reforms</ARG0> , ” he said .', '“ We are sorry that the public would have been inconvenienced</ARG1> by this strike but <ARG1>it was unavoidable <SIG0>due to</SIG0> <ARG0>the non-serious approach of the IBA and government to avert the strike by improving their offer on wage increase and discussing our concerns on the banking sector reforms</ARG0> , ” he said .', '“ We are sorry that the public would have been inconvenienced by this strike but it was unavoidable due to the non-serious approach of the IBA and government to avert the strike by improving their offer on wage increase and discussing our concerns on the banking sector reforms , ” he said .']
+===============================
+Answers:
+0. Yesterday , <ARG1>over 50 Karnataka Rakshana Vedike ( KRV ) activists were taken into custody</ARG1> when <ARG0>they allegedly tried to attack some members of Maharashtra Ekikaran Samithi ( MES ) and corporators of Belgaum City Corporation</ARG0> .
+
+Prediction:
+['Yesterday , <ARG1>over 50 Karnataka Rakshana Vedike ( KRV ) activists were taken into custody</ARG1> <SIG0>when</SIG0> <ARG0>they allegedly tried to attack some members of Maharashtra Ekikaran Samithi ( MES ) and corporators of Belgaum City Corporation</ARG0> .', 'Yesterday , <ARG1>over 50 Karnataka Rakshana Vedike ( KRV ) activists were taken into custody</ARG1> <SIG0>when</SIG0> <ARG0>they allegedly tried to attack some members of Maharashtra Ekikaran Samithi ( MES ) and corporators of Belgaum City Corporation</ARG0> .']
+===============================
+Answers:
+0. <SIG0>In case</SIG0> <ARG0>the government does not change its stand</ARG0> , <ARG1>we will further intensify our stir</ARG1> .
+
+Prediction:
+['<SIG0>In case</SIG0> <ARG0>the government does not change its stand</ARG0> , <ARG1>we will further intensify our stir</ARG1> .', '<SIG0>In case</SIG0> <ARG0>the government does not change its stand</ARG0> , <ARG1>we will further intensify our stir</ARG1> .']
+===============================
+Answers:
+0. The arctic blast that <ARG0>began</ARG0> last weekend has been <ARG1>blamed</ARG1> for at least seven deaths across the nation.
+
+Prediction:
+['The arctic <ARG0>blast</ARG0> that <SIG0>began</SIG0> last weekend has been blamed for at least seven <ARG1>deaths</ARG1> across the nation.', 'The arctic <ARG0>blast</ARG0> that <SIG0>began</SIG0> last weekend has been blamed for at least seven <ARG1>deaths</ARG1> across the nation.']
+===============================
+Answers:
+0. LeT militant held for beheading Congress leader 21st May 2011 12:04 PM JAMMU : <ARG1>A Lashkar-e-Taiba ( LeT ) terrorist has been arrested</ARG1> <SIG0>for</SIG0> <ARG0>the murder of Congress leader Abdul Gani Rather last week</ARG0> , police said Saturday .
+
+Prediction:
+['LeT militant held for beheading Congress leader 21st May 2011 12:04 PM JAMMU : <ARG1>A Lashkar-e-Taiba ( LeT ) terrorist has been arrested</ARG1> <SIG0>for</SIG0> <ARG0>the murder of Congress leader Abdul Gani Rather last week</ARG0> , police said Saturday .', 'LeT militant held for beheading Congress leader 21st May 2011 12:04 PM JAMMU : <ARG1>A Lashkar-e-Taiba ( LeT ) terrorist has been arrested</ARG1> <SIG0>for</SIG0> <ARG0>the murder of Congress leader Abdul Gani Rather last week</ARG0> , police said Saturday .']
+===============================
+Answers:
+0. It was only after <ARG0>Katarias weekend visit to his constituency</ARG0> that <ARG1>the tribals gave up their nightlong vigil on the hilltops and shopkeepers agreed to open the market</ARG1> .
+
+Prediction:
+['<SIG0>It was only after</SIG0> <ARG0>Kataria\x92s weekend visit to his constituency</ARG0> that the tribals gave up their nightlong vigil on the hilltops and <ARG1>shopkeepers agreed to open the market</ARG1> .', '<SIG0>It was only after</SIG0> <ARG0>Kataria\x92s weekend visit to his constituency</ARG0> that the tribals gave up their nightlong vigil on the hilltops and <ARG1>shopkeepers agreed to open the market</ARG1> .']
+===============================
+Answers:
+0. Profit at the unit <ARG1>fell</ARG1> to $110.6 million, or 37 cents a share, from $142.4 million, or 45 cents a share, largely because of a $24 million one-time charge associated with Hughess previously announced <ARG0>plan</ARG0> to reduce employment by at least 6,000 people by year end.
+
+Prediction:
+["Profit at the unit <ARG1>fell</ARG1> to $110.6 million, or 37 cents a share, from $142.4 million, or 45 cents a share, largely because of a $24 million one-time charge associated with Hughes's previously announced <ARG0>plan</ARG0> to <SIG0>reduce</SIG0> employment by at least 6,000 people by year end. ", "Profit at the unit <ARG1>fell</ARG1> to $110.6 million, or 37 cents a share, from $142.4 million, or 45 cents a share, largely because of a $24 million one-time charge associated with Hughes's previously announced <ARG0>plan</ARG0> to <SIG0>reduce</SIG0> employment by at least 6,000 people by year end. "]
+===============================
+Answers:
+0. <ARG0>The move</ARG0> <ARG1><SIG0>angered</SIG0> residents who had been protesting in front of the court against the two being granted bail</ARG1> .
+1. The move angered <ARG1>residents who had been protesting in front of the court</ARG1> <ARG0>against the two being granted bail</ARG0> .
+
+Prediction:
+['The move <SIG0>angered</SIG0> <ARG1>residents who had been protesting in front of the court</ARG1> <ARG0>against the two being granted bail</ARG0> .', 'The move <SIG0>angered</SIG0> <ARG1>residents who had been protesting in front of the court</ARG1> <ARG0>against the two being granted bail</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The members owing allegiance to TDP made an attempt to stall the proceedings of the meeting in protest</ARG1> <ARG0>against alleged delay in allotting lands to beneficiaries at Singannagudem under the weaker section housing scheme</ARG0> .
+1. <ARG1>The members owing allegiance to TDP made an attempt to stall the proceedings of the meeting</ARG1> <ARG0>in protest against alleged delay in allotting lands to beneficiaries at Singannagudem under the weaker section housing scheme</ARG0> .
+
+Prediction:
+['<ARG1>The members owing allegiance to TDP made an attempt <ARG0>to stall the proceedings of the meeting</ARG1> <SIG0>in protest</SIG0> against alleged delay in allotting lands to beneficiaries at Singannagudem under the weaker section housing scheme</ARG0> .', '<ARG1>The members owing allegiance to TDP made an attempt <ARG0>to stall the proceedings of the meeting</ARG1> <SIG0>in protest</SIG0> against alleged delay in allotting lands to beneficiaries at Singannagudem under the weaker section housing scheme</ARG0> .']
+===============================
+Answers:
+0. Kochi : Lawyers boycott courts July 23 , 2016 00:00 IST For the second day , <ARG1>lawyers boycotted the High Court and other courts in the city on Friday</ARG1> <SIG0>in response to</SIG0> <ARG0>a call by the Kerala High Court Advocates ’ Association</ARG0> .
+
+Prediction:
+['Kochi : Lawyers boycott courts July 23 , 2016 00:00 IST For the second day , <ARG1>lawyers boycotted the High Court and other courts in the city on Friday</ARG1> <SIG0>in response to</SIG0> <ARG0>a call by the Kerala High Court Advocates ’ Association</ARG0> .', 'Kochi : Lawyers boycott courts July 23 , 2016 00:00 IST For the second day , <ARG1>lawyers boycotted the High Court and other courts in the city on Friday</ARG1> <SIG0>in response to</SIG0> <ARG0>a call by the Kerala High Court Advocates ’ Association</ARG0> .']
+===============================
+Answers:
+0. A senior UN official has warned the Security Council that urgent <ARG0>measures</ARG0> are needed to <SIG0>avoid</SIG0> <ARG1>famine</ARG1> in the war-torn region of Tigray in Ethiopia, in a briefing seen by AFP.
+
+Prediction:
+['A senior UN official has warned the Security Council that urgent <ARG0>measures</ARG0> are needed to <SIG0>avoid</SIG0> <ARG1>famine</ARG1> in the war-torn region of Tigray in Ethiopia, in a briefing seen by AFP.', 'A senior UN official has warned the Security Council that urgent <ARG0>measures</ARG0> are needed to <SIG0>avoid</SIG0> <ARG1>famine</ARG1> in the war-torn region of Tigray in Ethiopia, in a briefing seen by AFP.']
+===============================
+Answers:
+0. <ARG1>The arrests came</ARG1> after <ARG0>residents took to the streets and barricaded roads</ARG0> .
+
+Prediction:
+['<ARG1>The arrests</ARG1> <SIG0>came after</SIG0> <ARG0>residents took to the streets and barricaded roads</ARG0> .', '<ARG1>The arrests</ARG1> <SIG0>came after</SIG0> <ARG0>residents took to the streets and barricaded roads</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The nun was allegedly raped in K Nuagaon of Kandhamal district on August 25</ARG1> during <ARG0>the communal riots which unleashed after the murder of Swami Laxmanananda Saraswati and four of his disciples</ARG0> .
+1. The nun was allegedly raped in K Nuagaon of Kandhamal district on August 25 during <ARG1>the communal riots which unleashed</ARG1> after <ARG0>the murder of Swami Laxmanananda Saraswati and four of his disciples</ARG0> .
+
+Prediction:
+['The nun was allegedly raped in K Nuagaon of Kandhamal district on August 25 during <ARG1>the communal riots which unleashed</ARG1> <SIG0>after</SIG0> <ARG0>the murder of Swami Laxmanananda Saraswati and four of his disciples</ARG0> .', 'The nun was allegedly raped in K Nuagaon of Kandhamal district on August 25 during <ARG1>the communal riots which unleashed</ARG1> <SIG0>after</SIG0> <ARG0>the murder of Swami Laxmanananda Saraswati and four of his disciples</ARG0> .']
+===============================
+Answers:
+0. Kingfisher pilots go on strike 15th July 2012 10:44 AM <ARG1>Kingfisher Airlines ’ last nail in the coffin came on Saturday morning</ARG1> when <ARG0>a large section of employees , including pilots , engineers and ground staff , struck work , disrupting a major chunk of its daily schedule</ARG0> .
+1. Kingfisher pilots go on strike 15th July 2012 10:44 AM Kingfisher Airlines ’ last nail in the coffin came on Saturday morning when <ARG0>a large section of employees , including pilots , engineers and ground staff , struck work</ARG0> , <ARG1>disrupting a major chunk of its daily schedule</ARG1> .
+
+Prediction:
+['Kingfisher pilots go on strike 15th July 2012 10:44 AM Kingfisher Airlines ’ last nail in the coffin came on Saturday morning when <ARG0>a large section of employees , including pilots , engineers and ground staff , struck work</ARG0> , <SIG0><ARG1>disrupting</SIG0> a major chunk of its daily schedule</ARG1> .', 'Kingfisher pilots go on strike 15th July 2012 10:44 AM Kingfisher Airlines ’ last nail in the coffin came on Saturday morning when <ARG0>a large section of employees , including pilots , engineers and ground staff , struck work</ARG0> , <SIG0><ARG1>disrupting</SIG0> a major chunk of its daily schedule</ARG1> .']
+===============================
+Answers:
+0. <ARG1>South African truck drivers have embarked on a nationwide strike</ARG1> <ARG0><SIG0>in protest at</SIG0> foreign drivers allegedly taking away their jobs</ARG0> .
+
+Prediction:
+['<ARG1>South African truck drivers have embarked on a nationwide strike</ARG1> <SIG0><ARG0>in protest at</SIG0> foreign drivers allegedly taking away their jobs</ARG0> .', '<ARG1>South African truck drivers have embarked on a nationwide strike</ARG1> <SIG0><ARG0>in protest at</SIG0> foreign drivers allegedly taking away their jobs</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The government has blamed separatist forces from Xinjiang</ARG1> <SIG0>for</SIG0> <ARG0>the attack</ARG0> .
+
+Prediction:
+['<ARG1>The government has blamed separatist forces from Xinjiang</ARG1> <SIG0>for</SIG0> <ARG0>the attack</ARG0> .', '<ARG1>The government has blamed separatist forces from Xinjiang</ARG1> <SIG0>for</SIG0> <ARG0>the attack</ARG0> .']
+===============================
+Answers:
+0. <ARG0>Arrest of ISI Spies</ARG0> <ARG1><SIG0>Have Created</SIG0> Panic Among People</ARG1>
+
+Prediction:
+['<ARG0>Arrest of ISI Spies</ARG0> <SIG0>Have Created</SIG0> <ARG1>Panic Among People</ARG1>', '<ARG0>Arrest of ISI Spies</ARG0> <SIG0>Have Created</SIG0> <ARG1>Panic Among People</ARG1>']
+===============================
+Answers:
+0. 19th July 2013 12:22 PM <ARG1>Protests rocked several areas of Jammu division today</ARG1> <ARG0><SIG0>to</SIG0> protest the firing incident in Ramban</ARG0> where curfew remained in force even as authorities stopped a fresh batch of Amarnath pilgrims from leaving for the shrine .
+1. 19th July 2013 12:22 PM Protests rocked several areas of Jammu division today to protest the firing incident in Ramban where <ARG1>curfew remained in force</ARG1> <SIG0>even as</SIG0> <ARG0>authorities stopped a fresh batch of Amarnath pilgrims from leaving for the shrine</ARG0> .
+
+Prediction:
+['19th July 2013 12:22 PM <ARG1>Protests rocked several areas of Jammu division today</ARG1> <SIG0>to</SIG0> protest the firing incident in Ramban where curfew remained in force even as <ARG0>authorities stopped a fresh batch of Amarnath pilgrims from leaving for the shrine</ARG0> .', '19th July 2013 12:22 PM <ARG1>Protests rocked several areas of Jammu division today</ARG1> <SIG0>to</SIG0> protest the firing incident in Ramban where curfew remained in force even as <ARG0>authorities stopped a fresh batch of Amarnath pilgrims from leaving for the shrine</ARG0> .']
+===============================
+Answers:
+0. OPINION India ’ s Pakistan problem is Pakistan ’ s problem too December 03 , 2008 00:00 IST Siddharth Varadarajan <SIG0>If</SIG0> <ARG0>politics and emotion do not dictate India ’ s response</ARG0> , <ARG1>the terrorist strikes in Mumbai could be a catalyst for ending the Pakistani military ’ s fatal patronage of jihadi groups</ARG1> .
+1. OPINION India ’ s Pakistan problem is Pakistan ’ s problem too December 03 , 2008 00:00 IST Siddharth Varadarajan If politics and emotion do not dictate India ’ s response , <ARG0>the terrorist strikes in Mumbai</ARG0> <SIG0>could be a catalyst for</SIG0> <ARG1>ending the Pakistani military ’ s fatal patronage of jihadi groups</ARG1> .
+
+Prediction:
+['OPINION India ’ s Pakistan problem is Pakistan ’ s problem too December 03 , 2008 00:00 IST Siddharth Varadarajan <SIG0>If</SIG0> <ARG0>politics and emotion do not dictate India ’ s response</ARG0> , <ARG1>the terrorist strikes in Mumbai could be a catalyst for ending the Pakistani military ’ s fatal patronage of jihadi groups</ARG1> .', 'OPINION India ’ s Pakistan problem is Pakistan ’ s problem too December 03 , 2008 00:00 IST Siddharth Varadarajan <SIG0>If</SIG0> <ARG0>politics and emotion do not dictate India ’ s response</ARG0> , <ARG1>the terrorist strikes in Mumbai could be a catalyst for ending the Pakistani military ’ s fatal patronage of jihadi groups</ARG1> .']
+===============================
+Answers:
+0. Subcontractors  will  be offered a <ARG0>settlement</ARG0> and a swift transition to new management  is expected  to avert an <ARG1>exodus</ARG1> of skilled workers from Waertsilae Marines two big shipyards, government officials said.
+
+Prediction:
+["Subcontractors  will  be offered a settlement and <ARG0>a</ARG0> swift transition to new management  <SIG0>is</SIG0> expected <ARG1></ARG1> to avert an exodus of skilled workers from Waertsilae Marine's two big shipyards, government officials said.    ", "Subcontractors  will  be offered a settlement and <ARG0>a</ARG0> swift transition to new management  <SIG0>is</SIG0> expected <ARG1></ARG1> to avert an exodus of skilled workers from Waertsilae Marine's two big shipyards, government officials said.    "]
+===============================
+Answers:
+0. Britains largely foreign-owned automotive sector was a big winner from the final <ARG0>Brexit</ARG0> agreement, which <SIG0>allow</SIG0>s for tariff-free <ARG1>trade</ARG1> with the continent.
+
+Prediction:
+["Britain's largely foreign-owned automotive sector was a big winner from the final Brexit <ARG0>agreement,</ARG0> which <SIG0>allows</SIG0> for tariff-free <ARG1>trade</ARG1> with the continent.", "Britain's largely foreign-owned automotive sector was a big winner from the final Brexit <ARG0>agreement,</ARG0> which <SIG0>allows</SIG0> for tariff-free <ARG1>trade</ARG1> with the continent."]
+===============================
+Answers:
+0. <ARG1>The three-day hunger strike of the patients -- demanding the withdrawal of the transfer of two officials -- ended yesterday</ARG1> after <ARG0>the Social Welfare Minister Krishna Tirath assured them that the transfer will be reconsidered</ARG0> .
+1. <ARG1>The three-day hunger strike of the patients</ARG1> -- <ARG0><SIG0>demanding</SIG0> the withdrawal of the transfer of two officials</ARG0> -- ended yesterday after the Social Welfare Minister Krishna Tirath assured them that the transfer will be reconsidered .
+
+Prediction:
+['<ARG1>The three-day hunger strike of the patients -- <SIG0><ARG0>demanding</SIG0> the withdrawal of the transfer of two officials -- ended yesterday</ARG1> after the Social Welfare Minister Krishna Tirath assured them that the transfer will be reconsidered</ARG0> .', '<ARG1>The three-day hunger strike of the patients -- <SIG0><ARG0>demanding</SIG0> the withdrawal of the transfer of two officials -- ended yesterday</ARG1> after the Social Welfare Minister Krishna Tirath assured them that the transfer will be reconsidered</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The incident took place at 8 am</ARG1> when <ARG0>Anurag Pandey , the newly elected LMC corporator from Mallahi Tola -1 , and his supporters had an argument with LMC sanitation workers Arun Kumar , Anil Kumar , Sachidanand , and their colleagues</ARG0> over the cleaning of streets in the locality .
+1. The incident took place at 8 am when <ARG1>Anurag Pandey , the newly elected LMC corporator from Mallahi Tola -1 , and his supporters had an argument with LMC sanitation workers Arun Kumar , Anil Kumar , Sachidanand , and their colleagues</ARG1> <SIG0>over</SIG0> <ARG0>the cleaning of streets in the locality</ARG0> .
+
+Prediction:
+['<ARG1>The incident took place at 8 am when <ARG0>Anurag Pandey , the newly elected LMC corporator from Mallahi Tola -1 , and his supporters had an argument with LMC sanitation workers Arun Kumar , Anil Kumar , Sachidanand , and their colleagues</ARG1> <SIG0>over</SIG0> the cleaning of streets in the locality</ARG0> .', '<ARG1>The incident took place at 8 am when <ARG0>Anurag Pandey , the newly elected LMC corporator from Mallahi Tola -1 , and his supporters had an argument with LMC sanitation workers Arun Kumar , Anil Kumar , Sachidanand , and their colleagues</ARG1> <SIG0>over</SIG0> the cleaning of streets in the locality</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The decision was taken</ARG1> after <ARG0>hundreds of KSRP personnel and their family members staged a protest in Koramangala</ARG0> blocking traffic for more than eight hours on Wednesday .
+1. The decision was taken after <ARG0>hundreds of KSRP personnel and their family members staged a protest in Koramangala</ARG0> <ARG1><SIG0>blocking</SIG0> traffic for more than eight hours on Wednesday</ARG1> .
+
+Prediction:
+['<ARG1>The decision was taken</ARG1> after <ARG0>hundreds of KSRP personnel and their family members staged a protest in Koramangala</ARG0> <SIG0>blocking</SIG0> traffic for more than eight hours on Wednesday .', '<ARG1>The decision was taken</ARG1> after <ARG0>hundreds of KSRP personnel and their family members staged a protest in Koramangala</ARG0> <SIG0>blocking</SIG0> traffic for more than eight hours on Wednesday .']
+===============================
+Answers:
+0. Hence , <ARG1>we also have plans to organise talks with the public and also with those who hold protests against plywood factories</ARG1> <ARG0><SIG0>so that</SIG0> the actual issues can be sorted out</ARG0> , ” he added .
+1. Hence , we also have plans to organise talks with the public and also with those who hold <ARG1>protests</ARG1> <ARG0>against plywood factories</ARG0> so that the actual issues can be sorted out , ” he added .
+
+Prediction:
+['Hence , we also have plans to organise talks with the public and also with <ARG1>those who hold protests</ARG1> <ARG0>against plywood factories <SIG0>so that</SIG0> the actual issues can be sorted out</ARG0> , ” he added .', 'Hence , we also have plans to organise talks with the public and also with <ARG1>those who hold protests</ARG1> <ARG0>against plywood factories <SIG0>so that</SIG0> the actual issues can be sorted out</ARG0> , ” he added .']
+===============================
+Answers:
+0. When asked about the response to the ongoing strike , Sugumar said , “ <SIG0>Since</SIG0> <ARG0>the diesel price issue has irked almost all truckers</ARG0> , <ARG1>nearly 95 per cent of trucks are off the roads in the country</ARG1> .
+
+Prediction:
+['When asked about the response to the ongoing strike , Sugumar said , “ <SIG0>Since</SIG0> <ARG0>the diesel price issue has irked almost all truckers</ARG0> , <ARG1>nearly 95 per cent of trucks are off the roads in the country</ARG1> .', 'When asked about the response to the ongoing strike , Sugumar said , “ <SIG0>Since</SIG0> <ARG0>the diesel price issue has irked almost all truckers</ARG0> , <ARG1>nearly 95 per cent of trucks are off the roads in the country</ARG1> .']
+===============================
+Answers:
+0. <ARG0><SIG0>In a bid to</SIG0> reach out to voters</ARG0> , <ARG1>the Trinamool Congress leader participated the 7 - km padayatra from Rajabazar , a minority dominated area to Ballygung Phari covering five Assembly constituencies</ARG1> .
+
+Prediction:
+['<SIG0><ARG0>In a bid to</SIG0> reach out to voters</ARG0> , <ARG1>the Trinamool Congress leader participated the 7 - km padayatra from Rajabazar , a minority dominated area to Ballygung Phari covering five Assembly constituencies</ARG1> .', '<SIG0><ARG0>In a bid to</SIG0> reach out to voters</ARG0> , <ARG1>the Trinamool Congress leader participated the 7 - km padayatra from Rajabazar , a minority dominated area to Ballygung Phari covering five Assembly constituencies</ARG1> .']
+===============================
+Answers:
+0. <ARG1>The entire protest</ARG1> <ARG0>against the celebrations</ARG0> began with Mangal Pandey , joined by Rani Lakshmi Bai , Maulavi Ahmedullah Shah , Rao Sahib , Tantia Tope , Azimullah Khan , Kunwar Singh , Rajput chief of Jagadishpur , Firuz Saha , Pran Sukh Yadav and Rao Tula Ram of Rewari , who refused food and water against the leaders and people of India for letting down every single person who fought for freedom .
+1. The entire protest against the celebrations began with Mangal Pandey , joined by Rani Lakshmi Bai , Maulavi Ahmedullah Shah , Rao Sahib , Tantia Tope , Azimullah Khan , Kunwar Singh , Rajput chief of Jagadishpur , Firuz Saha , Pran Sukh Yadav and Rao Tula Ram of Rewari , who <ARG1>refused food and water against the leaders and people of India</ARG1> <ARG0>for</ARG0> letting down every single person who fought for freedom .
+
+Prediction:
+['<ARG1>The entire protest against the celebrations began with Mangal Pandey , joined by Rani Lakshmi Bai , Maulavi Ahmedullah Shah , Rao Sahib , Tantia Tope , Azimullah Khan , Kunwar Singh , Rajput chief of Jagadishpur , Firuz Saha , Pran Sukh Yadav and Rao Tula Ram of Rewari , who refused food and water <ARG0>against the leaders and people of India</ARG1> <SIG0>for</SIG0> letting down every single person who fought for freedom</ARG0> .', '<ARG1>The entire protest against the celebrations began with Mangal Pandey , joined by Rani Lakshmi Bai , Maulavi Ahmedullah Shah , Rao Sahib , Tantia Tope , Azimullah Khan , Kunwar Singh , Rajput chief of Jagadishpur , Firuz Saha , Pran Sukh Yadav and Rao Tula Ram of Rewari , who refused food and water <ARG0>against the leaders and people of India</ARG1> <SIG0>for</SIG0> letting down every single person who fought for freedom</ARG0> .']
+===============================
+Answers:
+0. The profit gain was made despite a weakening in the housing market, for which the company is a supplier, and a <ARG0>strengthening</ARG0> in the dollar, which <ARG1>lowers</ARG1> the value of overseas earnings when they are translated into dollars.
+
+Prediction:
+['The profit <ARG1>gain</ARG1> was <SIG0>made</SIG0> despite a <ARG0>weakening</ARG0> in the housing market, for which the company is a supplier, and a strengthening in the dollar, which lowers the value of overseas earnings when they are translated into dollars.    ', 'The profit <ARG1>gain</ARG1> was <SIG0>made</SIG0> despite a <ARG0>weakening</ARG0> in the housing market, for which the company is a supplier, and a strengthening in the dollar, which lowers the value of overseas earnings when they are translated into dollars.    ']
+===============================
+Answers:
+0. Our Universities are already cash-strapped and <ARG1>inevitably the burden of paying for this brazen right wing vandalism will be carried by the poorest of students</ARG1> , <ARG0>who are desperate to access higher education so that they can one day get a job</ARG0> . ''
+1. Our Universities are already cash-strapped and inevitably the burden of paying for this brazen right wing vandalism will be carried by <ARG1>the poorest of students , who are desperate to access higher education</ARG1> <SIG0>so that</SIG0> <ARG0>they can one day get a job</ARG0> . ''
+
+Prediction:
+["Our Universities are already cash-strapped and inevitably the burden of paying for this brazen right wing vandalism will be carried by the poorest of students</ARG1> , <ARG1><ARG0>who are desperate to access higher education <SIG0>so that</SIG0> they can one day get a job</ARG0> . ''", "Our Universities are already cash-strapped and inevitably the burden of paying for this brazen right wing vandalism will be carried by the poorest of students</ARG1> , <ARG1><ARG0>who are desperate to access higher education <SIG0>so that</SIG0> they can one day get a job</ARG0> . ''"]
+===============================
+Answers:
+0. Its far too much money for five birds but we are <ARG0>donating</ARG0> a large part to bird keepers in a centre near here to <SIG0>help</SIG0> <ARG1>animals</ARG1> in difficulty.
+
+Prediction:
+['"It\'s far too much money for five birds but we are <ARG1><ARG0>donating</ARG0> a large part to bird keepers in a centre near here to <SIG0>help</ARG1></SIG0> animals in difficulty.', '"It\'s far too much money for five birds but we are <ARG1><ARG0>donating</ARG0> a large part to bird keepers in a centre near here to <SIG0>help</ARG1></SIG0> animals in difficulty.']
+===============================
+Answers:
+0. <ARG1>Angered community members mobilised and marched to a suspected gang member 's house in Bardien Street</ARG1> where <ARG0>Tavern Moss was stabbed and beaten to death</ARG0> , police said at the time .
+
+Prediction:
+["<SIG0><ARG1><ARG0>Angered</SIG0> community members mobilised and marched to a suspected gang member 's house in Bardien Street</ARG0> where Tavern Moss was stabbed and beaten to death</ARG1> , police said at the time .", "<SIG0><ARG1><ARG0>Angered</SIG0> community members mobilised and marched to a suspected gang member 's house in Bardien Street</ARG0> where Tavern Moss was stabbed and beaten to death</ARG1> , police said at the time ."]
+===============================
+Answers:
+0. The directors said if Messrs. Drabinsky and Gottlieb mail an <ARG0>offer</ARG0> to shareholders by Nov. 22, it will <ARG1>reimburse</ARG1> them a maximum of C$8.5 million for expenses related to a bid.
+
+Prediction:
+['The directors said if Messrs. Drabinsky and Gottlieb <ARG0>mail</ARG0> an offer to shareholders by Nov. 22, it will <SIG0><ARG1>reimburse</ARG1></SIG0> them a maximum of C$8.5 million for expenses related to a bid.    ', 'The directors said if Messrs. Drabinsky and Gottlieb <ARG0>mail</ARG0> an offer to shareholders by Nov. 22, it will <SIG0><ARG1>reimburse</ARG1></SIG0> them a maximum of C$8.5 million for expenses related to a bid.    ']
+===============================
+Answers:
+0. <ARG1>The 1966 riots</ARG1> , which were <SIG0>prompted by</SIG0> <ARG0>a 50 per cent increase in cross-harbour ferry fares</ARG0> , took place against the backdrop of a bad economy and widening gap between the government and the people .
+
+Prediction:
+['<ARG1>The 1966 riots</ARG1> , which were <SIG0>prompted by</SIG0> <ARG0>a 50 per cent increase in cross-harbour ferry fares</ARG0> , took place against the backdrop of a bad economy and widening gap between the government and the people .', '<ARG1>The 1966 riots</ARG1> , which were <SIG0>prompted by</SIG0> <ARG0>a 50 per cent increase in cross-harbour ferry fares</ARG0> , took place against the backdrop of a bad economy and widening gap between the government and the people .']
+===============================
+Answers:
+0. " <ARG1>Rebels opened fire on the IAF chopper</ARG1> when <ARG0>it tried to land in a conflict zone in Sukma district</ARG0> to rescue a few troopers who had received gunshots in an encounter .
+1. " Rebels opened fire on the IAF chopper when <ARG1>it tried to land in a conflict zone in Sukma district</ARG1> <ARG0><SIG0>to</SIG0> rescue a few troopers who had received gunshots in an encounter</ARG0> .
+
+Prediction:
+['" <ARG1>Rebels opened fire on the IAF chopper</ARG1> when <ARG0>it tried to land in a conflict zone in Sukma district <SIG0>to</SIG0> rescue a few troopers who had received gunshots in an encounter</ARG0> .', '" <ARG1>Rebels opened fire on the IAF chopper</ARG1> when <ARG0>it tried to land in a conflict zone in Sukma district <SIG0>to</SIG0> rescue a few troopers who had received gunshots in an encounter</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Striking mineworkers have threatened to halt all mining operations around Rustenburg within a week</ARG1> <SIG0>if</SIG0> <ARG0>their employers do not accede to their R12,500 pay demand</ARG0> .
+
+Prediction:
+['<ARG1>Striking mineworkers have threatened to halt all mining operations around Rustenburg within a week</ARG1> <SIG0>if</SIG0> <ARG0>their employers do not accede to their R12,500 pay demand</ARG0> .', '<ARG1>Striking mineworkers have threatened to halt all mining operations around Rustenburg within a week</ARG1> <SIG0>if</SIG0> <ARG0>their employers do not accede to their R12,500 pay demand</ARG0> .']
+===============================
+Answers:
+0. <ARG0>Wild , irresponsible and most unfounded allegations , by certain sections of the Sikh community , about my involvement in the inciting of violence against them during the most unfortunate Sikh riots of 1984 , soon after the death of Shrimati Indira Gandhi , the then prime minister of India</ARG0> , <ARG1><SIG0>has caused</SIG0> me acute agony</ARG1> .
+
+Prediction:
+['<ARG0>Wild , irresponsible and most unfounded allegations , by certain sections of the Sikh community , about my involvement in the inciting of violence against them during the most unfortunate Sikh riots of 1984 , soon after the death of Shrimati Indira Gandhi , the then prime minister of India</ARG0> , <SIG0><ARG1>has caused</SIG0> me acute agony</ARG1> .', '<ARG0>Wild , irresponsible and most unfounded allegations , by certain sections of the Sikh community , about my involvement in the inciting of violence against them during the most unfortunate Sikh riots of 1984 , soon after the death of Shrimati Indira Gandhi , the then prime minister of India</ARG0> , <SIG0><ARG1>has caused</SIG0> me acute agony</ARG1> .']
+===============================
+Answers:
+0. <ARG1>Twelve students arrested</ARG1> <SIG0>for</SIG0> <ARG0>public violence while protesting against financial aid cuts at the University of the Witwatersrand</ARG0> appeared in the Johannesburg Regional Court on Tuesday .
+1. Twelve students arrested for public violence while <ARG1>protesting</ARG1> <ARG0>against financial aid cuts</ARG0> at the University of the Witwatersrand appeared in the Johannesburg Regional Court on Tuesday .
+
+Prediction:
+['<ARG1>Twelve students arrested</ARG1> <SIG0>for</SIG0> <ARG0>public violence</ARG0> while protesting against financial aid cuts at the University of the Witwatersrand appeared in the Johannesburg Regional Court on Tuesday .', '<ARG1>Twelve students arrested</ARG1> <SIG0>for</SIG0> <ARG0>public violence</ARG0> while protesting against financial aid cuts at the University of the Witwatersrand appeared in the Johannesburg Regional Court on Tuesday .']
+===============================
+Answers:
+0. <ARG1>Wits students held protests</ARG1> <ARG0><SIG0>demanding</SIG0> the realisation of free , quality and decolonised education , in line with the call of the # FeesMustFall movement</ARG0> .
+
+Prediction:
+['Wits <ARG1>students held protests</ARG1> <SIG0><ARG0>demanding</SIG0> the realisation of free , quality and decolonised education</ARG0> , in line with the call of the # FeesMustFall movement .', 'Wits <ARG1>students held protests</ARG1> <SIG0><ARG0>demanding</SIG0> the realisation of free , quality and decolonised education</ARG0> , in line with the call of the # FeesMustFall movement .']
+===============================
+Answers:
+0. <ARG1>JAC convenor M. Kodandaram , Telangana Rashtra Samithi ( TRS ) legislators K. Tarakarama Rao , E. Rajender and Harishwar Reddy were among dozens of leaders arrested by the police</ARG1> <SIG0>for</SIG0> <ARG0>staging protests on the highway despite police not giving permission for the same</ARG0> .
+1. JAC convenor M. Kodandaram , Telangana Rashtra Samithi ( TRS ) legislators K. Tarakarama Rao , E. Rajender and Harishwar Reddy were among dozens of leaders arrested by the police for <ARG1>staging protests on the highway</ARG1> <SIG0>despite</SIG0> <ARG0>police not giving permission for the same</ARG0> .
+
+Prediction:
+['JAC convenor M. Kodandaram , Telangana Rashtra Samithi ( TRS ) <ARG1>legislators K. Tarakarama Rao , E. Rajender and Harishwar Reddy were among dozens of leaders arrested by the police</ARG1> <SIG0>for</SIG0> <ARG0>staging protests on the highway despite police not giving permission for the same</ARG0> .', 'JAC convenor M. Kodandaram , Telangana Rashtra Samithi ( TRS ) <ARG1>legislators K. Tarakarama Rao , E. Rajender and Harishwar Reddy were among dozens of leaders arrested by the police</ARG1> <SIG0>for</SIG0> <ARG0>staging protests on the highway despite police not giving permission for the same</ARG0> .']
+===============================
+Answers:
+0. <ARG0>It</ARG0> <SIG0>give</SIG0>s Amazon the fabled Metro Goldwyn Mayer <ARG1>studios</ARG1>, an iconic name in Hollywood which has been through a series of ownership changes and bankruptcy in recent years.
+
+Prediction:
+['It <SIG0><ARG1>gives</SIG0> Amazon the fabled Metro Goldwyn Mayer studios, an iconic name in Hollywood which has been through a series of ownership <ARG0>changes</ARG0> and bankruptcy in recent years.</ARG1>', 'It <SIG0><ARG1>gives</SIG0> Amazon the fabled Metro Goldwyn Mayer studios, an iconic name in Hollywood which has been through a series of ownership <ARG0>changes</ARG0> and bankruptcy in recent years.</ARG1>']
+===============================
+Answers:
+0. <ARG0>There was an encounter between security forces and the militants in Baramulla town as well</ARG0> where <ARG1>two militants were killed early this morning</ARG1> .
+
+Prediction:
+['There was <ARG0>an encounter between security forces and the militants in Baramulla town as well <SIG0>where</SIG0> <ARG1>two militants were killed early this morning</ARG0></ARG1> .', 'There was <ARG0>an encounter between security forces and the militants in Baramulla town as well <SIG0>where</SIG0> <ARG1>two militants were killed early this morning</ARG0></ARG1> .']
+===============================
+Answers:
+0. <ARG0>The stone pelting incident that ensued</ARG0> <SIG0>led to</SIG0> <ARG1>injury of at least nine policemen though no injury to any agitator was recorded</ARG1> .
+
+Prediction:
+['<ARG0>The stone pelting incident</ARG0> that ensued <SIG0>led to</SIG0> <ARG1>injury of at least nine policemen though no injury to any agitator was recorded</ARG1> .', '<ARG0>The stone pelting incident</ARG0> that ensued <SIG0>led to</SIG0> <ARG1>injury of at least nine policemen though no injury to any agitator was recorded</ARG1> .']
+===============================
+Answers:
+0. Ocean Drilling amp Exploration Co. will sell its contract-drilling business, and <ARG1>took</ARG1> a $50.9 million loss from discontinued operations in the third quarter because of the planned <ARG0>sale</ARG0>.
+
+Prediction:
+['Ocean Drilling amp Exploration Co. will sell its contract-drilling business, and took a $50.9 million <ARG1>loss</ARG1> from discontinued operations in the third quarter <SIG0>because of</SIG0> the planned <ARG0>sale.</ARG0>    ', 'Ocean Drilling amp Exploration Co. will sell its contract-drilling business, and took a $50.9 million <ARG1>loss</ARG1> from discontinued operations in the third quarter <SIG0>because of</SIG0> the planned <ARG0>sale.</ARG0>    ']
+===============================
+Answers:
+0. <ARG1>The 10,000 - strong agitating teachers did not take classes</ARG1> <SIG0>to</SIG0> <ARG0>protest the " negative conditions " in the regulation after a call by the Federation of Central University Teachers ' Associations</ARG0> ( FEDCUTA ) .
+
+Prediction:
+['<ARG1>The 10,000 - strong agitating teachers did not take classes</ARG1> <SIG0>to</SIG0> protest the " negative conditions " in the regulation</ARG0> after <ARG0>a call by the Federation of Central University Teachers \' Associations ( FEDCUTA ) .', '<ARG1>The 10,000 - strong agitating teachers did not take classes</ARG1> <SIG0>to</SIG0> protest the " negative conditions " in the regulation</ARG0> after <ARG0>a call by the Federation of Central University Teachers \' Associations ( FEDCUTA ) .']
+===============================
+Answers:
+0. <ARG1>Tension in Nagari</ARG1> After <ARG0>TDP Men Attack Roja</ARG0>
+
+Prediction:
+['<ARG1>Tension in Nagari</ARG1> <SIG0>After</SIG0> <ARG0>TDP Men Attack Roja</ARG0>', '<ARG1>Tension in Nagari</ARG1> <SIG0>After</SIG0> <ARG0>TDP Men Attack Roja</ARG0>']
+===============================
+Answers:
+0. <ARG1>The incident took place around noon in Gaya district 's Uchla village near Sherghati , about 100 km from here</ARG1> , when <ARG0>Maoists blew up a patrolling vehicle of the Roshanganj police station</ARG0> .
+
+Prediction:
+["<ARG1>The incident took place around noon in Gaya district 's Uchla village near Sherghati</ARG1> , about 100 km from here , <SIG0>when</SIG0> <ARG0>Maoists blew up a patrolling vehicle of the Roshanganj police station</ARG0> .", "<ARG1>The incident took place around noon in Gaya district 's Uchla village near Sherghati</ARG1> , about 100 km from here , <SIG0>when</SIG0> <ARG0>Maoists blew up a patrolling vehicle of the Roshanganj police station</ARG0> ."]
+===============================
+Answers:
+0. <ARG1>The blockade was lifted</ARG1> <SIG0>following</SIG0> <ARG0>an assurance from ADM Debraj Senapati and the additional SP J. Mahapatra</ARG0> to apprise the State Government of their demand .
+1. <ARG1>The blockade was lifted</ARG1> following an assurance from ADM Debraj Senapati and the additional SP J. Mahapatra <ARG0><SIG0>to</SIG0> apprise the State Government of their demand</ARG0> .
+
+Prediction:
+['<ARG1>The blockade was lifted</ARG1> following <ARG0>an assurance from ADM Debraj Senapati and the additional SP J. Mahapatra <SIG0>to</SIG0> apprise the State Government of their demand</ARG0> .', '<ARG1>The blockade was lifted</ARG1> following <ARG0>an assurance from ADM Debraj Senapati and the additional SP J. Mahapatra <SIG0>to</SIG0> apprise the State Government of their demand</ARG0> .']
+===============================
+Answers:
+0. VISAKHAPATNAM : YSR Congress bandh partial September 01 , 2012 00:00 IST <ARG1>The bandh organised by YSR Congress in protest</ARG1> <ARG0>against the unscheduled power-cuts</ARG0> was partial and peaceful in the city on Friday .
+1. VISAKHAPATNAM : YSR Congress bandh partial September 01 , 2012 00:00 IST <ARG1>The bandh organised by YSR Congress</ARG1> <ARG0>in protest against the unscheduled power-cuts</ARG0> was partial and peaceful in the city on Friday .
+
+Prediction:
+['VISAKHAPATNAM : YSR Congress bandh partial September 01 , 2012 00:00 IST <ARG1>The bandh organised by YSR Congress</ARG1> <SIG0><ARG0>in protest</SIG0> against the unscheduled power-cuts</ARG0> was partial and peaceful in the city on Friday .', 'VISAKHAPATNAM : YSR Congress bandh partial September 01 , 2012 00:00 IST <ARG1>The bandh organised by YSR Congress</ARG1> <SIG0><ARG0>in protest</SIG0> against the unscheduled power-cuts</ARG0> was partial and peaceful in the city on Friday .']
+===============================
+Answers:
+0. Many funds in recent weeks and months have been <ARG0>selling</ARG0> their highest-quality junk issues, such as RJR Nabisco, to raise cash to <ARG1>meet</ARG1> expected redemptions.
+
+Prediction:
+['Many funds in recent weeks and months have been <ARG0>selling</ARG0> their highest-quality junk issues, such as RJR Nabisco, to <SIG0><ARG1>raise</ARG1></SIG0> cash to meet expected redemptions.    ', 'Many funds in recent weeks and months have been <ARG0>selling</ARG0> their highest-quality junk issues, such as RJR Nabisco, to <SIG0><ARG1>raise</ARG1></SIG0> cash to meet expected redemptions.    ']
+===============================
+Answers:
+0. <ARG1>VCK blames PMK</ARG1> <SIG0>for</SIG0> <ARG0>unrest</ARG0>
+
+Prediction:
+['VCK <ARG1>blames PMK</ARG1> <SIG0>for</SIG0> <ARG0>unrest</ARG0>', 'VCK <ARG1>blames PMK</ARG1> <SIG0>for</SIG0> <ARG0>unrest</ARG0>']
+===============================
+Answers:
+0. Of the five flat occupants , <ARG1>Atif Ameen and Mohd Sajid were killed</ARG1> during <ARG0>the encounter</ARG0> .
+
+Prediction:
+['Of the five flat occupants , <ARG1>Atif Ameen and Mohd Sajid were killed</ARG1> <SIG0>during</SIG0> <ARG0>the encounter</ARG0> .', 'Of the five flat occupants , <ARG1>Atif Ameen and Mohd Sajid were killed</ARG1> <SIG0>during</SIG0> <ARG0>the encounter</ARG0> .']
+===============================
+Answers:
+0. A police officer patrolling the area told this newspaper that <ARG1>there was considerable confusion in the police force</ARG1> , <SIG0>because</SIG0> <ARG0>the cops did n't know whom to check at a time when the ministers were being targetted by their own partymen</ARG0> .
+
+Prediction:
+["A police officer patrolling the area told this newspaper that <ARG1>there was considerable confusion in the police force</ARG1> , <SIG0>because</SIG0> <ARG0>the cops did n't know whom to check at a time when the ministers were being targetted by their own partymen</ARG0> .", "A police officer patrolling the area told this newspaper that <ARG1>there was considerable confusion in the police force</ARG1> , <SIG0>because</SIG0> <ARG0>the cops did n't know whom to check at a time when the ministers were being targetted by their own partymen</ARG0> ."]
+===============================
+Answers:
+0. <ARG1>The organisers of that rally – the Civil Human Rights Front ( CHRF ) – issued a joint statement with democratic lawmakers</ARG1> <ARG0>placing the blame for the destruction at the legislative council squarely on Lam</ARG0> , saying she had “ ignored the demands of the people and pushed youngsters towards desperation ” .
+1. The organisers of that rally – the Civil Human Rights Front ( CHRF ) – issued a joint statement with democratic lawmakers <ARG1>placing the blame for the destruction at the legislative council squarely on Lam</ARG1> , <ARG0><SIG0>saying</SIG0> she had “ ignored the demands of the people and pushed youngsters towards desperation ”</ARG0> .
+
+Prediction:
+['The organisers of that rally – the Civil Human Rights Front ( CHRF ) – issued a joint statement with democratic lawmakers</ARG1> <SIG0><ARG1>placing</SIG0> the blame for the destruction at the legislative council squarely on Lam</ARG0> , saying <ARG0>she had “ ignored the demands of the people and pushed youngsters towards desperation ” .', 'The organisers of that rally – the Civil Human Rights Front ( CHRF ) – issued a joint statement with democratic lawmakers</ARG1> <SIG0><ARG1>placing</SIG0> the blame for the destruction at the legislative council squarely on Lam</ARG0> , saying <ARG0>she had “ ignored the demands of the people and pushed youngsters towards desperation ” .']
+===============================
+Answers:
+0. <ARG1>The violence</ARG1> <SIG0>was over</SIG0> <ARG0>the decision by the ANC to deploy former cabinet minister Thoko Didiza as the party 's Tshwane Mayoral Candidate ahead of the upcoming local government elections instead of the incumbent Kgosientso Ramokgopa whom they prefer</ARG0> .
+
+Prediction:
+["<ARG1>The violence</ARG1> was <SIG0>over</SIG0> <ARG0>the decision by the ANC to deploy former cabinet minister Thoko Didiza as the party 's Tshwane Mayoral Candidate ahead of the upcoming local government elections instead of the incumbent Kgosientso Ramokgopa whom they prefer</ARG0> .", "<ARG1>The violence</ARG1> was <SIG0>over</SIG0> <ARG0>the decision by the ANC to deploy former cabinet minister Thoko Didiza as the party 's Tshwane Mayoral Candidate ahead of the upcoming local government elections instead of the incumbent Kgosientso Ramokgopa whom they prefer</ARG0> ."]
+===============================
+Answers:
+0. This is the second time the fragmented centre-left <ARG0>opposition</ARG0> has failed to <SIG0>pass</SIG0> a no-confidence <ARG1>motion</ARG1> against him, their first attempt having fallen in February.
+
+Prediction:
+['This is the second time the fragmented centre-left opposition</ARG0> has failed to <SIG0>pass</SIG0> a no-confidence <ARG1>motion</ARG1> against him, their first attempt having <ARG0>fallen in February.', 'This is the second time the fragmented centre-left opposition</ARG0> has failed to <SIG0>pass</SIG0> a no-confidence <ARG1>motion</ARG1> against him, their first attempt having <ARG0>fallen in February.']
+===============================
+Answers:
+0. <ARG1>The men were the founders of the social movement Occupy Central with Love and Peace and were among nine pro-democracy campaigners convicted</ARG1> <SIG0>over</SIG0> <ARG0>their leadership in the “ umbrella movement ” rallies in Hong Kong in 2014</ARG0> , which triggered a massive city-wide strike for democratic elections .
+1. The men were the founders of the social movement Occupy Central with Love and Peace and were among nine pro-democracy campaigners convicted over their leadership in <ARG0>the “ umbrella movement ” rallies in Hong Kong in 2014</ARG0> , <ARG1>which <SIG0>triggered</SIG0> a massive city-wide strike for democratic elections</ARG1> .
+2. The men were the founders of the social movement Occupy Central with Love and Peace and were among nine pro-democracy campaigners convicted over their leadership in the “ umbrella movement ” rallies in Hong Kong in 2014 , which triggered <ARG1>a massive city-wide strike</ARG1> <SIG0>for</SIG0> <ARG0>democratic elections</ARG0> .
+
+Prediction:
+['The men were the founders of the social movement Occupy Central with Love and Peace and were among nine pro-democracy campaigners convicted</ARG1> <SIG0>over</SIG0> <ARG0>their leadership in the “ umbrella movement ” rallies in Hong Kong in 2014</ARG0> , which triggered <ARG1>a massive city-wide strike for democratic elections .', 'The men were the founders of the social movement Occupy Central with Love and Peace and were among nine pro-democracy campaigners convicted</ARG1> <SIG0>over</SIG0> <ARG0>their leadership in the “ umbrella movement ” rallies in Hong Kong in 2014</ARG0> , which triggered <ARG1>a massive city-wide strike for democratic elections .', 'The men were the founders of the social movement Occupy Central with Love and Peace and were among nine pro-democracy campaigners convicted over their leadership in the “ umbrella movement ” rallies in Hong Kong in 2014 , which triggered a massive city-wide strike for democratic elections .']
+===============================
+Answers:
+0. The 51-year-old Italian has been at loggerheads with the cash-strapped clubs owners Suning over planned <ARG0>cost cutting</ARG0> which would <SIG0>prevent</SIG0> him <ARG1>building</ARG1> the team he wants to challenge at home and in Europe.
+
+Prediction:
+["The 51-year-old Italian has been at loggerheads with the cash-strapped club's owners Suning over planned cost <ARG0>cutting</ARG0> which would <SIG0>prevent</SIG0> him building the <ARG1>team</ARG1> he wants to challenge at home and in Europe.", "The 51-year-old Italian has been at loggerheads with the cash-strapped club's owners Suning over planned cost <ARG0>cutting</ARG0> which would <SIG0>prevent</SIG0> him building the <ARG1>team</ARG1> he wants to challenge at home and in Europe."]
+===============================
+Answers:
+0. After the Chief Minister was briefed about the incident , <ARG0>she was mobbed by the residents</ARG0> <ARG1>and had to listen to the acute power problem in the area</ARG1> .
+
+Prediction:
+['After <ARG0>the Chief Minister was briefed about the incident</ARG0> , <ARG1>she was mobbed by the residents and <SIG0>had</SIG0> to listen to the acute power problem in the area</ARG1> .', 'After <ARG0>the Chief Minister was briefed about the incident</ARG0> , <ARG1>she was mobbed by the residents and <SIG0>had</SIG0> to listen to the acute power problem in the area</ARG1> .']
+===============================
+Answers:
+0. <ARG1>They poured out their woes to the reporters and photographers who reached the Police Stadium</ARG1> <SIG0>on</SIG0> <ARG0>hearing about the incident</ARG0> .
+
+Prediction:
+['<ARG1>They poured out their woes to the reporters and photographers who reached the Police Stadium</ARG1> <SIG0>on</SIG0> <ARG0>hearing about the incident</ARG0> .', '<ARG1>They poured out their woes to the reporters and photographers who reached the Police Stadium</ARG1> <SIG0>on</SIG0> <ARG0>hearing about the incident</ARG0> .']
+===============================
+Answers:
+0. <ARG1>Violence first broke out in the hill district on September 26</ARG1> when <ARG0>three auto-rickshaw drivers , all belonging to the Dimasa tribe , were killed</ARG0> .
+
+Prediction:
+['<ARG1>Violence first broke out in the hill district on September 26</ARG1> <SIG0>when</SIG0> <ARG0>three auto-rickshaw drivers , all belonging to the Dimasa tribe , were killed</ARG0> .', '<ARG1>Violence first broke out in the hill district on September 26</ARG1> <SIG0>when</SIG0> <ARG0>three auto-rickshaw drivers , all belonging to the Dimasa tribe , were killed</ARG0> .']
+===============================
+Answers:
+0. <ARG1>The ANC in the North West has threatened to take action</ARG1> <ARG0>against unruly members who disrupted a provincial executive committee ( PEC ) meeting</ARG0> , the party said on Thursday .
+
+Prediction:
+['<ARG1>The ANC in the North West has threatened to take action</ARG1> <SIG0><ARG0>against</SIG0> unruly members who disrupted a provincial executive committee ( PEC ) meeting</ARG0> , the party said on Thursday .', '<ARG1>The ANC in the North West has threatened to take action</ARG1> <SIG0><ARG0>against</SIG0> unruly members who disrupted a provincial executive committee ( PEC ) meeting</ARG0> , the party said on Thursday .']
+===============================
+Answers:
+0. Earlier staff-reduction moves have <ARG0>trimmed</ARG0> about 300 jobs, the spokesman <ARG1>said</ARG1>.
+
+Prediction:
+['Earlier staff-reduction <ARG0>moves</ARG0> have <SIG0><ARG1>trimmed</ARG1></SIG0> about 300 jobs, the spokesman said. ', 'Earlier staff-reduction <ARG0>moves</ARG0> have <SIG0><ARG1>trimmed</ARG1></SIG0> about 300 jobs, the spokesman said. ']
+===============================
+Answers:
+0. Chris Sozou, General Manager Platforms, Partnerships & Analytics, Virgin Money Australia, said:Our digital bank has been designed with a clear ambition to simplify <ARG0>banking</ARG0> and <SIG0>help</SIG0> customers achieve their financial <ARG1>goals</ARG1>.
+
+Prediction:
+['   Chris Sozou, General Manager Platforms, Partnerships & Analytics, Virgin Money Australia, said:"Our digital <ARG0>bank</ARG0> has been designed with a clear ambition to <SIG0>simplify</SIG0> banking and help customers <ARG1>achieve</ARG1> their financial goals.', '   Chris Sozou, General Manager Platforms, Partnerships & Analytics, Virgin Money Australia, said:"Our digital <ARG0>bank</ARG0> has been designed with a clear ambition to <SIG0>simplify</SIG0> banking and help customers <ARG1>achieve</ARG1> their financial goals.']
+===============================
+Answers:
+0. VISAKHAPATNAM <ARG1>DCI employees go on mass casual leave</ARG1> , <ARG0>threaten to intensify stir</ARG0>
+
+Prediction:
+['<ARG0>VISAKHAPATNAM DCI employees go on mass casual leave</ARG0> , <SIG0><ARG1>threaten to intensify stir</ARG1></SIG0>', '<ARG0>VISAKHAPATNAM DCI employees go on mass casual leave</ARG0> , <SIG0><ARG1>threaten to intensify stir</ARG1></SIG0>']
+===============================
+Answers:
+0. `` During <ARG0>these strikes</ARG0> ... <ARG1>extensive damage was caused to public property</ARG1> , '' said Paul Smit , a DA councillor in the city .
+
+Prediction:
+["`` <SIG0>During</SIG0> <ARG0>these strikes</ARG0> ... <ARG1>extensive damage was caused to public property</ARG1> , '' said Paul Smit , a DA councillor in the city .", "`` <SIG0>During</SIG0> <ARG0>these strikes</ARG0> ... <ARG1>extensive damage was caused to public property</ARG1> , '' said Paul Smit , a DA councillor in the city ."]
+===============================
+Answers:
+0. <ARG1>Great revolutionaries of the Hindustan Republican Association including Jogesh Chatterjee , Chandrashekhar Azad , Yogendra Shukla , Ashfaqullah Khan , Bhagat Singh , and Batukeshwar Dutt protested</ARG1> <ARG0>against decreased sense of patriotism amongst the youth and the depraved polity increasingly leading to reduced sense of citizenry</ARG0> .
+1. Great revolutionaries of the Hindustan Republican Association including Jogesh Chatterjee , Chandrashekhar Azad , Yogendra Shukla , Ashfaqullah Khan , Bhagat Singh , and Batukeshwar Dutt protested against <ARG0>decreased sense of patriotism amongst the youth and the depraved polity</ARG0> <SIG0>increasingly leading to</SIG0> <ARG1>reduced sense of citizenry</ARG1> .
+
+Prediction:
+['<ARG1>Great revolutionaries of the Hindustan Republican Association including Jogesh Chatterjee , Chandrashekhar Azad , Yogendra Shukla , Ashfaqullah Khan , Bhagat Singh , and Batukeshwar Dutt protested <ARG0>against decreased sense of patriotism amongst the youth and the depraved polity</ARG0> increasingly <SIG0>leading to</SIG0> reduced sense of citizenry</ARG1> .', '<ARG1>Great revolutionaries of the Hindustan Republican Association including Jogesh Chatterjee , Chandrashekhar Azad , Yogendra Shukla , Ashfaqullah Khan , Bhagat Singh , and Batukeshwar Dutt protested <ARG0>against decreased sense of patriotism amongst the youth and the depraved polity</ARG0> increasingly <SIG0>leading to</SIG0> reduced sense of citizenry</ARG1> .']
+===============================
+Answers:
+0. <ARG1>At least one demonstrator was briefly detained</ARG1> when <ARG0>he unfolded a banner</ARG0> , witnesses said .
+
+Prediction:
+['<ARG1>At least one demonstrator was briefly detained</ARG1> <SIG0>when</SIG0> <ARG0>he unfolded a banner</ARG0> , witnesses said .', '<ARG1>At least one demonstrator was briefly detained</ARG1> <SIG0>when</SIG0> <ARG0>he unfolded a banner</ARG0> , witnesses said .']
+===============================
+Answers:
+0. <ARG1>Striking mine workers at Impala Platinum ( Implats ) mine near Rustenburg braved the hot morning sun on Tuesday</ARG1> <ARG0><SIG0>to</SIG0> wait for ANC Youth League president Julius Malema</ARG0> .
+
+Prediction:
+['<ARG1>Striking mine workers at Impala Platinum ( Implats ) mine near Rustenburg braved the hot morning sun on Tuesday</ARG1> <SIG0><ARG0>to</SIG0> wait for ANC Youth League president Julius Malema</ARG0> .', '<ARG1>Striking mine workers at Impala Platinum ( Implats ) mine near Rustenburg braved the hot morning sun on Tuesday</ARG1> <SIG0><ARG0>to</SIG0> wait for ANC Youth League president Julius Malema</ARG0> .']
+===============================

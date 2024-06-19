@@ -1,0 +1,78 @@
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+03/03/2024 17:01:03 - INFO - __main__ - Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+wandb: Currently logged in as: rebboud-youssra2512 (dsyouss). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.16.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.0
+wandb: Run data is saved locally in /data/Youss/RE/CausalNewsCorpus/wandb/run-20240303_170104-o5bwbrjh
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run whole-puddle-306
+wandb: ⭐️ View project at https://wandb.ai/dsyouss/CausalNewsCorpus
+wandb: 🚀 View run at https://wandb.ai/dsyouss/CausalNewsCorpus/runs/o5bwbrjh
+03/03/2024 17:01:24 - WARNING - datasets.builder - Using custom data configuration default-a98f2b0c9585b1e0
+Downloading and preparing dataset csv/default to /homes/rebboud/.cache/huggingface/datasets/csv/default-a98f2b0c9585b1e0/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58...
+Downloading data files:   0%|          | 0/3 [00:00<?, ?it/s]Downloading data files: 100%|██████████| 3/3 [00:00<00:00, 4580.60it/s]
+Extracting data files:   0%|          | 0/3 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 3/3 [00:00<00:00, 1018.12it/s]
+0 tables [00:00, ? tables/s]                            0 tables [00:00, ? tables/s]                            Traceback (most recent call last):
+  File "run_st2.py", line 1449, in <module>
+    main()
+  File "run_st2.py", line 597, in main
+    raw_datasets = load_dataset(extension, data_files=data_files)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/load.py", line 1679, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/builder.py", line 704, in download_and_prepare
+    self._download_and_prepare(
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/builder.py", line 793, in _download_and_prepare
+    self._prepare_split(split_generator, **prepare_split_kwargs)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/builder.py", line 1271, in _prepare_split
+    writer.write_table(table)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/arrow_writer.py", line 519, in write_table
+    pa_table = table_cast(pa_table, self._schema)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1897, in table_cast
+    return cast_table_to_schema(table, schema)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1880, in cast_table_to_schema
+    arrays = [cast_array_to_feature(table[name], feature) for name, feature in features.items()]
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1880, in <listcomp>
+    arrays = [cast_array_to_feature(table[name], feature) for name, feature in features.items()]
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1673, in wrapper
+    return pa.chunked_array([func(chunk, *args, **kwargs) for chunk in array.chunks])
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1673, in <listcomp>
+    return pa.chunked_array([func(chunk, *args, **kwargs) for chunk in array.chunks])
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1845, in cast_array_to_feature
+    return array_cast(array, feature(), allow_number_to_str=allow_number_to_str)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1675, in wrapper
+    return func(array, *args, **kwargs)
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/datasets/table.py", line 1754, in array_cast
+    return array.cast(pa_type)
+  File "pyarrow/array.pxi", line 915, in pyarrow.lib.Array.cast
+  File "/homes/rebboud/.local/lib/python3.8/site-packages/pyarrow/compute.py", line 376, in cast
+    return call_function("cast", [arr], options)
+  File "pyarrow/_compute.pyx", line 542, in pyarrow._compute.call_function
+  File "pyarrow/_compute.pyx", line 341, in pyarrow._compute.Function.call
+  File "pyarrow/error.pxi", line 144, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 100, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: Failed to parse string: 'train_10_99' as a scalar of type int64
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/data/conda/lama3_new/lib/python3.8/site-packages/wandb/sdk/wandb_manager.py", line 175, in _teardown
+    result = self._service.join()
+  File "/data/conda/lama3_new/lib/python3.8/site-packages/wandb/sdk/service/service.py", line 271, in join
+    ret = self._internal_proc.wait()
+  File "/data/conda/lama3_new/lib/python3.8/subprocess.py", line 1079, in wait
+    return self._wait(timeout=timeout)
+  File "/data/conda/lama3_new/lib/python3.8/subprocess.py", line 1804, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/data/conda/lama3_new/lib/python3.8/subprocess.py", line 1762, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+wandb: 🚀 View run whole-puddle-306 at: https://wandb.ai/dsyouss/CausalNewsCorpus/runs/o5bwbrjh
+wandb: ️⚡ View job at https://wandb.ai/dsyouss/CausalNewsCorpus/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjkxNjE3MTAy/version_details/v12
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240303_170104-o5bwbrjh/logs

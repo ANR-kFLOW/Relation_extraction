@@ -15,7 +15,7 @@ LEARNING_RATE = 0.000025
 EPOCHS = 10
 BATCH_SIZE = 8
 SEED = 1
-SAVE_PATH = 'model_our_data_gpt_augmented.pth'
+SAVE_PATH = 'cs_sampled_our_data.pth'
 
 
 class DataSequence(torch.utils.data.Dataset):
@@ -182,7 +182,7 @@ def re_score(predictions, ground_truths, type):
         ground_truths (list) :    list of list of ground truth relations
         type (str) :          the kind of evaluation (relation, subject, object) """
     if type == 'relation':
-        vocab = ['cause', 'enable', 'prevent', 'intend','0']
+        vocab = ['cause', 'enable', 'prevent', 'intend']
         predictions = [pred[1] for pred in predictions]
         ground_truths = [gt[1] for gt in ground_truths]
 
@@ -335,7 +335,7 @@ def check_best_performing(model, best_metric, new_metric, PATH):
 
 
 def test_model(data, path_to_model):
-    with open('model_our_data_gpt_augmented.pth', 'rb') as f:
+    with open('cs_sampled_our_data.pth', 'rb') as f:
         buffer = io.BytesIO(f.read())
 
     # Load the model from the buffer
@@ -403,8 +403,10 @@ def make_predictions(texts, path_to_model):
 if __name__ == "__main__":
     #data = pd.read_csv('drive/MyDrive/rebel_format_v2.csv')
     # df_train, df_val = train_test_split(data, test_size=0.1, random_state=SEED)
-    df_train = pd.read_csv('/data/Youss/RE/REBEL/data/train_augmented.csv')
-    df_val = pd.read_csv('/data/Youss/RE/REBEL/data/validation_augmented.csv')
+    df_train = pd.read_csv('/data/Youss/RE/REBEL/data/CS_our_data_mixed.csv')
+    df_train = df_train[~df_train['triplets'].str.contains('0')]
+    df_val = pd.read_csv('/data/Youss/RE/REBEL/data/news_data_with_cnc/validation_augmented.csv')
+    df_val = df_val[~df_val['triplets'].str.contains('0')]
     #del data
 
     model_checkpoint = "Babelscape/rebel-large"
@@ -414,8 +416,9 @@ if __name__ == "__main__":
 
     train_loop(model, df_train, df_val)
 
-    test_data = pd.read_csv('/data/Youss/RE/REBEL/data/our_data/test.csv')
-    with open('model_our_data_gpt_augmented.pth', 'rb') as f:
+    test_data = pd.read_csv('/data/Youss/RE/REBEL/data/news_data_with_cnc/test.csv')
+    test_data = test_data[~test_data['triplets'].str.contains('0')]
+    with open('cs_sampled_our_data.pth', 'rb') as f:
         buffer = io.BytesIO(f.read())
 
     # Load the model from the buffer

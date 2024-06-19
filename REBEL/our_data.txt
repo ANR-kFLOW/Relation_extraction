@@ -1,0 +1,20 @@
+[nltk_data] Downloading package punkt to /homes/rebboud/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "/data/Youss/RE/REBEL/train.py", line 411, in <module>
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_checkpoint)
+  File "/data/Zephyr/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/data/Zephyr/lib/python3.9/site-packages/transformers/modeling_utils.py", line 3239, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/data/Zephyr/lib/python3.9/site-packages/transformers/utils/hub.py", line 389, in cached_file
+    resolved_file = hf_hub_download(
+  File "/data/Zephyr/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/data/Zephyr/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1449, in hf_hub_download
+    with temp_file_manager() as temp_file:
+  File "/data/Zephyr/lib/python3.9/tempfile.py", line 545, in NamedTemporaryFile
+    (fd, name) = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/data/Zephyr/lib/python3.9/tempfile.py", line 255, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+OSError: [Errno 122] Disk quota exceeded: '/homes/rebboud/.cache/huggingface/hub/tmpjyo9uqq7'
