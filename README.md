@@ -50,15 +50,16 @@ The script can be run from the command line with the following arguments:
 - `--threshold`: Threshold for classification (float).
 
 ### 4. LLMs as Event Extractors 
-## Training Script
-
-
+#### Training Script
 
 ```bash
-python main.py test --llm dpo --template prompt_template.yml --verbose --num_examples 2 --news_dataset data/CS.csv --test_dataset data/test.csv --output 2_shot_cs_dpo.csv
+python main.py test --llm LLM-name --template prompt_template.yml --verbose --num_examples 2 --news_dataset examples-dataset --test_dataset ground-truth-dataset  --output prediction-dataset
 
 ```
-
+#### Evaluation script 
+```bash
+python eval_bio.py --gt /path/to/ground_truth_file.csv --pred /path/to/prediction_file.csv
+``` 
 ### 5. Data
 
 The `Data` folder stores datasets used in the project. These datasets are either constructed by LLMs or obtained previously.
