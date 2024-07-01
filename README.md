@@ -55,7 +55,8 @@ The script can be run from the command line with the following arguments:
 
 
 ```bash
-python main.py test --llm dpo --template prompt_template.yml --verbose --num_examples 2 --news_dataset data/CS.csv --test_dataset data/test.csv --output 2_shot_cs_dpo.csv ```
+python main.py test --llm dpo --template prompt_template.yml --verbose --num_examples 2 --news_dataset data/CS.csv --test_dataset data/test.csv --output 2_shot_cs_dpo.csv
+
 
 ### 5. Data
 
