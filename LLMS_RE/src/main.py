@@ -6,7 +6,8 @@ import yaml
 import openai
 import time
 from argparse import ArgumentParser
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
 from langchain_core.prompts.prompt import PromptTemplate
 
 # === Init ====================================================================
@@ -63,9 +64,8 @@ def call_gpt4_api(prompt, api_key, max_retries=3, timeout=1200):
     return None
 
 
-def call_huggingface_model(prompt, model_name):
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+def call_huggingface_model(prompt, tokenizer, model):
+
 
     inputs = tokenizer(prompt, return_tensors="pt", max_length=1024, truncation=True)
     outputs = model.generate(**inputs, max_length=150)
@@ -74,7 +74,7 @@ def call_huggingface_model(prompt, model_name):
     return response
 
 
-def extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose):
+def extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose,model_name):
     PROMPT_TEMPLATE = load_prompt_template(template_path)
     input_data = {"input_sentence": input_sentence, "examples": examples}
     formatted_prompt = PROMPT_TEMPLATE.format(**input_data)
@@ -82,7 +82,9 @@ def extract_information(input_sentence, examples, llm_model, template_path, api_
     if llm_model == "gpt4":
         res = call_gpt4_api(formatted_prompt, api_key)
     else:
-        res = call_huggingface_model(formatted_prompt, available_llms[llm_model])
+        tokenizer = AutoTokenizer.from_pretrained( available_llms[model_name])
+        model = AutoModelForCausalLM.from_pretrained( available_llms[model_name])
+        res = call_huggingface_model(formatted_prompt,tokenizer,model)
 
     patterns = [r"Subject:\s*(.*?),\s*Object:\s*(.*?),\s*Relation:\s*(.*)"]
     match = re.search(patterns[0], res)
@@ -124,7 +126,8 @@ def run(task, news_dataset_path, test_dataset_path, num_examples, llm_model, tem
 
         for _, row in test_dataset.iterrows():
             input_sentence = row['text']
-            extracted_data = extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose)
+            
+            extracted_data = extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose,llm_model)
             results.append({
                 "text": input_sentence,
                 "subject": extracted_data.get("subject", "N/A"),
