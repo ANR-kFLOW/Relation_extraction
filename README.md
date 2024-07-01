@@ -41,15 +41,24 @@ CUDA_VISIBLE_DEVICES='3' python main.py --verbose -x 1
 ```
 x is the number of example 
 
-### 3. Data
+### 3. Relation Detection
+The script can be run from the command line with the following arguments:
+
+- `--train_file`: Path to the training data file (CSV).
+- `--val_file`: Path to the validation data file (CSV).
+- `--test_file`: Path to the test data file (CSV).
+- `--threshold`: Threshold for classification (float).
+
+
+### 5. Data
 
 The `Data` folder stores datasets used in the project. These datasets are either constructed by LLMs or obtained previously.
 
-### 4. Refining
+### 6. Refining
 
 The `Refining` folder contains resources for future refinements. 
 
-### 5. Scripts
+### 7. Scripts
 
 The `Scripts` folder contains various data processing scripts utilized in the project.
 
