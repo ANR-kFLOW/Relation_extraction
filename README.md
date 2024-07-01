@@ -49,6 +49,11 @@ The script can be run from the command line with the following arguments:
 - `--test_file`: Path to the test data file (CSV).
 - `--threshold`: Threshold for classification (float).
 
+```bash
+python train_thre.py --train_file /path/to/train_file.csv --val_file /path/to/val_file.csv --test_file /path/to/test_file.csv --threshold 0.8
+
+```
+
 ### 4. LLMs as Event Extractors 
 #### Inference Script
 
