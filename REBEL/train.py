@@ -10,12 +10,16 @@ from tqdm import tqdm
 import numpy as np
 from sklearn.model_selection import train_test_split
 import sys
+from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import classification_report, precision_recall_fscore_support
+import re
 import io
 LEARNING_RATE = 0.000025
 EPOCHS = 10
 BATCH_SIZE = 8
 SEED = 1
-SAVE_PATH = 'cs_sampled_our_data.pth'
+
+SAVE_PATH = '2stft_75_old.pth'
 
 
 class DataSequence(torch.utils.data.Dataset):
@@ -176,6 +180,11 @@ def extract_triplets(texts, gold_extraction, prediction=False):
 
 
 def re_score(predictions, ground_truths, type):
+    print(type)
+    # print(predictions)
+    # print('\\\\\\\\\\\\')
+    # print(ground_truths)
+    # print('\\\\\\\\\\\\')
     """Evaluate RE predictions
     Args:
         predictions (list) :  list of list of predicted relations (several relations in each sentence)
@@ -333,9 +342,79 @@ def check_best_performing(model, best_metric, new_metric, PATH):
         best_metric = new_metric
     return best_metric
 
+def get_text_from_ids(input_ids, tokenizer):
+    """Decode input_ids to text using the tokenizer."""
+    return tokenizer.batch_decode(input_ids, skip_special_tokens=True)
+
+
+def get_bio_tags(text, entities):
+    """Generate BIO tags for a given text based on entities."""
+    words = text.split()
+    bio_tags = ['O'] * len(words)
+
+    for entity in entities:
+        if len(entity) == 2:
+            continue  # Skip if entity is incomplete (only relation without subject or object)
+        print(entity)
+        subject, relation, object = entity
+        if subject in text and object in text:
+            subject_start = text.index(subject)
+            object_start = text.index(object)
+
+            subject_words = subject.split()
+            object_words = object.split()
+
+            for i, word in enumerate(words):
+                if text.index(word) >= subject_start and text.index(word) < subject_start + len(subject):
+                    bio_tags[i] = 'B-SUB' if text.index(word) == subject_start else 'I-SUB'
+                if text.index(word) >= object_start and text.index(word) < object_start + len(object):
+                    bio_tags[i] = 'B-OBJ' if text.index(word) == object_start else 'I-OBJ'
+
+    return bio_tags
+
+
+def re_score_bio(predictions, ground_truths, texts, tokenizer):
+    """Evaluate RE predictions with BIO tagging.
+    Args:
+        predictions (list) :  list of list of predicted relations (several relations in each sentence)
+        ground_truths (list) :    list of list of ground truth relations
+        texts (list) :       list of original sentences
+        tokenizer :          tokenizer to decode input ids to text
+    """
+    # Decode input ids to texts if not already done
+    # if isinstance(texts[0], list):
+    #     texts = get_text_from_ids(texts, tokenizer)
+
+    # Generate BIO tags for predictions and ground truths
+
+
+    pred_bio_tags = [get_bio_tags(text, preds) for text, preds in zip(texts, predictions)]
+
+    print(pred_bio_tags)
+    gt_bio_tags = [get_bio_tags(text, gts) for text, gts in zip(texts, ground_truths)]
+
+    # Initialize counts for TP, FP, and FN
+    tp, fp, fn = 0, 0, 0
+
+    # Calculate TP, FP, and FN
+    for pred_tags, gt_tags in zip(pred_bio_tags, gt_bio_tags):
+        for p_tag, g_tag in zip(pred_tags, gt_tags):
+            if p_tag == g_tag and p_tag != 'O':
+                tp += 1
+            elif p_tag != g_tag and p_tag != 'O':
+                fp += 1
+            elif p_tag != g_tag and g_tag != 'O':
+                fn += 1
+
+    # Calculate precision, recall, and F1
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0
+    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+
+    return precision, recall, f1
 
 def test_model(data, path_to_model):
-    with open('cs_sampled_our_data.pth', 'rb') as f:
+    with open('2stft_75_old.pth', 'rb') as f:
         buffer = io.BytesIO(f.read())
 
     # Load the model from the buffer
@@ -351,12 +430,15 @@ def test_model(data, path_to_model):
 
     pred = []
     gt = []
+    texts=[]
 
 
     for val_data, val_label in test_dataloader:
         test_label = val_label['input_ids'].to(device)
         mask = val_data['attention_mask'].to(device)
         input_id = val_data['input_ids'].to(device)
+        # text=val_data['text']
+        # print(val_data.keys())
 
         outputs = model.generate(input_id)
         outputs = tokenizer.batch_decode(outputs, skip_special_tokens=False)
@@ -364,12 +446,147 @@ def test_model(data, path_to_model):
 
         gt = gt + extract_triplets(labels, gold_extraction=True)
         pred = pred + extract_triplets(outputs, gold_extraction=False)
+        texts=texts+get_text_from_ids(input_id,tokenizer)
 
         del outputs, labels
+    print(len(pred))
+    print(len(gt))
+    print(len(texts))
+    # Create the pred DataFrame
+    pred_data = []
+    for i, triple in enumerate(pred):
+        text = texts[i]
+        subject, relation, obj = triple
+        pred_data.append([text, subject, relation, obj])
 
-    scores, precision, recall, f1 = re_score(pred, gt, 'relation')
-    scores, precision, recall, f1 = re_score(pred, gt, 'subject')
-    scores, precision, recall, f1 = re_score(pred, gt, 'object')
+    pred_df = pd.DataFrame(pred_data, columns=['text', 'subject', 'relation', 'object'])
+
+    # Create the gt DataFrame
+    gt_data = []
+    for i, triple in enumerate(gt):
+        text = texts[i]
+        subject, relation, obj = triple
+        gt_data.append([text, subject, relation, obj])
+
+    gt_df = pd.DataFrame(gt_data, columns=['text', 'subject', 'relation', 'object'])
+
+    # Save to CSV
+    pred_df.to_csv('pred.csv', index=False)
+    gt_df.to_csv('gt.csv', index=False)
+    # scores, precision, recall, f1 = re_score(pred, gt, 'relation')
+    # scores, precision, recall, f1 = re_score(pred, gt, 'subject')
+    # scores, precision, recall, f1 = re_score(pred, gt, 'object')
+    # precision, recall, f1 = re_score_bio(pred, gt, texts, tokenizer)
+    # print(f"Precision: {precision:.4f}, Recall: {recall:.4f}, F1-Score: {f1:.4f}")
+    score_BIO(gt_df,pred_df)
+
+
+
+
+def create_bio_tagging(text, subject, object_):
+    # Remove commas from the text, subject, and object
+    text = str(text).replace(',', '')
+    subject = str(subject).replace(',', '')
+    object_ = str(object_).replace(',', '')
+
+    words = text.split()
+    bio_tags = ['O'] * len(words)
+
+    # Create a helper function to find the index of a substring in a list of words
+    def find_sublist(sublist, main_list):
+        sublen = len(sublist)
+        for i in range(len(main_list) - sublen + 1):
+            if main_list[i:i + sublen] == sublist:
+                return i
+        return -1
+
+    subject_words = subject.split()
+    object_words = object_.split()
+
+    # Find and tag the subject
+    subject_start_idx = find_sublist(subject_words, words)
+    if subject_start_idx != -1:
+        bio_tags[subject_start_idx] = 'B-C'
+        for i in range(1, len(subject_words)):
+            bio_tags[subject_start_idx + i] = 'I-C'
+
+    # Find and tag the object
+    object_start_idx = find_sublist(object_words, words)
+    if object_start_idx != -1:
+        bio_tags[object_start_idx] = 'B-E'
+        for i in range(1, len(object_words)):
+            bio_tags[object_start_idx + i] = 'I-E'
+
+    return ' '.join(bio_tags)
+
+
+def score_BIO(ground_truth, predictions):
+    # Load the CSV files
+    # ground_truth = pd.read_csv(gt_path)
+    # predictions = pd.read_csv(pred_path)
+
+    # Add BIO tagging columns to both DataFrames
+    ground_truth['BIO_tagging'] = ground_truth.apply(
+        lambda row: create_bio_tagging(row['text'], row['subject'], row['object']), axis=1)
+    predictions['BIO_tagging'] = predictions.apply(
+        lambda row: create_bio_tagging(row['text'], row['subject'], row['object']), axis=1)
+
+    # Calculate precision, recall, and F1 score for BIO tagging
+    gt_bio_tags = ground_truth['BIO_tagging'].apply(lambda x: x.split()).tolist()
+    pred_bio_tags = predictions['BIO_tagging'].apply(lambda x: x.split()).tolist()
+
+    all_gt_tags = [tag for sublist in gt_bio_tags for tag in sublist]
+    all_pred_tags = [tag for sublist in pred_bio_tags for tag in sublist]
+
+    precision = precision_score(all_gt_tags, all_pred_tags, average='weighted',
+                                labels=['B-C', 'I-C', 'B-E', 'I-E', 'O'])
+    recall = recall_score(all_gt_tags, all_pred_tags, average='weighted', labels=['B-C', 'I-C', 'B-E', 'I-E', 'O'])
+    f1 = f1_score(all_gt_tags, all_pred_tags, average='weighted', labels=['B-C', 'I-C', 'B-E', 'I-E', 'O'])
+
+    print(f"BIO Tagging - Precision: {precision}, Recall: {recall}, F1 Score: {f1}")
+
+    # Calculate precision, recall, and F1 score for relations
+    gt_relations = ground_truth['relation'].tolist()
+    pred_relations = predictions['relation'].tolist()
+
+    precision_rel = precision_score(gt_relations, pred_relations, average='weighted')
+    recall_rel = recall_score(gt_relations, pred_relations, average='weighted')
+    f1_rel = f1_score(gt_relations, pred_relations, average='weighted')
+
+
+    print(f"Relations - Precision: {precision_rel}, Recall: {recall_rel}, F1 Score: {f1_rel}")
+
+    report = classification_report(all_gt_tags, all_pred_tags)
+    print(report)
+    # Create mappings for replacements
+    replacement_dict = {
+        'B-C': 'subject',
+        'I-C': 'subject',
+        'B-E': 'object',
+        'I-E': 'object',
+        'O': 'O'
+    }
+
+    # Function to replace labels
+    def replace_labels(labels, mapping):
+        return [mapping[label] for label in labels]
+
+    # Replace labels in gt and pred
+    gt_replaced = replace_labels(all_gt_tags, replacement_dict)
+    pred_replaced = replace_labels(all_pred_tags, replacement_dict)
+
+    # Compute the classification report
+    report = classification_report(gt_replaced, pred_replaced, target_names=['subject', 'object', 'O'])
+    print(report)
+    # Compute micro average
+    precision, recall, f1, _ = precision_recall_fscore_support(gt_replaced, pred_replaced,
+                                                               average='weighted')
+    print(precision,recall,f1)
+
+    # # Save the DataFrames with BIO tagging columns
+    # ground_truth.to_csv('ground_truth_with_bio.csv', index=False)
+    # predictions.to_csv('predictions_with_bio.csv', index=False)
+
 
 
 def make_predictions(texts, path_to_model):
@@ -414,11 +631,11 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
     print('I am calling the train loop')
 
-    train_loop(model, df_train, df_val)
+    # train_loop(model, df_train, df_val)
 
     test_data = pd.read_csv('/data/Youss/RE/REBEL/data/news_data_with_cnc/test.csv')
     test_data = test_data[~test_data['triplets'].str.contains('0')]
-    with open('cs_sampled_our_data.pth', 'rb') as f:
+    with open('2stft_75_old.pth', 'rb') as f:
         buffer = io.BytesIO(f.read())
 
     # Load the model from the buffer
