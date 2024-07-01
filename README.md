@@ -49,6 +49,13 @@ The script can be run from the command line with the following arguments:
 - `--test_file`: Path to the test data file (CSV).
 - `--threshold`: Threshold for classification (float).
 
+### 4. LLMs as Event Extractors 
+## Training Script
+
+
+
+```bash
+python main.py test --llm dpo --template prompt_template.yml --verbose --num_examples 2 --news_dataset data/CS.csv --test_dataset data/test.csv --output 2_shot_cs_dpo.csv ```
 
 ### 5. Data
 
