@@ -85,7 +85,7 @@ def extract_information(input_sentence, examples, llm_model, template_path, api_
         tokenizer = AutoTokenizer.from_pretrained( available_llms[model_name])
         model = AutoModelForCausalLM.from_pretrained( available_llms[model_name])
         res = call_huggingface_model(formatted_prompt,tokenizer,model)
-
+    print(res)
     patterns = [r"Subject:\s*(.*?),\s*Object:\s*(.*?),\s*Relation:\s*(.*)"]
     match = re.search(patterns[0], res)
 
@@ -126,8 +126,9 @@ def run(task, news_dataset_path, test_dataset_path, num_examples, llm_model, tem
 
         for _, row in test_dataset.iterrows():
             input_sentence = row['text']
-            
+
             extracted_data = extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose,llm_model)
+
             results.append({
                 "text": input_sentence,
                 "subject": extracted_data.get("subject", "N/A"),
