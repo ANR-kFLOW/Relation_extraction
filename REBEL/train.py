@@ -621,9 +621,9 @@ if __name__ == "__main__":
     #data = pd.read_csv('drive/MyDrive/rebel_format_v2.csv')
     # df_train, df_val = train_test_split(data, test_size=0.1, random_state=SEED)
     df_train = pd.read_csv('/data/Youss/RE/REBEL/data/CS_our_data_mixed.csv')
-    df_train = df_train[~df_train['triplets'].str.contains('0')]
+    # df_train = df_train[~df_train['triplets'].str.contains('0')]
     df_val = pd.read_csv('/data/Youss/RE/REBEL/data/news_data_with_cnc/validation_augmented.csv')
-    df_val = df_val[~df_val['triplets'].str.contains('0')]
+    # df_val = df_val[~df_val['triplets'].str.contains('0')]
     #del data
 
     model_checkpoint = "Babelscape/rebel-large"
@@ -634,7 +634,7 @@ if __name__ == "__main__":
     # train_loop(model, df_train, df_val)
 
     test_data = pd.read_csv('/data/Youss/RE/REBEL/data/news_data_with_cnc/test.csv')
-    test_data = test_data[~test_data['triplets'].str.contains('0')]
+    # test_data = test_data[~test_data['triplets'].str.contains('0')]
     with open('2stft_75_old.pth', 'rb') as f:
         buffer = io.BytesIO(f.read())
 
