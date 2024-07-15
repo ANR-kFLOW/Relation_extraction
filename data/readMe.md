@@ -7,7 +7,7 @@ This repository contains various subfolders representing the data utilized in th
 ### OD_and_SD
 - **Original Data:** The original data used for the project, from 
  [Original Data repository](https://github.com/ANR-kFLOW/EventRelationDataset).
-- **Augmented Data:** Data augmented using GPT-3.5, from [Augmneted data repository](https://github.com/ANR-kFLOW/semmes).
+- **Augmented Data:** Data augmented using GPT-3.5, from [Augmented data repository](https://github.com/ANR-kFLOW/semmes).
 
 ### News Data
 - **News Data:** The combined data from OD, SD, and CNC sources.
