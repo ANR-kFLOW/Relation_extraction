@@ -8,8 +8,8 @@ This repository contains various subfolders representing the data utilized in th
 - **Original Data:** The raw data used for the project.
 - **Augmented Data:** Data augmented using GPT-3.5.
 
-### CNC_joined_data
-- **Joined Data:** The combined data from OD, SD, and CNC sources.
+### News Data
+- **News Data:** The combined data from OD, SD, and CNC sources.
 
 ### ATOMIC_data
 - **Filtered Data:** Data filtered from the ATOMIC dataset.
