@@ -1,1 +1,2 @@
-
+This folder contains the code for the ongoning project to create a platform where all of the models implemented in the github are compared against eachother. 
+two_step_model.py is the main file in charge of setting up the pipeline from training data to the results for all of the models.
