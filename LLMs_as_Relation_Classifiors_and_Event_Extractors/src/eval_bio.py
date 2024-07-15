@@ -4,6 +4,20 @@ import argparse
 from sklearn.metrics import classification_report, precision_recall_fscore_support
 import re
 
+# def clean_relation(value):
+#     # Remove < and >
+#     value = str(value).replace('<', '').replace('>', '')
+#     # Remove ()N
+#     value = str(value).replace('()N', '')
+#     # Keep only the first word
+#     if len(value)>0:
+#         value = str(value).split()[0]
+#     else:
+#         value='Nul'
+#     return value
+
+# Apply the cleaning function to the relation column
+
 
 def create_bio_tagging(text, subject, object_):
     # Remove commas from the text, subject, and object
@@ -46,6 +60,8 @@ def main(gt_path, pred_path):
     # Load the CSV files
     ground_truth = pd.read_csv(gt_path)
     predictions = pd.read_csv(pred_path)
+    #in case of zephyr predictions, we need to do more cleaning of the output
+    # predictions['relation'] = predictions['relation'].apply(clean_relation)
 
     # Add BIO tagging columns to both DataFrames
     ground_truth['BIO_tagging'] = ground_truth.apply(

@@ -5,6 +5,7 @@ import pandas as pd
 import yaml
 import openai
 import time
+import torch
 from argparse import ArgumentParser
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -16,7 +17,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Specify the GPU id
 os.environ["HUGGINGFACE_HUB_CACHE"] = "/data/huggingface/"
 
 available_llms = {
-    "zephyr": "HuggingFaceH4/zephyr-7b-beta",
+    "zephyr": "TheBloke/zephyr-7B-beta-AWQ",
     "dpo": "yunconglong/Truthful_DPO_TomGrc_FusionNet_7Bx2_MoE_13B",
     "una": "fblgit/UNA-TheBeagle-7b-v1",
     "solar": "bhavinjawade/SOLAR-10B-OrcaDPO-Jawade",
@@ -65,16 +66,19 @@ def call_gpt4_api(prompt, api_key, max_retries=3, timeout=1200):
 
 
 def call_huggingface_model(prompt, tokenizer, model):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(device)
 
-
-    inputs = tokenizer(prompt, return_tensors="pt", max_length=1024, truncation=True)
-    outputs = model.generate(**inputs, max_length=150)
+    inputs = tokenizer(prompt, return_tensors="pt", max_length=1024, truncation=True).to(device)
+    outputs = model.generate(**inputs, max_length=1000)
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    # Remove the prompt from the generated text
+    # response = response[829:].strip()
 
     return response
 
 
-def extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose,model_name):
+def extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose, model_name):
     PROMPT_TEMPLATE = load_prompt_template(template_path)
     input_data = {"input_sentence": input_sentence, "examples": examples}
     formatted_prompt = PROMPT_TEMPLATE.format(**input_data)
@@ -82,15 +86,19 @@ def extract_information(input_sentence, examples, llm_model, template_path, api_
     if llm_model == "gpt4":
         res = call_gpt4_api(formatted_prompt, api_key)
     else:
-        tokenizer = AutoTokenizer.from_pretrained( available_llms[model_name])
-        model = AutoModelForCausalLM.from_pretrained( available_llms[model_name])
-        res = call_huggingface_model(formatted_prompt,tokenizer,model)
+        tokenizer = AutoTokenizer.from_pretrained(available_llms[model_name])
+        model = AutoModelForCausalLM.from_pretrained(available_llms[model_name],device_map='cuda')
+        res = call_huggingface_model(formatted_prompt, tokenizer, model)
     print(res)
     patterns = [r"Subject:\s*(.*?),\s*Object:\s*(.*?),\s*Relation:\s*(.*)"]
-    match = re.search(patterns[0], res)
+    # Use re.finditer to get an iterator of all matches
+    matches = list(re.finditer(patterns[0], res))
 
-    if match:
-        subject, object_, relation = match.groups()
+    # Check if there are any matches
+    if matches:
+        # Get the last match
+        last_match = matches[-1]
+        subject, object_, relation = last_match.groups()
         return {"subject": subject, "object": object_, "relation": relation}
     else:
         return {}
@@ -126,8 +134,8 @@ def run(task, news_dataset_path, test_dataset_path, num_examples, llm_model, tem
 
         for _, row in test_dataset.iterrows():
             input_sentence = row['text']
-
-            extracted_data = extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose,llm_model)
+            extracted_data = extract_information(input_sentence, examples, llm_model, template_path, api_key, verbose,
+                                                 llm_model)
 
             results.append({
                 "text": input_sentence,
