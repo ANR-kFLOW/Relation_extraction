@@ -1,10 +1,10 @@
-# Relation_Extraction
-This repository contains data (data) and methods for Event relation extraction.
+# Event_Relation_Extraction
+
 ## Overview
 
 This repository contains code and data for various components of the project. Below is a brief overview of each subfolder:
 
-### 1. CNC
+### 1.  [CNC](./Relation_extraction/CNC/)
 
 The `CNC` folder contains code for event extraction, adapted from the [CausalNewsCorpus](https://github.com/tanfiona/CausalNewsCorpus/tree/master). This code takes our data that are transformed into the required format and performs event extraction.
 
