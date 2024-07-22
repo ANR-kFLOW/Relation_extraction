@@ -1,6 +1,5 @@
 # Relation_Extraction
-This repository contains data (data) and methods for Event relation extraction(CNC), Data augmnetation using LLMs(CommonSenseDataAugmentation)
-
+This repository contains data (data) and methods for Event relation extraction.
 ## Overview
 
 This repository contains code and data for various components of the project. Below is a brief overview of each subfolder:
