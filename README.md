@@ -45,7 +45,7 @@ python run_st2.py \
 ### [Joint Relation Classification and Event Extraction with Sequence-to-Sequence Language Model-REBEL](./REBEL_Joined_RelationClassification_and_EventExtraction/)
 In Thins folder you find [data](./REBEL_Joined_RelationClassification_and_EventExtraction/data/) and [scripts](./REBEL_Joined_RelationClassification_and_EventExtraction/src/) for trainig the seq2seq model REBEL on event relation extraction.
 
-### LLMs as Event Extractors 
+### [LLMs as Event Extractors](./LLMs_as_Relation_Classifiors_and_Event_Extractors/) 
 
 #### Inference Script
 
@@ -60,7 +60,7 @@ python eval_bio.py --gt /path/to/ground_truth_file.csv --pred /path/to/predictio
 ``` 
 
 
-###  Data
+###  [Data](./data/)
 
 The `Data` folder stores datasets used in the project. These datasets are either constructed by LLMs or obtained previously.
 #### CommonSenseDataAugmentation
