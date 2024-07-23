@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains code and data for various components of the project. Below is a brief overview of each subfolder:
-###  [Relation Detection](./Relation Detection/)
+###  [Relation Detection](./Relation Detection)
 The script can be run from the command line with the following arguments:
 
 - `--train_file`: Path to the training data file (CSV).
