@@ -19,12 +19,12 @@ def test_model(df, path_to_model):
     buffer = io.BytesIO(f.read())
   model = torch.load(buffer,map_location=torch.device('cpu')).to(device)
   
-  model_config = PretrainedConfig.from_pretrained('rebel_config/')
+  model_config = PretrainedConfig.from_pretrained('rebel_config/', cache_dir='data/huggingface/')
   config = GenerationConfig.from_model_config(model_config)
-  
+  print(config)
   
   # Load tokenizer
-  tokenizer = AutoTokenizer.from_pretrained('Babelscape/rebel-large')
+  tokenizer = AutoTokenizer.from_pretrained('Babelscape/rebel-large', cache_dir='data/huggingface/')
   # Load data
   #data = pd.read_csv(data_csv)
   data = df
@@ -44,7 +44,7 @@ def test_model(df, path_to_model):
       #outputs = model.generate(**inputs)
       outputs = model.generate(generation_config=config,**inputs)
     outputs = tokenizer.batch_decode(outputs, skip_special_tokens=True)
-    #print(outputs)
+    print(outputs)
     pred.extend(outputs)
   # End timing the inference process
   end_time = time.time()

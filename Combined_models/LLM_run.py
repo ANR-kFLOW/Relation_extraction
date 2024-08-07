@@ -176,7 +176,7 @@ if __name__ == '__main__':
         prog='LLM4ke',
         description='Extract subject, object, and relation from sentences using Hugging Face models or GPT-4'
     )
-    parser.add_argument('task', help='Task to perform', choices=['test'])
+    parser.add_argument('--task', help='Task to perform', choices=['test'])
     parser.add_argument('--news_dataset', help='Path to the news dataset CSV file', required=True)
     parser.add_argument('--test_dataset', help='Path to the test dataset CSV file', required=True)
     parser.add_argument('--num_examples', type=int, help='Number of examples per relation', required=True)

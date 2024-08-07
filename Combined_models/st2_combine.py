@@ -527,6 +527,7 @@ def main_st2(arg):
     # Initialize the accelerator. We will let the accelerator handle device placement for us in this example.
     # If we're using tracking, we also need to initialize it here and it will by default pick up all supported trackers
     # in the environment
+    
     accelerator = (
         Accelerator(log_with=args.st2_report_to, logging_dir=args.st2_output_dir) if args.st2_with_tracking else Accelerator()
     )
@@ -537,8 +538,12 @@ def main_st2(arg):
         level=logging.INFO,
     )
     logger.info(accelerator.state, main_process_only=False)
-    wandb.init(config=args)
-    wandb.run.log_code(".")
+    if args.st2_with_tracking:
+        
+        wandb.init(config=args)
+        wandb.run.log_code(".")
+    else:
+        print('not using wandb')
 
     if accelerator.is_local_main_process:
         datasets.utils.logging.set_verbosity_warning()
@@ -619,9 +624,9 @@ def main_st2(arg):
     # In distributed training, the .from_pretrained methods guarantee that only one local process can concurrently
     # download model & vocab.
     if args.st2_config_name:
-        config = AutoConfig.from_pretrained(args.st2_config_name)
+        config = AutoConfig.from_pretrained(args.st2_config_name, cache_dir='data/huggingface/')
     elif args.st2_model_name_or_path:
-        config = AutoConfig.from_pretrained(args.st2_model_name_or_path)
+        config = AutoConfig.from_pretrained(args.st2_model_name_or_path, cache_dir='data/huggingface/')
     else:
         config = CONFIG_MAPPING['albert-base-v2']()
         logger.warning("You are instantiating a new config instance from scratch.")
@@ -634,9 +639,9 @@ def main_st2(arg):
         )
 
     if config.model_type in {"gpt2", "roberta"}:
-        tokenizer = AutoTokenizer.from_pretrained(tokenizer_name_or_path, use_fast=True, add_prefix_space=True)
+        tokenizer = AutoTokenizer.from_pretrained(tokenizer_name_or_path, use_fast=True, add_prefix_space=True, cache_dir='data/huggingface/')
     else:
-        tokenizer = AutoTokenizer.from_pretrained(tokenizer_name_or_path, use_fast=True)
+        tokenizer = AutoTokenizer.from_pretrained(tokenizer_name_or_path, use_fast=True, cache_dir='data/huggingface/')
     tokenizer.add_special_tokens({"additional_special_tokens": ["<ARG0>", "</ARG0>", "<ARG1>", "</ARG1>", "<SIG0>", "</SIG0>"]})
 
     model = ST2ModelV2(args)
@@ -834,7 +839,7 @@ def main_st2(arg):
                 test_dataset = test_dataset.select(range(args.st2_max_test_samples))
     else:
         test_dataset = None
-    
+    '''
     # Log a few random samples from the training set:
     if args.st2_train_file is not None:
         for index in random.sample(range(len(train_dataset)), 3):
@@ -846,7 +851,7 @@ def main_st2(arg):
         #print(len(test_dataset))
         for index in random.sample(range(len(test_dataset)), 3):
             logger.info(f"Sample {index} of the test set: {test_dataset[index]}.")
-    
+    '''
     # DataLoaders creation:
     if args.st2_pad_to_max_length:
         # If padding was already done ot max length, we use the default data collator that will just convert everything
@@ -1255,8 +1260,8 @@ def main_st2(arg):
             logger.info("Signal | P: {} | R: {} | F1: {}".format(main_results["Signal"]["precision"], main_results["Signal"]["recall"], main_results["Signal"]["f1"]))
             logger.info("Overall | P: {} | R: {} | F1: {}".format(main_results["Overall"]["precision"], main_results["Overall"]["recall"], main_results["Overall"]["f1"]))
             logger.info("best-overall-f1: {}, from epoch {}".format(best_overall_f1, best_epoch))
-
-            wandb.log(
+            if args.st2_with_tracking:
+                wandb.log(
                 {
                     "Best-Overall-F1": best_overall_f1,
                     "Best-Epoch": best_epoch,
@@ -1456,8 +1461,8 @@ def main_st2(arg):
             for i, prediction in enumerate(predictions):
                 f.write(json.dumps({"index": i, "prediction": prediction}) + "\n")
 
-
-    wandb.finish()
+    if args.st2_with_tracking:
+        wandb.finish()
     return predictions
 
 

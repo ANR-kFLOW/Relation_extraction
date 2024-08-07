@@ -562,9 +562,9 @@ def main_st1(args):
 
         for predict_dataset, task in zip(predict_datasets, tasks):
             # Removing the `label` columns because it contains -1 and Trainer won't like that.
-            predict_dataset = predict_dataset.remove_columns("label")
-            print(model)
-            print(predict_dataset)
+            #predict_dataset = predict_dataset.remove_columns("label")
+            #print(model)
+            #print(predict_dataset)
             #predict_dataset.to(device)
             predictions = trainer.predict(predict_dataset, metric_key_prefix="predict").predictions
             predictions = np.squeeze(predictions) if is_regression else np.argmax(predictions, axis=1)

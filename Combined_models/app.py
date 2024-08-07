@@ -16,9 +16,9 @@ def set_choices(yaml_file):
     # Read the entire file content
         file_content = file.read()
     s = file_content
-    print(s)
+    #print(s)
     x = s.split('name:')
-    print(x)
+    #print(x)
     final_string = x[0]
     final_string = final_string + 'name:' + x[1]
     #print(x)
@@ -46,7 +46,7 @@ def set_choices(yaml_file):
             
             parts = re.split(r'enum:|description:', sent)
             st0_str = 'enum:\n'
-            print(parts)
+            #print(parts)
             for i in options:
                 st0_str = st0_str + '              - ' + i + '\n'
             #st0_str = st0_str + '              - off' + '\n'
@@ -54,55 +54,81 @@ def set_choices(yaml_file):
             final_st0 = 'name:' + parts[0] + st0_str + parts[2]
             final_string = final_string + final_st0
             
-            
-            
+                        
             
         if sent[:4] == ' st1':
-            options = []
-            directory_path = 'pretrained_models/st1'
-            for filename in os.listdir(directory_path):
-                file_path = os.path.join(directory_path, filename)
-                if os.path.isdir(file_path):
-                    if filename != '.DS_Store':
-                        prefix = filename + '_'
-                        for modelname in os.listdir(file_path):
-                            if os.path.isdir(file_path):
-                                if modelname != '.DS_Store':
-                                    option = prefix + modelname
-                                    options.append(option)
             
-            parts = re.split(r'enum:|description:', sent)
             st1_str = 'enum:\n'
-            print(parts)
-            for i in options:
-                st1_str = st1_str + '              - ' + i + '\n'
+            directory_list = ['pretrained_models/st1','pretrained_models/st3']
+            directory_path = 'pretrained_models/st1'
+            for directory_path in directory_list:
+                options = []
+                for filename in os.listdir(directory_path):
+                    file_path = os.path.join(directory_path, filename)
+                    if os.path.isdir(file_path):
+                        if filename != '.DS_Store':
+                            prefix = filename + '_'
+                            for modelname in os.listdir(file_path):
+                                if os.path.isdir(file_path):
+                                    if modelname != '.DS_Store':
+                                        option = prefix + modelname
+                                        options.append(option)
+                
+                parts = re.split(r'enum:|description:', sent)
+                
+                #print(parts)
+                for i in options:
+                    st1_str = st1_str + '              - ' + i + '\n'
+            
+            st1_str = st1_str + '              - zephyr' + '\n'
+            st1_str = st1_str + '              - dpo' + '\n'
+            st1_str = st1_str + '              - una' + '\n'
+            st1_str = st1_str + '              - solar' + '\n'
+            st1_str = st1_str + '              - gpt4' + '\n'
             st1_str = st1_str + '              - off' + '\n'
             st1_str = st1_str + '          description:'
             final_st1 = 'name:' + parts[0] + st1_str + parts[2]
             final_string = final_string + final_st1
         if sent[:4] == ' st2':
             options = []
-            directory_path = 'pretrained_models/st2'
-            for filename in os.listdir(directory_path):
-                file_path = os.path.join(directory_path, filename)
-                if os.path.isdir(file_path):
-                    if filename != '.DS_Store':
-                        prefix = filename + '_'
-                        for modelname in os.listdir(file_path):
-                            if os.path.isdir(file_path):
-                                
-                                if modelname != '.DS_Store':
-                                    option = prefix + modelname
-                                    options.append(option)
-            parts = re.split(r'enum:|description:', sent)
-            #print(parts)
+            directory_list = ['pretrained_models/st2','pretrained_models/st3']
+            #directory_path = 'pretrained_models/st2'
             st2_str = 'enum:\n'
-            for i in options:
-                st2_str = st2_str + '              - ' + i + '\n'
+            for directory_path in directory_list:
+                options = []
+                #print('here')
+                #print(directory_path)
+                #print('here')
+                for filename in os.listdir(directory_path):
+                    file_path = os.path.join(directory_path, filename)
+                    if os.path.isdir(file_path):
+                        if filename != '.DS_Store':
+                            prefix = filename + '_'
+                            for modelname in os.listdir(file_path):
+                                if os.path.isdir(file_path):
+                                    
+                                    if modelname != '.DS_Store':
+                                        option = prefix + modelname
+                                        options.append(option)
+                parts = re.split(r'enum:|description:', sent)
+                #print(parts)
+                
+                #print(options)
+                for i in options:
+                    st2_str = st2_str + '              - ' + i + '\n'
+                #print(st2_str)
+            
+            st2_str = st2_str + '              - zephyr' + '\n'
+            st2_str = st2_str + '              - dpo' + '\n'
+            st2_str = st2_str + '              - una' + '\n'
+            st2_str = st2_str + '              - solar' + '\n'
+            st2_str = st2_str + '              - gpt4' + '\n'
             st2_str = st2_str + '              - off' + '\n'
             st2_str = st2_str + '          description:'
             final_st2 = 'name:' + parts[0] + st2_str + parts[2]
             final_string = final_string + final_st2
+            print(final_string)
+        '''
         if sent[:4] == ' st3':
             options = []
             directory_path = 'pretrained_models/st3'
@@ -132,7 +158,7 @@ def set_choices(yaml_file):
             final_string = final_string + final_st3
             #flag = True
             
-            
+         '''   
         if sent[:4] == ' t_f':
             options = []
             directory_path = 'new_data/'
@@ -141,7 +167,7 @@ def set_choices(yaml_file):
                 if os.path.isfile(file_path):
                     if filename != '.DS_Store':
                         option = filename
-                        print(option)
+                        #print(option)
                         options.append(option)
             parts = re.split(r'enum:|description:', sent)
             #print(parts)
@@ -152,9 +178,8 @@ def set_choices(yaml_file):
             final_tf = 'name:' + parts[0] + tf_str + parts[2]
             final_string = final_string + final_tf
             flag = True
-        
-    
-    
+    #print(final_string)
+
     #print(final_string)
     if file_content == final_string:
         return
@@ -204,9 +229,11 @@ def set_config(flags):
         config['DEFAULT']['text_from_user'] = flags['User sent']
     '''
     
-    
-    
-    config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
+    if 't_f' not in flags and 'q' not in flags:
+        print('either choose a dataset or give your own sentences')
+        return False
+    if 'q' not in flags:
+        config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
     
     
     filter_s = flags['st0']
@@ -217,35 +244,102 @@ def set_config(flags):
         filter_name = filter_name + '_' + filter_parts[i]
     filter_path = 'pretrained_models/st0/' + filter_prefix + '/' + filter_name
     config['DEFAULT']['filter_model_path'] = filter_path
-    
-    
+    config['DEFAULT']['rebel_flag'] = 'False'
+    config['DEFAULT']['split_st3_flag'] = 'True'
     
     if flags['st1'] != 'off':
         s = flags['st1']
-        parts = s.split('_')
-        prefix = parts[0] + '_' + parts[1]
-        model_name = parts[2]
-        for i in range(3,len(parts)):
-            model_name = model_name + '_' + parts[i]
-        path = 'pretrained_models/st1/' + prefix + '/' + model_name
-        config['DEFAULT']['st1_model_name_or_path'] = path
+        if s == 'zephyr':
+            config['DEFAULT']['LLMS_llm'] = 'zephyr'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'dpo':
+            config['DEFAULT']['LLMS_llm'] = 'dpo'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'una':
+            config['DEFAULT']['LLMS_llm'] = 'una'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'solar':
+            config['DEFAULT']['LLMS_llm'] = 'solar'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'gpt4':
+            config['DEFAULT']['LLMS_llm'] = 'gpt4'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        else:
+            parts = s.split('_')
+            prefix = parts[0] + '_' + parts[1]
+            model_name = parts[2]
+            if parts[1] != 'st3':
+                for i in range(3,len(parts)):
+                    model_name = model_name + '_' + parts[i]
+                path = 'pretrained_models/st1/' + prefix + '/' + model_name
+                config['DEFAULT']['st1_model_name_or_path'] = path
+                config['DEFAULT']['subtask1_flag'] = 'False'
+                config['DEFAULT']['st1_flag'] = 'True'
+            else:
+                for i in range(3,len(parts)):
+                    model_name = model_name + '_' + parts[i]
+                path = 'pretrained_models/st3/' + prefix + '/' + model_name
+                config['DEFAULT']['rebel_inf_model_name_or_path'] = path
+                config['DEFAULT']['rebel_st1_flag'] = 'True'
+                config['DEFAULT']['rebel_flag'] = 'True'
+                config['DEFAULT']['subtask1_flag'] = 'True'
+                config['DEFAULT']['subtask3_flag'] = 'False'
+                config['DEFAULT']['st1_flag'] = 'False'
     else:
         config['DEFAULT']['subtask1_flag'] = 'True'
     
     
     if flags['st2'] != 'off':
         s = flags['st2']
-        parts = s.split('_')
-        prefix = parts[0] + '_' + parts[1]
-        model_name = parts[2]
-        for i in range(3,len(parts)):
-            model_name = model_name + '_' + parts[i]
-        path = 'pretrained_models/st2/' + prefix + '/' + model_name
-        config['DEFAULT']['st2_pretrained_path'] = path
-        config['DEFAULT']['st2_load_checkpoint_for_test'] = path + '/pytorch_model.bin'
+        if s == 'zephyr':
+            config['DEFAULT']['LLMS_llm'] = 'zephyr'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'dpo':
+            config['DEFAULT']['LLMS_llm'] = 'dpo'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'una':
+            config['DEFAULT']['LLMS_llm'] = 'una'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'solar':
+            config['DEFAULT']['LLMS_llm'] = 'solar'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        elif s == 'gpt4':
+            config['DEFAULT']['LLMS_llm'] = 'gpt4'
+            config['DEFAULT']['LLM_flag'] = 'True'
+        else:
+            parts = s.split('_')
+            prefix = parts[0] + '_' + parts[1]
+            model_name = parts[2]
+            if parts[1] != 'st3':
+                for i in range(3,len(parts)):
+                    model_name = model_name + '_' + parts[i]
+                path = 'pretrained_models/st2/' + prefix + '/' + model_name
+                config['DEFAULT']['st2_pretrained_path'] = path
+                config['DEFAULT']['st2_load_checkpoint_for_test'] = path + '/pytorch_model.bin'
+                config['DEFAULT']['subtask2_flag'] = 'False'
+                config['DEFAULT']['st2_flag'] = 'True'
+            else:
+                for i in range(3,len(parts)):
+                    model_name = model_name + '_' + parts[i]
+                path = 'pretrained_models/st3/' + prefix + '/' + model_name
+                config['DEFAULT']['rebel_inf_model_name_or_path'] = path
+                config['DEFAULT']['rebel_flag'] = 'True'
+                config['DEFAULT']['rebel_st2_flag'] = 'True'
+                config['DEFAULT']['subtask2_flag'] = 'True'
+                config['DEFAULT']['subtask3_flag'] = 'False'
     else:
         config['DEFAULT']['subtask2_flag'] = 'True'
     
+    if 'q' in flags:
+        config['DEFAULT']['text_from_user'] = flags['q']
+    if 'api' in flags:
+        config['DEFAULT']['LLMS_api_key'] = flags['api']
+    #if flags['t_f'] != 'None':
+        #config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
+    with open('config_swagger.ini', 'w') as configfile:
+        config.write(configfile)
+    return True
+'''   
     if flags['st3'] != 'off':
         s = flags['st3']
         config['DEFAULT']['rebel_flag'] = 'False'
@@ -275,15 +369,8 @@ def set_config(flags):
             config['DEFAULT']['rebel_flag'] = 'True'
     else:
         config['DEFAULT']['subtask3_flag'] = 'True'
+'''
     
-    if flags['ut'] != 'None':
-        config['DEFAULT']['text_from_user'] = flags['ut']
-    if flags['api'] != 'None':
-        config['DEFAULT']['LLMS_api_key'] = flags['api']
-    #if flags['t_f'] != 'None':
-        #config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
-    with open('config_swagger.ini', 'w') as configfile:
-        config.write(configfile)
 
 
 app = Flask(__name__)
@@ -328,7 +415,10 @@ class RunPipeline(Resource):
             'items': ['item1', 'item2', 'item3']  # Example response data
         }
         #print(flags)
-        set_config(flags)
+        f = set_config(flags)
+        if f == False:
+            return jsonify('either choose a dataset or give your own sentences')
+        
         json = run_pipeline('config_swagger.ini')
         
         return jsonify(json)
@@ -357,4 +447,4 @@ def test_pipe():
 if __name__ == "__main__":
     set_choices('static/swagger.yaml')
     print('done')
-    app.run(port=5001, host='0.0.0.0', debug=True)
+    app.run(port=5004, host='0.0.0.0', debug=True)

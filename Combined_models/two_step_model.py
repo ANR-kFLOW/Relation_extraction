@@ -1,5 +1,6 @@
 import subprocess
 import argparse
+import configparser
 import numpy as np
 import pandas as pd
 from accelerate import Accelerator
@@ -68,7 +69,7 @@ def parse_args():
     parser.add_argument(
         "--test_file", 
         type=str, 
-        default=None, 
+        default='Joined_data/News_data/test.csv', 
         help="A csv or a json file containing the test data."
     )
     parser.add_argument(
@@ -357,15 +358,26 @@ def parse_args():
         help="Whether to use pretrained signal detector",
     )
     #parser.add_argument('--filter_threshold', type=float, required=True, help='Threshold for classification')
+    
+    
+    
+    
+    
+    
     parser.add_argument('--use_cpu', action="store_true", help='To tell that the model should only use cpu')
+    
+    
+    
+    #rebel
     parser.add_argument(
         "--rebel_inf_model_name_or_path",
         type=str,
+        default='pretrained_models/st3/rebel_st3/model_our_data_gpt_augmented.pth',
         help="Path to pretrained model or model identifier from huggingface.co/models.",
         required=False,
     )
     
-    
+    #rebel
     
     
     #parser.add_argument('--filter_model_path', type=str, help='Path to model')
@@ -418,13 +430,13 @@ def parse_args():
     parser.add_argument(
         "--st1_output_dir",
         type=str,
-        default=None,
+        default='outs/2sft_st1_base_new',
         help="output for csv file",
     )
     parser.add_argument(
         "--st1_task_name",
         type=str,
-        default=None,
+        default='cola',
         help="The name of the task to train on: "
     )
     parser.add_argument(
@@ -477,6 +489,7 @@ def parse_args():
     parser.add_argument(
         "--st1_model_name_or_path",
         type=str,
+        default='pretrained_models/st1/roberta_st1/best_model',
         help="Path to pretrained model or model identifier from huggingface.co/models"
     )
     parser.add_argument(
@@ -562,9 +575,25 @@ def parse_args():
     #st2
     
     
-    
-    
-    
+    parser.add_argument(
+        "--st2_pretrained_path",
+        type=str,
+        default='pretrained_models/st2/roberta_st2/epoch_9',
+        help="The path to the folder that has the pretrained model.",
+    )
+    parser.add_argument(
+        "--st2_load_checkpoint_for_test",
+        type=str,
+        default='pretrained_models/st2/roberta_st2/epoch_9/pytorch_model.bin',
+        help="specific path to the model",
+    )
+    parser.add_argument(
+        "--st2_model_name_or_path",
+        type=str,
+        default='albert-base-v2',
+        help="Path to pretrained model or model identifier from huggingface.co/models.",
+        required=False,
+    )
     parser.add_argument(
         "--st2_dataset_name",
         type=str,
@@ -636,12 +665,7 @@ def parse_args():
         action="store_true",
         help="If passed, pad all samples to `max_length`. Otherwise, dynamic padding is used.",
     )
-    parser.add_argument(
-        "--st2_model_name_or_path",
-        type=str,
-        help="Path to pretrained model or model identifier from huggingface.co/models.",
-        required=False,
-    )
+    
     parser.add_argument(
         "--st2_config_name",
         type=str,
@@ -715,7 +739,7 @@ def parse_args():
     parser.add_argument(
         "--st2_output_dir", 
         type=str, 
-        default=None, 
+        default="outs/baseline", 
         help="Where to store the final model."
     )
     parser.add_argument(
@@ -783,6 +807,7 @@ def parse_args():
     parser.add_argument(
         "--st2_with_tracking",
         action="store_true",
+        default=False,
         help="Whether to enable experiment trackers for logging.",
     )
     parser.add_argument(
@@ -844,7 +869,7 @@ def parse_args():
     parser.add_argument(
         "--st2_dropout",
         type=float,
-        default=0.1,
+        default=0.3,
         help="classifier dropout rate",
     )
     parser.add_argument(
@@ -852,12 +877,7 @@ def parse_args():
         action="store_true",
         help="Activate to use model with Highest Overall F1 score, else defaults to Last model.",
     )
-    parser.add_argument(
-        "--st2_load_checkpoint_for_test",
-        type=str,
-        default=None,
-        help="classifier dropout rate",
-    )
+   
     parser.add_argument(
         "--st2_do_train",
         action="store_true",
@@ -892,24 +912,11 @@ def parse_args():
     
     
     
-    
-    
-    
-    
-    
-    
     parser.add_argument('--filter_train_file', type=str, help='Path to the training data file')
     parser.add_argument('--filter_val_file', type=str, help='Path to the validation data file')
     parser.add_argument('--filter_test_file', type=str, help='Path to the test data file')
-    parser.add_argument('--filter_threshold', type=float, required=True, help='Threshold for classification')
-    parser.add_argument('--filter_model_path', type=str, help='Path to model')
-    
-    
-    
-    
-    
-    
-    
+    parser.add_argument('--filter_threshold', type=float, default=0.8, help='Threshold for classification')
+    parser.add_argument('--filter_model_path', type=str, default='pretrained_models/st0/roberta_st0/best_model_st1.pt', help='Path to model')
     
     
     
@@ -923,13 +930,13 @@ def parse_args():
     
     
     
-    parser.add_argument('LLMS_task', help='Task to perform', choices=['test'])
-    parser.add_argument('--LLMS_news_dataset', help='Path to the news dataset CSV file', required=True)
-    parser.add_argument('--LLMS_test_dataset', help='Path to the test dataset CSV file', required=True)
-    parser.add_argument('--LLMS_num_examples', type=int, help='Number of examples per relation', required=True)
+    parser.add_argument('--LLMS_task', help='Task to perform', choices=['test'])
+    parser.add_argument('--LLMS_news_dataset', help='Path to the news dataset CSV file', default='news.csv')
+    parser.add_argument('--LLMS_test_dataset', help='Path to the test dataset CSV file', default='test.csv')
+    parser.add_argument('--LLMS_num_examples', type=int, help='Number of examples per relation', default=2)
     parser.add_argument('--LLMS_llm', help='LLM to use', default='zephyr', choices=available_llms)
-    parser.add_argument('--LLMS_template', help='Path to the prompt template YAML file', required=True)
-    parser.add_argument('--LLMS_output', help='Path to save the output predictions CSV file', required=True)
+    parser.add_argument('--LLMS_template', help='Path to the prompt template YAML file', default='prompt_template.yml')
+    parser.add_argument('--LLMS_output', default='LLM_pred', help='Path to save the output predictions CSV file')
     parser.add_argument('--LLMS_api_key', help='API key for GPT-4', required=False)
     parser.add_argument('--LLMS_verbose', help='Print the full prompt', default=False, action='store_true')
     parser.add_argument("--LLMS_log", type=int, choices=[10, 20, 30, 40, 50], action="store", default=20,
@@ -953,12 +960,53 @@ def parse_args():
     parser.add_argument(
         "--rebel_flag",
         action="store_true",
-        help="Tells the pipeline not to use this model",
+        help="Tells the pipeline to use this model",
     )
     parser.add_argument(
         "--LLM_flag",
         action="store_true",
-        help="Tells the pipeline not to use this model",
+        help="Tells the pipeline to use this model",
+    )
+    
+    parser.add_argument(
+        "--subtask1_flag",
+        action="store_true",
+        help="Tells the pipeline not to do subtask 1",
+    )
+    parser.add_argument(
+        "--subtask2_flag",
+        action="store_true",
+        help="Tells the pipeline not to do subtask 2",
+    )
+    parser.add_argument(
+        "--subtask3_flag",
+        action="store_true",
+        help="Tells the pipeline not to do subtask 3",
+    )
+    
+    
+    parser.add_argument(
+        "--config_file",
+        type=str,
+        help="Path to a configuration file"
+    )
+    
+    
+    
+    parser.add_argument(
+        "--split_st3_flag",
+        action="store_true",
+        help="Tells the pipeline to split st3",
+    )
+    parser.add_argument(
+        "--rebel_st1_flag",
+        action="store_true",
+        help="Tells the pipeline to use st1 from rebel",
+    )
+    parser.add_argument(
+        "--rebel_st2_flag",
+        action="store_true",
+        help="Tells the pipeline to use st2 from rebel",
     )
     
     #flags
@@ -966,6 +1014,20 @@ def parse_args():
     parser.add_argument('--text_from_user', type=str, help='this is user submitted text to be evaluated')
     #text from user
     args = parser.parse_args()
+    if args.config_file:
+        config = configparser.ConfigParser()
+        config.read(args.config_file)
+        
+        # Override command line arguments with those from the config file
+        for key in config['DEFAULT']:
+            value = config['DEFAULT'].get(key)
+            if hasattr(args, key):
+                #attr_type = type(getattr(args, key))
+                attr_type = type(value)
+                #print(attr_type)
+                #print(value)
+                #print(type(value))
+                setattr(args, key, attr_type(config['DEFAULT'][key]))
 
     # Sanity checks
     if args.task_name is None and args.train_file is None and args.validation_file is None  and args.test_file is None:
@@ -987,7 +1049,14 @@ def parse_args():
     return args
 
 
+def split_list_last(lst):
+    s = lst.split(' ')
+    return s[-1]
 
+def split_list_rest(lst):
+    s = lst.split(' ')
+    rest = " ".join(s[:-1])
+    return rest
 
 def para_into_df(s):
     parts = s.split('. ')
@@ -998,189 +1067,212 @@ def para_into_df(s):
     
 def main():
     args = parse_args()
+    args.st1_do_predict = True
+    args.st2_do_test = True
+    args.st1_use_cpu = True
     
     if args.text_from_user != None:
+        print(args.text_from_user)
         base_df = para_into_df(args.text_from_user)
     else:
         base_df = pd.read_csv(args.test_file)
-        base_df = base_df.drop(columns=['causal_text_w_pairs'])
-        base_df = base_df.drop(columns=['num_rs'])
+        #base_df = base_df.drop(columns=['causal_text_w_pairs'])
+        #base_df = base_df.drop(columns=['num_rs'])
+    
     args.st1_test_file = args.test_file
     args.base_df = base_df
+    
     #print('---------------------------------')
     only_causal_df = run_filter(args)
+    if len(only_causal_df) < 1:
+        print('There are no causal sentences')
+        return 
     #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+    only_causal_df = only_causal_df.drop(columns=['label'])
+    only_causal_df = only_causal_df.drop(columns=['triplets'])
+    only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
     args.only_causal = only_causal_df
+    #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
     df_final = only_causal_df.copy()
     
-    if not args.st2_flag:
-        st2_df = main_st2(args)
-        st2_indexes = []
-        st2_pred = []
-        for i in range(len(st2_df)):
-            st2_indexes.append(len(st2_df[i]))
-            st2_pred.append(str(st2_df[i]))
+    if not args.subtask1_flag:
+        print('st1')    
         
-        df_final['num_rs'] = st2_indexes
-        df_final['pred_st2'] = st2_pred
-    print('st1')    
-    if not args.st1_flag:
-        st1_df = main_st1(args)
-        df_final['label_st1'] = st1_df
-        df_final = df_final.drop(columns=['label'])
+        if not args.st1_flag:
+            print('running default model')
+            args.st1_flag = True
+            
+        if args.st1_flag:
+            args.st1_test_file = 't'
+            st1_df = main_st1(args)
+            df_final['label_st1'] = st1_df
+        #df_final = df_final.drop(columns=['label'])
     #print(len(st2_indexes))
     #print(len(st2_pred))
     #print(len(args.only_causal))
-    print('rebel')
-    if not args.rebel_flag:
-        rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
-        #print(len(args.only_causal))
-        #print(len(args.base_df))
-        #print(len(rebel_df))
-        df_final['triplet-rebel'] = rebel_df['prediction']
+    if not args.subtask2_flag:
+        print('st2')
+        if not args.st2_flag:
+            print('running default model')
+            args.st2_flag = True
+        if args.st2_flag:
+            args.st2_test_file = 't'
+            st2_df = main_st2(args)
+            st2_indexes = []
+            st2_pred = []
+            for i in range(len(st2_df)):
+                st2_indexes.append(len(st2_df[i]))
+                st2_pred.append(str(st2_df[i]))
+            
+            df_final['num_rs'] = st2_indexes
+            df_final['pred_st2'] = st2_pred
         
-    #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-    #return 0
-    print('LLM')
-    if not args.LLM_flag:    
-        args.LLMS_output = 'LLM_pred/' + args.LLMS_llm +'/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
+    if not args.subtask3_flag:
         
-        llm_df = run_LLM(args)
-        llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
-        df_final['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df['subj-obj-rel-LLM-' + args.LLMS_llm]
-        df_final = df_final.drop(columns=['triplets'])
+        if not args.rebel_flag or args.LLM_flag:
+            print('running default model')
+            args.rebel_flag = True
+        if args.rebel_flag:
+            print('rebel')
+            rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
+            #print(len(args.only_causal))
+            #print(len(args.base_df))
+            #print(len(rebel_df))
+            df_final['triplet-rebel'] = rebel_df['prediction']
+            if args.split_st3_flag == True:
+                if args.rebel_st1_flag == True:
+                    df_final['rebel_label'] = df_final['triplet-rebel'].map(split_list_last)
+                if args.rebel_st2_flag == True:
+                    df_final['rebel_sub_obj'] = df_final['triplet-rebel'].map(split_list_rest)
+            
+        #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+        #return 0
         
+        if args.LLM_flag:
+            print('LLM')    
+            args.LLMS_output = args.LLMS_output + '/' + args.LLMS_llm +'/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
+            
+            llm_df = run_LLM(args)
+            llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
+            df_final['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df['subj-obj-rel-LLM-' + args.LLMS_llm]
+            #df_final = df_final.drop(columns=['triplets'])
+            
     df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
     
+def run_pipeline(config_path):
+    args = parse_args()
+    config = configparser.ConfigParser()
+    config.read(config_path)
     '''
-    args_script_filter = [
-        'python', 'binary_filter.py',
-        '--train_file', args.train_file,
-        '--val_file', args.validation_file,
-        '--test_file', args.test_file,
-        '--threshold', args.threshold,
-        '--filter_model_path', args.filter_model_path
-    ]
-    args_script_filter = [str(x) for x in args_script_filter]
+    # Override command line arguments with those from the config file
+    for section in config.sections():
+        for key, value in config.items(section):
+            if hasattr(args, key):
+                attr_type = type(getattr(args, key))
+                setattr(args, key, attr_type(value))
+    '''
+    for key in config['DEFAULT']:
+            value = config['DEFAULT'].get(key)
+            if hasattr(args, key):
+                attr_type = type(value)
+                #print(attr_type)
+                #print(value)
+                #print(type(value))
+                setattr(args, key, attr_type(config['DEFAULT'][key]))
     
-    if args.do_train:
-        args_script_st2 = [
-        'python', 'st2_combine.py',
-        '--train_file', args.train_file,
-        '--validation_file', args.validation_file,
-        '--test_file', args.test_file, 
-        '--dropout', args.dropout, 
-        '--learning_rate', args.learning_rate, 
-        '--model_name_or_path', args.model_name_or_path, 
-        '--num_train_epochs', args.num_train_epochs,
-        '--num_warmup_steps', args.num_warmup_steps,
-        '--output_dir', args.output_dir,
-        '--per_device_train_batch_size', args.per_device_train_batch_size, 
-        '--per_device_eval_batch_size', args.per_device_eval_batch_size, 
-        '--per_device_test_batch_size', args.per_device_test_batch_size, 
-        '--report_to wandb', 
-        '--task_name', args.task_name,
-        '--do_test', 
-        '--do_train', 
-        '--weight_decay', args.weight_decay,
-        '--use_best_model'
-        ]
-        args_script_st2 = [str(y) for y in args_script_st2]
+    args.st1_do_predict = True
+    args.st2_do_test = True
+    args.st1_use_cpu = True
+    
+    if args.text_from_user != None:
+        print('border1')
+        print(args.text_from_user)
+        print('border2')
+        base_df = para_into_df(args.text_from_user)
     else:
-        args_script_st2 = [
-            'python', 'st2_combine.py',
-            '--test_file', 'only_causal.csv',
-            '--dropout', args.dropout, 
-            '--learning_rate', args.learning_rate, 
-            '--model_name_or_path', args.model_name_or_path, 
-            '--num_train_epochs', args.num_train_epochs,
-            '--num_warmup_steps', args.num_warmup_steps,
-            '--output_dir', args.output_dir,
-            '--per_device_train_batch_size', args.per_device_train_batch_size, 
-            '--per_device_eval_batch_size', args.per_device_eval_batch_size, 
-            '--per_device_test_batch_size', args.per_device_test_batch_size, 
-            '--report_to', 'wandb',
-            '--task_name', args.task_name,
-            '--do_test', 
-            '--weight_decay', args.weight_decay,
-            '--load_checkpoint_for_test', args.load_checkpoint_for_test
-        ]
-        args_script_st2 = [str(z) for z in args_script_st2]
-        args_script_st1 = ['python', 'st1_combine.py',
-                           '--task_name', 'cola',
-                           '--do_predict',
-                           '--model_name_or_path', 'best_model',
-                           '--output_dir', 'outs/2sft_st1_base_new',
-                           '--test_file', 'only_causal.csv',
-                           '--use_cpu', 'True'
-                           ]
-        args_script_rebel = ['python', 'train.py' , '--test_file', 'only_causal.csv', '--model_name_or_path', 'model_our_data_gpt_augmented.pth', '--model_type', 'Babelscape/rebel-large', '--config', 'rebel_config/'
-                             ]
+        base_df = pd.read_csv(args.test_file)
+        #base_df = base_df.drop(columns=['causal_text_w_pairs'])
+        #base_df = base_df.drop(columns=['num_rs'])
     
-    #result1 = subprocess.run(args_script1, capture_output=True, text=True)
-    result1 = subprocess.run(args_script_filter, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    print("Output from binary_filter.py:")
-    print(result1.stdout)
-    print("Errors from binary_filter.py (if any):")
-    print(result1.stderr)
+    args.st1_test_file = args.test_file
+    args.base_df = base_df
     
-    result2 = subprocess.run(args_script_st2, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    print("Output from st2_combine.py:")
-    print(result2.stdout)
-    print("Errors from st2_combine.py (if any):")
-    print(result2.stderr)
+    #print('---------------------------------')
+    only_causal_df = run_filter(args)
+    if len(only_causal_df) < 1:
+        print('There are no causal sentences')
+        return 'There are no causal sentences'
+    #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+    only_causal_df = only_causal_df.drop(columns=['label'])
+    only_causal_df = only_causal_df.drop(columns=['triplets'])
+    only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+    args.only_causal = only_causal_df
+    #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
+    df_final = only_causal_df.copy()
     
-    result3 = subprocess.run(args_script_st1, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    print("Output from st1_combine.py:")
-    print(result3.stdout)
-    print("Errors from st1_combine.py (if any):")
-    print(result3.stderr)
-    
-    result4 = subprocess.run(args_script_rebel)
-    print("Output from rebel:")
-    print(result4.stdout)
-    print("Errors from rebel (if any):")
-    print(result4.stderr)
-    
-    json_file_path = "outs/baseline/test-submission-temp.json"
-    data = []
-    with open(json_file_path, 'r') as file:
-        for line in file:
-            data.append(json.loads(line))
-    '''
-    df_combined = pd.read_csv('predicted_as_causal.csv')
-    
-    '''
+    if args.subtask1_flag == 'False':
+        print('st1')    
+        
+        if not args.st1_flag:
+            print('running default model')
+            args.st1_flag = True
             
-    df = pd.DataFrame(data)
-    
-    df_st1 = pd.read_csv('outs/2sft_st1_base_new/predict_results_cola.txt', delimiter='\t')
-    i_m2 = 0
-    for i in range(len(df_combined)):
-        d = df_combined.iloc[i]['num_rs']
-        if d > 0:
-            #df_combined.iat[i]['num_rs'] = len(df.iloc[i_m2]['prediction'])
-            #df_combined.iat[i]['causal_text_w_pairs'] = df.iloc[i_m2]['prediction']
-            df_combined.iat[i, 7] = len(df.iloc[i_m2]['prediction'])
-            df_combined.iat[i, 6] = df.iloc[i_m2]['prediction']
-            i_m2 = i_m2 + 1
+        if args.st1_flag == 'True':
+            args.st1_test_file = 't'
+            st1_df = main_st1(args)
+            mapping = {0: 'cause', 1: 'enable', 2: 'prevent', 3: 'intend'}
+            df_final['label_st1'] = st1_df
+            df_final['label_st1'] = df_final['label_st1'].replace(mapping)
+        #df_final = df_final.drop(columns=['label'])
+    #print(len(st2_indexes))
+    #print(len(st2_pred))
+    #print(len(args.only_causal))
+    if args.subtask2_flag == 'False':
+        print('st2')
+        if not args.st2_flag:
+            print('running default model')
+            args.st2_flag = True
+        if args.st2_flag == 'True':
+            args.st2_test_file = 't'
+            st2_df = main_st2(args)
+            st2_indexes = []
+            st2_pred = []
+            for i in range(len(st2_df)):
+                st2_indexes.append(len(st2_df[i]))
+                st2_pred.append(str(st2_df[i]))
+            df_final['num_rs_roberta'] = st2_indexes
+            df_final['span_pred_roberta'] = st2_pred
+            df_final = df_final.drop(columns=['num_rs'])
+    if args.subtask3_flag == 'False':
+        if not args.rebel_flag or args.LLM_flag:
+            print('running default model')
+            args.rebel_flag = True
             
-    '''
+        if args.rebel_flag == 'True':
+            print('rebel')
+            rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
+            #df_final['triplet-rebel'] = rebel_df['prediction']
+            if args.rebel_st1_flag == 'True':
+                df_final['label_rebel'] = rebel_df['prediction'].map(split_list_last)
+            if args.rebel_st2_flag == 'True':
+                df_final['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
+            
+        #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+        #return 0
+        
+        if args.LLM_flag:
+            print('LLM')    
+            args.LLMS_output = args.LLMS_output + '/' + args.LLMS_llm +'/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
+            
+            llm_df = run_LLM(args)
+            llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
+            df_final['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df['subj-obj-rel-LLM-' + args.LLMS_llm]
+            #df_final = df_final.drop(columns=['triplets']) 
     
-    #df_rebel = pd.read_csv('rebel_prediction/pred_rebel.csv')
-    #df_rebel['subj-rel-obj'] = df_rebel.apply(lambda row: [row['subject'], row['relation'], row['object']], axis=1)
-    
-    #df_only_causal = df_combined.loc[df_combined['num_rs'] > 0]
-    #df_only_causal['label'] = df_st1['prediction']
-    #df_only_causal.reset_index(drop=True, inplace=True)
-    
-    #df_only_causal.loc[:, 'label'] = df_st1['prediction'].values
-    #df_only_causal.drop(columns=['triplets'], inplace=True)
-    #df_only_causal['subj-rel-obj'] = df_rebel['subj-rel-obj']
-    #df_only_causal['subj-rel-obj'] = df_rebel['prediction']
-    #df_only_causal.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-    #df_combined.to_csv(f'final-combined_pred-{datetime.now()}.csv')
-    
+    df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+    #df_json = df_final.values.tolist()  
+    df_json = df_final.to_dict(orient='records')
+    return df_json
 
 if __name__ == "__main__":
     main()
