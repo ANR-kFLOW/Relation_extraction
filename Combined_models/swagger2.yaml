@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: Relation Detection - OpenAPI 3.3
+  description: Here we provide a platform to run and compare multiple models against each other
+  version: 1.0.11
+paths:
+  /Flag_List:
+    get:
+      summary: Get items with individual choices
+      parameters:
+        - in: query
+          name: ut
+          required: false
+          schema:
+            type: string
+          description: Type here if you want to input your own sentences; please seperate each sentence with a period followed by a space.
+        - in: query
+          name: st1
+          required: false
+          schema:
+            type: string
+            default: roberta_st1_best_model
+            enum:
+          description: Determines which model should be used for subtask 1 if subtask 1 is being done
+        - in: query
+          name: st2
+          required: false
+          schema:
+            type: string
+            default: roberta_st2_epoch_9
+            enum:
+          description: Determines which model should be used for subtask 2 if subtask 2 is being done
+        - in: query
+          name: st3
+          required: false
+          schema:
+            type: string
+            default: rebel_st3_model_our_data_gpt_augmented.pth
+            enum:
+              - rebel
+              - gpt
+              - none
+          description: Determines which model should be used for subtask 3 if subtask 3 is being done
+        - in: query
+          name: api
+          required: false
+          schema:
+            type: string
+            default: None
+          description: This is the api key that ChatGPT will use if it is called
+      responses:
+        '200':
+          description: A list of items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
