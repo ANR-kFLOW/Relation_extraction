@@ -12,8 +12,8 @@ from transformers import (
 class SignalDetector(nn.Module):
     def __init__(self, model_and_tokenizer_path) -> None:
         super().__init__()
-        self.tokenizer = AutoTokenizer.from_pretrained(model_and_tokenizer_path)
-        self.signal_detector = AutoModelForSequenceClassification.from_pretrained(model_and_tokenizer_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_and_tokenizer_path, cache_dir='data/huggingface/')
+        self.signal_detector = AutoModelForSequenceClassification.from_pretrained(model_and_tokenizer_path, cache_dir='data/huggingface/')
         self.signal_detector.eval()
         self.signal_detector.cuda()
 
@@ -37,9 +37,9 @@ class ST2ModelV2(nn.Module):
         #self.model = AutoModel.from_pretrained(args.st2_model_name_or_path)
         #self.tokenizer = AutoTokenizer.from_pretrained(args.st2_model_name_or_path)
         
-        self.config = AutoConfig.from_pretrained('/Users/gustavoflores/Downloads/Relation_extraction/Combined_model/epoch_9/config.json')
-        self.model = AutoModel.from_pretrained('/Users/gustavoflores/Downloads/Relation_extraction/Combined_model/epoch_9')
-        self.tokenizer = AutoTokenizer.from_pretrained(args.st2_model_name_or_path)
+        self.config = AutoConfig.from_pretrained(args.st2_pretrained_path + '/config.json', cache_dir='data/huggingface/')
+        self.model = AutoModel.from_pretrained(args.st2_pretrained_path, cache_dir='data/huggingface/')
+        self.tokenizer = AutoTokenizer.from_pretrained(args.st2_model_name_or_path, cache_dir='data/huggingface/')
 #         Count the total number of layers
 #        total_layers = sum(1 for _ in self.model.parameters())
 #
