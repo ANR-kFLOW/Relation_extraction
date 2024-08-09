@@ -13,7 +13,11 @@ For having the information stored locally in your machine you can just download 
 and mount it to the docker image with the command: docker run -p 5001:5004 -it -v $(pwd)/Combined_model:/data relation_extraction_pipeline 
 
 Using the docker file from the docker testing folder build the image with the command: 
+docker build --platform linux/amd64  -t relation_extraction docker-testing/Dockerfile
+
+or alternatively from within the docker-testing folder:
 docker build --platform linux/amd64  -t relation_extraction
+
 then run the image with: docker run -it relation_extraction
 inside the docker use the following commands in the following order:
 conda install anaconda::evaluate
