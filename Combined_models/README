@@ -36,6 +36,8 @@ conda install conda-forge::flask-restful
 
 After this is over commit the image into another image that is based on this instance with the name relation_extraction_pipeline 
 
+docker commit [Name of Docker instance]  relation_extraction_pipeline
+
 To be able to connect to the application you need to export the docker file to a local port that is available. 
 
 In this example the local port for 5001 is available:
