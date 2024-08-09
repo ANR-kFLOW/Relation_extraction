@@ -1,1 +1,44 @@
+Building from a docker file locally: 
+The file can either have the repository for the app stored locally on the machine or in the image.
+
+If it is prefered to have all of the files in the image add these lines to Docker file for the first image:
+WORKDIR /app
+# Copy the files into the new image
+COPY Combined_model/ /app/Combined_model/
+
+Be sure to have the Combined_model folder saved on your local machine.
+After the Docker image is built the Combined_model folder can be removed and the folder will be stored in the image.
+
+For having the information stored locally in your machine you can just download the Combined_models folder,
+and mount it to the docker image with the command: docker run -p 5001:5004 -it -v $(pwd)/Combined_model:/data relation_extraction_pipeline 
+
+Using the docker file from the docker testing folder build the image with the command: 
+docker build --platform linux/amd64  -t relation_extraction
+then run the image with: docker run -it relation_extraction
+inside the docker use the following commands in the following order:
+conda install anaconda::evaluate
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia 
+conda install anaconda::scikit-learn     
+conda install conda-forge::transformers 
+conda install conda-forge::accelerate
+conda install conda-forge::langchain
+conda install conda-forge::python-dotenv 
+conda install anaconda::flask
+conda install conda-forge::werkzeug=2.2
+conda install conda-forge::openai=0.28.1
+conda install conda-forge::huggingface_hub
+conda install conda-forge::flask-swagger-ui
+conda install conda-forge::flask-restful
+
+After this is over commit the image into another image that is based on this instance with the name relation_extraction_pipeline 
+
+To be able to connect to the application you need to export the docker file to a local port that is available. 
+
+In this example the local port for 5001 is available:
+docker run -p 5001:5004 -it -v $(pwd)/Combined_model:/data relation_extraction_pipeline 
+
+When running the link that is given in the terminal change the local port number to the number that you exported from your local machine. 
+for the previous example it would be http://127.0.0.1:5001/swagger/
+
+Be sure to add the /swagger to the end of the link. 
 
