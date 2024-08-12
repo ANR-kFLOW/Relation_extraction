@@ -1,3 +1,0 @@
-This is the folder where all the pretrained versions of rebel are stored.
-Do not place in files that are not pretrained models of rebel that are stored as a .pth file.
-The web application uses this directory to determine the options for rebel that are available. 
