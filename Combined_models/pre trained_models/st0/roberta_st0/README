@@ -1,0 +1,3 @@
+This is the folder where all the pretrained versions of roberta used for filtering will be stored. 
+Do not put a file in here that is not a pretrained file for roberta.
+This folder is used to determine the options that available in the application.
