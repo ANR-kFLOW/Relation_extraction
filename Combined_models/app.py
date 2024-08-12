@@ -215,8 +215,8 @@ def check_cache(cache_list):
     st0 = 'tf-' + t_f + '-' + 'filter-' + cache_list['filter']
     print(t_f)
     print(st0)
-    print(st0 + '-' + 'st1-' + cache_list['st1'])
-    print(st0 + '-' + 'st2-' + cache_list['st2'])
+    #print(st0 + '-' + 'st1-' + cache_list['st1'])
+    #print(st0 + '-' + 'st2-' + cache_list['st2'])
     st1 = ''
     st2 = ''
     tasks = ['st0_preset', 'st1_preset', 'st2_preset']
