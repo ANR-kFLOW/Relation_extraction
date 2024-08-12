@@ -209,9 +209,49 @@ def get_params():
     return response
 
 
+def check_cache(cache_list):
+    skip_path = {}
+    t_f = cache_list['t_f']
+    st0 = 'tf-' + t_f + '-' + 'filter-' + cache_list['filter']
+    print(t_f)
+    print(st0)
+    print(st0 + '-' + 'st1-' + cache_list['st1'])
+    print(st0 + '-' + 'st2-' + cache_list['st2'])
+    st1 = ''
+    st2 = ''
+    tasks = ['st0_preset', 'st1_preset', 'st2_preset']
+    
+    if 'st1' in cache_list:
+        st1 = st0 + '-' + 'st1-' + cache_list['st1']
+        
+    if 'st2' in cache_list:
+        st2 = st0 + '-' + 'st2-' + cache_list['st2']
+        
+    directory_path = 'saved_app_outs/'
+    
+    for filename in os.listdir(directory_path):
+        file_path = os.path.join(directory_path, filename)
+        
+        if filename == st0 + '.csv':
+            skip_path['st0_preset'] = file_path
+            
+        if filename == st1 + '.csv':
+            skip_path['st1_preset'] = file_path
+            
+        if filename == st2 + '.csv':
+            skip_path['st2_preset'] = file_path
+            
+    for task in tasks:
+        if task not in skip_path:
+            skip_path[task] = 'None'
+            
+    return skip_path
+
+
 def set_config(flags):
     config = configparser.ConfigParser()
     config['DEFAULT'] = {}
+    preset_labels = {}
     '''
     if flags['Do subtask 1'] == False:
         config['DEFAULT']['subtask1_flag'] = 'True'
@@ -228,15 +268,21 @@ def set_config(flags):
     if flags['User sent'] != None:
         config['DEFAULT']['text_from_user'] = flags['User sent']
     '''
+    check_preset_flag = False
     
     if 't_f' not in flags and 'q' not in flags:
         print('either choose a dataset or give your own sentences')
         return False
     if 'q' not in flags:
         config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
+        check_preset_flag = True
+        preset_labels['t_f'] = flags['t_f']
     
     
     filter_s = flags['st0']
+    
+    
+    
     filter_parts = filter_s.split('_')
     filter_prefix = filter_parts[0] + '_' + filter_parts[1]
     filter_name = filter_parts[2]
@@ -244,6 +290,10 @@ def set_config(flags):
         filter_name = filter_name + '_' + filter_parts[i]
     filter_path = 'pretrained_models/st0/' + filter_prefix + '/' + filter_name
     config['DEFAULT']['filter_model_path'] = filter_path
+    
+    preset_labels['filter'] = 'roberta-' + filter_name
+    
+    
     config['DEFAULT']['rebel_flag'] = 'False'
     config['DEFAULT']['split_st3_flag'] = 'True'
     
@@ -275,6 +325,7 @@ def set_config(flags):
                 config['DEFAULT']['st1_model_name_or_path'] = path
                 config['DEFAULT']['subtask1_flag'] = 'False'
                 config['DEFAULT']['st1_flag'] = 'True'
+                preset_labels['st1'] = 'roberta-' + model_name
             else:
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
@@ -285,6 +336,7 @@ def set_config(flags):
                 config['DEFAULT']['subtask1_flag'] = 'True'
                 config['DEFAULT']['subtask3_flag'] = 'False'
                 config['DEFAULT']['st1_flag'] = 'False'
+                preset_labels['st1'] = 'rebel-' + model_name
     else:
         config['DEFAULT']['subtask1_flag'] = 'True'
     
@@ -318,6 +370,7 @@ def set_config(flags):
                 config['DEFAULT']['st2_load_checkpoint_for_test'] = path + '/pytorch_model.bin'
                 config['DEFAULT']['subtask2_flag'] = 'False'
                 config['DEFAULT']['st2_flag'] = 'True'
+                preset_labels['st2'] = 'roberta-' + model_name
             else:
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
@@ -327,15 +380,25 @@ def set_config(flags):
                 config['DEFAULT']['rebel_st2_flag'] = 'True'
                 config['DEFAULT']['subtask2_flag'] = 'True'
                 config['DEFAULT']['subtask3_flag'] = 'False'
+                preset_labels['st2'] = 'rebel-' + model_name
     else:
         config['DEFAULT']['subtask2_flag'] = 'True'
     
     if 'q' in flags:
         config['DEFAULT']['text_from_user'] = flags['q']
+        check_preset_flag = False
     if 'api' in flags:
         config['DEFAULT']['LLMS_api_key'] = flags['api']
     #if flags['t_f'] != 'None':
         #config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
+    if check_preset_flag:
+        print(preset_labels)
+        cache_dict = check_cache(preset_labels)
+        for key in cache_dict.keys():
+            config['DEFAULT'][key] = cache_dict[key]
+    
+    
+    
     with open('config_swagger.ini', 'w') as configfile:
         config.write(configfile)
     return True

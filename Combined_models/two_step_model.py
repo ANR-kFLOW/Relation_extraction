@@ -1010,6 +1010,34 @@ def parse_args():
     )
     
     #flags
+    
+    parser.add_argument(
+        "--pipeline_config_name",
+        type=str,
+        default='None',
+        help="Name of the output file that will be used as a reference"
+    )
+    parser.add_argument(
+        "--st0_preset",
+        type=str,
+        default='None',
+        help="Name of the file that is using a model that is already done for the filter"
+    )
+    parser.add_argument(
+        "--st1_preset",
+        type=str,
+        default='None',
+        help="Name of the file that is using a model that is already done for st1"
+    )
+    parser.add_argument(
+        "--st2_preset",
+        type=str,
+        default='None',
+        help="Name of the file that is using a model that is already done for st2"
+    )
+    
+    
+    
     #text from user
     parser.add_argument('--text_from_user', type=str, help='this is user submitted text to be evaluated')
     #text from user
@@ -1132,6 +1160,7 @@ def main():
         if not args.rebel_flag or args.LLM_flag:
             print('running default model')
             args.rebel_flag = True
+            
         if args.rebel_flag:
             print('rebel')
             rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
@@ -1184,13 +1213,23 @@ def run_pipeline(config_path):
     args.st2_do_test = True
     args.st1_use_cpu = True
     
+    
+    user_flag = False
+    st1_model = ''
+    
+    
+    
+    
     if args.text_from_user != None:
         print('border1')
         print(args.text_from_user)
         print('border2')
         base_df = para_into_df(args.text_from_user)
+        user_flag = True
     else:
         base_df = pd.read_csv(args.test_file)
+        st0_path = args.filter_model_path.split('/')
+        st0_preset_name = 'saved_app_outs/tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1]
         #base_df = base_df.drop(columns=['causal_text_w_pairs'])
         #base_df = base_df.drop(columns=['num_rs'])
     
@@ -1198,64 +1237,115 @@ def run_pipeline(config_path):
     args.base_df = base_df
     
     #print('---------------------------------')
-    only_causal_df = run_filter(args)
-    if len(only_causal_df) < 1:
-        print('There are no causal sentences')
-        return 'There are no causal sentences'
-    #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
-    only_causal_df = only_causal_df.drop(columns=['label'])
-    only_causal_df = only_causal_df.drop(columns=['triplets'])
-    only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
-    args.only_causal = only_causal_df
-    #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
-    df_final = only_causal_df.copy()
+    
+    if user_flag == False and args.st0_preset != 'None':
+        print('hello')
+        only_causal_df = pd.read_csv(args.st0_preset)
+        args.only_causal = only_causal_df
+        df_final = only_causal_df.copy()
+    else:
+        only_causal_df = run_filter(args)    
+        if len(only_causal_df) < 1:
+            print('There are no causal sentences')
+            return 'There are no causal sentences'
+        #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+        only_causal_df = only_causal_df.drop(columns=['label'])
+        only_causal_df = only_causal_df.drop(columns=['triplets'])
+        only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+        args.only_causal = only_causal_df
+        #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
+        df_final = only_causal_df.copy()
+        st0_path = args.filter_model_path.split('/')
+        if user_flag == False:
+            df_final.to_csv('saved_app_outs/tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
+            print(st0_preset_name)
     
     if args.subtask1_flag == 'False':
         print('st1')    
-        
-        if not args.st1_flag:
-            print('running default model')
-            args.st1_flag = True
-            
-        if args.st1_flag == 'True':
-            args.st1_test_file = 't'
-            st1_df = main_st1(args)
-            mapping = {0: 'cause', 1: 'enable', 2: 'prevent', 3: 'intend'}
-            df_final['label_st1'] = st1_df
-            df_final['label_st1'] = df_final['label_st1'].replace(mapping)
+        if user_flag == False and args.st1_preset != 'None':
+            st1_df = pd.read_csv(args.st1_preset)
+            df_final['label_roberta'] = st1_df['label_roberta']
+        else:
+            if not args.st1_flag:
+                print('running default model')
+                args.st1_flag = 'True'
+                
+            if args.st1_flag == 'True':
+                args.st1_test_file = 't'
+                st1_df = main_st1(args)
+                mapping = {0: 'cause', 1: 'enable', 2: 'prevent', 3: 'intend'}
+                df_final['label_roberta'] = st1_df
+                df_final['label_roberta'] = df_final['label_roberta'].replace(mapping)
+                if user_flag == False:
+                    st1_path = args.st1_model_name_or_path.split('/')
+                    st1_preset_name = st0_preset_name + '-st1-roberta-' + st1_path[-1]
+                    print(st1_preset_name)
+                    df_final['label_roberta'].to_csv(st1_preset_name + '.csv')
         #df_final = df_final.drop(columns=['label'])
     #print(len(st2_indexes))
     #print(len(st2_pred))
     #print(len(args.only_causal))
     if args.subtask2_flag == 'False':
         print('st2')
-        if not args.st2_flag:
-            print('running default model')
-            args.st2_flag = True
-        if args.st2_flag == 'True':
-            args.st2_test_file = 't'
-            st2_df = main_st2(args)
-            st2_indexes = []
-            st2_pred = []
-            for i in range(len(st2_df)):
-                st2_indexes.append(len(st2_df[i]))
-                st2_pred.append(str(st2_df[i]))
-            df_final['num_rs_roberta'] = st2_indexes
-            df_final['span_pred_roberta'] = st2_pred
-            df_final = df_final.drop(columns=['num_rs'])
+        if user_flag == False and args.st2_preset != 'None':
+            st2_df = pd.read_csv(args.st2_preset)
+            df_final['num_rs_roberta'] = st2_df['num_rs_roberta']
+            df_final['span_pred_roberta'] = st2_df['span_pred_roberta']
+        else:
+            if not args.st2_flag:
+                print('running default model')
+                args.st2_flag = 'True'
+            if args.st2_flag == 'True':
+                args.st2_test_file = 't'
+                st2_df = main_st2(args)
+                st2_indexes = []
+                st2_pred = []
+                for i in range(len(st2_df)):
+                    st2_indexes.append(len(st2_df[i]))
+                    st2_pred.append(str(st2_df[i]))
+                df_final['num_rs_roberta'] = st2_indexes
+                df_final['span_pred_roberta'] = st2_pred
+                df_final = df_final.drop(columns=['num_rs'])
+                if user_flag == False:
+                    st2_path = args.st2_pretrained_path.split('/')
+                    st2_preset_name = st0_preset_name + '-st2-roberta-' + st2_path[-1]
+                    print(st2_preset_name)
+                    df_final[['span_pred_roberta', 'num_rs_roberta']].to_csv(st2_preset_name + '.csv')
+                
+                
     if args.subtask3_flag == 'False':
         if not args.rebel_flag or args.LLM_flag:
             print('running default model')
-            args.rebel_flag = True
-            
+            args.rebel_flag = 'True'
         if args.rebel_flag == 'True':
             print('rebel')
-            rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
-            #df_final['triplet-rebel'] = rebel_df['prediction']
-            if args.rebel_st1_flag == 'True':
-                df_final['label_rebel'] = rebel_df['prediction'].map(split_list_last)
-            if args.rebel_st2_flag == 'True':
-                df_final['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
+            used_preset_rebel = False
+            if 'rebel' in args.st1_preset:
+                    if user_flag == False:
+                        rebel_df = pd.read_csv(args.st1_preset)
+                        df_final['label_rebel'] = rebel_df['label_rebel']
+                        used_preset_rebel = True
+            if 'rebel' in args.st2_preset:
+                if user_flag == False:
+                        rebel_df = pd.read_csv(args.st2_preset)
+                        df_final['span_pred_rebel'] = rebel_df['span_pred_rebel']
+                        used_preset_rebel = True
+            if used_preset_rebel == False:
+                rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
+                #df_final['triplet-rebel'] = rebel_df['prediction']
+                if args.rebel_st1_flag == 'True':
+                    df_final['label_rebel'] = rebel_df['prediction'].map(split_list_last)
+                if args.rebel_st2_flag == 'True':
+                    df_final['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
+                if user_flag == False:
+                    rebel_path = args.rebel_inf_model_name_or_path.split('/')
+                    rebel_st1_preset_name = st0_preset_name + '-st1-rebel-' + rebel_path[-1]
+                    rebel_st2_preset_name = st0_preset_name + '-st2-rebel-' + rebel_path[-1]
+                    
+                    print(rebel_st1_preset_name)
+                    print(rebel_st2_preset_name)
+                    df_final['label_rebel'].to_csv(rebel_st1_preset_name + '.csv')
+                    df_final['span_pred_rebel'].to_csv(rebel_st2_preset_name + '.csv')
             
         #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
         #return 0
@@ -1271,6 +1361,8 @@ def run_pipeline(config_path):
     
     df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
     #df_json = df_final.values.tolist()  
+    if args.pipeline_config_name != 'None':
+        df_final.to_csv('saved_app_outs/' + args.pipeline_config_name + '.csv')
     df_json = df_final.to_dict(orient='records')
     return df_json
 
