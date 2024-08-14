@@ -1,2 +1,12 @@
 **/.DS_Store
 .idea
+Binary_classification/
+CNC/
+CommonSenseDataAugmentation/
+Joined_data/
+LLMS_RE/
+Outputs/
+REBEL/
+data/
+refining/
+scripts/
