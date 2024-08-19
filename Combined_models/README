@@ -84,3 +84,7 @@ All of the place holder names would have to be replaced with a counterpart that 
 When putting in files into st0 or rebel_st3 be mindful of keeping the file as the same file type as shown in the example. 
 
 When putting in multiple pretrained model files in the same directory make sure that each name is unique so that it can be clearly distinguished when the model appears as an option in the web application.
+
+
+
+When importing this github be sure to create the empty folders: saved_app_outs and combined_outs
