@@ -1,15 +1,14 @@
-from flask import Flask, render_template, jsonify, request
-from two_step_model import run_pipeline
-from dotenv import load_dotenv
-import subprocess
+import configparser
 import os
 import re
-import yaml
+
+from flask import Flask, render_template, jsonify, request
 from flask_restful import Api, Resource
 from flask_swagger_ui import get_swaggerui_blueprint
 
-import configparser
+from two_step_model import run_pipeline
 
+CACHE_DIR = 'out/'
 
 def set_choices(yaml_file):
     with open(yaml_file, 'r') as file:
@@ -227,8 +226,9 @@ def check_cache(cache_list):
     if 'st2' in cache_list:
         st2 = st0 + '-' + 'st2-' + cache_list['st2']
         
-    directory_path = 'saved_app_outs/'
-    
+    directory_path = os.path.join(CACHE_DIR, 'st')
+    os.makedirs('st', exist_ok=True)
+
     for filename in os.listdir(directory_path):
         file_path = os.path.join(directory_path, filename)
         

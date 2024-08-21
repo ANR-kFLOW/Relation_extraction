@@ -29,10 +29,8 @@ from transformers import (
 )
 from transformers.trainer_utils import get_last_checkpoint
 from sklearn.metrics import precision_recall_fscore_support
-
 import wandb
 os.environ['WANDB_PROJECT']='CausalNewsCorpus'
-
 
 
 
@@ -206,8 +204,8 @@ def main_st1(args):
         model_args = args
         data_args = args
         #training_args = args
-    if training_args.do_train:
-        wandb.login()
+    # if training_args.do_train:
+    #     wandb.login()
     
     # Setup logging
     logging.basicConfig(

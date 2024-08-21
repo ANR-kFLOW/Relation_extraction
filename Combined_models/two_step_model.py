@@ -1,34 +1,30 @@
-import subprocess
 import argparse
 import configparser
-import numpy as np
-import pandas as pd
-from accelerate import Accelerator
-from accelerate.logging import get_logger
-import json
-from inf_rebel import test_model
+import os
 from datetime import datetime
+
+import pandas as pd
+from accelerate.logging import get_logger
 from transformers import (
-    CONFIG_MAPPING,
     MODEL_MAPPING,
-    AutoConfig,
-    AutoTokenizer,
     SchedulerType,
-    default_data_collator,
-    get_scheduler,
 )
 
-from binary_filter import run_filter
-from st2_combine import main_st2
-from st1_combine import main_st1
 from LLM_run import run_LLM
+from binary_filter import run_filter
+from inf_rebel import test_model
+from st1_combine import main_st1
+from st2_combine import main_st2
 
 logger = get_logger(__name__)
 
 MODEL_CONFIG_CLASSES = list(MODEL_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
 
-#print('--------')
+CACHE_COMBINED_DIR = os.path.join('out', 'combined')
+os.makedirs(CACHE_COMBINED_DIR, exist_ok=True)
+
+# print('--------')
 available_llms = {
     "zephyr": "HuggingFaceH4/zephyr-7b-beta",
     "dpo": "yunconglong/Truthful_DPO_TomGrc_FusionNet_7Bx2_MoE_13B",
@@ -36,8 +32,9 @@ available_llms = {
     "solar": "bhavinjawade/SOLAR-10B-OrcaDPO-Jawade",
     "gpt4": "OpenAI-GPT4"  # Added GPT-4
 }
+
+
 def parse_args():
-    
     parser = argparse.ArgumentParser(
         description="Finetune a transformers model on a text classification task (NER) with accelerate library"
     )
@@ -55,21 +52,21 @@ def parse_args():
         help="The configuration name of the dataset to use (via the datasets library).",
     )
     parser.add_argument(
-        "--train_file", 
-        type=str, 
-        default=None, 
+        "--train_file",
+        type=str,
+        default=None,
         help="A csv or a json file containing the training data."
     )
     parser.add_argument(
-        "--validation_file", 
-        type=str, 
-        default=None, 
+        "--validation_file",
+        type=str,
+        default=None,
         help="A csv or a json file containing the validation data."
     )
     parser.add_argument(
-        "--test_file", 
-        type=str, 
-        default='Joined_data/News_data/test.csv', 
+        "--test_file",
+        type=str,
+        default='Joined_data/News_data/test.csv',
         help="A csv or a json file containing the test data."
     )
     parser.add_argument(
@@ -156,15 +153,15 @@ def parse_args():
         help="Initial learning rate (after the potential warmup period) to use.",
     )
     parser.add_argument(
-        "--weight_decay", 
-        type=float, 
-        default=0.0, 
+        "--weight_decay",
+        type=float,
+        default=0.0,
         help="Weight decay to use."
     )
     parser.add_argument(
-        "--num_train_epochs", 
-        type=int, 
-        default=3, 
+        "--num_train_epochs",
+        type=int,
+        default=3,
         help="Total number of training epochs to perform."
     )
     parser.add_argument(
@@ -190,15 +187,15 @@ def parse_args():
         "--num_warmup_steps", type=int, default=0, help="Number of steps for the warmup in the lr scheduler."
     )
     parser.add_argument(
-        "--output_dir", 
-        type=str, 
-        default=None, 
+        "--output_dir",
+        type=str,
+        default=None,
         help="Where to store the final model."
     )
     parser.add_argument(
-        "--seed", 
-        type=int, 
-        default=42, 
+        "--seed",
+        type=int,
+        default=42,
         help="A seed for reproducible training."
     )
     parser.add_argument(
@@ -231,18 +228,18 @@ def parse_args():
         help="Activate debug mode and run training only with a subset of data.",
     )
     parser.add_argument(
-        "--push_to_hub", 
-        action="store_true", 
+        "--push_to_hub",
+        action="store_true",
         help="Whether or not to push the model to the Hub."
     )
     parser.add_argument(
-        "--hub_model_id", 
-        type=str, 
+        "--hub_model_id",
+        type=str,
         help="The name of the repository to keep in sync with the local `output_dir`."
     )
     parser.add_argument(
-        "--hub_token", 
-        type=str, 
+        "--hub_token",
+        type=str,
         help="The token to use to push to the Model Hub."
     )
     parser.add_argument(
@@ -308,7 +305,7 @@ def parse_args():
         action="store_true",
         help="Whether to use pretrained signal detector",
     )
-    parser.add_argument( #"outs_test/signal_cls"
+    parser.add_argument(  # "outs_test/signal_cls"
         "--signal_model_and_tokenizer_path",
         type=str,
         help="Path to pretrained signal detector model.",
@@ -357,18 +354,11 @@ def parse_args():
         default=5,
         help="Whether to use pretrained signal detector",
     )
-    #parser.add_argument('--filter_threshold', type=float, required=True, help='Threshold for classification')
-    
-    
-    
-    
-    
-    
+    # parser.add_argument('--filter_threshold', type=float, required=True, help='Threshold for classification')
+
     parser.add_argument('--use_cpu', action="store_true", help='To tell that the model should only use cpu')
-    
-    
-    
-    #rebel
+
+    # rebel
     parser.add_argument(
         "--rebel_inf_model_name_or_path",
         type=str,
@@ -376,18 +366,13 @@ def parse_args():
         help="Path to pretrained model or model identifier from huggingface.co/models.",
         required=False,
     )
-    
-    #rebel
-    
-    
-    #parser.add_argument('--filter_model_path', type=str, help='Path to model')
-    
-    
-    #st1
-    
-    
-    
-    
+
+    # rebel
+
+    # parser.add_argument('--filter_model_path', type=str, help='Path to model')
+
+    # st1
+
     '''
     parser.add_argument(
         "--st1_get_process_log_level",
@@ -425,8 +410,7 @@ def parse_args():
         help="sets the model to predict",
     )
     parser.add_argument('--st1_use_cpu', action="store_true", help='To tell that the model should only use cpu')
-    
-    
+
     parser.add_argument(
         "--st1_output_dir",
         type=str,
@@ -551,30 +535,18 @@ def parse_args():
         default=False,
         help="If the model to use with predictions is a regression model."
     )
-    
+
     parser.add_argument(
-        "--st1_seed", 
-        type=int, 
-        default=42, 
+        "--st1_seed",
+        type=int,
+        default=42,
         help="A seed for reproducible training."
     )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    #st1
-    
-    
-    
-    
-    #st2
-    
-    
+
+    # st1
+
+    # st2
+
     parser.add_argument(
         "--st2_pretrained_path",
         type=str,
@@ -607,21 +579,21 @@ def parse_args():
         help="The configuration name of the dataset to use (via the datasets library).",
     )
     parser.add_argument(
-        "--st2_train_file", 
-        type=str, 
-        default=None, 
+        "--st2_train_file",
+        type=str,
+        default=None,
         help="A csv or a json file containing the training data."
     )
     parser.add_argument(
-        "--st2_validation_file", 
-        type=str, 
-        default=None, 
+        "--st2_validation_file",
+        type=str,
+        default=None,
         help="A csv or a json file containing the validation data."
     )
     parser.add_argument(
-        "--st2_test_file", 
-        type=str, 
-        default=None, 
+        "--st2_test_file",
+        type=str,
+        default=None,
         help="A csv or a json file containing the test data."
     )
     parser.add_argument(
@@ -665,7 +637,7 @@ def parse_args():
         action="store_true",
         help="If passed, pad all samples to `max_length`. Otherwise, dynamic padding is used.",
     )
-    
+
     parser.add_argument(
         "--st2_config_name",
         type=str,
@@ -703,15 +675,15 @@ def parse_args():
         help="Initial learning rate (after the potential warmup period) to use.",
     )
     parser.add_argument(
-        "--st2_weight_decay", 
-        type=float, 
-        default=0.0, 
+        "--st2_weight_decay",
+        type=float,
+        default=0.0,
         help="Weight decay to use."
     )
     parser.add_argument(
-        "--st2_num_train_epochs", 
-        type=int, 
-        default=3, 
+        "--st2_num_train_epochs",
+        type=int,
+        default=3,
         help="Total number of training epochs to perform."
     )
     parser.add_argument(
@@ -737,15 +709,15 @@ def parse_args():
         "--st2_num_warmup_steps", type=int, default=0, help="Number of steps for the warmup in the lr scheduler."
     )
     parser.add_argument(
-        "--st2_output_dir", 
-        type=str, 
-        default="outs/baseline", 
+        "--st2_output_dir",
+        type=str,
+        default="outs/baseline",
         help="Where to store the final model."
     )
     parser.add_argument(
-        "--st2_seed", 
-        type=int, 
-        default=42, 
+        "--st2_seed",
+        type=int,
+        default=42,
         help="A seed for reproducible training."
     )
     parser.add_argument(
@@ -778,18 +750,18 @@ def parse_args():
         help="Activate debug mode and run training only with a subset of data.",
     )
     parser.add_argument(
-        "--st2_push_to_hub", 
-        action="store_true", 
+        "--st2_push_to_hub",
+        action="store_true",
         help="Whether or not to push the model to the Hub."
     )
     parser.add_argument(
-        "--st2_hub_model_id", 
-        type=str, 
+        "--st2_hub_model_id",
+        type=str,
         help="The name of the repository to keep in sync with the local `output_dir`."
     )
     parser.add_argument(
-        "--st2_hub_token", 
-        type=str, 
+        "--st2_hub_token",
+        type=str,
         help="The token to use to push to the Model Hub."
     )
     parser.add_argument(
@@ -856,7 +828,7 @@ def parse_args():
         action="store_true",
         help="Whether to use pretrained signal detector",
     )
-    parser.add_argument( #"outs_test/signal_cls"
+    parser.add_argument(  # "outs_test/signal_cls"
         "--st2_signal_model_and_tokenizer_path",
         type=str,
         help="Path to pretrained signal detector model.",
@@ -877,7 +849,7 @@ def parse_args():
         action="store_true",
         help="Activate to use model with Highest Overall F1 score, else defaults to Last model.",
     )
-   
+
     parser.add_argument(
         "--st2_do_train",
         action="store_true",
@@ -900,36 +872,22 @@ def parse_args():
         default=5,
         help="Whether to use pretrained signal detector",
     )
-    
-    
-    #st2
-    
-    
-    
-    
-    #filter
-    
-    
-    
-    
+
+    # st2
+
+    # filter
+
     parser.add_argument('--filter_train_file', type=str, help='Path to the training data file')
     parser.add_argument('--filter_val_file', type=str, help='Path to the validation data file')
     parser.add_argument('--filter_test_file', type=str, help='Path to the test data file')
     parser.add_argument('--filter_threshold', type=float, default=0.8, help='Threshold for classification')
-    parser.add_argument('--filter_model_path', type=str, default='pretrained_models/st0/roberta_st0/best_model_st1.pt', help='Path to model')
-    
-    
-    
-    
-    
-    #filter
-    
-    
-    
-    #LLMS
-    
-    
-    
+    parser.add_argument('--filter_model_path', type=str, default='pretrained_models/st0/roberta_st0/best_model_st1.pt',
+                        help='Path to model')
+
+    # filter
+
+    # LLMS
+
     parser.add_argument('--LLMS_task', help='Task to perform', choices=['test'])
     parser.add_argument('--LLMS_news_dataset', help='Path to the news dataset CSV file', default='news.csv')
     parser.add_argument('--LLMS_test_dataset', help='Path to the test dataset CSV file', default='test.csv')
@@ -941,12 +899,10 @@ def parse_args():
     parser.add_argument('--LLMS_verbose', help='Print the full prompt', default=False, action='store_true')
     parser.add_argument("--LLMS_log", type=int, choices=[10, 20, 30, 40, 50], action="store", default=20,
                         help="Verbosity (default: INFO) : DEBUG = 10, INFO = 20, WARNING = 30, ERROR = 40, CRITICAL = 50")
-    
-    
-    #LLMS
-    
-    
-    #flags
+
+    # LLMS
+
+    # flags
     parser.add_argument(
         "--st2_flag",
         action="store_true",
@@ -967,7 +923,7 @@ def parse_args():
         action="store_true",
         help="Tells the pipeline to use this model",
     )
-    
+
     parser.add_argument(
         "--subtask1_flag",
         action="store_true",
@@ -983,16 +939,13 @@ def parse_args():
         action="store_true",
         help="Tells the pipeline not to do subtask 3",
     )
-    
-    
+
     parser.add_argument(
         "--config_file",
         type=str,
         help="Path to a configuration file"
     )
-    
-    
-    
+
     parser.add_argument(
         "--split_st3_flag",
         action="store_true",
@@ -1008,9 +961,9 @@ def parse_args():
         action="store_true",
         help="Tells the pipeline to use st2 from rebel",
     )
-    
-    #flags
-    
+
+    # flags
+
     parser.add_argument(
         "--pipeline_config_name",
         type=str,
@@ -1035,30 +988,28 @@ def parse_args():
         default='None',
         help="Name of the file that is using a model that is already done for st2"
     )
-    
-    
-    
-    #text from user
+
+    # text from user
     parser.add_argument('--text_from_user', type=str, help='this is user submitted text to be evaluated')
-    #text from user
+    # text from user
     args = parser.parse_args()
     if args.config_file:
         config = configparser.ConfigParser()
         config.read(args.config_file)
-        
+
         # Override command line arguments with those from the config file
         for key in config['DEFAULT']:
             value = config['DEFAULT'].get(key)
             if hasattr(args, key):
-                #attr_type = type(getattr(args, key))
+                # attr_type = type(getattr(args, key))
                 attr_type = type(value)
-                #print(attr_type)
-                #print(value)
-                #print(type(value))
+                # print(attr_type)
+                # print(value)
+                # print(type(value))
                 setattr(args, key, attr_type(config['DEFAULT'][key]))
 
     # Sanity checks
-    if args.task_name is None and args.train_file is None and args.validation_file is None  and args.test_file is None:
+    if args.task_name is None and args.train_file is None and args.validation_file is None and args.test_file is None:
         raise ValueError("Need either a task name or a training/validation file.")
     else:
         if args.train_file is not None:
@@ -1081,10 +1032,12 @@ def split_list_last(lst):
     s = lst.split(' ')
     return s[-1]
 
+
 def split_list_rest(lst):
     s = lst.split(' ')
     rest = " ".join(s[:-1])
     return rest
+
 
 def para_into_df(s):
     parts = s.split('. ')
@@ -1092,52 +1045,53 @@ def para_into_df(s):
     df = pd.DataFrame()
     df['text'] = parts
     return df
-    
+
+
 def main():
     args = parse_args()
     args.st1_do_predict = True
     args.st2_do_test = True
     args.st1_use_cpu = True
-    
+
     if args.text_from_user != None:
         print(args.text_from_user)
         base_df = para_into_df(args.text_from_user)
     else:
         base_df = pd.read_csv(args.test_file)
-        #base_df = base_df.drop(columns=['causal_text_w_pairs'])
-        #base_df = base_df.drop(columns=['num_rs'])
-    
+        # base_df = base_df.drop(columns=['causal_text_w_pairs'])
+        # base_df = base_df.drop(columns=['num_rs'])
+
     args.st1_test_file = args.test_file
     args.base_df = base_df
-    
-    #print('---------------------------------')
+
+    # print('---------------------------------')
     only_causal_df = run_filter(args)
     if len(only_causal_df) < 1:
         print('There are no causal sentences')
-        return 
-    #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+        return
+        # only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
     only_causal_df = only_causal_df.drop(columns=['label'])
     only_causal_df = only_causal_df.drop(columns=['triplets'])
     only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
     args.only_causal = only_causal_df
-    #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
+    # df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
     df_final = only_causal_df.copy()
-    
+
     if not args.subtask1_flag:
-        print('st1')    
-        
+        print('st1')
+
         if not args.st1_flag:
             print('running default model')
             args.st1_flag = True
-            
+
         if args.st1_flag:
             args.st1_test_file = 't'
             st1_df = main_st1(args)
             df_final['label_st1'] = st1_df
-        #df_final = df_final.drop(columns=['label'])
-    #print(len(st2_indexes))
-    #print(len(st2_pred))
-    #print(len(args.only_causal))
+        # df_final = df_final.drop(columns=['label'])
+    # print(len(st2_indexes))
+    # print(len(st2_pred))
+    # print(len(args.only_causal))
     if not args.subtask2_flag:
         print('st2')
         if not args.st2_flag:
@@ -1151,43 +1105,45 @@ def main():
             for i in range(len(st2_df)):
                 st2_indexes.append(len(st2_df[i]))
                 st2_pred.append(str(st2_df[i]))
-            
+
             df_final['num_rs'] = st2_indexes
             df_final['pred_st2'] = st2_pred
-        
+
     if not args.subtask3_flag:
-        
+
         if not args.rebel_flag or args.LLM_flag:
             print('running default model')
             args.rebel_flag = True
-            
+
         if args.rebel_flag:
             print('rebel')
             rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
-            #print(len(args.only_causal))
-            #print(len(args.base_df))
-            #print(len(rebel_df))
+            # print(len(args.only_causal))
+            # print(len(args.base_df))
+            # print(len(rebel_df))
             df_final['triplet-rebel'] = rebel_df['prediction']
             if args.split_st3_flag == True:
                 if args.rebel_st1_flag == True:
                     df_final['rebel_label'] = df_final['triplet-rebel'].map(split_list_last)
                 if args.rebel_st2_flag == True:
                     df_final['rebel_sub_obj'] = df_final['triplet-rebel'].map(split_list_rest)
-            
-        #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-        #return 0
-        
+
+        # df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+        # return 0
+
         if args.LLM_flag:
-            print('LLM')    
-            args.LLMS_output = args.LLMS_output + '/' + args.LLMS_llm +'/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
-            
+            print('LLM')
+            args.LLMS_output = args.LLMS_output + '/' + args.LLMS_llm + '/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
+
             llm_df = run_LLM(args)
-            llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
+            llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(
+                lambda row: [row['subject'], row['object'], row['relation']], axis=1)
             df_final['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df['subj-obj-rel-LLM-' + args.LLMS_llm]
-            #df_final = df_final.drop(columns=['triplets'])
-            
-    df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-    
+            # df_final = df_final.drop(columns=['triplets'])
+
+    df_final.to_csv(os.path.join(CACHE_COMBINED_DIR, f'final-combined_pred-{datetime.now()}.csv'))
+
+
 def run_pipeline(config_path):
     args = parse_args()
     config = configparser.ConfigParser()
@@ -1201,25 +1157,21 @@ def run_pipeline(config_path):
                 setattr(args, key, attr_type(value))
     '''
     for key in config['DEFAULT']:
-            value = config['DEFAULT'].get(key)
-            if hasattr(args, key):
-                attr_type = type(value)
-                #print(attr_type)
-                #print(value)
-                #print(type(value))
-                setattr(args, key, attr_type(config['DEFAULT'][key]))
-    
+        value = config['DEFAULT'].get(key)
+        if hasattr(args, key):
+            attr_type = type(value)
+            # print(attr_type)
+            # print(value)
+            # print(type(value))
+            setattr(args, key, attr_type(config['DEFAULT'][key]))
+
     args.st1_do_predict = True
     args.st2_do_test = True
     args.st1_use_cpu = True
-    
-    
+
     user_flag = False
     st1_model = ''
-    
-    
-    
-    
+
     if args.text_from_user != None:
         print('border1')
         print(args.text_from_user)
@@ -1230,38 +1182,38 @@ def run_pipeline(config_path):
         base_df = pd.read_csv(args.test_file)
         st0_path = args.filter_model_path.split('/')
         st0_preset_name = 'saved_app_outs/tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1]
-        #base_df = base_df.drop(columns=['causal_text_w_pairs'])
-        #base_df = base_df.drop(columns=['num_rs'])
-    
+        # base_df = base_df.drop(columns=['causal_text_w_pairs'])
+        # base_df = base_df.drop(columns=['num_rs'])
+
     args.st1_test_file = args.test_file
     args.base_df = base_df
-    
-    #print('---------------------------------')
-    
+
+    # print('---------------------------------')
+
     if user_flag == False and args.st0_preset != 'None':
         print('hello')
         only_causal_df = pd.read_csv(args.st0_preset)
         args.only_causal = only_causal_df
         df_final = only_causal_df.copy()
     else:
-        only_causal_df = run_filter(args)    
+        only_causal_df = run_filter(args)
         if len(only_causal_df) < 1:
             print('There are no causal sentences')
             return 'There are no causal sentences'
-        #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
+        # only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
         only_causal_df = only_causal_df.drop(columns=['label'])
         only_causal_df = only_causal_df.drop(columns=['triplets'])
         only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
         args.only_causal = only_causal_df
-        #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
+        # df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
         df_final = only_causal_df.copy()
         st0_path = args.filter_model_path.split('/')
         if user_flag == False:
             df_final.to_csv('saved_app_outs/tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
             print(st0_preset_name)
-    
+
     if args.subtask1_flag == 'False':
-        print('st1')    
+        print('st1')
         if user_flag == False and args.st1_preset != 'None':
             st1_df = pd.read_csv(args.st1_preset)
             df_final['label_roberta'] = st1_df['label_roberta']
@@ -1269,7 +1221,7 @@ def run_pipeline(config_path):
             if not args.st1_flag:
                 print('running default model')
                 args.st1_flag = 'True'
-                
+
             if args.st1_flag == 'True':
                 args.st1_test_file = 't'
                 st1_df = main_st1(args)
@@ -1281,10 +1233,10 @@ def run_pipeline(config_path):
                     st1_preset_name = st0_preset_name + '-st1-roberta-' + st1_path[-1]
                     print(st1_preset_name)
                     df_final['label_roberta'].to_csv(st1_preset_name + '.csv')
-        #df_final = df_final.drop(columns=['label'])
-    #print(len(st2_indexes))
-    #print(len(st2_pred))
-    #print(len(args.only_causal))
+        # df_final = df_final.drop(columns=['label'])
+    # print(len(st2_indexes))
+    # print(len(st2_pred))
+    # print(len(args.only_causal))
     if args.subtask2_flag == 'False':
         print('st2')
         if user_flag == False and args.st2_preset != 'None':
@@ -1311,8 +1263,7 @@ def run_pipeline(config_path):
                     st2_preset_name = st0_preset_name + '-st2-roberta-' + st2_path[-1]
                     print(st2_preset_name)
                     df_final[['span_pred_roberta', 'num_rs_roberta']].to_csv(st2_preset_name + '.csv')
-                
-                
+
     if args.subtask3_flag == 'False':
         if not args.rebel_flag or args.LLM_flag:
             print('running default model')
@@ -1321,18 +1272,18 @@ def run_pipeline(config_path):
             print('rebel')
             used_preset_rebel = False
             if 'rebel' in args.st1_preset:
-                    if user_flag == False:
-                        rebel_df = pd.read_csv(args.st1_preset)
-                        df_final['label_rebel'] = rebel_df['label_rebel']
-                        used_preset_rebel = True
+                if user_flag == False:
+                    rebel_df = pd.read_csv(args.st1_preset)
+                    df_final['label_rebel'] = rebel_df['label_rebel']
+                    used_preset_rebel = True
             if 'rebel' in args.st2_preset:
                 if user_flag == False:
-                        rebel_df = pd.read_csv(args.st2_preset)
-                        df_final['span_pred_rebel'] = rebel_df['span_pred_rebel']
-                        used_preset_rebel = True
+                    rebel_df = pd.read_csv(args.st2_preset)
+                    df_final['span_pred_rebel'] = rebel_df['span_pred_rebel']
+                    used_preset_rebel = True
             if used_preset_rebel == False:
                 rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
-                #df_final['triplet-rebel'] = rebel_df['prediction']
+                # df_final['triplet-rebel'] = rebel_df['prediction']
                 if args.rebel_st1_flag == 'True':
                     df_final['label_rebel'] = rebel_df['prediction'].map(split_list_last)
                 if args.rebel_st2_flag == 'True':
@@ -1341,30 +1292,32 @@ def run_pipeline(config_path):
                     rebel_path = args.rebel_inf_model_name_or_path.split('/')
                     rebel_st1_preset_name = st0_preset_name + '-st1-rebel-' + rebel_path[-1]
                     rebel_st2_preset_name = st0_preset_name + '-st2-rebel-' + rebel_path[-1]
-                    
+
                     print(rebel_st1_preset_name)
                     print(rebel_st2_preset_name)
                     df_final['label_rebel'].to_csv(rebel_st1_preset_name + '.csv')
                     df_final['span_pred_rebel'].to_csv(rebel_st2_preset_name + '.csv')
-            
-        #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-        #return 0
-        
+
+        # df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+        # return 0
+
         if args.LLM_flag:
-            print('LLM')    
-            args.LLMS_output = args.LLMS_output + '/' + args.LLMS_llm +'/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
-            
+            print('LLM')
+            args.LLMS_output = args.LLMS_output + '/' + args.LLMS_llm + '/' + args.LLMS_llm + f'_pred-{datetime.now()}.csv'
+
             llm_df = run_LLM(args)
-            llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
+            llm_df['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df.apply(
+                lambda row: [row['subject'], row['object'], row['relation']], axis=1)
             df_final['subj-obj-rel-LLM-' + args.LLMS_llm] = llm_df['subj-obj-rel-LLM-' + args.LLMS_llm]
-            #df_final = df_final.drop(columns=['triplets']) 
-    
-    df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-    #df_json = df_final.values.tolist()  
+            # df_final = df_final.drop(columns=['triplets'])
+
+    df_final.to_csv(os.path.join(CACHE_COMBINED_DIR,  f'final-combined_pred-{datetime.now()}.csv'))
+    # df_json = df_final.values.tolist()
     if args.pipeline_config_name != 'None':
         df_final.to_csv('saved_app_outs/' + args.pipeline_config_name + '.csv')
     df_json = df_final.to_dict(orient='records')
     return df_json
+
 
 if __name__ == "__main__":
     main()
