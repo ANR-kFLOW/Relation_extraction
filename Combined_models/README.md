@@ -51,8 +51,7 @@ Build the docker image using
 
 then run the image with
 
-
-
+    docker run -d -p 5002:5004 -v $(pwd)/pretrained_models:/pretrained_models -v $(pwd)/out:/out --name kflow_rel_extraction kflow/rel_extraction
 
 When running the link that is given in the terminal change the local port number to the number that you exported from your local machine. 
 for the previous example it would be http://127.0.0.1:5004/swagger/
