@@ -1,4 +1,4 @@
-# Sub-task list
+## Sub-task list
 
 The pipeline adresses the following sub-tasks:
 - `st0` filters out the entries that have no relationship
@@ -8,8 +8,6 @@ The pipeline adresses the following sub-tasks:
 
 In the options, `st3` models can be used to do either st1 or st2 tasks.
 However, when the model is called both tasks are done regardless if the pipeline requests for only one.
-
-
 
 
 ## Import the pretrained models
@@ -47,10 +45,12 @@ TBW where to find these files
 Build the docker image using
 
     docker build -t kflow/rel_extraction .
+    
+    # in production on linux
+    docker build --build-arg="ENV_FILE=environment_prod.yml" -t kflow/rel_extraction .
 
 then run the image with
 
-    docker run -p 5004:5004 -v $(pwd)/pretrained_models:/pretrained_models -v $(pwd)/out:/out --name kflow_rel_extraction kflow/rel_extraction 
 
 
 
