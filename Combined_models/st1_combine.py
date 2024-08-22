@@ -1,4 +1,5 @@
 import os
+
 os.environ['TORCH_USE_CUDA_DSA'] = ''
 
 # Rest of your imports
@@ -11,7 +12,6 @@ import torch
 import datasets
 import numpy as np
 from datasets import load_dataset, load_metric, Features, Value, Dataset, DatasetDict
-
 
 import transformers
 from transformers import (
@@ -30,9 +30,8 @@ from transformers import (
 from transformers.trainer_utils import get_last_checkpoint
 from sklearn.metrics import precision_recall_fscore_support
 import wandb
-os.environ['WANDB_PROJECT']='CausalNewsCorpus'
 
-
+os.environ['WANDB_PROJECT'] = 'CausalNewsCorpus'
 
 task_to_keys = {
     "cola": ("text", None),
@@ -48,7 +47,7 @@ task_to_keys = {
 
 ft = {
     'index': Value('string'),
-    'text': Value('string'), 
+    'text': Value('string'),
     'label': Value('int64')
 }
 
@@ -78,7 +77,7 @@ class DataTrainingArguments:
         default=128,
         metadata={
             "help": "The maximum total input sequence length after tokenization. Sequences longer "
-            "than this will be truncated, sequences shorter will be padded."
+                    "than this will be truncated, sequences shorter will be padded."
         },
     )
     st1_overwrite_cache: bool = field(
@@ -88,28 +87,28 @@ class DataTrainingArguments:
         default=True,
         metadata={
             "help": "Whether to pad all samples to `max_seq_length`. "
-            "If False, will pad the samples dynamically when batching to the maximum length in the batch."
+                    "If False, will pad the samples dynamically when batching to the maximum length in the batch."
         },
     )
     st1_max_train_samples: Optional[int] = field(
         default=None,
         metadata={
             "help": "For debugging purposes or quicker training, truncate the number of training examples to this "
-            "value if set."
+                    "value if set."
         },
     )
     st1_max_eval_samples: Optional[int] = field(
         default=None,
         metadata={
             "help": "For debugging purposes or quicker training, truncate the number of evaluation examples to this "
-            "value if set."
+                    "value if set."
         },
     )
     st1_max_predict_samples: Optional[int] = field(
         default=None,
         metadata={
             "help": "For debugging purposes or quicker training, truncate the number of prediction examples to this "
-            "value if set."
+                    "value if set."
         },
     )
     st1_train_file: Optional[str] = field(
@@ -118,9 +117,11 @@ class DataTrainingArguments:
     st1_validation_file: Optional[str] = field(
         default=None, metadata={"help": "A csv or a json file containing the validation data."}
     )
-    st1_test_file: Optional[str] = field(default=None, metadata={"help": "A csv or a json file containing the test data."})
+    st1_test_file: Optional[str] = field(default=None,
+                                         metadata={"help": "A csv or a json file containing the test data."})
 
-    st1_is_regression: Optional[bool] = field(default=False, metadata={"help": "If the model to use with predictions in a regression model."})
+    st1_is_regression: Optional[bool] = field(default=False, metadata={
+        "help": "If the model to use with predictions in a regression model."})
 
     def __post_init__(self):
         if self.task_name is not None:
@@ -136,7 +137,7 @@ class DataTrainingArguments:
             assert train_extension in ["csv", "json"], "`train_file` should be a csv or a json file."
             validation_extension = self.validation_file.split(".")[-1]
             assert (
-                validation_extension == train_extension
+                    validation_extension == train_extension
             ), "`validation_file` should have the same extension (csv or json) as `train_file`."
 
 
@@ -171,7 +172,7 @@ class ModelArguments:
         default=False,
         metadata={
             "help": "Will use the token generated when running `transformers-cli login` (necessary to use this script "
-            "with private models)."
+                    "with private models)."
         },
     )
 
@@ -186,7 +187,7 @@ def main_st1(args):
         print(x)
     else:
         print("MPS device not found")
-        
+
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
     if args == None:
         if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
@@ -197,16 +198,16 @@ def main_st1(args):
             model_args, data_args, training_args = parser.parse_args_into_dataclasses()
     else:
         training_args = TrainingArguments(
-                    output_dir=args.st1_output_dir,
-                    do_predict=args.st1_do_predict,
-                    use_cpu=True
-                )
+            output_dir=args.st1_output_dir,
+            do_predict=args.st1_do_predict,
+            use_cpu=True
+        )
         model_args = args
         data_args = args
-        #training_args = args
-    # if training_args.do_train:
-    #     wandb.login()
-    
+        # training_args = args
+    if training_args.do_train:
+        wandb.login()
+
     # Setup logging
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
@@ -227,7 +228,7 @@ def main_st1(args):
         + f"distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
     )
     logger.info(f"Training/evaluation parameters {training_args}")
-    
+
     # Detecting last checkpoint.
     last_checkpoint = None
     if os.path.isdir(training_args.output_dir) and training_args.do_train and not training_args.overwrite_output_dir:
@@ -258,7 +259,7 @@ def main_st1(args):
     #
     # In distributed training, the load_dataset function guarantee that only one local process can concurrently
     # download the dataset.
-    
+
     # Loading a dataset from your local files.
     # CSV/JSON training and evaluation files are needed.
     data_files = {}
@@ -281,13 +282,15 @@ def main_st1(args):
     for key in data_files.keys():
         logger.info(f"load a local file for {key}: {data_files[key]}")
     if args == None:
-        if (training_args.do_train and data_args.st1_train_file.endswith(".csv")) or (training_args.do_predict and data_args.st1_test_file.endswith(".csv")):
+        if (training_args.do_train and data_args.st1_train_file.endswith(".csv")) or (
+                training_args.do_predict and data_args.st1_test_file.endswith(".csv")):
             # Loading a dataset from local csv files
-            #raw_datasets = load_dataset("csv", data_files=data_files, cache_dir=model_args.st1_cache_dir, features=Features(ft))
+            # raw_datasets = load_dataset("csv", data_files=data_files, cache_dir=model_args.st1_cache_dir, features=Features(ft))
             raw_datasets = load_dataset("csv", data_files=data_files, cache_dir=model_args.st1_cache_dir)
         else:
             # Loading a dataset from local json files
-            raw_datasets = load_dataset("json", data_files=data_files, cache_dir=model_args.st1_cache_dir, features=Features(ft))
+            raw_datasets = load_dataset("json", data_files=data_files, cache_dir=model_args.st1_cache_dir,
+                                        features=Features(ft))
     else:
         dataset = Dataset.from_pandas(args.only_causal)
         raw_datasets = DatasetDict({"test": dataset})
@@ -324,7 +327,7 @@ def main_st1(args):
             cache_dir=model_args.st1_cache_dir,
             revision=model_args.st1_model_revision,
             use_auth_token=True if model_args.st1_use_auth_token else None,
-            
+
         )
     else:
         config = AutoConfig.from_pretrained(
@@ -345,9 +348,9 @@ def main_st1(args):
         cache_dir=model_args.st1_cache_dir,
         revision=model_args.st1_model_revision,
         ignore_mismatched_sizes=True,
-        use_auth_token=True if model_args.st1_use_auth_token else None, 
+        use_auth_token=True if model_args.st1_use_auth_token else None,
     )
-    #model = model.to(device=mps_device)
+    # model = model.to(device=mps_device)
     device = torch.device("cpu")
     model = model.to(device)
     # Preprocessing the raw_datasets
@@ -375,9 +378,9 @@ def main_st1(args):
     label_to_id = None
     if training_args.do_train:
         if (
-            model.config.label2id != PretrainedConfig(num_labels=num_labels).label2id
-            and data_args.st1_task_name is not None
-            and not is_regression
+                model.config.label2id != PretrainedConfig(num_labels=num_labels).label2id
+                and data_args.st1_task_name is not None
+                and not is_regression
         ):
             # Some have all caps in their config, some don't.
             label_name_to_id = {k.lower(): v for k, v in model.config.label2id.items()}
@@ -470,7 +473,7 @@ def main_st1(args):
 
         # add custom metrics
         result["accuracy"] = (preds == p.label_ids).astype(np.float32).mean().item()
-        p,r,f,s = precision_recall_fscore_support(np.array(p.label_ids), np.array(preds), average='weighted')
+        p, r, f, s = precision_recall_fscore_support(np.array(p.label_ids), np.array(preds), average='weighted')
         result["f1"] = f
         result["precision"] = p
         result["recall"] = r
@@ -504,7 +507,6 @@ def main_st1(args):
         data_collator=data_collator,
     )
 
-
     # Training
     if training_args.do_train:
         logger.info(f'train samples: {len(train_dataset)}')
@@ -520,7 +522,8 @@ def main_st1(args):
         )
         metrics["train_samples"] = min(max_train_samples, len(train_dataset))
 
-        trainer.save_model(os.path.join(training_args.output_dir, "best_model"))  # Saves the tokenizer too for easy upload
+        trainer.save_model(
+            os.path.join(training_args.output_dir, "best_model"))  # Saves the tokenizer too for easy upload
 
         trainer.log_metrics("train", metrics)
         trainer.save_metrics("train", metrics)
@@ -560,10 +563,10 @@ def main_st1(args):
 
         for predict_dataset, task in zip(predict_datasets, tasks):
             # Removing the `label` columns because it contains -1 and Trainer won't like that.
-            #predict_dataset = predict_dataset.remove_columns("label")
-            #print(model)
-            #print(predict_dataset)
-            #predict_dataset.to(device)
+            # predict_dataset = predict_dataset.remove_columns("label")
+            # print(model)
+            # print(predict_dataset)
+            # predict_dataset.to(device)
             predictions = trainer.predict(predict_dataset, metric_key_prefix="predict").predictions
             predictions = np.squeeze(predictions) if is_regression else np.argmax(predictions, axis=1)
 
@@ -596,7 +599,6 @@ def main_st1(args):
     else:
         trainer.create_model_card(**kwargs)
     return predictions
-
 
 
 def _mp_fn(index):

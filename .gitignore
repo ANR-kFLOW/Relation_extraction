@@ -10,3 +10,6 @@ REBEL/
 data/
 refining/
 scripts/
+
+Combined_models/out
+Combined_models/pretrained_models
