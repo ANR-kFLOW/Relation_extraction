@@ -477,7 +477,7 @@ class RunPipeline(Resource):
         # return json
 
 
-api.add_resource(RunPipeline, '/RunPipeline')
+api.add_resource(RunPipeline, '/extract')
 
 args_script1 = ['python', 'two_step_model.py']
 

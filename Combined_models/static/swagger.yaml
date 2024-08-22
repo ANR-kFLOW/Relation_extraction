@@ -4,7 +4,7 @@ info:
   description: Here we provide a platform to run and compare multiple models against each other
   version: 1.0.11
 paths:
-  /RunPipeline:
+  /extract:
     get:
       summary: Get items with individual choices
       parameters:
