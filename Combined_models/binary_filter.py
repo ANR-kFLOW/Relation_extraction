@@ -63,8 +63,14 @@ def run_filter(args):
     print(test_data['num_rs'].value_counts(normalize=True))
     
     # Set device
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+    
+    cuda_flag = False
+    if torch.cuda.is_available():
+        cuda_flag = True
+    else:
+        cuda_flag = False
     # Define parameters
     MAX_LEN = 128
     TRAIN_BATCH_SIZE = 32
@@ -95,7 +101,10 @@ def run_filter(args):
 
     # Load the best model
     best_model = RobertaForSequenceClassification.from_pretrained('roberta-base', num_labels=2, cache_dir='data/huggingface/')
-    best_model.load_state_dict(torch.load(best_model_path, map_location=torch.device('cpu')))
+    if cuda_flag == True:
+        best_model.load_state_dict(torch.load(best_model_path))
+    else:
+        best_model.load_state_dict(torch.load(best_model_path, map_location=torch.device('cpu')))
     best_model.to(device)
 
     best_model.eval()
@@ -178,6 +187,11 @@ if __name__ == '__main__':
     # Set device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+    cuda_flag = False
+    if torch.cuda.is_available():
+        cuda_flag = True
+    else:
+        cuda_flag = False
     # Define parameters
     MAX_LEN = 128
     TRAIN_BATCH_SIZE = 32
@@ -207,7 +221,11 @@ if __name__ == '__main__':
 
     # Load the best model
     best_model = RobertaForSequenceClassification.from_pretrained('roberta-base', num_labels=2, cache_dir='data/huggingface/')
-    best_model.load_state_dict(torch.load(best_model_path, map_location=torch.device('cpu')))
+    
+    if cuda_flag == True:
+        best_model.load_state_dict(torch.load(best_model_path))
+    else:
+        best_model.load_state_dict(torch.load(best_model_path, map_location=torch.device('cpu')))
     best_model.to(device)
 
     best_model.eval()
