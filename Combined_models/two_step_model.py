@@ -1075,7 +1075,7 @@ def parse_args():
     )
     
     parser.add_argument(
-        "--preset_CACHE_DIR",
+        "--preset_cache_dir",
         type=str,
         default='saved_app_outs/',
         help="Name of the output file that will be used as a reference"
@@ -1272,7 +1272,7 @@ def run_pipeline(config_path):
     else:
         base_df = pd.read_csv(args.test_file)
         st0_path = args.filter_model_path.split('/')
-        st0_preset_name = args.preset_CACHE_DIR + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1]
+        st0_preset_name = args.preset_cache_dir + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1]
         #base_df = base_df.drop(columns=['causal_text_w_pairs'])
         #base_df = base_df.drop(columns=['num_rs'])
     
@@ -1300,8 +1300,9 @@ def run_pipeline(config_path):
         df_final = only_causal_df.copy()
         st0_path = args.filter_model_path.split('/')
         if user_flag == False:
-            df_final.to_csv(args.preset_CACHE_DIR + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
+            df_final.to_csv(args.preset_cache_dir + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
             print(st0_preset_name)
+            print('above is something to check')
     
     if args.subtask1_flag == 'False':
         print('st1')    
@@ -1323,6 +1324,7 @@ def run_pipeline(config_path):
                     st1_path = args.st1_model_name_or_path.split('/')
                     st1_preset_name = st0_preset_name + '-st1-roberta-' + st1_path[-1]
                     print(st1_preset_name)
+                    print('above is something to check')
                     df_final['label_roberta'].to_csv(st1_preset_name + '.csv')
         #df_final = df_final.drop(columns=['label'])
     #print(len(st2_indexes))
@@ -1353,6 +1355,7 @@ def run_pipeline(config_path):
                     st2_path = args.st2_pretrained_path.split('/')
                     st2_preset_name = st0_preset_name + '-st2-roberta-' + st2_path[-1]
                     print(st2_preset_name)
+                    print('above is something to check')
                     df_final[['span_pred_roberta', 'num_rs_roberta']].to_csv(st2_preset_name + '.csv')
                 
                 
@@ -1547,7 +1550,7 @@ def run_pipeline(config_path):
     df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
     #df_json = df_final.values.tolist()  
     if args.pipeline_config_name != 'None':
-        df_final.to_csv(args.preset_CACHE_DIR + args.pipeline_config_name + '.csv')
+        df_final.to_csv(args.preset_cache_dir + args.pipeline_config_name + '.csv')
     df_json = df_final.to_dict(orient='records')
     return df_json
 

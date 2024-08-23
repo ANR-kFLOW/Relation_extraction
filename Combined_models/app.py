@@ -259,7 +259,7 @@ def set_config(flags):
     config = configparser.ConfigParser()
     config['DEFAULT'] = {}
     preset_labels = {}
-    config['DEFAULT']['preset_CACHE_DIR'] = CACHE_DIR
+    config['DEFAULT']['preset_cache_dir'] = CACHE_DIR
     '''
     if flags['Do subtask 1'] == False:
         config['DEFAULT']['subtask1_flag'] = 'True'
