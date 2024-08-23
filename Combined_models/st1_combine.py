@@ -351,7 +351,8 @@ def main_st1(args):
         use_auth_token=True if model_args.st1_use_auth_token else None,
     )
     # model = model.to(device=mps_device)
-    device = torch.device("cpu")
+    
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     # Preprocessing the raw_datasets
     if data_args.st1_task_name is not None:
