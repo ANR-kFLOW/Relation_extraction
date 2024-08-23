@@ -6,6 +6,11 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+cuda_flag = False
+if torch.cuda.is_available():
+  cuda_flag = True
+else:
+  cuda_flag = False
 class DataSequence(Dataset):
   def __init__(self, data):
     self.data = data
@@ -17,7 +22,10 @@ def test_model(df, path_to_model):
   # Load model
   with open(path_to_model, 'rb') as f:
     buffer = io.BytesIO(f.read())
-  model = torch.load(buffer,map_location=torch.device('cpu')).to(device)
+  if cuda_flag == True:
+    model = torch.load(buffer).to(device)
+  else:
+    model = torch.load(buffer,map_location=torch.device('cpu')).to(device)
   
   model_config = PretrainedConfig.from_pretrained('rebel_config/', cache_dir='data/huggingface/')
   config = GenerationConfig.from_model_config(model_config)
