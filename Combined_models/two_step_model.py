@@ -1084,21 +1084,31 @@ def parse_args():
     #text from user
     parser.add_argument('--text_from_user', type=str, help='this is user submitted text to be evaluated')
     #text from user
+    
+    #
+    parser.add_argument(
+        "--user_config_file_path",
+        type=str,
+        default='False',
+        help="Name of the output file that will be used as a reference"
+    )
+    
+    #
     args = parser.parse_args()
     if args.config_file:
         config = configparser.ConfigParser()
         config.read(args.config_file)
         
         # Override command line arguments with those from the config file
-        for key in config['DEFAULT']:
-            value = config['DEFAULT'].get(key)
+        for key in config['TEMP']:
+            value = config['TEMP'].get(key)
             if hasattr(args, key):
                 #attr_type = type(getattr(args, key))
                 attr_type = type(value)
                 #print(attr_type)
                 #print(value)
                 #print(type(value))
-                setattr(args, key, attr_type(config['DEFAULT'][key]))
+                setattr(args, key, attr_type(config['TEMP'][key]))
 
     # Sanity checks
     if args.task_name is None and args.train_file is None and args.validation_file is None  and args.test_file is None:
@@ -1233,24 +1243,25 @@ def main():
     
 def run_pipeline(config_path):
     args = parse_args()
-    config = configparser.ConfigParser()
-    config.read(config_path)
-    '''
-    # Override command line arguments with those from the config file
-    for section in config.sections():
-        for key, value in config.items(section):
-            if hasattr(args, key):
-                attr_type = type(getattr(args, key))
-                setattr(args, key, attr_type(value))
-    '''
-    for key in config['DEFAULT']:
-            value = config['DEFAULT'].get(key)
-            if hasattr(args, key):
-                attr_type = type(value)
-                #print(attr_type)
-                #print(value)
-                #print(type(value))
-                setattr(args, key, attr_type(config['DEFAULT'][key]))
+    if config_path != 'False':
+        config = configparser.ConfigParser()
+        config.read(config_path)
+        '''
+        # Override command line arguments with those from the config file
+        for section in config.sections():
+            for key, value in config.items(section):
+                if hasattr(args, key):
+                    attr_type = type(getattr(args, key))
+                    setattr(args, key, attr_type(value))
+        '''
+        for key in config['TEMP']:
+                value = config['TEMP'].get(key)
+                if hasattr(args, key):
+                    attr_type = type(value)
+                    #print(attr_type)
+                    #print(value)
+                    #print(type(value))
+                    setattr(args, key, attr_type(config['TEMP'][key]))
     
     args.st1_do_predict = True
     args.st2_do_test = True
@@ -1547,7 +1558,7 @@ def run_pipeline(config_path):
             #df_final['subj-obj-rel-LLM-' + args.llms_llm] = llm_df['subj-obj-rel-LLM-' + args.llms_llm]
             #df_final = df_final.drop(columns=['triplets']) 
     
-    df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+    #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
     #df_json = df_final.values.tolist()  
     if args.pipeline_config_name != 'None':
         df_final.to_csv(args.preset_cache_dir + args.pipeline_config_name + '.csv')
@@ -1555,4 +1566,12 @@ def run_pipeline(config_path):
     return df_json
 
 if __name__ == "__main__":
-    main()
+    
+    args = parse_args()
+    config_path = args.user_config_file_path
+    
+    json_dict = run_pipeline(config_path)
+    
+    df = pd.DataFrame(json_dict)
+    df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+    #main()

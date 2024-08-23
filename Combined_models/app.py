@@ -257,24 +257,24 @@ def check_cache(cache_list):
 
 def set_config(flags):
     config = configparser.ConfigParser()
-    config['DEFAULT'] = {}
+    config['TEMP'] = {}
     preset_labels = {}
-    config['DEFAULT']['preset_cache_dir'] = CACHE_DIR
+    config['TEMP']['preset_cache_dir'] = CACHE_DIR
     '''
     if flags['Do subtask 1'] == False:
-        config['DEFAULT']['subtask1_flag'] = 'True'
+        config['TEMP']['subtask1_flag'] = 'True'
     if flags['Do subtask 2'] == False:
-        config['DEFAULT']['subtask2_flag'] = 'True'
+        config['TEMP']['subtask2_flag'] = 'True'
         
     if flags['Do subtask 3'] == False:
-        config['DEFAULT']['subtask3_flag'] = 'True'
+        config['TEMP']['subtask3_flag'] = 'True'
     else:
         if flags['Use REBEL'] == True:
-            config['DEFAULT']['rebel_flag'] = 'True'
+            config['TEMP']['rebel_flag'] = 'True'
         if flags['Use LLM'] == True:
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLM_flag'] = 'True'
     if flags['User sent'] != None:
-        config['DEFAULT']['text_from_user'] = flags['User sent']
+        config['TEMP']['text_from_user'] = flags['User sent']
     '''
     check_preset_flag = False
     
@@ -282,7 +282,7 @@ def set_config(flags):
         print('either choose a dataset or give your own sentences')
         return False
     if 'q' not in flags:
-        config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
+        config['TEMP']['test_file'] = 'new_data/' + flags['t_f']
         check_preset_flag = True
         preset_labels['t_f'] = flags['t_f']
     
@@ -297,61 +297,61 @@ def set_config(flags):
     for i in range(3,len(filter_parts)):
         filter_name = filter_name + '_' + filter_parts[i]
     filter_path = 'pretrained_models/st0/' + filter_prefix + '/' + filter_name
-    config['DEFAULT']['filter_model_path'] = filter_path
+    config['TEMP']['filter_model_path'] = filter_path
     
     preset_labels['filter'] = 'roberta-' + filter_name
     
     
-    config['DEFAULT']['rebel_flag'] = 'False'
-    config['DEFAULT']['split_st3_flag'] = 'True'
+    config['TEMP']['rebel_flag'] = 'False'
+    config['TEMP']['split_st3_flag'] = 'True'
     
     if flags['st1'] != 'off':
         s = flags['st1']
         if s == 'zephyr':
-            config['DEFAULT']['LLMS_llm'] = 'zephyr'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'zephyr'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st1'] = 'llm-zephyr'
-            config['DEFAULT']['llm_st1_flag'] = 'True'
-            config['DEFAULT']['subtask1_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['st1_flag'] = 'False'
-            config['DEFAULT']['llm_st1_mod'] = 'zephyr'
+            config['TEMP']['llm_st1_flag'] = 'True'
+            config['TEMP']['subtask1_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['st1_flag'] = 'False'
+            config['TEMP']['llm_st1_mod'] = 'zephyr'
         elif s == 'dpo':
-            config['DEFAULT']['LLMS_llm'] = 'dpo'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'dpo'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st1'] = 'llm-dpo'
-            config['DEFAULT']['llm_st1_flag'] = 'True'
-            config['DEFAULT']['subtask1_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['st1_flag'] = 'False'
-            config['DEFAULT']['llm_st1_mod'] = 'dpo'
+            config['TEMP']['llm_st1_flag'] = 'True'
+            config['TEMP']['subtask1_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['st1_flag'] = 'False'
+            config['TEMP']['llm_st1_mod'] = 'dpo'
         elif s == 'una':
-            config['DEFAULT']['LLMS_llm'] = 'una'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'una'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st1'] = 'llm-una'
-            config['DEFAULT']['llm_st1_flag'] = 'True'
-            config['DEFAULT']['subtask1_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['st1_flag'] = 'False'
-            config['DEFAULT']['llm_st1_mod'] = 'una'
+            config['TEMP']['llm_st1_flag'] = 'True'
+            config['TEMP']['subtask1_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['st1_flag'] = 'False'
+            config['TEMP']['llm_st1_mod'] = 'una'
         elif s == 'solar':
-            config['DEFAULT']['LLMS_llm'] = 'solar'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'solar'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st1'] = 'llm-solar'
-            config['DEFAULT']['llm_st1_flag'] = 'True'
-            config['DEFAULT']['subtask1_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['st1_flag'] = 'False'
-            config['DEFAULT']['llm_st1_mod'] = 'solar'
+            config['TEMP']['llm_st1_flag'] = 'True'
+            config['TEMP']['subtask1_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['st1_flag'] = 'False'
+            config['TEMP']['llm_st1_mod'] = 'solar'
         elif s == 'gpt4':
-            config['DEFAULT']['LLMS_llm'] = 'gpt4'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'gpt4'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st1'] = 'llm-gpt4'
-            config['DEFAULT']['llm_st1_flag'] = 'True'
-            config['DEFAULT']['subtask1_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['st1_flag'] = 'False'
-            config['DEFAULT']['llm_st1_mod'] = 'gpt4'
+            config['TEMP']['llm_st1_flag'] = 'True'
+            config['TEMP']['subtask1_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['st1_flag'] = 'False'
+            config['TEMP']['llm_st1_mod'] = 'gpt4'
         else:
             parts = s.split('_')
             prefix = parts[0] + '_' + parts[1]
@@ -360,68 +360,68 @@ def set_config(flags):
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
                 path = 'pretrained_models/st1/' + prefix + '/' + model_name
-                config['DEFAULT']['st1_model_name_or_path'] = path
-                config['DEFAULT']['subtask1_flag'] = 'False'
-                config['DEFAULT']['st1_flag'] = 'True'
+                config['TEMP']['st1_model_name_or_path'] = path
+                config['TEMP']['subtask1_flag'] = 'False'
+                config['TEMP']['st1_flag'] = 'True'
                 preset_labels['st1'] = 'roberta-' + model_name
             else:
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
                 path = 'pretrained_models/st3/' + prefix + '/' + model_name
-                config['DEFAULT']['rebel_inf_model_name_or_path'] = path
-                config['DEFAULT']['rebel_st1_flag'] = 'True'
-                config['DEFAULT']['rebel_flag'] = 'True'
-                config['DEFAULT']['subtask1_flag'] = 'True'
-                config['DEFAULT']['subtask3_flag'] = 'False'
-                config['DEFAULT']['st1_flag'] = 'False'
+                config['TEMP']['rebel_inf_model_name_or_path'] = path
+                config['TEMP']['rebel_st1_flag'] = 'True'
+                config['TEMP']['rebel_flag'] = 'True'
+                config['TEMP']['subtask1_flag'] = 'True'
+                config['TEMP']['subtask3_flag'] = 'False'
+                config['TEMP']['st1_flag'] = 'False'
                 preset_labels['st1'] = 'rebel-' + model_name
-                config['DEFAULT']['rebel_st1_mod'] = path
+                config['TEMP']['rebel_st1_mod'] = path
     else:
-        config['DEFAULT']['subtask1_flag'] = 'True'
+        config['TEMP']['subtask1_flag'] = 'True'
     
     
     if flags['st2'] != 'off':
         s = flags['st2']
         if s == 'zephyr':
-            config['DEFAULT']['LLMS_llm'] = 'zephyr'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'zephyr'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st2'] = 'llm-zephyr'
-            config['DEFAULT']['llm_st2_flag'] = 'True'
-            config['DEFAULT']['subtask2_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['llm_st2_mod'] = 'zephyr'
+            config['TEMP']['llm_st2_flag'] = 'True'
+            config['TEMP']['subtask2_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['llm_st2_mod'] = 'zephyr'
         elif s == 'dpo':
-            config['DEFAULT']['LLMS_llm'] = 'dpo'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'dpo'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st2'] = 'llm-dpo'
-            config['DEFAULT']['llm_st2_flag'] = 'True'
-            config['DEFAULT']['subtask2_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['llm_st2_mod'] = 'dpo'
+            config['TEMP']['llm_st2_flag'] = 'True'
+            config['TEMP']['subtask2_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['llm_st2_mod'] = 'dpo'
         elif s == 'una':
-            config['DEFAULT']['LLMS_llm'] = 'una'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'una'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st2'] = 'llm-una'
-            config['DEFAULT']['llm_st2_flag'] = 'True'
-            config['DEFAULT']['subtask2_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['llm_st2_mod'] = 'una'
+            config['TEMP']['llm_st2_flag'] = 'True'
+            config['TEMP']['subtask2_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['llm_st2_mod'] = 'una'
         elif s == 'solar':
-            config['DEFAULT']['LLMS_llm'] = 'solar'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'solar'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st2'] = 'llm-solar'
-            config['DEFAULT']['llm_st2_flag'] = 'True'
-            config['DEFAULT']['subtask2_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['llm_st2_mod'] = 'solar'
+            config['TEMP']['llm_st2_flag'] = 'True'
+            config['TEMP']['subtask2_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['llm_st2_mod'] = 'solar'
         elif s == 'gpt4':
-            config['DEFAULT']['LLMS_llm'] = 'gpt4'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'gpt4'
+            config['TEMP']['LLM_flag'] = 'True'
             preset_labels['st2'] = 'llm-gpt4'
-            config['DEFAULT']['llm_st2_flag'] = 'True'
-            config['DEFAULT']['subtask2_flag'] = 'True'
-            config['DEFAULT']['subtask3_flag'] = 'False'
-            config['DEFAULT']['llm_st2_mod'] = 'gpt4'
+            config['TEMP']['llm_st2_flag'] = 'True'
+            config['TEMP']['subtask2_flag'] = 'True'
+            config['TEMP']['subtask3_flag'] = 'False'
+            config['TEMP']['llm_st2_mod'] = 'gpt4'
         else:
             parts = s.split('_')
             prefix = parts[0] + '_' + parts[1]
@@ -430,37 +430,37 @@ def set_config(flags):
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
                 path = 'pretrained_models/st2/' + prefix + '/' + model_name
-                config['DEFAULT']['st2_pretrained_path'] = path
-                config['DEFAULT']['st2_load_checkpoint_for_test'] = path + '/pytorch_model.bin'
-                config['DEFAULT']['subtask2_flag'] = 'False'
-                config['DEFAULT']['st2_flag'] = 'True'
+                config['TEMP']['st2_pretrained_path'] = path
+                config['TEMP']['st2_load_checkpoint_for_test'] = path + '/pytorch_model.bin'
+                config['TEMP']['subtask2_flag'] = 'False'
+                config['TEMP']['st2_flag'] = 'True'
                 preset_labels['st2'] = 'roberta-' + model_name
             else:
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
                 path = 'pretrained_models/st3/' + prefix + '/' + model_name
-                config['DEFAULT']['rebel_inf_model_name_or_path'] = path
-                config['DEFAULT']['rebel_flag'] = 'True'
-                config['DEFAULT']['rebel_st2_flag'] = 'True'
-                config['DEFAULT']['subtask2_flag'] = 'True'
-                config['DEFAULT']['subtask3_flag'] = 'False'
+                config['TEMP']['rebel_inf_model_name_or_path'] = path
+                config['TEMP']['rebel_flag'] = 'True'
+                config['TEMP']['rebel_st2_flag'] = 'True'
+                config['TEMP']['subtask2_flag'] = 'True'
+                config['TEMP']['subtask3_flag'] = 'False'
                 preset_labels['st2'] = 'rebel-' + model_name
-                config['DEFAULT']['rebel_st2_mod'] = path
+                config['TEMP']['rebel_st2_mod'] = path
     else:
-        config['DEFAULT']['subtask2_flag'] = 'True'
+        config['TEMP']['subtask2_flag'] = 'True'
     
     if 'q' in flags:
-        config['DEFAULT']['text_from_user'] = flags['q']
+        config['TEMP']['text_from_user'] = flags['q']
         check_preset_flag = False
     if 'api' in flags:
-        config['DEFAULT']['LLMS_api_key'] = flags['api']
+        config['TEMP']['LLMS_api_key'] = flags['api']
     #if flags['t_f'] != 'None':
-        #config['DEFAULT']['test_file'] = 'new_data/' + flags['t_f']
+        #config['TEMP']['test_file'] = 'new_data/' + flags['t_f']
     if check_preset_flag:
         print(preset_labels)
         cache_dict = check_cache(preset_labels)
         for key in cache_dict.keys():
-            config['DEFAULT'][key] = cache_dict[key]
+            config['TEMP'][key] = cache_dict[key]
     
     
     
@@ -470,22 +470,22 @@ def set_config(flags):
 '''   
     if flags['st3'] != 'off':
         s = flags['st3']
-        config['DEFAULT']['rebel_flag'] = 'False'
+        config['TEMP']['rebel_flag'] = 'False'
         if s == 'zephyr':
-            config['DEFAULT']['LLMS_llm'] = 'zephyr'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'zephyr'
+            config['TEMP']['LLM_flag'] = 'True'
         elif s == 'dpo':
-            config['DEFAULT']['LLMS_llm'] = 'dpo'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'dpo'
+            config['TEMP']['LLM_flag'] = 'True'
         elif s == 'una':
-            config['DEFAULT']['LLMS_llm'] = 'una'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'una'
+            config['TEMP']['LLM_flag'] = 'True'
         elif s == 'solar':
-            config['DEFAULT']['LLMS_llm'] = 'solar'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'solar'
+            config['TEMP']['LLM_flag'] = 'True'
         elif s == 'gpt4':
-            config['DEFAULT']['LLMS_llm'] = 'gpt4'
-            config['DEFAULT']['LLM_flag'] = 'True'
+            config['TEMP']['LLMS_llm'] = 'gpt4'
+            config['TEMP']['LLM_flag'] = 'True'
         else:
             parts = s.split('_')
             prefix = parts[0] + '_' + parts[1]
@@ -493,10 +493,10 @@ def set_config(flags):
             for i in range(3,len(parts)):
                 model_name = model_name + '_' + parts[i]
             path = 'pretrained_models/st3/' + prefix + '/' + model_name
-            config['DEFAULT']['rebel_inf_model_name_or_path'] = path
-            config['DEFAULT']['rebel_flag'] = 'True'
+            config['TEMP']['rebel_inf_model_name_or_path'] = path
+            config['TEMP']['rebel_flag'] = 'True'
     else:
-        config['DEFAULT']['subtask3_flag'] = 'True'
+        config['TEMP']['subtask3_flag'] = 'True'
 '''
     
 
