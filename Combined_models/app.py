@@ -1,5 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 from two_step_model import run_pipeline
+CACHE_DIR = 'out/'
+DEFAULT_PORT = 5004
 from dotenv import load_dotenv
 import subprocess
 import os
@@ -227,7 +229,7 @@ def check_cache(cache_list):
     if 'st2' in cache_list:
         st2 = st0 + '-' + 'st2-' + cache_list['st2']
         
-    directory_path = 'saved_app_outs/'
+    directory_path = CACHE_DIR
     skip_path['st0_preset'] = directory_path + st0 + '.csv'
     skip_path['st1_preset'] = directory_path + st1 + '.csv'
     skip_path['st2_preset'] = directory_path + st2 + '.csv'
@@ -257,6 +259,7 @@ def set_config(flags):
     config = configparser.ConfigParser()
     config['DEFAULT'] = {}
     preset_labels = {}
+    config['DEFAULT']['preset_CACHE_DIR'] = CACHE_DIR
     '''
     if flags['Do subtask 1'] == False:
         config['DEFAULT']['subtask1_flag'] = 'True'
@@ -572,4 +575,4 @@ def test_pipe():
 if __name__ == "__main__":
     set_choices('static/swagger.yaml')
     print('done')
-    app.run(port=5004, host='0.0.0.0', debug=True)
+    app.run(port=DEFAULT_PORT, host='0.0.0.0', debug=True)

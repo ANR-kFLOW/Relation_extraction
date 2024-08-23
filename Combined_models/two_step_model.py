@@ -1074,7 +1074,12 @@ def parse_args():
         help="Name of the file that is using a model that is already done for st2"
     )
     
-    
+    parser.add_argument(
+        "--preset_CACHE_DIR",
+        type=str,
+        default='saved_app_outs/',
+        help="Name of the output file that will be used as a reference"
+    )
     
     #text from user
     parser.add_argument('--text_from_user', type=str, help='this is user submitted text to be evaluated')
@@ -1267,7 +1272,7 @@ def run_pipeline(config_path):
     else:
         base_df = pd.read_csv(args.test_file)
         st0_path = args.filter_model_path.split('/')
-        st0_preset_name = 'saved_app_outs/tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1]
+        st0_preset_name = args.preset_CACHE_DIR + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1]
         #base_df = base_df.drop(columns=['causal_text_w_pairs'])
         #base_df = base_df.drop(columns=['num_rs'])
     
@@ -1295,7 +1300,7 @@ def run_pipeline(config_path):
         df_final = only_causal_df.copy()
         st0_path = args.filter_model_path.split('/')
         if user_flag == False:
-            df_final.to_csv('saved_app_outs/tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
+            df_final.to_csv(args.preset_CACHE_DIR + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
             print(st0_preset_name)
     
     if args.subtask1_flag == 'False':
@@ -1542,7 +1547,7 @@ def run_pipeline(config_path):
     df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
     #df_json = df_final.values.tolist()  
     if args.pipeline_config_name != 'None':
-        df_final.to_csv('saved_app_outs/' + args.pipeline_config_name + '.csv')
+        df_final.to_csv(args.preset_CACHE_DIR + args.pipeline_config_name + '.csv')
     df_json = df_final.to_dict(orient='records')
     return df_json
 
