@@ -1328,8 +1328,18 @@ def main_st2(arg):
             #t = model
             #for param_tensor in t.state_dict():
                 #print(param_tensor, "\t", t.state_dict()[param_tensor].size())
-
-            model.load_state_dict(torch.load(args.st2_load_checkpoint_for_test, map_location=torch.device('cpu')))
+            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            cuda_flag = False
+            if torch.cuda.is_available():
+                cuda_flag = True
+            else:
+                cuda_flag = False
+            if cuda_flag == True:
+                model.load_state_dict(torch.load(args.st2_load_checkpoint_for_test))
+                model.to(device)
+            else:
+                model.load_state_dict(torch.load(args.st2_load_checkpoint_for_test, map_location=torch.device('cpu')))
+                model.to(device)
 
         model.eval()
         predictions = []
