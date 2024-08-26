@@ -948,13 +948,13 @@ def parse_args():
     
     #flags
     parser.add_argument(
-        "--st2_flag",
-        action="store_true",
+        "--st2_roberta_flag",
+        default='False',
         help="Tells the pipeline not to use this model",
     )
     parser.add_argument(
-        "--st1_flag",
-        action="store_true",
+        "--st1_roberta_flag",
+        default='False',
         help="Tells the pipeline not to use this model",
     )
     parser.add_argument(
@@ -970,17 +970,17 @@ def parse_args():
     
     parser.add_argument(
         "--subtask1_flag",
-        action="store_true",
+        default='False',
         help="Tells the pipeline not to do subtask 1",
     )
     parser.add_argument(
         "--subtask2_flag",
-        action="store_true",
+        default='False',
         help="Tells the pipeline not to do subtask 2",
     )
     parser.add_argument(
         "--subtask3_flag",
-        action="store_true",
+        default='False',
         help="Tells the pipeline not to do subtask 3",
     )
     
@@ -1179,11 +1179,11 @@ def main():
     if not args.subtask1_flag:
         print('st1')    
         
-        if not args.st1_flag:
+        if not args.st1_roberta_flag:
             print('running default model')
-            args.st1_flag = True
+            args.st1_roberta_flag = True
             
-        if args.st1_flag:
+        if args.st1_roberta_flag:
             args.st1_test_file = 't'
             st1_df = main_st1(args)
             df_final['label_st1'] = st1_df
@@ -1193,10 +1193,10 @@ def main():
     #print(len(args.only_causal))
     if not args.subtask2_flag:
         print('st2')
-        if not args.st2_flag:
+        if not args.st2_roberta_flag:
             print('running default model')
-            args.st2_flag = True
-        if args.st2_flag:
+            args.st2_roberta_flag = True
+        if args.st2_roberta_flag:
             args.st2_test_file = 't'
             st2_df = main_st2(args)
             st2_indexes = []
@@ -1315,17 +1315,17 @@ def run_pipeline(config_path):
             print(st0_preset_name)
             print('above is something to check')
     
-    if args.subtask1_flag == 'False':
+    if args.subtask1_flag == 'True':
         print('st1')    
         if user_flag == False and os.path.exists(args.st1_preset):
             st1_df = pd.read_csv(args.st1_preset)
             df_final['label_roberta'] = st1_df['label_roberta']
         else:
-            if not args.st1_flag:
+            if not args.st1_roberta_flag:
                 print('running default model')
-                args.st1_flag = 'True'
+                args.st1_roberta_flag = 'True'
                 
-            if args.st1_flag == 'True':
+            if args.st1_roberta_flag == 'True':
                 args.st1_test_file = 't'
                 st1_df = main_st1(args)
                 mapping = {0: 'cause', 1: 'enable', 2: 'prevent', 3: 'intend'}
@@ -1341,17 +1341,17 @@ def run_pipeline(config_path):
     #print(len(st2_indexes))
     #print(len(st2_pred))
     #print(len(args.only_causal))
-    if args.subtask2_flag == 'False':
+    if args.subtask2_flag == 'True':
         print('st2')
         if user_flag == False and os.path.exists(args.st2_preset):
             st2_df = pd.read_csv(args.st2_preset)
             df_final['num_rs_roberta'] = st2_df['num_rs_roberta']
             df_final['span_pred_roberta'] = st2_df['span_pred_roberta']
         else:
-            if not args.st2_flag:
+            if not args.st2_roberta_flag:
                 print('running default model')
-                args.st2_flag = 'True'
-            if args.st2_flag == 'True':
+                args.st2_roberta_flag = 'True'
+            if args.st2_roberta_flag == 'True':
                 args.st2_test_file = 't'
                 st2_df = main_st2(args)
                 st2_indexes = []
@@ -1370,7 +1370,7 @@ def run_pipeline(config_path):
                     df_final[['span_pred_roberta', 'num_rs_roberta']].to_csv(st2_preset_name + '.csv')
                 
                 
-    if args.subtask3_flag == 'False':
+    if args.subtask3_flag == 'True':
         if args.rebel_flag == 'False' and args.llm_flag == 'False':
             print('running default model')
             args.rebel_flag = 'True'
