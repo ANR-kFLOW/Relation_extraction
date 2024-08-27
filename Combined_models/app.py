@@ -12,7 +12,8 @@ from flask_swagger_ui import get_swaggerui_blueprint
 
 import configparser
 
-
+#this is in charge of going through the preset models directory and updating the choices available to
+#the user based on which models are available
 def set_choices(yaml_file):
     with open(yaml_file, 'r') as file:
     # Read the entire file content
@@ -198,7 +199,7 @@ def set_choices(yaml_file):
             #yaml.dump(data, f)
         return
 
-
+#this collects all of the responses from the user and puts it into one dict
 def get_params():
     params = request.args
     response = {}
@@ -210,13 +211,14 @@ def get_params():
     print('above is the param list')
     return response
 
-
+#this generates the preset labels for each of the subtasks
+#it is important to note that the preset may not exist but that is checked in two_step_model.py
 def check_cache(cache_list):
     skip_path = {}
     t_f = cache_list['t_f']
     st0 = 'tf-' + t_f + '-' + 'filter-' + cache_list['filter']
-    print(t_f)
-    print(st0)
+    #print(t_f)
+    #print(st0)
     #print(st0 + '-' + 'st1-' + cache_list['st1'])
     #print(st0 + '-' + 'st2-' + cache_list['st2'])
     st1 = ''
@@ -255,6 +257,8 @@ def check_cache(cache_list):
     return skip_path
     '''
 
+
+#this takes in the arguements given by the user and creates a config file based on the information given
 def set_config(flags):
     config = configparser.ConfigParser()
     config['TEMP'] = {}
