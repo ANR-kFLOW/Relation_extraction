@@ -65,18 +65,31 @@ There are two options for running the pipeline without the use of the web applic
 
 Arguements available:
   --test_file
+  
     Input the path to the file you want to use for inferences
+    
   --st1_mod
+  
     Input the path to the pretrained model you are using for st1. Be sure to include the path in the pretrained models folder
+    
   --st2_mod
+  
     Input the path to the pretrained model you are using for st2.
+    
   --config_path
+  
     If there is a config file available input the path and that will be taken as a priority over the other inputs. 
+    
   --text_from_user
+  
     Type out your sentences in quote marks and be sure to seperate them with periods. This will be used instead of the test file
+    
   --skip_st1
+  
     Type in true if you do not want the pipeline to perform st1
+    
   --skip_st2
+  
     Type in true if you do not want the pipeline to perform st2
 
     
