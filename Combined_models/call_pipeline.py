@@ -12,18 +12,23 @@ available_llms = {
     "solar": "bhavinjawade/SOLAR-10B-OrcaDPO-Jawade",
     "gpt4": "OpenAI-GPT4"  # Added GPT-4
 }
-
+#this will return a dict with the preset labels for all of the presets used
 def build_preset_label(t_f, filter, st1, st2, preset_labels):
     presets_dict = {}
     
+    #this gets the name of the test file
     tf = t_f.split('/')[-1]
+    
+    #this gets the name of the pretrained model
     filter_name = filter.split('/')[-1]
     
+    #this saves the path of the filter preset
     filter_preset = 'out/tf-' + tf + '-filter-' + preset_labels['filter'] + filter_name + '.csv'
-    filter_label = 'tf-' + tf + '-filter-' + preset_labels['filter'] + filter_name
-    
     presets_dict['st0_preset'] = filter_preset
     
+    #this allows st1 and st2 preset to use the filter label as part of their preset
+    #this is important because dataset and model used for filtering could change the output which requires a different preset
+    filter_label = 'tf-' + tf + '-filter-' + preset_labels['filter'] + filter_name
     if st1 != 'None':
         st1_name = st1.split('/')[-1]
         st1_preset = 'out/' + filter_label + '-st1-' + preset_labels['st1'] + st1_name + '.csv'
@@ -36,25 +41,40 @@ def build_preset_label(t_f, filter, st1, st2, preset_labels):
         
     return presets_dict
 
+#the expectation is that it will receive a dict that contains the vital information to build a config file
 def create_config(build_dict):
+    
     llms = ["zephyr", "dpo", "una", "solar", "gpt4"]
+    
+    #config is the final config that will be passed to the pipeline
     config = configparser.ConfigParser()
     config['TEMP'] = {}
+    
+    #this keeps track of which type of models are being used for a given subtask
     preset_labels = {}
+    
+    #this keeps track of whether user text is used or not
     ut = False
+    
+    #if text doesn't have .csv it is most likely user submitted text
     if '.csv' in build_dict['text']:
         config['TEMP']['test_file'] = build_dict['text']
     else:
         ut = True
         config['TEMP']['text_from_user'] = build_dict['text']
     
+    #these are basic arguements that can just be passed
     config['TEMP']['preset_cache_dir'] = 'out/'
     config['TEMP']['filter_threshold'] = str(build_dict['filter_threshold'])
     config['TEMP']['filter_model_path'] = build_dict['filter_mod']
     config['TEMP']['llms_api_key'] = str(build_dict['llms_api_key'])
+    
+    #this part would have to change if there are more types of files for filter than roberta
     preset_labels['filter'] = 'roberta-'
+    
+    #if the skip is selected none of these arguements need to be in the config file
     if build_dict['skip_st1'] == 'False':
-        
+        #each of these blocks assign the appropriate flags required for each type of model used for the subtask
         if 'roberta' in build_dict['st1_mod']:
             config['TEMP']['subtask1_flag'] = 'True'
             config['TEMP']['st1_model_name_or_path'] = build_dict['st1_mod']
@@ -74,7 +94,7 @@ def create_config(build_dict):
             config['TEMP']['llm_flag'] = 'True'
             config['TEMP']['llm_st1_flag'] = 'True'
     
-    
+    #this does the same as the previous block except for st2
     if build_dict['skip_st2'] == 'False':
             
         if 'roberta' in build_dict['st2_mod']:
@@ -96,6 +116,8 @@ def create_config(build_dict):
             config['TEMP']['llm_st2_mod'] = build_dict['st2_mod']
             config['TEMP']['llm_flag'] = 'True'
             config['TEMP']['llm_st2_flag'] = 'True'
+            
+    #presets are not needed when the user provides text
     if not ut:
         presets_dict = build_preset_label(build_dict['text'], build_dict['filter_mod'], build_dict['st1_mod'], build_dict['st2_mod'], preset_labels)
         config['TEMP'].update(presets_dict)
@@ -114,33 +136,33 @@ def parse_args():
         "--test_file", 
         type=str, 
         default='None', 
-        help="A csv or a json file containing the test data."
+        help="A csv file containing the test data."
     )
-    parser.add_argument('--filter_mod', type=str, default='None', help='Path to model')
-    parser.add_argument('--filter_threshold', type=float, default=0.8, help='Threshold for classification')
+    parser.add_argument('--filter_mod', type=str, default='None', help='Path to the model used to filter the data')
+    parser.add_argument('--filter_threshold', type=float, default=0.8, help='Threshold for classification in the filter')
     parser.add_argument(
         "--st1_mod",
         type=str,
         default='None',
-        help="model used for st1"
+        help="Model used for st1"
     )
     parser.add_argument(
         "--st2_mod",
         type=str,
         default='None',
-        help="model used for st2",
+        help="Model used for st2",
     )
     
     parser.add_argument('--llms_api_key', help='API key for GPT-4', required=False)
     parser.add_argument(
         "--config_path",
         default='None',
-        help="Tells the pipeline to use st2 from llm",
+        help="This is the path to the config file",
     )
     parser.add_argument('--text_from_user', default='None', required=False)
     
-    parser.add_argument('--skip_st1', default='False', required=False)
-    parser.add_argument('--skip_st2', default='False', required=False)
+    parser.add_argument('--skip_st1', default='False', help='This tells the pipeline to not perform st1', required=False)
+    parser.add_argument('--skip_st2', default='False', help='This tells the pipeline to not perform st2', required=False)
     
     args = parser.parse_args()
     return args
@@ -151,16 +173,17 @@ if __name__ == "__main__":
     user_dict = {}
     arg_list = [args.test_file, args.filter_mod, args.st1_mod, args.st2_mod, args.text_from_user]
     
-    
+    #checks if the user submitted any arguments that would change the config file from the default
     if all(x == arg_list[0] for x in arg_list):
         user_submitted = False
     else:
         user_submitted = True
-        
     if args.skip_st1 != 'False' or args.skip_st2 != 'False':
         user_submitted = True
-    
+        
+    #this is check is for the case when a user submits a config file
     if args.config_path != 'None':
+        #this part updates the current arguments to the ones defined in the config file
         config = configparser.ConfigParser()
         config.read(args.config_path)
         for key in config['TEMP']:
@@ -168,7 +191,7 @@ if __name__ == "__main__":
                 if hasattr(args, key):
                     attr_type = type(value)
                     setattr(args, key, attr_type(config['TEMP'][key]))
-                    
+        #this defines the dictionary representing the inputs from the user and filling in None when not provided            
         user_dict['text'] = args.test_file
         user_dict['filter_mod'] = args.filter_mod
         user_dict['st1_mod'] = args.st1_mod
@@ -181,6 +204,7 @@ if __name__ == "__main__":
         user_dict['skip_st2'] = args.skip_st2
     else:
         if user_submitted:
+            #this is the same as the last block except this time the user provides arguements through the command prompt
             user_dict['text'] = args.test_file
             user_dict['filter_mod'] = args.filter_mod
             user_dict['st1_mod'] = args.st1_mod
@@ -194,8 +218,8 @@ if __name__ == "__main__":
             
             
         else:
-            print('default used')
-            
+            #print('default used')
+            #this is the default if nothing has been provided by the user
             default_config = configparser.ConfigParser()
             default_config.read('config_default.cfg')
             default_dict = {section: dict(default_config.items(section)) for section in default_config.sections()}
@@ -223,26 +247,29 @@ if __name__ == "__main__":
                 df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
             default_used = True
     
-    
+    #this is so that the file stops here if the default is used
     if not default_used:    
-        
+        #this loads up a dict from the default config
         default_config = configparser.ConfigParser()
         default_config.read('config_default.cfg')
         default_dict = {section: dict(default_config.items(section)) for section in default_config.sections()}
         build_dict = user_dict
         
+        #These checks make changes based on whether a subtask is being skipped
         if build_dict['skip_st1'] != 'False':
             build_dict['st1_mod'] = 'None'
             
         if build_dict['skip_st2'] != 'False':
             build_dict['st2_mod'] = 'None'
         
+        #this checks if the user provided their own text and if they didn't the csv file is used
         if args.text_from_user == 'None':
             if build_dict['text'] == 'None':
                 build_dict['text'] = default_dict['TEMP']['test_file']
         else:
             build_dict['text'] = args.text_from_user
             
+        #these checks fill in the parts that the user did not specify with the default parameters
         if build_dict['filter_mod'] == 'None':
             build_dict['filter_mod'] = default_dict['TEMP']['filter_mod']
             
@@ -252,13 +279,19 @@ if __name__ == "__main__":
         if build_dict['st2_mod'] == 'None' and build_dict['skip_st2'] == 'False':
             build_dict['st2_mod'] = default_dict['TEMP']['st2_mod']
             
-            
+        #this creates the config file from the build dict which contains all of the necessary information to make a config file
+        #everything that the user did not specify is filled with the default
         config = create_config(build_dict)
         with open('config_temp.cfg', 'w') as configfile:
             config.write(configfile)
-            
+        #now the newly created config file will be used    
         json_dict = run_pipeline('config_temp.cfg')
         #print(json_dict)
         df = pd.DataFrame(json_dict)
-        df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+        
+        #this just checks if the filter was able to find at least one causal sentence. 
+        if df == 'There are no causal sentences':
+            print('There are no causal sentences')
+        else:
+            df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
         
