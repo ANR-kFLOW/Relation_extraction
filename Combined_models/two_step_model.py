@@ -1093,6 +1093,34 @@ def parse_args():
         help="Name of the output file that will be used as a reference"
     )
     
+    
+    parser.add_argument(
+        "--st1_mod",
+        type=str,
+        default='None',
+        help="model used for st1"
+    )
+    parser.add_argument(
+        "--st2_mod",
+        type=str,
+        default='None',
+        help="model used for st2",
+    )
+    
+    #parser.add_argument('--llms_api_key', help='API key for GPT-4', required=False)
+    parser.add_argument(
+        "--config_path",
+        default='None',
+        help="Tells the pipeline to use st2 from llm",
+    )
+    #parser.add_argument('--text_from_user', default='None', required=False)
+    
+    parser.add_argument('--skip_st1', default='False', required=False)
+    parser.add_argument('--skip_st2', default='False', required=False)
+    
+    
+    
+    
     #
     args = parser.parse_args()
     if args.config_file:
@@ -1145,101 +1173,7 @@ def para_into_df(s):
     df = pd.DataFrame()
     df['text'] = parts
     return df
-    
-def main():
-    args = parse_args()
-    args.st1_do_predict = True
-    args.st2_do_test = True
-    args.st1_use_cpu = True
-    
-    if args.text_from_user != None:
-        print(args.text_from_user)
-        base_df = para_into_df(args.text_from_user)
-    else:
-        base_df = pd.read_csv(args.test_file)
-        #base_df = base_df.drop(columns=['causal_text_w_pairs'])
-        #base_df = base_df.drop(columns=['num_rs'])
-    
-    args.st1_test_file = args.test_file
-    args.base_df = base_df
-    
-    #print('---------------------------------')
-    only_causal_df = run_filter(args)
-    if len(only_causal_df) < 1:
-        print('There are no causal sentences')
-        return 
-    #only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
-    only_causal_df = only_causal_df.drop(columns=['label'])
-    only_causal_df = only_causal_df.drop(columns=['triplets'])
-    only_causal_df = only_causal_df.drop(columns=['causal_text_w_pairs'])
-    args.only_causal = only_causal_df
-    #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
-    df_final = only_causal_df.copy()
-    
-    if not args.subtask1_flag:
-        print('st1')    
-        
-        if not args.st1_roberta_flag:
-            print('running default model')
-            args.st1_roberta_flag = True
-            
-        if args.st1_roberta_flag:
-            args.st1_test_file = 't'
-            st1_df = main_st1(args)
-            df_final['label_st1'] = st1_df
-        #df_final = df_final.drop(columns=['label'])
-    #print(len(st2_indexes))
-    #print(len(st2_pred))
-    #print(len(args.only_causal))
-    if not args.subtask2_flag:
-        print('st2')
-        if not args.st2_roberta_flag:
-            print('running default model')
-            args.st2_roberta_flag = True
-        if args.st2_roberta_flag:
-            args.st2_test_file = 't'
-            st2_df = main_st2(args)
-            st2_indexes = []
-            st2_pred = []
-            for i in range(len(st2_df)):
-                st2_indexes.append(len(st2_df[i]))
-                st2_pred.append(str(st2_df[i]))
-            
-            df_final['num_rs'] = st2_indexes
-            df_final['pred_st2'] = st2_pred
-        
-    if not args.subtask3_flag:
-        
-        if not args.rebel_flag or args.llm_flag:
-            print('running default model')
-            args.rebel_flag = True
-            
-        if args.rebel_flag:
-            print('rebel')
-            rebel_df = test_model(args.only_causal, args.rebel_inf_model_name_or_path)
-            #print(len(args.only_causal))
-            #print(len(args.base_df))
-            #print(len(rebel_df))
-            df_final['triplet-rebel'] = rebel_df['prediction']
-            if args.split_st3_flag == True:
-                if args.rebel_st1_flag == True:
-                    df_final['rebel_label'] = df_final['triplet-rebel'].map(split_list_last)
-                if args.rebel_st2_flag == True:
-                    df_final['rebel_sub_obj'] = df_final['triplet-rebel'].map(split_list_rest)
-            
-        #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
-        #return 0
-        
-        if args.llm_flag:
-            print('LLM')    
-            args.llms_output = args.llms_output + '/' + args.llms_llm +'/' + args.llms_llm + f'_pred-{datetime.now()}.csv'
-            
-            llm_df = run_LLM(args)
-            llm_df['subj-obj-rel-LLM-' + args.llms_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
-            df_final['subj-obj-rel-LLM-' + args.llms_llm] = llm_df['subj-obj-rel-LLM-' + args.llms_llm]
-            #df_final = df_final.drop(columns=['triplets'])
-            
-    df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+
     
 def run_pipeline(config_path):
     args = parse_args()
@@ -1262,7 +1196,7 @@ def run_pipeline(config_path):
                     #print(value)
                     #print(type(value))
                     setattr(args, key, attr_type(config['TEMP'][key]))
-    
+    args.filter_threshold = float(args.filter_threshold)
     args.st1_do_predict = True
     args.st2_do_test = True
     args.st1_use_cpu = True
@@ -1291,7 +1225,7 @@ def run_pipeline(config_path):
     args.base_df = base_df
     
     #print('---------------------------------')
-    
+    #print(args.st0_preset)
     if not user_flag and os.path.exists(args.st0_preset):
         print('hello')
         only_causal_df = pd.read_csv(args.st0_preset)

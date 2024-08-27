@@ -303,7 +303,7 @@ def set_config(flags):
     
     
     config['TEMP']['rebel_flag'] = 'False'
-    config['TEMP']['split_st3_flag'] = 'True'
+    #config['TEMP']['split_st3_flag'] = 'True'
     
     if flags['st1'] != 'off':
         s = flags['st1']
@@ -358,7 +358,7 @@ def set_config(flags):
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
                 path = 'pretrained_models/st3/' + prefix + '/' + model_name
-                config['TEMP']['rebel_inf_model_name_or_path'] = path
+                #config['TEMP']['rebel_inf_model_name_or_path'] = path
                 config['TEMP']['rebel_st1_flag'] = 'True'
                 config['TEMP']['rebel_flag'] = 'True'
                 config['TEMP']['subtask3_flag'] = 'True'
@@ -421,7 +421,7 @@ def set_config(flags):
                 for i in range(3,len(parts)):
                     model_name = model_name + '_' + parts[i]
                 path = 'pretrained_models/st3/' + prefix + '/' + model_name
-                config['TEMP']['rebel_inf_model_name_or_path'] = path
+                #config['TEMP']['rebel_inf_model_name_or_path'] = path
                 config['TEMP']['rebel_flag'] = 'True'
                 config['TEMP']['rebel_st2_flag'] = 'True'
                 config['TEMP']['subtask3_flag'] = 'True'
@@ -443,7 +443,7 @@ def set_config(flags):
     
     
     
-    with open('config_swagger.ini', 'w') as configfile:
+    with open('config_swagger.cfg', 'w') as configfile:
         config.write(configfile)
     return True
 '''   
@@ -526,7 +526,7 @@ class RunPipeline(Resource):
         if f == False:
             return jsonify('either choose a dataset or give your own sentences')
         
-        json = run_pipeline('config_swagger.ini')
+        json = run_pipeline('config_swagger.cfg')
         
         return jsonify(json)
         #return json
@@ -549,7 +549,7 @@ def test_pipe():
     #print("Current working directory:", os.getcwd())
     #print("Cache directory:", os.getenv('HF_HOME', '~/.cache/huggingface'))
     #tokenizer = RobertaTokenizer.from_pretrained('roberta-base', cache_dir='data/huggingface/')
-    json = run_pipeline('config_swagger.ini')
+    json = run_pipeline('config_swagger.cfg')
     return json
 if __name__ == "__main__":
     set_choices('static/swagger.yaml')
