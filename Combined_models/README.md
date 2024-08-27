@@ -56,3 +56,10 @@ then run the image with
 When running the link that is given in the terminal change the local port number to the number that you exported from your local machine. 
 for the previous example it would be http://127.0.0.1:5004/swagger/
 > (Be sure to add the /swagger to the end of the link)
+
+
+
+## Running the pipeline manually
+
+There are two options for running the pipeline without the use of the web application: passing the arguements to call_pipeline.py, and creating a config file which is passed to call_pipeline.py
+
