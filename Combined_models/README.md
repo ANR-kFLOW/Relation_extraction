@@ -93,7 +93,29 @@ Arguements available:
     
     --skip_st2
   
+Any value that is not specified will be filled in by the default value that is described in config_default.cfg this means that the pipeline can be ran with a command as simple as:
+
+    python call_pipeline.py
     
+Arguements can be added at the end to change the configuration of the pipeline, like:
+
+    python call_pipeline.py --text_from_user "This is a test sentence."
+
+Which would make the pipeline use the given sentence instead of the default csv file
+
+When using a config file do a command like:
+
+    python call_pipeline.py --config_file /path/to/file
+
+For the config file the format looks like: 
+
+    [TEMP]
+    Argument_A = x
+    Argument_B = y
+      
+A full example of this can be found in example.cfg
+
+Inputting arguements through a config file works the same way as typing it out in a command line.
 
     
 
