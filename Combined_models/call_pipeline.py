@@ -29,6 +29,8 @@ def build_preset_label(t_f, filter, st1, st2, preset_labels):
     #this allows st1 and st2 preset to use the filter label as part of their preset
     #this is important because dataset and model used for filtering could change the output which requires a different preset
     filter_label = 'tf-' + tf + '-filter-' + preset_labels['filter'] + filter_name
+    
+    #each of these checks are if the subtask is part of the pipeline
     if st1 != 'None':
         st1_name = st1.split('/')[-1]
         st1_preset = 'out/' + filter_label + '-st1-' + preset_labels['st1'] + st1_name + '.csv'
@@ -119,6 +121,7 @@ def create_config(build_dict):
             
     #presets are not needed when the user provides text
     if not ut:
+        #the presets are now added to the config file
         presets_dict = build_preset_label(build_dict['text'], build_dict['filter_mod'], build_dict['st1_mod'], build_dict['st2_mod'], preset_labels)
         config['TEMP'].update(presets_dict)
     
