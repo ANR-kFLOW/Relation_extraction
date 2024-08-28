@@ -244,7 +244,7 @@ if __name__ == "__main__":
             json_dict = run_pipeline('config_temp.cfg')
             #print(json_dict)
             df = pd.DataFrame(json_dict)
-            if df == 'There are no causal sentences':
+            if isinstance(df, str):
                 print('There are no causal sentences')
             else:
                 df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
@@ -293,7 +293,7 @@ if __name__ == "__main__":
         df = pd.DataFrame(json_dict)
         
         #this just checks if the filter was able to find at least one causal sentence. 
-        if df == 'There are no causal sentences':
+        if isinstance(df, str):
             print('There are no causal sentences')
         else:
             df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
