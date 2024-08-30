@@ -170,8 +170,17 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-if __name__ == "__main__":
+
+def main_call(param=None, flag=False):
     args = parse_args()
+    if flag:
+        args.text_from_user = param['q']
+        args.filter_mod = param['filter']
+        args.st1_mod = param['st1']
+        args.st2_mod = param['st2']
+        
+        args.llms_api_key = param['api']
+        
     default_used = False
     user_dict = {}
     arg_list = [args.test_file, args.filter_mod, args.st1_mod, args.st2_mod, args.text_from_user]
@@ -281,7 +290,11 @@ if __name__ == "__main__":
             
         if build_dict['st2_mod'] == 'None' and build_dict['skip_st2'] == 'False':
             build_dict['st2_mod'] = default_dict['TEMP']['st2_mod']
-            
+         
+        if build_dict['st1_mod'] == 'gpt-4' or build_dict['st2_mod'] == 'gpt-4':
+            if build_dict['llms_api_key'] == 'None':
+                print('You need to give an OpenAI api key if you are going to prompt gpt-4')
+                return 0
         #this creates the config file from the build dict which contains all of the necessary information to make a config file
         #everything that the user did not specify is filled with the default
         config = create_config(build_dict)
@@ -297,4 +310,9 @@ if __name__ == "__main__":
             print('There are no causal sentences')
         else:
             df.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
+            return df
         
+
+
+if __name__ == "__main__":
+    main_call()

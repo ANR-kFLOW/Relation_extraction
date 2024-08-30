@@ -1159,13 +1159,18 @@ def parse_args():
 
 
 def split_list_last(lst):
-    s = lst.split(' ')
+    s = lst.split('  ')
     return s[-1]
 
 def split_list_rest(lst):
-    s = lst.split(' ')
-    rest = " ".join(s[:-1])
-    return rest
+    s = lst.split('  ')
+    r = s[:-1]
+    rest = "  ".join(s[:-1])
+    if r:
+        #print(r)
+        r[0] = r[0].replace(" ", "", 1)
+    
+    return r
 
 def para_into_df(s):
     parts = s.split('. ')

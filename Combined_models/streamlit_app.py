@@ -1,8 +1,10 @@
 import streamlit as st
+from annotated_text import annotated_text
 import subprocess
 import os
 import re
 import yaml
+import pandas as pd
 from call_pipeline import main_call
 def app(model_dict):
     # Title of the app
@@ -90,7 +92,64 @@ def app(model_dict):
         if not fail_flag:
             st.write('done')
             result = main_call(call_dict, flag=True)
-            #st.write(result)
+            st.write(result)
+            inf = annotate_inf(result)
+            print(inf)
+            for i in inf:
+                annotated_text(i)
+            annotated_text(
+    "This ",
+    ("is", "verb"),
+    " some ",
+    ("annotated", "adj"),
+    ("text", "noun"),
+    " for those of ",
+    ("you", "pronoun"),
+    " who ",
+    ("like", "verb"),
+    " this sort of ",
+    ("thing", "noun"),
+    "."
+)
+
+
+def annotate_inf(dict):
+    annotated_list = []
+    label_dict = {'cause':'#fea', 'enable':'#8ef', 'prevent':'#afa', 'intend':'#faf', 'invalid':'#faa'}
+    t_list = ['subj', 'obj']
+    if 'span_pred_roberta' in dict:
+        print('use case not implemented')
+    else:
+        df = pd.DataFrame(dict)
+        for index, row in df.iterrows():
+            #you can potentially have it pull up the column name that has span_pred and use that as a variable
+            sub_obj = row['span_pred_rebel']
+            rel = row['label_rebel']
+            if not rel in label_dict.keys():
+                label = 'invalid'
+            else:
+                label = rel
+            color = label_dict[label]
+            sentence = row['text']
+            loop_list = [sentence]
+            
+            for i in range(2):
+                temp_list = []
+                obj = sub_obj[i]
+                for entry in loop_list:
+                    if isinstance(entry,str):
+                        x = annotate_sub(entry, obj, label + '-' + t_list[i], color)
+                        temp_list.extend(x)
+                    else:
+                        temp_list.append(entry)
+                loop_list = temp_list
+            annotated_list.append(loop_list)
+    return annotated_list
+                
+                    
+                
+            
+
 
 def get_choices(directory_path):
     model_dict = {}
@@ -108,6 +167,20 @@ def get_choices(directory_path):
                             model_list.append(modelpath)
             model_dict[filename] = model_list
     return model_dict
+
+
+def annotate_sub(sent, obj, label, color):
+    annotated_list = []
+    if obj.lower() in sent.lower():
+        parts = re.split(re.escape(obj), sent, flags=re.IGNORECASE, maxsplit=1)
+        t = (obj, label, color)
+        annotated_list.append(parts[0])
+        annotated_list.append(t)
+        annotated_list.append(parts[1])
+        return annotated_list
+    else:
+        annotated_list.append(sent)
+        return annotated_list
 
 
 if __name__ == "__main__":
