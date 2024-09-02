@@ -1093,7 +1093,7 @@ def parse_args():
         help="Name of the output file that will be used as a reference"
     )
     
-    
+    '''
     parser.add_argument(
         "--st1_mod",
         type=str,
@@ -1106,7 +1106,7 @@ def parse_args():
         default='None',
         help="model used for st2",
     )
-    
+    '''
     #parser.add_argument('--llms_api_key', help='API key for GPT-4', required=False)
     parser.add_argument(
         "--config_path",
@@ -1118,7 +1118,7 @@ def parse_args():
     parser.add_argument('--skip_st1', default='False', required=False)
     parser.add_argument('--skip_st2', default='False', required=False)
     
-    
+    parser.add_argument('--override_preset', default='False', required=False)
     
     
     #
@@ -1182,6 +1182,9 @@ def para_into_df(s):
     
 def run_pipeline(config_path):
     args = parse_args()
+    st0_mod = 'n/a'
+    st1_mod = 'n/a'
+    st2_mod = 'n/a'
     if config_path != 'False':
         config = configparser.ConfigParser()
         config.read(config_path)
@@ -1231,11 +1234,12 @@ def run_pipeline(config_path):
     
     #print('---------------------------------')
     #print(args.st0_preset)
-    if not user_flag and os.path.exists(args.st0_preset):
+    if not user_flag and os.path.exists(args.st0_preset) and args.override_preset == 'False':
         print('hello')
         only_causal_df = pd.read_csv(args.st0_preset)
         args.only_causal = only_causal_df
         df_final = only_causal_df.copy()
+        st0_mod = 'roberta'
     else:
         only_causal_df = run_filter(args)    
         if len(only_causal_df) < 1:
@@ -1249,6 +1253,7 @@ def run_pipeline(config_path):
         #df_final = only_causal_df.copy(columns=['causal_text_w_pairs'])
         df_final = only_causal_df.copy()
         st0_path = args.filter_model_path.split('/')
+        st0_mod = 'roberta'
         if user_flag == False:
             df_final.to_csv(args.preset_cache_dir + 'tf-' + args.test_file[9:] + '-filter-roberta-' + st0_path[-1] + '.csv')
             print(st0_preset_name)
@@ -1256,9 +1261,10 @@ def run_pipeline(config_path):
     
     if args.subtask1_flag == 'True':
         print('st1')    
-        if user_flag == False and os.path.exists(args.st1_preset):
+        if user_flag == False and os.path.exists(args.st1_preset) and args.override_preset == 'False':
             st1_df = pd.read_csv(args.st1_preset)
-            df_final['label_roberta'] = st1_df['label_roberta']
+            df_final['label'] = st1_df['label']
+            st1_mod = 'roberta'
         else:
             if not args.st1_roberta_flag:
                 print('running default model')
@@ -1268,24 +1274,26 @@ def run_pipeline(config_path):
                 args.st1_test_file = 't'
                 st1_df = main_st1(args)
                 mapping = {0: 'cause', 1: 'enable', 2: 'prevent', 3: 'intend'}
-                df_final['label_roberta'] = st1_df
-                df_final['label_roberta'] = df_final['label_roberta'].replace(mapping)
+                df_final['label'] = st1_df
+                df_final['label'] = df_final['label'].replace(mapping)
+                st1_mod = 'roberta'
                 if user_flag == False:
                     st1_path = args.st1_model_name_or_path.split('/')
                     st1_preset_name = st0_preset_name + '-st1-roberta-' + st1_path[-1]
                     print(st1_preset_name)
                     print('above is something to check')
-                    df_final['label_roberta'].to_csv(st1_preset_name + '.csv')
+                    df_final['label'].to_csv(st1_preset_name + '.csv')
         #df_final = df_final.drop(columns=['label'])
     #print(len(st2_indexes))
     #print(len(st2_pred))
     #print(len(args.only_causal))
     if args.subtask2_flag == 'True':
         print('st2')
-        if user_flag == False and os.path.exists(args.st2_preset):
+        if user_flag == False and os.path.exists(args.st2_preset) and args.override_preset == 'False':
             st2_df = pd.read_csv(args.st2_preset)
             df_final['num_rs_roberta'] = st2_df['num_rs_roberta']
-            df_final['span_pred_roberta'] = st2_df['span_pred_roberta']
+            df_final['span_pred'] = st2_df['span_pred']
+            st2_mod = 'roberta'
         else:
             if not args.st2_roberta_flag:
                 print('running default model')
@@ -1299,14 +1307,15 @@ def run_pipeline(config_path):
                     st2_indexes.append(len(st2_df[i]))
                     st2_pred.append(str(st2_df[i]))
                 df_final['num_rs_roberta'] = st2_indexes
-                df_final['span_pred_roberta'] = st2_pred
+                df_final['span_pred'] = st2_pred
                 df_final = df_final.drop(columns=['num_rs'])
+                st2_mod = 'roberta'
                 if user_flag == False:
                     st2_path = args.st2_pretrained_path.split('/')
                     st2_preset_name = st0_preset_name + '-st2-roberta-' + st2_path[-1]
                     print(st2_preset_name)
                     print('above is something to check')
-                    df_final[['span_pred_roberta', 'num_rs_roberta']].to_csv(st2_preset_name + '.csv')
+                    df_final[['span_pred', 'num_rs_roberta']].to_csv(st2_preset_name + '.csv')
                 
                 
     if args.subtask3_flag == 'True':
@@ -1349,64 +1358,75 @@ def run_pipeline(config_path):
                         
                 
                 if args.rebel_st1_flag == 'True':
+                    st1_mod = 'rebel'
                     if not same_model:
                         rebel_df = test_model(args.only_causal, args.rebel_st1_mod)
-                    df_final['label_rebel'] = rebel_df['prediction'].map(split_list_last)
+                    df_final['label'] = rebel_df['prediction'].map(split_list_last)
                 if args.rebel_st2_flag == 'True':
+                    st2_mod = 'rebel'
                     if not same_model:
                         rebel_df = test_model(args.only_causal, args.rebel_st2_mod)
-                    df_final['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
+                    df_final['span_pred'] = rebel_df['prediction'].map(split_list_rest)
             else:
-                if 'rebel' in args.st1_preset and os.path.exists(args.st1_preset):
+                if 'rebel' in args.st1_preset and os.path.exists(args.st1_preset) and args.override_preset == 'False':
+                    st1_mod = 'rebel'
+                    
                     rebel_df = pd.read_csv(args.st1_preset)
-                    print(rebel_df['label_rebel'].head())
+                    print(rebel_df['label'].head())
                     print(rebel_df.columns.tolist())
                     print('change above')
                     print(len(rebel_df))
                     print(len(df_final))
                     #print(df_final['label_rebel'].head())
-                    x = rebel_df['label_rebel']
-                    df_final['label_rebel'] = x
+                    x = rebel_df['label']
+                    df_final['label'] = x
                 elif 'rebel' in args.st1_preset:
+                    st1_mod = 'rebel'
+                    
                     rebel_df = test_model(args.only_causal, args.rebel_st1_mod)
-                    df_final['label_rebel'] = rebel_df['prediction'].map(split_list_last)
+                    df_final['label'] = rebel_df['prediction'].map(split_list_last)
                     
                     
                     rebel_path = args.rebel_st1_mod.split('/')
                     rebel_st1_preset_name = {}
                     rebel_st2_preset_name = {}
-                    rebel_st1_preset_name['label_rebel'] = st0_preset_name + '-st1-rebel-' + rebel_path[-1]
-                    rebel_st2_preset_name['span_pred_rebel'] = st0_preset_name + '-st2-rebel-' + rebel_path[-1]
+                    rebel_st1_preset_name['label'] = st0_preset_name + '-st1-rebel-' + rebel_path[-1]
+                    rebel_st2_preset_name['span_pred'] = st0_preset_name + '-st2-rebel-' + rebel_path[-1]
                     
                     
                     df_rebel_preset = df_final
-                    df_rebel_preset['label_rebel'] = rebel_df['prediction'].map(split_list_last)
-                    df_rebel_preset['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
-                    df_rebel_preset['label_rebel'].to_csv(rebel_st1_preset_name['label_rebel'] + '.csv')
-                    df_rebel_preset['span_pred_rebel'].to_csv(rebel_st2_preset_name['span_pred_rebel'] + '.csv')
+                    df_rebel_preset['label'] = rebel_df['prediction'].map(split_list_last)
+                    df_rebel_preset['span_pred'] = rebel_df['prediction'].map(split_list_rest)
+                    df_rebel_preset['label'].to_csv(rebel_st1_preset_name['label'] + '.csv')
+                    df_rebel_preset['span_pred'].to_csv(rebel_st2_preset_name['span_pred'] + '.csv')
                     
-                if 'rebel' in args.st2_preset and os.path.exists(args.st2_preset):
+                if 'rebel' in args.st2_preset and os.path.exists(args.st2_preset) and args.override_preset == 'False':
+                    st2_mod = 'rebel'
+                    
                     print(args.st2_preset)
                     rebel_df = pd.read_csv(args.st2_preset)
                     #x = rebel_df['span_pred_rebel']
-                    df_final['span_pred_rebel'] = rebel_df['span_pred_rebel']
+                    df_final['span_pred'] = rebel_df['span_pred']
                 elif 'rebel' in args.st2_preset:
+                    st2_mod = 'rebel'
+                    
+                    
                     rebel_df = test_model(args.only_causal, args.rebel_st2_mod)
-                    df_final['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
+                    df_final['span_pred'] = rebel_df['prediction'].map(split_list_rest)
                     
                     
                     rebel_path = args.rebel_st2_mod.split('/')
                     rebel_st1_preset_name = {}
                     rebel_st2_preset_name = {}
-                    rebel_st1_preset_name['label_rebel'] = st0_preset_name + '-st1-rebel-' + rebel_path[-1]
-                    rebel_st2_preset_name['span_pred_rebel'] = st0_preset_name + '-st2-rebel-' + rebel_path[-1]
+                    rebel_st1_preset_name['label'] = st0_preset_name + '-st1-rebel-' + rebel_path[-1]
+                    rebel_st2_preset_name['span_pred'] = st0_preset_name + '-st2-rebel-' + rebel_path[-1]
                     
                     
                     df_rebel_preset = df_final
-                    df_rebel_preset['label_rebel'] = rebel_df['prediction'].map(split_list_last)
-                    df_rebel_preset['span_pred_rebel'] = rebel_df['prediction'].map(split_list_rest)
-                    df_rebel_preset['label_rebel'].to_csv(rebel_st1_preset_name['label_rebel'] + '.csv')
-                    df_rebel_preset['span_pred_rebel'].to_csv(rebel_st2_preset_name['span_pred_rebel'] + '.csv')
+                    df_rebel_preset['label'] = rebel_df['prediction'].map(split_list_last)
+                    df_rebel_preset['span_pred'] = rebel_df['prediction'].map(split_list_rest)
+                    df_rebel_preset['label'].to_csv(rebel_st1_preset_name['label'] + '.csv')
+                    df_rebel_preset['span_pred'].to_csv(rebel_st2_preset_name['span_pred'] + '.csv')
                     
             '''        
             if 'rebel' in args.st1_preset:
@@ -1484,13 +1504,16 @@ def run_pipeline(config_path):
                 if not same_model:
                     args.llms_llm = args.llm_st1_mod
                     llm_df = run_LLM(args)
-                df_final['label_' + args.llms_llm] = llm_df.apply(lambda row: [ row['relation']], axis=1)
+                st1_mod = 'llm_' + args.llms_llm
+                df_final['label'] = llm_df.apply(lambda row: [ row['relation']], axis=1)
                 
             if args.llm_st2_flag == 'True':
+                
                 if not same_model:
                     args.llms_llm = args.llm_st2_mod
                     llm_df = run_LLM(args)
-                df_final['span_pred_' + args.llms_llm] = llm_df.apply(lambda row: [ row['subject'], row['object']], axis=1)
+                st2_mod = 'llm_' + args.llms_llm
+                df_final['span_pred'] = llm_df.apply(lambda row: [ row['subject'], row['object']], axis=1)
             
             llm_df['subj-obj-rel-LLM-' + args.llms_llm] = llm_df.apply(lambda row: [row['subject'], row['object'], row['relation']], axis=1)
             
@@ -1499,6 +1522,11 @@ def run_pipeline(config_path):
     
     #df_final.to_csv('combined_outs/'f'final-combined_pred-{datetime.now()}.csv')
     #df_json = df_final.values.tolist()  
+    
+    df_final['st0_model'] = st0_mod
+    df_final['st1_model'] = st1_mod
+    df_final['st2_model'] = st2_mod
+    
     if args.pipeline_config_name != 'None':
         df_final.to_csv(args.preset_cache_dir + args.pipeline_config_name + '.csv')
     df_json = df_final.to_dict(orient='records')
