@@ -6,6 +6,8 @@ import re
 import yaml
 import pandas as pd
 from call_pipeline import main_call
+import ast
+import difflib
 def app(model_dict):
     # Title of the app
     st.title("Streamlit Relation Extraction Demo")
@@ -93,38 +95,97 @@ def app(model_dict):
             st.write('done')
             result = main_call(call_dict, flag=True)
             st.write(result)
-            inf = annotate_inf(result)
+            flag, inf = annotate_inf(result)
             print(inf)
-            for i in inf:
-                annotated_text(i)
-            annotated_text(
-    "This ",
-    ("is", "verb"),
-    " some ",
-    ("annotated", "adj"),
-    ("text", "noun"),
-    " for those of ",
-    ("you", "pronoun"),
-    " who ",
-    ("like", "verb"),
-    " this sort of ",
-    ("thing", "noun"),
-    "."
-)
-
+            if flag:
+                for i in inf:
+                    annotated_text(i)
+                annotated_text(
+        "This ",
+        ("is", "verb"),
+        " some ",
+        ("annotated", "adj"),
+        ("text", "noun"),
+        " for those of ",
+        ("you", "pronoun"),
+        " who ",
+        ("like", "verb"),
+        " this sort of ",
+        ("thing", "noun"),
+        "."
+    )
+            else:
+                for i in inf:
+                    st.text(i)
 
 def annotate_inf(dict):
     annotated_list = []
     label_dict = {'cause':'#fea', 'enable':'#8ef', 'prevent':'#afa', 'intend':'#faf', 'invalid':'#faa'}
     t_list = ['subj', 'obj']
-    if 'span_pred_roberta' in dict:
+    
+    use_annotate = False
+    
+    if 'roberta' in dict['st2_model'][0]:
         print('use case not implemented')
+        df = pd.DataFrame(dict)
+        for index, row in df.iterrows():
+            
+            sub_obj = ast.literal_eval(row['span_pred'])
+            rel = row['label']
+            
+            if not rel in label_dict.keys():
+                label = 'invalid'
+            else:
+                label = rel
+            color = label_dict[label]
+            for entry in sub_obj:
+                text = entry
+                
+                subj_tag = '](' + label + '-subj)'
+                obj_tag = '](' + label + '-obj)'
+                
+                subj_a = entry.find('<ARG0>')
+                subj_b = entry.find('</ARG0>')
+                
+                if subj_a < subj_b:
+                    text = re.sub('<ARG0>', '[', text)
+                    text = re.sub('</ARG0>', subj_tag, text)
+                else:
+                    text = re.sub('</ARG0>', '[', text)
+                    text = re.sub('<ARG0>', subj_tag, text)
+                
+                
+                obj_a = entry.find('<ARG1>')
+                obj_b = entry.find('</ARG1>')
+                
+                if obj_a < obj_b:
+                    text = re.sub('<ARG1>', '[', text)
+                    text = re.sub('</ARG1>', obj_tag, text)
+                else:
+                    text = re.sub('</ARG1>', '[', text)
+                    text = re.sub('<ARG1>', obj_tag, text)
+                    
+                text = re.sub(r"</?[^>]+>", "", text)
+                print(text)
+                annotated_list.append(text)
+            
+            #span_list = extract_spans(sub_obj)
+            #print(span_list)
+            '''
+            for span in span_list:
+                text = row['text']
+                for i, s in enumerate(span):
+                    part = re.sub(s, '[' + s + ']' + label + '-' + t_list[i], text)
+                    text = merge_strings(text, part)
+                annotated_list.append(text)
+            '''
+            
     else:
         df = pd.DataFrame(dict)
         for index, row in df.iterrows():
             #you can potentially have it pull up the column name that has span_pred and use that as a variable
-            sub_obj = row['span_pred_rebel']
-            rel = row['label_rebel']
+            sub_obj = row['span_pred']
+            rel = row['label']
             if not rel in label_dict.keys():
                 label = 'invalid'
             else:
@@ -144,7 +205,8 @@ def annotate_inf(dict):
                         temp_list.append(entry)
                 loop_list = temp_list
             annotated_list.append(loop_list)
-    return annotated_list
+            use_annotate = True
+    return use_annotate, annotated_list
                 
                     
                 
@@ -182,6 +244,83 @@ def annotate_sub(sent, obj, label, color):
         annotated_list.append(sent)
         return annotated_list
 
+
+def extract_substring(text, start_tag, end_tag):
+    #start_tag = "<ARG1>"
+    #end_tag = "</ARG1>"
+
+    start_index = text.find(start_tag) + len(start_tag)
+    end_index = text.find(end_tag)
+
+    if start_index == -1 or end_index == -1:
+        return None  # Tags not found
+
+    return text[start_index:end_index]
+
+
+def remove_tags(text):
+    
+    if text is None:
+        return ''
+    
+    # Pattern to match anything between < and >
+    cleaned_text = re.sub(r"</?[^>]+>", "", text)
+    cleaned_text = re.sub('  ', ' ', cleaned_text)
+    return cleaned_text
+
+
+def merge_strings(str_a, str_b):
+    # Create a SequenceMatcher object to compare the strings
+    s = difflib.SequenceMatcher(None, str_a, str_b)
+    
+    # Initialize an empty result list
+    result = []
+    
+    # Iterate over the matching blocks and differences
+    for tag, i1, i2, j1, j2 in s.get_opcodes():
+        if tag == 'equal':
+            result.append(str_a[i1:i2])
+        elif tag == 'replace':
+            result.append(f"({str_b[j1:j2]})[{str_a[i1:i2]}]")
+        elif tag == 'insert':
+            result.append(f"({str_b[j1:j2]})")
+        elif tag == 'delete':
+            result.append(f"[{str_a[i1:i2]}]")
+    
+    # Join the list into a single string
+    return ''.join(result)
+
+
+def extract_spans(sents):
+    span_list = []
+    print(sents)
+    
+    if not sents:
+        return 0
+    for sent in sents:
+        loop_list = []
+        subj = extract_substring(sent, '<ARG0>', '</ARG0>')
+        
+        if not subj:
+            subj = extract_substring(sent, '</ARG0>', '<ARG0>')
+            
+        obj = extract_substring(sent, '<ARG1>', '</ARG1>')
+        
+        if not obj:
+            obj = extract_substring(sent, '</ARG1>', '<ARG1>')
+        
+        #print(subj)
+        #print(obj)
+        
+        subj = remove_tags(subj)
+        obj = remove_tags(obj)
+        
+        loop_list.append(subj)
+        loop_list.append(obj)
+        
+        span_list.append(loop_list)
+    print(len(sents))
+    return span_list
 
 if __name__ == "__main__":
     #print('hello world')

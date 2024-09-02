@@ -74,6 +74,9 @@ def create_config(build_dict):
     #this part would have to change if there are more types of files for filter than roberta
     preset_labels['filter'] = 'roberta-'
     
+    #this is to override the preset that already exists
+    config['TEMP']['override_preset'] = build_dict['override_preset']
+    
     #if the skip is selected none of these arguements need to be in the config file
     if build_dict['skip_st1'] == 'False':
         #each of these blocks assign the appropriate flags required for each type of model used for the subtask
@@ -166,7 +169,7 @@ def parse_args():
     
     parser.add_argument('--skip_st1', default='False', help='This tells the pipeline to not perform st1', required=False)
     parser.add_argument('--skip_st2', default='False', help='This tells the pipeline to not perform st2', required=False)
-    
+    parser.add_argument('--override_preset', default='False', required=False)
     args = parser.parse_args()
     return args
 
@@ -214,6 +217,8 @@ def main_call(param=None, flag=False):
         
         user_dict['skip_st1'] = args.skip_st1
         user_dict['skip_st2'] = args.skip_st2
+        
+        user_dict['override_preset'] = args.override_preset
     else:
         if user_submitted:
             #this is the same as the last block except this time the user provides arguements through the command prompt
@@ -228,7 +233,7 @@ def main_call(param=None, flag=False):
             user_dict['skip_st1'] = args.skip_st1
             user_dict['skip_st2'] = args.skip_st2
             
-            
+            user_dict['override_preset'] = args.override_preset
         else:
             #print('default used')
             #this is the default if nothing has been provided by the user
@@ -245,6 +250,7 @@ def main_call(param=None, flag=False):
             build_dict['skip_st1'] = args.skip_st1
             build_dict['skip_st2'] = args.skip_st2
             
+            build_dict['override_preset'] = args.override_preset
             
             config = create_config(build_dict)
             with open('config_temp.cfg', 'w') as configfile:
