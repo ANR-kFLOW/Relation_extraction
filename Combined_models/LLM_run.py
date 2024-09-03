@@ -44,8 +44,8 @@ def call_gpt4_api(prompt, api_key, max_retries=3, timeout=1200):
     while retries < max_retries:
         try:
             response = openai.ChatCompletion.create(
-                #model="gpt-4",  # Use GPT-4 model
-                model = 'gpt-3.5-turbo',
+                model="gpt-4",  # Use GPT-4 model
+                #model = 'gpt-3.5-turbo',
                 messages=[
                     {"role": "system",
                      "content": "You are an assistant that extracts subjects, objects, and relations from sentences."},

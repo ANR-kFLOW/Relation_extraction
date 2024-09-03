@@ -92,34 +92,20 @@ def app(model_dict):
             call_dict['api'] = llm_api
             
         if not fail_flag:
-            st.write('done')
             result = main_call(call_dict, flag=True)
-            st.write(result)
             flag, inf = annotate_inf(result)
             print(inf)
             if flag:
                 for i in inf:
                     annotated_text(i)
-                annotated_text(
-        "This ",
-        ("is", "verb"),
-        " some ",
-        ("annotated", "adj"),
-        ("text", "noun"),
-        " for those of ",
-        ("you", "pronoun"),
-        " who ",
-        ("like", "verb"),
-        " this sort of ",
-        ("thing", "noun"),
-        "."
-    )
             else:
                 for i in inf:
-                    st.text(i)
+                    annotated_text(i)
+                    #st.text(i)
 
 def annotate_inf(dict):
     annotated_list = []
+    test_list = []
     label_dict = {'cause':'#fea', 'enable':'#8ef', 'prevent':'#afa', 'intend':'#faf', 'invalid':'#faa'}
     t_list = ['subj', 'obj']
     
@@ -141,8 +127,10 @@ def annotate_inf(dict):
             for entry in sub_obj:
                 text = entry
                 
-                subj_tag = '](' + label + '-subj)'
-                obj_tag = '](' + label + '-obj)'
+                #subj_tag = '](' + label + '-subj)'
+                #obj_tag = '](' + label + '-obj)'
+                subj_tag = ']'
+                obj_tag = ']'
                 
                 subj_a = entry.find('<ARG0>')
                 subj_b = entry.find('</ARG0>')
@@ -166,19 +154,30 @@ def annotate_inf(dict):
                     text = re.sub('<ARG1>', obj_tag, text)
                     
                 text = re.sub(r"</?[^>]+>", "", text)
+                
+                subj_index = text.find(subj_tag)
+                obj_index = text.find(obj_tag)
+                
+                if subj_index > obj_index:
+                    tag_order = ['obj', 'subj']
+                else:
+                    tag_order = ['subj', 'obj']
+                
                 print(text)
-                annotated_list.append(text)
+                
+                subj_tag2 = label + '-subj'
+                obj_tag2 = label + '-obj'
+                
+                tag_list = {'subj':subj_tag2, 'obj':obj_tag2}
+                h = highlight_sent(text, tag_order, tag_list)
+                test_list.append(h)
+                #annotated_list.append(text)
+                annotated_list.append(h)
+            print(test_list)
             
             #span_list = extract_spans(sub_obj)
             #print(span_list)
-            '''
-            for span in span_list:
-                text = row['text']
-                for i, s in enumerate(span):
-                    part = re.sub(s, '[' + s + ']' + label + '-' + t_list[i], text)
-                    text = merge_strings(text, part)
-                annotated_list.append(text)
-            '''
+            
             
     else:
         df = pd.DataFrame(dict)
@@ -269,26 +268,56 @@ def remove_tags(text):
     return cleaned_text
 
 
-def merge_strings(str_a, str_b):
-    # Create a SequenceMatcher object to compare the strings
-    s = difflib.SequenceMatcher(None, str_a, str_b)
+
+def highlight_sent(sent, tag_order, tag_list):
+    color_list = {'subj':'#fea', 'obj':'#8ef'}
     
-    # Initialize an empty result list
-    result = []
+    tag = tag_list[tag_order[1]]
     
-    # Iterate over the matching blocks and differences
-    for tag, i1, i2, j1, j2 in s.get_opcodes():
-        if tag == 'equal':
-            result.append(str_a[i1:i2])
-        elif tag == 'replace':
-            result.append(f"({str_b[j1:j2]})[{str_a[i1:i2]}]")
-        elif tag == 'insert':
-            result.append(f"({str_b[j1:j2]})")
-        elif tag == 'delete':
-            result.append(f"[{str_a[i1:i2]}]")
+    bracket_list = ['[', ']']
+    i = 0
+    print('this is before the highlight test')
+    #first_split = re.split(r'[\[\]]', sent, 1)
+    split1 = sent.split('[', 1)
+    split2 = split1[1].split(']', 1)
+    #split2 = split1[1].split(']', 1)
+    first_split = [split1[0], split2[0], split2[1]]
+    print(sent)
+    print(first_split)
+    first_split_list = [first_split[0], ('[', '', color_list[tag_order[0]]), first_split[1], (']', tag_list[tag_order[0]], color_list[tag_order[0]]), first_split[2]]
+    split_list = first_split_list
+    print(first_split_list)
     
-    # Join the list into a single string
-    return ''.join(result)
+    for bracket in bracket_list:
+        loop_list = []
+        for entry in split_list:
+            if isinstance(entry, str):
+                loop_part = subsplit_text(entry, color_list[tag_order[1]], bracket, tag)
+                loop_list.extend(loop_part)
+            else:
+                print(entry)
+                loop_list.append(entry)
+        split_list = loop_list
+        
+    print(split_list)
+    print('highlight_sent ends here')
+    return(split_list)
+
+def subsplit_text(part, color, s, tag):
+    sub_list = []
+    note = ''
+    if s == ']':
+        note = tag
+    if s in part:
+        print('called')
+        parts = part.split(s)
+        sub_list.append(parts[0])
+        x = (s, note, color)
+        sub_list.append(x)
+        sub_list.append(parts[1])
+    else:
+        sub_list.append(part)
+    return sub_list
 
 
 def extract_spans(sents):
