@@ -14,7 +14,10 @@ def app(model_dict):
     
     
     preset_choices = ['', 
-        'here are some test sentences. I need to see if this works. hello hello 3.5. help me see if this works. The responses should be a mess. I need to figure out the right amount of sentences in order to let the program run. help me with the process. these are words and multiple words form a sentence. sentences form paragraphs. I was distracted so I fell. when I hit the ground I hurt myself. when you water a plant in the future it will grow. I was sad so I listened to music. I need more samples so I create more samples. Dropping the cup made me frustrated. Pushing the domino made it fall. The wind blowing made the house of cards fall. After dieting I lost weight. I was late because the strikes happend. seeing this caused me to be sad. watching food videos made me hungry. I was thristy so I drank water.']
+        'here are some test sentences. I need to see if this works. hello hello 3.5. help me see if this works. The responses should be a mess. I need to figure out the right amount of sentences in order to let the program run. help me with the process. these are words and multiple words form a sentence. sentences form paragraphs. I was distracted so I fell. when I hit the ground I hurt myself. when you water a plant in the future it will grow. I was sad so I listened to music. I need more samples so I create more samples. Dropping the cup made me frustrated. Pushing the domino made it fall. The wind blowing made the house of cards fall. After dieting I lost weight. I was late because the strikes happend. seeing this caused me to be sad. watching food videos made me hungry. I was thristy so I drank water.',
+        
+        'Two days before the attack , local police arrested Tohtunyaz , Ehet and Muhammad as they tried to illegally cross into Vietnam via Honghe county , the court said . 15th September 2015 05:49 AM THIRUVANANTHAPURAM : With the government appearing to be in no mood to meet the demand of the doctors of the health service , the Kerala Government Medical Officers Association spearheading the hunger strike in front of the state secretariat has called for intensifying the agitation in the coming days . Subcontractors  will  be offered a settlement and a swift transition to new management  is expected  to avert an exodus of skilled workers from Waertsilae Marines two big shipyards, government officials said. September 22 , 2016 00:00 IST Ahmad writes to Rajnath on violence by vigilante groups National Commission for Minorities ( NCM ) chairperson Naseem Ahmad has written to Union Home Minister Rajnath Singh , expressing concern at the growing violence against Muslims by vigilante groups and has urged the Minister to work towards creating a sense of security amongst the minorities . Mining for trouble Sino Gold Mining , which only last week announced a joint venture to expand exploration near its White Mountain Mine in Jilin province , had to halt operations yesterday as protesting farmers blocked the main access road .'
+        ]
     
     st1_st3 = model_dict['st1'] + model_dict['st3']
     st2_st3 = model_dict['st2'] + model_dict['st3']
@@ -43,9 +46,9 @@ def app(model_dict):
     # Dropdown menu
     #data_options = model_dict['data']
     #selected_data = st.selectbox("Choose a dataset:", data_names)
-    selected_st0 = st.selectbox("Choose the model used for the filter:", st0_models)
-    selected_st1 = st.selectbox("Choose the model used for subtask 1:", st1_models)
-    selected_st2= st.selectbox("Choose the model used for subtask 2:", st2_models)
+    selected_st0 = st.selectbox("Choose the model used to filter out sentences that have no relationships between their words:", st0_models)
+    selected_st1 = st.selectbox("Choose the model used to classify the relation in each sentence:", st1_models)
+    selected_st2= st.selectbox("Choose the model used to extract the spans of words that have a relationship to each other:", st2_models)
     
     preset_text = st.selectbox("Choose a preset choice:", preset_choices)
     
@@ -93,15 +96,18 @@ def app(model_dict):
             
         if not fail_flag:
             result = main_call(call_dict, flag=True)
-            flag, inf = annotate_inf(result)
-            print(inf)
-            if flag:
-                for i in inf:
-                    annotated_text(i)
+            if isinstance(result, str):
+                st.write(result)
             else:
-                for i in inf:
-                    annotated_text(i)
-                    #st.text(i)
+                flag, inf = annotate_inf(result)
+                print(inf)
+                if flag:
+                    for i in inf:
+                        annotated_text(i)
+                else:
+                    for i in inf:
+                        annotated_text(i)
+                        #st.text(i)
 
 def annotate_inf(dict):
     annotated_list = []
@@ -121,6 +127,7 @@ def annotate_inf(dict):
             
             if not rel in label_dict.keys():
                 label = 'invalid'
+                rel = 'other(' + rel + ')'
             else:
                 label = rel
             color = label_dict[label]
@@ -163,17 +170,17 @@ def annotate_inf(dict):
                 else:
                     tag_order = ['subj', 'obj']
                 
-                print(text)
+                #print(text)
                 
-                subj_tag2 = label + '-subj'
-                obj_tag2 = label + '-obj'
+                subj_tag2 = rel + '-subj'
+                obj_tag2 = rel + '-obj'
                 
                 tag_list = {'subj':subj_tag2, 'obj':obj_tag2}
                 h = highlight_sent(text, tag_order, tag_list)
                 test_list.append(h)
                 #annotated_list.append(text)
                 annotated_list.append(h)
-            print(test_list)
+            #print(test_list)
             
             #span_list = extract_spans(sub_obj)
             #print(span_list)
@@ -187,6 +194,7 @@ def annotate_inf(dict):
             rel = row['label']
             if not rel in label_dict.keys():
                 label = 'invalid'
+                rel = 'other(' + rel + ')'
             else:
                 label = rel
             color = label_dict[label]
@@ -198,7 +206,8 @@ def annotate_inf(dict):
                 obj = sub_obj[i]
                 for entry in loop_list:
                     if isinstance(entry,str):
-                        x = annotate_sub(entry, obj, label + '-' + t_list[i], color)
+                        x = annotate_sub(entry, obj, rel + '-' + t_list[i], color)
+                        #x = annotate_sub(entry, obj, label + '-' + t_list[i], color)
                         temp_list.extend(x)
                     else:
                         temp_list.append(entry)
@@ -276,17 +285,17 @@ def highlight_sent(sent, tag_order, tag_list):
     
     bracket_list = ['[', ']']
     i = 0
-    print('this is before the highlight test')
+    #print('this is before the highlight test')
     #first_split = re.split(r'[\[\]]', sent, 1)
     split1 = sent.split('[', 1)
     split2 = split1[1].split(']', 1)
     #split2 = split1[1].split(']', 1)
     first_split = [split1[0], split2[0], split2[1]]
-    print(sent)
-    print(first_split)
+    #print(sent)
+    #print(first_split)
     first_split_list = [first_split[0], ('[', '', color_list[tag_order[0]]), first_split[1], (']', tag_list[tag_order[0]], color_list[tag_order[0]]), first_split[2]]
     split_list = first_split_list
-    print(first_split_list)
+    #print(first_split_list)
     
     for bracket in bracket_list:
         loop_list = []
@@ -295,12 +304,12 @@ def highlight_sent(sent, tag_order, tag_list):
                 loop_part = subsplit_text(entry, color_list[tag_order[1]], bracket, tag)
                 loop_list.extend(loop_part)
             else:
-                print(entry)
+                #print(entry)
                 loop_list.append(entry)
         split_list = loop_list
         
-    print(split_list)
-    print('highlight_sent ends here')
+    #print(split_list)
+    #print('highlight_sent ends here')
     return(split_list)
 
 def subsplit_text(part, color, s, tag):
@@ -309,7 +318,7 @@ def subsplit_text(part, color, s, tag):
     if s == ']':
         note = tag
     if s in part:
-        print('called')
+        #print('called')
         parts = part.split(s)
         sub_list.append(parts[0])
         x = (s, note, color)
@@ -322,7 +331,7 @@ def subsplit_text(part, color, s, tag):
 
 def extract_spans(sents):
     span_list = []
-    print(sents)
+    #print(sents)
     
     if not sents:
         return 0
@@ -348,7 +357,7 @@ def extract_spans(sents):
         loop_list.append(obj)
         
         span_list.append(loop_list)
-    print(len(sents))
+    #print(len(sents))
     return span_list
 
 if __name__ == "__main__":
