@@ -979,7 +979,8 @@ def main_st2(arg):
         optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.st2_learning_rate)
 
         # Use the device given by the `accelerator` object.
-        device = accelerator.device
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        #device = accelerator.device
         model.to(device)
 
         # Scheduler and math around the number of training steps.
@@ -1038,7 +1039,7 @@ def main_st2(arg):
         logger.info("***** Running training *****")
         logger.info(f"  Num examples = {len(train_dataset)}")
         logger.info(f"  Num Epochs = {args.st2_num_train_epochs}")
-        logger.info(f"  Instantaneous batch size per device = {args.st2_per_device_train_batch_size}")
+        logger.info(f"  Instantaneous batch size per device = {device}")
         logger.info(f"  Total train batch size (w. parallel, distributed & accumulation) = {total_batch_size}")
         logger.info(f"  Gradient Accumulation steps = {args.st2_gradient_accumulation_steps}")
         logger.info(f"  Total optimization steps = {args.st2_max_train_steps}")
@@ -1345,7 +1346,7 @@ def main_st2(arg):
         predictions = []
         for step, batch in enumerate(test_dataloader):
             with torch.no_grad():
-                outputs = model(**{k: batch[k] if k in batch else None for k in ["input_ids", "attention_mask", "token_type_ids", "signal_bias_mask"]})
+                outputs = model(**{k: batch[k].to(device) if k in batch else None for k in ["input_ids", "attention_mask", "token_type_ids", "signal_bias_mask"]})
 
             start_cause_predictions = outputs["start_arg0_logits"]
             end_cause_predictions = outputs["end_arg0_logits"]
@@ -1380,10 +1381,10 @@ def main_st2(arg):
                             word_ids=word_ids,     
                         )
                 else:
-                    start_cause_predictions[i] -= (1 - batch["attention_mask"][i]) * 1e4
-                    end_cause_predictions[i] -= (1 - batch["attention_mask"][i]) * 1e4
-                    start_effect_predictions[i] -= (1 - batch["attention_mask"][i]) * 1e4
-                    end_effect_predictions[i] -= (1 - batch["attention_mask"][i]) * 1e4
+                    start_cause_predictions[i] -= (1 - batch["attention_mask"][i].to(device)) * 1e4
+                    end_cause_predictions[i] -= (1 - batch["attention_mask"][i].to(device)) * 1e4
+                    start_effect_predictions[i] -= (1 - batch["attention_mask"][i].to(device)) * 1e4
+                    end_effect_predictions[i] -= (1 - batch["attention_mask"][i].to(device)) * 1e4
                 
                     start_cause_predictions[i][0] = -1e4
                     end_cause_predictions[i][0] = -1e4
@@ -1408,8 +1409,8 @@ def main_st2(arg):
                         has_signal = signal_detector.predict(text=batch["text"][i])
 
                 if has_signal:
-                    start_signal_predictions[i] -= (1 - batch["attention_mask"][i]) * 1e4
-                    end_signal_predictions[i] -= (1 - batch["attention_mask"][i]) * 1e4
+                    start_signal_predictions[i] -= (1 - batch["attention_mask"][i].to(device)) * 1e4
+                    end_signal_predictions[i] -= (1 - batch["attention_mask"][i].to(device)) * 1e4
 
                     start_signal_predictions[i][0] = -1e4
                     end_signal_predictions[i][0] = -1e4
