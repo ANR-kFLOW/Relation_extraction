@@ -3,8 +3,20 @@
 ## Overview
 
 This repository contains code and data for various components of the project. Below is a brief overview of each subfolder:
+###  [Relation Detection](./Relation-Detection/)
+The script can be run from the command line with the following arguments:
 
-### 1.  [CNC](./CNC/)
+- `--train_file`: Path to the training data file (CSV).
+- `--val_file`: Path to the validation data file (CSV).
+- `--test_file`: Path to the test data file (CSV).
+- `--threshold`: Threshold for classification (float).
+
+```bash
+python train_thre.py --train_file /path/to/train_file.csv --val_file /path/to/val_file.csv --test_file /path/to/test_file.csv --threshold 0.8
+
+```
+
+### [CNC](./CNC/)
 
 The `CNC` folder contains code for event extraction, adapted from the [CausalNewsCorpus](https://github.com/tanfiona/CausalNewsCorpus/tree/master). This code takes our data that are transformed into the required format and performs event extraction.
 
@@ -30,30 +42,11 @@ python run_st2.py \
   --weight_decay 0.005 \
   --use_best_model
 ```
-### 2. CommonSenseDataAugmentation
+### [Joint Relation Classification and Event Extraction with Sequence-to-Sequence Language Model-REBEL](./REBEL_Joined_RelationClassification_and_EventExtraction/)
+In Thins folder you find [data](./REBEL_Joined_RelationClassification_and_EventExtraction/data/) and [scripts](./REBEL_Joined_RelationClassification_and_EventExtraction/src/) for trainig the seq2seq model REBEL on event relation extraction.
 
-The `CommonSenseDataAugmentation` folder hosts code for leveraging Language Models (LLMs) to generate common-sense data for event relations such as enable and prevent.
+### [LLMs as Event Extractors](./LLMs_as_Relation_Classifiors_and_Event_Extractors/) 
 
-To run the program, execute the follwing commannd 
-```bash
-CUDA_VISIBLE_DEVICES='3' python main.py --verbose -x 1
-```
-x is the number of example 
-
-### 3. Relation Detection
-The script can be run from the command line with the following arguments:
-
-- `--train_file`: Path to the training data file (CSV).
-- `--val_file`: Path to the validation data file (CSV).
-- `--test_file`: Path to the test data file (CSV).
-- `--threshold`: Threshold for classification (float).
-
-```bash
-python train_thre.py --train_file /path/to/train_file.csv --val_file /path/to/val_file.csv --test_file /path/to/test_file.csv --threshold 0.8
-
-```
-
-### 4. LLMs as Event Extractors 
 #### Inference Script
 
 ```bash
@@ -63,24 +56,27 @@ python main.py test --llm LLM-name --template prompt_template.yml --verbose --nu
 #### Evaluation script 
 ```bash
 python eval_bio.py --gt /path/to/ground_truth_file.csv --pred /path/to/prediction_file.csv
+(x is the number of examples)
 ``` 
-### 5. Data
+
+
+###  [Data](./data/)
 
 The `Data` folder stores datasets used in the project. These datasets are either constructed by LLMs or obtained previously.
+#### CommonSenseDataAugmentation
 
-### 6. Refining
+The `CommonSenseDataAugmentation` folder hosts code for leveraging Language Models (LLMs) to generate common-sense data for event relations such as enable and prevent.
 
-The `Refining` folder contains resources for future refinements. 
+To run the program, execute the follwing commannd 
+```bash
+CUDA_VISIBLE_DEVICES='3' python main.py --verbose -x 1
+```
 
-### 7. Scripts
-
-The `Scripts` folder contains various data processing scripts utilized in the project.
 
 ## Aknowledgement 
 This work has been partially supported by the French National Research Agency (ANR) within the kFLOW project (Grant n°ANR-21-CE23-0028).
 
-## Contact 
-youssra.rebboud@eurecom.fr
+
 
 
 
