@@ -1,6 +1,7 @@
 .DS_Store
 
 Combined_models/out
+Combined_models/data
 Combined_models/pretrained_models
 
 # Byte-compiled / optimized / DLL files
