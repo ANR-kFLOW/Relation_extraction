@@ -14,7 +14,6 @@ def app(model_dict):
     
     
     preset_choices = ['', 
-        'He was hungry which made him angry. He worked hard with the intention of  getting a good grade. She brought water in order for her to not be dehydrated on her hike. I will give you the keys to the studio so that you can record', 
         
         'Bad inferences. Lalu , Rabri upbeat after success of shutdown 29th January 2010 01:40 PM An RJD activist wears a garland and crown made of vegetables and shouts slogans along with others during a protest against inflation in Patna . Protests were held across Andhra Pradesh criticising police action on Naidu and his supporters . Denied Aid , Dalit Boy tries to End Life. So we are asking people to come out because it may be the last time that we are going to have a peaceful and lawful protest in Hong Kong , ” said one of the organisers of the rally.  Mining for trouble Sino Gold Mining , which only last week announced a joint venture to expand exploration near its White Mountain Mine in Jilin province , had to halt operations yesterday as protesting farmers blocked the main access road .',
         
@@ -52,11 +51,11 @@ def app(model_dict):
     selected_st1 = st.selectbox("Choose the model used to classify the relation in each sentence:", st1_models)
     selected_st2= st.selectbox("Choose the model used to extract the spans of words that have a relationship to each other:", st2_models)
     
-    preset_text = st.selectbox("Choose a preset choice:", preset_choices)
+    preset_text = st.selectbox("Choose a recommended paragraph:", preset_choices)
     
     
     # Textbox
-    user_text = st.text_input("Enter causal sentences:")
+    user_text = st.text_input("Enter sentences of your choice containing causal relationships:")
     api = st.text_input("Enter your OpenAI api key if you are using gpt-4:")
     
    
