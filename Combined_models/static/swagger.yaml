@@ -1,0 +1,83 @@
+openapi: 3.0.3
+info:
+  title: Relation Detection - OpenAPI 3.3
+  description: Here we provide a platform to run and compare multiple models against each other
+  version: 1.0.11
+paths:
+  /extract:
+    get:
+      summary: Get items with individual choices
+      parameters:
+        - in: query
+          name: q
+          required: false
+          schema:
+            type: string
+            default:
+          description: Type here if you want to input your own sentences; please separate each sentence with a period followed by a space. If you fill in sentences, then the pipeline will only use those sentences for inference.
+        - in: query
+          name: st0
+          required: true
+          schema:
+            type: string
+            default: roberta_st0_best_model_st1.pt
+            enum:
+              - roberta_st0_best_model_st1.pt
+          description: Determines which pretrained model should be used for subtask 0. Subtask 0 is mandatory
+        - in: query
+          name: st1
+          required: true
+          schema:
+            type: string
+            default: roberta_st1_best_model
+            enum:
+              - roberta_st1_best_model
+              - rebel_st3_model_our_data_gpt_augmented.pth
+              - zephyr
+              - dpo
+              - una
+              - solar
+              - gpt4
+              - off
+          description: Determines which model should be used for subtask 1 if subtask 1 is being done
+        - in: query
+          name: st2
+          required: true
+          schema:
+            type: string
+            default: roberta_st2_epoch_9
+            enum:
+              - roberta_st2_epoch_9
+              - rebel_st3_model_our_data_gpt_augmented.pth
+              - zephyr
+              - dpo
+              - una
+              - solar
+              - gpt4
+              - off
+          description: Determines which model should be used for subtask 2 if subtask 2 is being done
+        - in: query
+          name: t_f
+          required: false
+          schema:
+            type: string
+            default: test.csv
+            enum:
+              - test.csv
+          description: This is the file that the pipeline will perform an inference on. If you would like to add in new datasets to the options put the csv file in the new_data folder and make sure that the name is unique.
+        - in: query
+          name: api
+          required: False
+          schema:
+            type: string
+            default:
+          description: This is the api key that ChatGPT will use if it is called in st3.
+      responses:
+        '200':
+          description: A list of items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string

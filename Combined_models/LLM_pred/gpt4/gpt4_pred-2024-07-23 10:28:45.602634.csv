@@ -1,0 +1,5 @@
+text,subject,object,relation
+I need to figure out the right amount of sentences in order to let the program run. ,I,the program,enable
+when I hit the ground I hurt myself. ,I,myself,cause
+I was late because the strikes happend. ,strikes,I,cause
+seeing this caused me to be sad. ,seeing this,me,cause
