@@ -73,10 +73,6 @@ CUDA_VISIBLE_DEVICES='3' python main.py --verbose -x 1
 ```
 
 
-## Aknowledgement 
-This work has been partially supported by the French National Research Agency (ANR) within the kFLOW project (Grant n°ANR-21-CE23-0028).
-
-
 
 
 
