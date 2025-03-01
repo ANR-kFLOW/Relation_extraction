@@ -1,0 +1,1198 @@
+context,triplets,label
+Properly disposing of hazardous waste according to regulatory standards the spread of respiratory diseases like COVID-19,<triplet> Properly disposing of hazardous waste according to regulatory standards <subj> the spread of respiratory diseases like COVID-19 <obj> no_relation,no_relation
+ affects adversely the  cause loses reputation,<triplet>  affects adversely the  <subj> loses reputation <obj> cause,cause
+ knocks  off his perch intend to fight back,<triplet>  knocks  off his perch <subj> to fight back <obj> intend,intend
+ hears from  cause TURNS HEAD TOWARDS THE NOISE,<triplet>  hears from  <subj> TURNS HEAD TOWARDS THE NOISE <obj> cause,cause
+spends helping becomes tired,<triplet>  spends helping <subj> becomes tired <obj> no_relation,no_relation
+ buys lunch intend to eat,<triplet>  buys lunch <subj> to eat <obj> intend,intend
+Conducting routine maintenance on your car can prevent engine failure and breakdowns.,<triplet> Conducting routine maintenance on your car <subj> engine failure and breakdowns. <obj> prevent,prevent
+Adequately insulating the home during winter months burglaries and break-ins,<triplet> Adequately insulating the home during winter months <subj> burglaries and break-ins <obj> no_relation,no_relation
+ gives the girl  cause smiles,<triplet>  gives the girl  <subj> smiles <obj> cause,cause
+ attends every  intend to know.,<triplet>  attends every  <subj> to know. <obj> intend,intend
+When the baking sheet is heated sufficiently enables the delicious croissants to rise perfectly,<triplet> When the baking sheet is heated sufficiently <subj> the delicious croissants to rise perfectly <obj> enable,enable
+works perfectly enter the builing.,<triplet>  works perfectly <subj>  enter the builing. <obj> no_relation,no_relation
+Drinking plenty of water and staying hydrated to lift and twirl them,<triplet> Drinking plenty of water and staying hydrated <subj> to lift and twirl them <obj> no_relation,no_relation
+ serves  apprenticeship intend to do well,<triplet>  serves  apprenticeship <subj> to do well <obj> intend,intend
+ acts strange cause is stared at,<triplet>  acts strange <subj> is stared at <obj> cause,cause
+ strikes  cause gets muscle sore,<triplet>  strikes  <subj> gets muscle sore <obj> cause,cause
+ pays close attention intend to get promoted,<triplet>  pays close attention <subj> to get promoted <obj> intend,intend
+takes guard to get rid of his friendship,<triplet>  takes guard <subj> to get rid of his friendship <obj> no_relation,no_relation
+"The door lock is engaged.
+If
+It cannot be opened from outside.",<triplet> The door lock is engaged. <subj> It cannot be opened from outside. <obj> enable,enable
+finishes  work to establish order,<triplet>  finishes  work <subj> to establish order <obj> no_relation,no_relation
+ calls attention to the fact intend everyone to know the truth,<triplet>  calls attention to the fact <subj> everyone to know the truth <obj> intend,intend
+ puts it back intend wash hands,<triplet>  puts it back <subj> wash hands <obj> intend,intend
+ invites  to visit cause Gives drink,<triplet>  invites  to visit <subj> Gives drink <obj> cause,cause
+ persuades the  to agree intend to ask questions about the process,<triplet>  persuades the to agree <subj> to ask questions about the process <obj> intend,intend
+ makes a virtue of necessity cause formulates a plan,<triplet>  makes a virtue of necessity <subj> formulates a plan <obj> cause,cause
+" Maintaining a healthy weight through diet and exercise prevents obesity-related health problems such as heart disease, diabetes, and joint pain","<triplet> Maintaining a healthy weight through diet and exercise <subj> obesity-related health problems such as heart disease, diabetes, and joint pain <obj> prevent",prevent
+If theres no wind it enables the room,<triplet> If theres no wind <subj> it enables the room <obj> no_relation,no_relation
+Washing your hands frequently prevents the spread of germs and illnesses caused by neglecting proper hand washing practices.,<triplet> Washing your hands frequently <subj> the spread of germs and illnesses caused by neglecting proper hand washing practices. <obj> prevent,prevent
+ gets a ladder intend to fix something,<triplet>  gets a ladder <subj> to fix something <obj> intend,intend
+"The bridge is now open
+enabling
+us to cross over to the other side of the river.",<triplet> The bridge is now open <subj> us to cross over to the other side of the river. <obj> enable,enable
+ returns the wallet intend to do the right thing,<triplet>  returns the wallet <subj> to do the right thing <obj> intend,intend
+Wearing seat belts while driving  can prevent serious injuries or fatalities in the event of an accident.,<triplet> Wearing seat belts while driving  <subj> serious injuries or fatalities in the event of an accident. <obj> prevent,prevent
+"Ensuring proper maintenance of vehicles and equipment, including oil changes and routine inspections prevents breakdowns or malfunctions that could cause injury or damage to property.","<triplet> Ensuring proper maintenance of vehicles and equipment, including oil changes and routine inspections <subj> breakdowns or malfunctions that could cause injury or damage to property. <obj> prevent",prevent
+Staying hydrated during exercise to locate or buy hiking boots.,<triplet> Staying hydrated during exercise <subj> to locate or buy hiking boots. <obj> no_relation,no_relation
+falls among thieves Do his homework.,<triplet>  falls among thieves <subj> Do his homework. <obj> no_relation,no_relation
+ punishes  cause puts down fist,<triplet>  punishes  <subj> puts down fist <obj> cause,cause
+"In order for the light bulb to shine
+there
+must be electricity flowing through it.",<triplet> In order for the light bulb to shine <subj> must be electricity flowing through it. <obj> enable,enable
+spends together takes pictures,<triplet>  spends together <subj> takes pictures <obj> no_relation,no_relation
+launches  attack if it is connected to the computer and has enough ink.,<triplet>  launches  attack <subj> if it is connected to the computer and has enough ink. <obj> no_relation,no_relation
+ really loves  cause  gets married,<triplet>  really loves  <subj>  gets married <obj> cause,cause
+pays the fiddler the gates of the dam can be opened,<triplet>  pays the fiddler <subj> the gates of the dam can be opened <obj> no_relation,no_relation
+cleans the house people evacuate the building,<triplet>  cleans the house <subj> people evacuate the building <obj> no_relation,no_relation
+"When the door is unlocked
+then
+it can be opened",<triplet> When the door is unlocked <subj> it can be opened <obj> enable,enable
+ takes  life cause is dirty,<triplet>  takes  life <subj> is dirty <obj> cause,cause
+The cars battery died go for a walk outside,<triplet> The cars battery died <subj> go for a walk outside <obj> no_relation,no_relation
+Staying indoors during a heavy snowstorm or blizzard electrocution or fire hazards caused by short circuits.,<triplet> Staying indoors during a heavy snowstorm or blizzard <subj> electrocution or fire hazards caused by short circuits. <obj> no_relation,no_relation
+ pops  in the oven intend food,<triplet>  pops in the oven <subj> food <obj> intend,intend
+" Limiting alcohol consumption prevents liver disease, high blood pressure, and other health problems associated with excessive drinking","<triplet> Limiting alcohol consumption <subj> liver disease, high blood pressure, and other health problems associated with excessive drinking <obj> prevent",prevent
+"Quitting smoking and avoiding secondhand smoke can help prevent lung cancer, emphysema, and other respiratory diseases.","<triplet> Quitting smoking and avoiding secondhand smoke <subj> lung cancer, emphysema, and other respiratory diseases. <obj> prevent",prevent
+The lock is replaced spreading the illness to others who may not be able to fight it off as easily.,<triplet> The lock is replaced <subj> spreading the illness to others who may not be able to fight it off as easily. <obj> no_relation,no_relation
+ takes part in the discussions intend to give and get information.,<triplet>  takes part in the discussions <subj> to give and get information. <obj> intend,intend
+When the water the onset of premature skin aging and potential skin cancer,<triplet> When the water <subj> the onset of premature skin aging and potential skin cancer <obj> no_relation,no_relation
+ is walking to work intend to get there on time,<triplet>  is walking to work <subj> to get there on time <obj> intend,intend
+"If you have a car
+you can
+drive it on the road.",<triplet> If you have a car <subj> drive it on the road. <obj> enable,enable
+ holds a  together intend to explain it,<triplet>  holds a together <subj> to explain it <obj> intend,intend
+ thanks  for coming intend to invite them to a future function,<triplet>  thanks  for coming <subj> to invite them to a future function <obj> intend,intend
+"The lock won't open without the right key
+using
+the right key",<triplet> The lock wont open without the right key <subj> the right key <obj> enable,enable
+ describes briefly the  intend To learn about the product,<triplet>  describes briefly the  <subj> To learn about the product <obj> intend,intend
+When you add salt to the boiling water to thank Person X,<triplet> When you add salt to the boiling water <subj> to thank Person X <obj> no_relation,no_relation
+If you have a phone to see how they feel,<triplet>  If you have a phone <subj> to see how they feel <obj> no_relation,no_relation
+"strikes while the iron is hot the loss of bone density, bone fragility, or fractures caused by osteoporosis.","<triplet>  strikes while the iron is hot <subj> the loss of bone density, bone fragility, or fractures caused by osteoporosis. <obj> no_relation",no_relation
+ is taken away intend to be aquitted,<triplet>  is taken away <subj> to be aquitted <obj> intend,intend
+ tells  to call intend to call after dinner,<triplet>  tells  to call <subj> to call after dinner <obj> intend,intend
+ walks home from the grocery store intend to get home and eat,<triplet>  walks home from the grocery store <subj> to get home and eat <obj> intend,intend
+Applying sunscreen before going outside can prevent sunburn and skin cancer caused by excessive UV exposure.,<triplet> Applying sunscreen before going outside <subj> sunburn and skin cancer caused by excessive UV exposure. <obj> prevent,prevent
+ crashes into a tree cause needs help,<triplet>  crashes into a tree <subj> needs help <obj> cause,cause
+ kicks the tires cause shoe falls off,<triplet>  kicks the tires <subj> shoe falls off <obj> cause,cause
+"With a properly inflated tire
+will
+the car will have better traction and handling on the road",<triplet> With a properly inflated tire <subj> the car will have better traction and handling on the road <obj> enable,enable
+the device can be turned on I checked the power cord and found that it was unplugged,<triplet> the device can be turned on <subj> I checked the power cord and found that it was unplugged <obj> no_relation,no_relation
+The meicine has been prescribe by a licenseoctor person x talks to strangers,<triplet>  The meicine has been prescribe by a licenseoctor <subj> person x talks to strangers <obj> no_relation,no_relation
+throws open major breakthrough,<triplet>  throws open <subj> major breakthrough <obj> no_relation,no_relation
+ cuts a long story short intend To finish speaking,<triplet>  cuts a long story short <subj> To finish speaking <obj> intend,intend
+ throws  into the trash intend to clean out the refrigerator,<triplet>  throws into the trash <subj> to clean out the refrigerator <obj> intend,intend
+ gets  afterwards intend to get more of it,<triplet>  gets afterwards <subj> to get more of it <obj> intend,intend
+turns heads to grab something to eat,<triplet>  turns heads <subj> to grab something to eat <obj> no_relation,no_relation
+buys the shoes obesity-related diseases like heart disease and stroke.,<triplet>  buys the shoes <subj> obesity-related diseases like heart disease and stroke. <obj> no_relation,no_relation
+ becomes  advocate intend to thank him,<triplet>  becomes  advocate <subj> to thank him <obj> intend,intend
+follows  everywhere to get the address of,<triplet>  follows  everywhere <subj> to get the address of  <obj> no_relation,no_relation
+resists every to swim again,<triplet>  resists every  <subj> to swim again <obj> no_relation,no_relation
+ puts the  in another way cause seen as intelligent,<triplet>  puts the in another way <subj> seen as intelligent <obj> cause,cause
+acts like a man to hear,<triplet>  acts like a man <subj> to hear <obj> no_relation,no_relation
+ puts lotion cause to get white tone,<triplet>  puts lotion <subj> to get white tone <obj> cause,cause
+"When the water
+is boiling,
+you can add noodles to it for making pasta.",<triplet> When the water <subj> you can add noodles to it for making pasta. <obj> enable,enable
+"A spark from the grill ignites the charcoal
+Starting
+For roasting marshmallows on the campfire",<triplet> A spark from the grill ignites the charcoal <subj> For roasting marshmallows on the campfire <obj> enable,enable
+ is very rude to  cause Y is offended,<triplet>  is very rude to  <subj> Y is offended <obj> cause,cause
+ puts  in storage intend to declutter,<triplet>  puts in storage <subj> to declutter <obj> intend,intend
+The road was blocked due to an accident to live a minimalistic lifestyle,<triplet> The road was blocked due to an accident <subj> to live a minimalistic lifestyle <obj> no_relation,no_relation
+"Heavy rain
+is causing
+umbrellas to protect us from getting wet.",<triplet> Heavy rain <subj> umbrellas to protect us from getting wet. <obj> enable,enable
+ takes  to the hospital intend to talk to the attending doctor about their condition.,<triplet>  takes to the hospital <subj> to talk to the attending doctor about their condition. <obj> intend,intend
+ wants to meet  cause calls person Y,<triplet>  wants to meet  <subj> calls person Y <obj> cause,cause
+turns  down they understand,<triplet>  turns  down <subj> they understand <obj> no_relation,no_relation
+ attempts  explanation intend to hear,<triplet>  attempts  explanation <subj> to hear <obj> intend,intend
+mentions  name cooking your favorite dessert becomes easy and enjoyable,<triplet>  mentions  name <subj> cooking your favorite dessert becomes easy and enjoyable <obj> no_relation,no_relation
+ listens to every word cause understands,<triplet>  listens to every word <subj> understands <obj> cause,cause
+If you have a garden hose accidents and injuries.,<triplet> If you have a garden hose <subj> accidents and injuries. <obj> no_relation,no_relation
+A tightrope walkers balance go outside and enjoy the sunshine,<triplet> A tightrope walkers balance <subj> go outside and enjoy the sunshine <obj> no_relation,no_relation
+issues  edict to go to sleep,<triplet>  issues  edict <subj> to go to sleep <obj> no_relation,no_relation
+When the cars engine it to be securely closed.,<triplet> When the cars engine <subj> it to be securely closed. <obj> no_relation,no_relation
+"When the car's engine is running smoothly,
+is enabling
+it can be safely driven on long road trips.","<triplet> When the cars engine is running smoothly, <subj> it can be safely driven on long road trips. <obj> enable",enable
+gives back to gets back,<triplet>  gives back to  <subj> gets back <obj> no_relation,no_relation
+gets rid altogether to become a mayor,<triplet>  gets rid altogether <subj> to become a mayor <obj> no_relation,no_relation
+"The fact of having a stove
+if
+turning it on",<triplet> The fact of having a stove <subj> turning it on <obj> enable,enable
+keeps  eye on things make a good impression,<triplet>  keeps  eye on things <subj> make a good impression <obj> no_relation,no_relation
+" Taking a regular exercise routine prevents obesity, heart disease, and other health issues caused by lack of physical activity","<triplet> Taking a regular exercise routine <subj> obesity, heart disease, and other health issues caused by lack of physical activity <obj> prevent",prevent
+With a adequately inflated bicycle tire enables a smoother ride.,<triplet> With a adequately inflated bicycle tire <subj> a smoother ride. <obj> enable,enable
+ demands a refund cause GIVES SHARE OF MONEY,<triplet>  demands a refund <subj> GIVES SHARE OF MONEY <obj> cause,cause
+ pleases forgive  intend to repent for what they did,<triplet>  pleases forgive  <subj> to repent for what they did <obj> intend,intend
+ gets  lately cause has fun at parties,<triplet>  gets lately <subj> has fun at parties <obj> cause,cause
+ wants to do something cause to wants to do something,<triplet>  wants to do something <subj> to wants to do something <obj> cause,cause
+ writes a letter to  intend to thank persony for a gift,<triplet>  writes a letter to  <subj> to thank persony for a gift <obj> intend,intend
+ knows what to say cause receives response,<triplet>  knows what to say <subj> receives response <obj> cause,cause
+" Avoiding exposure to cigarette smoke  prevents lung cancer, heart disease, and other smoking-related illnesses","<triplet> Avoiding exposure to cigarette smoke  <subj> lung cancer, heart disease, and other smoking-related illnesses <obj> prevent",prevent
+After you finish your homework I can drink it.,<triplet> After you finish your homework <subj> I can drink it. <obj> no_relation,no_relation
+ saves  for later cause puts it in the refrigerator,<triplet>  saves for later <subj> puts it in the refrigerator <obj> cause,cause
+The door can be opened to do other activities,<triplet> The door can be opened <subj> to do other activities <obj> no_relation,no_relation
+ boards a plane intend to go somewhere,<triplet>  boards a plane <subj> to go somewhere <obj> intend,intend
+ gets  lately cause is overwhelmed,<triplet>  gets lately <subj> is overwhelmed <obj> cause,cause
+" Following proper food handling procedures prevents foodborne illnesses, spoilage, or contamination due to improper food preparation or storage methods","<triplet> Following proper food handling procedures <subj> foodborne illnesses, spoilage, or contamination due to improper food preparation or storage methods <obj> prevent",prevent
+ teaches  how to fish intend someone to be good at fishing,<triplet>  teaches how to fish <subj> someone to be good at fishing <obj> intend,intend
+ fires another  cause could be injured or die,<triplet>  fires another  <subj> could be injured or die <obj> cause,cause
+ puts  in a bowl intend to eat the meal,<triplet>  puts in a bowl <subj> to eat the meal <obj> intend,intend
+ flushes the toilet intend to wash his hands,<triplet>  flushes the toilet <subj> to wash his hands <obj> intend,intend
+tears  away answers a question,<triplet>  tears  away <subj> answers a question <obj> no_relation,no_relation
+Theoor is unlock put in casket,<triplet>  Theoor is unlock <subj> put in casket <obj> no_relation,no_relation
+"Eating a balanced diet prevents obesity, diabetes, and other chronic health conditions.","<triplet> Eating a balanced diet <subj> obesity, diabetes, and other chronic health conditions. <obj> prevent",prevent
+wants anything to end the drama,<triplet>  wants anything <subj> to end the drama <obj> no_relation,no_relation
+"Practicing safe sex (e.g., using condoms or abstaining from sex) prevents unintended pregnancy, sexually transmitted infections (STIs), and AIDS if an HIV-infected partner is present.","<triplet> Practicing safe sex (e.g., using condoms or abstaining from sex) <subj> unintended pregnancy, sexually transmitted infections (STIs), and AIDS if an HIV-infected partner is present. <obj> prevent",prevent
+does the math breathes easier,<triplet>  does the math <subj> breathes easier <obj> no_relation,no_relation
+"Avoiding exposure to toxic chemicals or substances prevents cancer, birth defects, and other long-term health issues.","<triplet> Avoiding exposure to toxic chemicals or substances <subj> cancer, birth defects, and other long-term health issues. <obj> prevent",prevent
+ cuts  loose intend to let go of the past,<triplet>  cuts  loose <subj> to let go of the past <obj> intend,intend
+ takes guard cause they stand there,<triplet>  takes guard <subj> they stand there <obj> cause,cause
+"Cleaning the house regularly small fires from becoming larger, more dangerous, or uncontrollable","<triplet> Cleaning the house regularly <subj> small fires from becoming larger, more dangerous, or uncontrollable <obj> no_relation",no_relation
+ gets  a great gift intend give gift,<triplet>  gets  a great gift <subj> give gift <obj> intend,intend
+"When the traffic light
+turns
+green, cars","<triplet> When the traffic light <subj> green, cars <obj> enable",enable
+ loves to travel cause got free  mind and relaxed,<triplet>  loves to travel <subj> got free mind and relaxed <obj> cause,cause
+"Wearing appropriate safety gear such as hard hats, gloves, and goggles when working with hazardous materials vomits","<triplet> Wearing appropriate safety gear such as hard hats, gloves, and goggles when working with hazardous materials <subj> vomits <obj> no_relation",no_relation
+"Practicing good hygiene habits, such as washing hands regularly and avoiding contact with sick individuals tooth decay, gum disease, and other dental health issues.","<triplet> Practicing good hygiene habits, such as washing hands regularly and avoiding contact with sick individuals <subj> tooth decay, gum disease, and other dental health issues. <obj> no_relation",no_relation
+"Using a lockbox to store important documents and valuables  prevents theft, loss or damage due to natural disasters or other unexpected events.","<triplet> Using a lockbox to store important documents and valuables  <subj> theft, loss or damage due to natural disasters or other unexpected events. <obj> prevent",prevent
+ leaves the  immediately cause thinks about party,<triplet>  leaves the immediately <subj> thinks about party <obj> cause,cause
+ stands in front of  intend to tell  to move,<triplet>  stands in front of  <subj> to tell  to move <obj> intend,intend
+ is no longer friends intend to get revenge on friend.,<triplet>  is no longer friends <subj> to get revenge on friend. <obj> intend,intend
+ meets the lord in the air cause gets punished,<triplet>  meets the lord in the air <subj> gets punished <obj> cause,cause
+pays to the emperor to feel loved by a child,<triplet>  pays to the emperor <subj> to feel loved by a child <obj> no_relation,no_relation
+ states briefly the  cause date,<triplet>  states briefly the  <subj> date <obj> cause,cause
+ finds my keys intend to help someone out,<triplet>  finds my keys <subj> to help someone out <obj> intend,intend
+relaxes and watch gets help with a desicion,<triplet>  relaxes and watch  <subj> gets help with a desicion <obj> no_relation,no_relation
+ loses a tooth intend cover the toothless spot with a napkin,<triplet>  loses a tooth <subj> cover the toothless spot with a napkin <obj> intend,intend
+pays  tribute house fires from spreading and causing catastrophic damage or fatalities.,<triplet>  pays  tribute <subj> house fires from spreading and causing catastrophic damage or fatalities. <obj> no_relation,no_relation
+ finally broke down intend to cry,<triplet>  finally broke down <subj> to cry <obj> intend,intend
+Installing smoke detectors and implementing evacuation procedures can prevent fatalities from house fires or other emergencies.,<triplet> Installing smoke detectors and implementing evacuation procedures <subj> fatalities from house fires or other emergencies. <obj> prevent,prevent
+"You have a credit card
+If
+You can make purchases online or in stores",<triplet> You have a credit card <subj> You can make purchases online or in stores <obj> enable,enable
+ sees  tomorrow cause says Hi,<triplet>  sees  tomorrow <subj> says Hi <obj> cause,cause
+"the pump will turn on
+due to
+a built-in sensor's detection of the water level.",<triplet> the pump will turn on <subj> a built-in sensors detection of the water level. <obj> enable,enable
+recently saw progress,<triplet>  recently saw <subj> progress <obj> no_relation,no_relation
+ keeps  long cause is unable to see wife,<triplet>  keeps  long <subj> is unable to see wife <obj> cause,cause
+takes  action unauthorized access to your personal data by hackers or malicious software,<triplet>  takes  action <subj> unauthorized access to your personal data by hackers or malicious software <obj> no_relation,no_relation
+"The sound of the clock indicates that a predetermined amount of time has passed, typically 5 or 10 minutes. the solar panels will generate electricity","<triplet> The sound of the clock indicates that a predetermined amount of time has passed, typically 5 or 10 minutes. <subj> the solar panels will generate electricity <obj> no_relation",no_relation
+ breaks the seal intend to ensure something is fresh,<triplet>  breaks the seal <subj> to ensure something is fresh <obj> intend,intend
+ eats sushi intend to try something new,<triplet>  eats sushi <subj> to try something new <obj> intend,intend
+"it can provide relief from extreme heat or humidity, which may cause discomfort or health issues.
+Thusly,
+the indoor environment will be comfortable and conducive to productivity and relaxation.","<triplet> it can provide relief from extreme heat or humidity, which may cause discomfort or health issues. <subj> the indoor environment will be comfortable and conducive to productivity and relaxation. <obj> enable",enable
+ loves books cause gets a hunchback,<triplet>  loves books <subj> gets a hunchback <obj> cause,cause
+finally make to drink a lot of water,<triplet>  finally make  <subj> to drink a lot of water <obj> no_relation,no_relation
+ starts to get better cause loses fever,<triplet>  starts to get better <subj> loses fever <obj> cause,cause
+ gets a bad grade intend to be a failure,<triplet>  gets a bad grade <subj> to be a failure <obj> intend,intend
+"The computer's
+battery life is sufficient to complete the task,
+which eliminates any need for an external power source.",<triplet> The computers <subj> which eliminates any need for an external power source. <obj> enable,enable
+"Brushing and flossing teeth twice a day can prevent cavities, gum disease, and bad breath.","<triplet> Brushing and flossing teeth twice a day <subj> cavities, gum disease, and bad breath. <obj> prevent",prevent
+ places  on the table intend persony is too heavy to hold,<triplet>  places  on the table <subj> persony is too heavy to hold <obj> intend,intend
+ is moving to a new town cause get a new place to live,<triplet>  is moving to a new town <subj> get a new place to live <obj> cause,cause
+"When the traffic light turns
+green
+you can cross the intersection safely.",<triplet> When the traffic light turns <subj> you can cross the intersection safely. <obj> enable,enable
+ takes the kitten home cause sneezes,<triplet>  takes the kitten home <subj> sneezes <obj> cause,cause
+"Having a stable internet connection
+allows for
+streaming movies and TV shows",<triplet> Having a stable internet connection <subj> streaming movies and TV shows <obj> enable,enable
+ Avoiding smoking and secondhand smoke exposure prevents lungs from developing cancer or other respiratory diseases,<triplet> Avoiding smoking and secondhand smoke exposure <subj> lungs from developing cancer or other respiratory diseases <obj> prevent,prevent
+is no longer afraid attacks on livestock or humans,<triplet>  is no longer afraid <subj> attacks on livestock or humans <obj> no_relation,no_relation
+ gives  direction cause receives an award,<triplet>  gives  direction <subj> receives an award <obj> cause,cause
+obtains from the government to have a friend,<triplet>  obtains from the government <subj> to have a friend <obj> no_relation,no_relation
+Wearing safety glasses prevents eye injuries from flying debris or dust during construction work.,<triplet> Wearing safety glasses <subj> eye injuries from flying debris or dust during construction work. <obj> prevent,prevent
+ gives  a shake intend to pay them for it,<triplet>  gives  a shake <subj> to pay them for it <obj> intend,intend
+"buys a new plant nutrient deficiencies, obesity, and related health issues.","<triplet>  buys a new plant <subj> nutrient deficiencies, obesity, and related health issues. <obj> no_relation",no_relation
+"Wearing appropriate clothing and gear for the job or activity at hand prevents injuries, accidents, or fatalities from occurring.","<triplet> Wearing appropriate clothing and gear for the job or activity at hand <subj> injuries, accidents, or fatalities from occurring. <obj> prevent",prevent
+ washes  in the sink intend to get things clean,<triplet>  washes in the sink <subj> to get things clean <obj> intend,intend
+ feels like a failure intend eat sweets,<triplet>  feels like a failure <subj> eat sweets <obj> intend,intend
+"When the computer
+is turned on
+it starts up and loads software programs automatically",<triplet> When the computer <subj> it starts up and loads software programs automatically <obj> enable,enable
+When the dishwasher finishes to ease his tension,<triplet> When the dishwasher finishes <subj> to ease his tension <obj> no_relation,no_relation
+Covering exposed wires with insulating material to ask  questions,<triplet> Covering exposed wires with insulating material <subj> to ask  questions <obj> no_relation,no_relation
+ swings  cause he gets dropped,<triplet>  swings  <subj> he gets dropped <obj> cause,cause
+reminds  of PersonZ importance,<triplet>  reminds  of PersonZ <subj> importance <obj> no_relation,no_relation
+ gives  a big hug cause gets dirty,<triplet>  gives a big hug <subj> gets dirty <obj> cause,cause
+"The toaster will make bread toast
+when you plug it in
+plugging it in",<triplet> The toaster will make bread toast <subj> plugging it in <obj> enable,enable
+never played the students to understand,<triplet>  never played  <subj> the students to understand <obj> no_relation,no_relation
+ goes home together cause watches TV,<triplet>  goes home together <subj> watches TV <obj> cause,cause
+Maintaining a clean home environment rest,<triplet> Maintaining a clean home environment <subj> rest <obj> no_relation,no_relation
+ makes the welkin ring intend PERSON X WANT TO MAKE A WELKIN RING,<triplet>  makes the welkin ring <subj> PERSON X WANT TO MAKE A WELKIN RING <obj> intend,intend
+Using a seatbelt while driving or riding in a vehicle can prevent injury or death in case of an accident.,<triplet> Using a seatbelt while driving or riding in a vehicle <subj> injury or death in case of an accident. <obj> prevent,prevent
+takes  to the dentist gets energy,<triplet>  takes  to the dentist <subj> gets energy <obj> no_relation,no_relation
+"If a fire extinguisher
+is easily accessible and has not expired,
+it enables individuals",<triplet> If a fire extinguisher <subj> it enables individuals <obj> enable,enable
+ hits hard intend to leave,<triplet>  hits hard <subj> to leave <obj> intend,intend
+asks  to help execute the rights,<triplet>  asks  to help <subj> execute the rights <obj> no_relation,no_relation
+takes a few minutes to win a prize,<triplet>  takes a few minutes <subj> to win a prize <obj> no_relation,no_relation
+" Applying sunscreen with at least SPF  before going outside prevents sunburn, skin cancer, and premature aging due to UV rays","<triplet> Applying sunscreen with at least SPF before going outside <subj> sunburn, skin cancer, and premature aging due to UV rays <obj> prevent",prevent
+"She won't be able to hear anything
+without
+her hearing aid",<triplet> She wont be able to hear anything <subj> her hearing aid <obj> enable,enable
+raises by taxation to refresh,<triplet>  raises by taxation <subj> to refresh <obj> no_relation,no_relation
+ gets a bloody nose intend to relax,<triplet>  gets a bloody nose <subj> to relax <obj> intend,intend
+ finds it funny intend to hear another joke,<triplet>  finds it funny <subj> to hear another joke <obj> intend,intend
+ decides to go to the movies intend to have fun,<triplet>  decides to go to the movies <subj> to have fun <obj> intend,intend
+Installing smoke detectors in the house obstructs the fatal risk of undetected smoke and flare-ups,<triplet> Installing smoke detectors in the house <subj> the fatal risk of undetected smoke and flare-ups <obj> prevent,prevent
+ plays every day intend to relax.,<triplet>  plays every day <subj> to relax. <obj> intend,intend
+ walks past  cause gets asked a question,<triplet>  walks past  <subj> gets asked a question <obj> cause,cause
+Locking the doors at night can prevent burglars from breaking in.,<triplet> Locking the doors at night <subj> burglars from breaking in. <obj> prevent,prevent
+takes a picture of to play another game,<triplet>  takes a picture of  <subj> to play another game <obj> no_relation,no_relation
+ meets a boy intend to flirt,<triplet>  meets a boy <subj> to flirt <obj> intend,intend
+"Maintaining proper tire pressure and avoiding overloading the vehicle prevents tire blowouts, loss of control, and rollover accidents while driving on a rain-soaked road.","<triplet> Maintaining proper tire pressure and avoiding overloading the vehicle <subj> tire blowouts, loss of control, and rollover accidents while driving on a rain-soaked road. <obj> prevent",prevent
+performs  duty wake up and start my day,<triplet>  performs  duty <subj> wake up and start my day <obj> no_relation,no_relation
+remains quiet Person X watches television,<triplet>  remains quiet <subj> Person X watches television <obj> no_relation,no_relation
+ takes  by the arm cause arm is hurt,<triplet>  takes  by the arm <subj> arm is hurt <obj> cause,cause
+ pulls  closer to  cause start sweating,<triplet>  pulls  closer to  <subj> start sweating <obj> cause,cause
+"its doors open automatically
+due to
+the built-in sensors and electronic components that enable the system's operation",<triplet> its doors open automatically <subj> the built-in sensors and electronic components that enable the systems operation <obj> enable,enable
+takes notes to go to sleep,<triplet>  takes notes <subj> to go to sleep <obj> no_relation,no_relation
+ gets paid cause avoids being pennyless,<triplet>  gets paid <subj> avoids being pennyless <obj> cause,cause
+"When the water pressure
+is increased
+enables the showerhead",<triplet> When the water pressure <subj> enables the showerhead <obj> enable,enable
+ gets  as a gift intend to say thank you,<triplet>  gets as a gift <subj> to say thank you <obj> intend,intend
+ takes guitar lessons intend to give X study to learn,<triplet>  takes guitar lessons <subj> to give X study to learn <obj> intend,intend
+ pulls  closer to  intend to kiss ,<triplet>  pulls closer to  <subj> to kiss  <obj> intend,intend
+wants to make a sandwich able to survive,<triplet>  wants to make a sandwich <subj> able to survive <obj> no_relation,no_relation
+ pays  homage intend to leave an offering,<triplet>  pays  homage <subj> to leave an offering <obj> intend,intend
+announces to everyone to leave Person Y alone,<triplet>  announces to everyone <subj> to leave Person Y alone <obj> no_relation,no_relation
+"Draining stagnant water from outdoor containers, such as birdbaths or fountains prevents the breeding of mosquitoes, which are known carriers of diseases like malaria and dengue fever.","<triplet> Draining stagnant water from outdoor containers, such as birdbaths or fountains <subj> the breeding of mosquitoes, which are known carriers of diseases like malaria and dengue fever. <obj> prevent",prevent
+"If the lock
+is picked
+the door can be opened.",<triplet> If the lock <subj> the door can be opened. <obj> enable,enable
+"Installing a carbon monoxide detector in your home prevents unintended poisoning due to gas leaks or faulty appliances, which can be deadly without warning.","<triplet> Installing a carbon monoxide detector in your home <subj> unintended poisoning due to gas leaks or faulty appliances, which can be deadly without warning. <obj> prevent",prevent
+ likes  back intend to be understood,<triplet>  likes back <subj> to be understood <obj> intend,intend
+ gets  into trouble cause trialed,<triplet>  gets  into trouble <subj> trialed <obj> cause,cause
+asks the waiter tells story from memory,<triplet>  asks the waiter <subj> tells story from memory <obj> no_relation,no_relation
+ decides to rob a bank intend find a place to hide,<triplet>  decides to rob a bank <subj> find a place to hide <obj> intend,intend
+names the baby persony thanks person x,<triplet>  names the baby <subj> persony thanks person x <obj> no_relation,no_relation
+ makes a scene intend to show frustration,<triplet>  makes a scene <subj> to show frustration <obj> intend,intend
+ causes  pain intend apologize,<triplet>  causes  pain <subj> apologize <obj> intend,intend
+ loves the outdoors intend to go hiking,<triplet>  loves the outdoors <subj> to go hiking <obj> intend,intend
+bakes a pie enabling sight during outdoor activities.,<triplet>  bakes a pie <subj> enabling sight during outdoor activities. <obj> no_relation,no_relation
+If theoor is unlock shoes get dirty,<triplet>  If theoor is unlock <subj> shoes get dirty <obj> no_relation,no_relation
+Covering the food with a lid before refrigeration prevents spoilage and contamination,<triplet> Covering the food with a lid before refrigeration <subj> spoilage and contamination <obj> prevent,prevent
+ says maybe intend to go about his/her day,<triplet>  says maybe <subj> to go about his/her day <obj> intend,intend
+"Using safe methods when transporting heavy objects prevents accidents, injuries, or damage caused by improper handling or lifting techniques.","<triplet> Using safe methods when transporting heavy objects <subj> accidents, injuries, or damage caused by improper handling or lifting techniques. <obj> prevent",prevent
+ feels pretty bad intend to make it right,<triplet>  feels pretty bad <subj> to make it right <obj> intend,intend
+The door one can use a jumper cable to enable the car to start again,<triplet> The door <subj> one can use a jumper cable to enable the car to start again <obj> no_relation,no_relation
+Using a seatbelt while driving on bumpy roads prevents injuries from sudden stops or collisions,<triplet> Using a seatbelt while driving on bumpy roads <subj> injuries from sudden stops or collisions <obj> prevent,prevent
+"is time to go home dehydration, especially during hot weather or physical activity.","<triplet>  is time to go home <subj> dehydration, especially during hot weather or physical activity. <obj> no_relation",no_relation
+solves the problem say goodbye to,<triplet>  solves the problem <subj> say goodbye to  <obj> no_relation,no_relation
+ strikes  into the hearts cause becomes a renowned public speaker,<triplet>  strikes into the hearts <subj> becomes a renowned public speaker <obj> cause,cause
+ overcomes evil with good intend to protest,<triplet>  overcomes evil with good <subj> to protest <obj> intend,intend
+ wants  than anything cause is successful,<triplet>  wants than anything <subj> is successful <obj> cause,cause
+"The phone line is working
+which
+enables us to make and receive calls",<triplet> The phone line is working <subj> enables us to make and receive calls <obj> enable,enable
+ wins  over cause happy feelings,<triplet>  wins  over <subj> happy feelings <obj> cause,cause
+ saves enough money intend to go buy it,<triplet>  saves enough money <subj> to go buy it <obj> intend,intend
+ starts chasing  cause yells in fear,<triplet>  starts chasing  <subj> yells in fear <obj> cause,cause
+ teaches children  cause gains knowledge,<triplet>  teaches children  <subj> gains knowledge <obj> cause,cause
+is baking cookies to keep it as a pet,<triplet>  is baking cookies <subj> to keep it as a pet <obj> no_relation,no_relation
+ Covering food and storing it at proper temperatures prevents food poisoning or bacterial contamination due to improper handling or storage,<triplet> Covering food and storing it at proper temperatures <subj> food poisoning or bacterial contamination due to improper handling or storage <obj> prevent,prevent
+ kills every  cause become sweaty,<triplet>  kills every  <subj> become sweaty <obj> cause,cause
+"If the weather
+is sunny and clear,
+we can have a picnic outside.",<triplet> If the weather <subj> we can have a picnic outside. <obj> enable,enable
+ finds  to read intend to read day and night,<triplet>  finds to read <subj> to read day and night <obj> intend,intend
+The road is clear of obstacles call their family,<triplet> The road is clear of obstacles <subj> call their family <obj> no_relation,no_relation
+ knows how to cook intend show their talent off,<triplet>  knows how to cook <subj> show their talent off <obj> intend,intend
+Using a bike helmet while cycling finds something,<triplet> Using a bike helmet while cycling <subj> finds something <obj> no_relation,no_relation
+ hugs  intend to tell  something,<triplet>  hugs  <subj> to tell  something <obj> intend,intend
+ takes a shortcut cause opens the door,<triplet>  takes a shortcut <subj> opens the door <obj> cause,cause
+Taking allergy medication before exposure to pollen prevents allergic reactions.,<triplet> Taking allergy medication before exposure to pollen <subj> allergic reactions. <obj> prevent,prevent
+ makes a hole cause falls asleep,<triplet>  makes a hole <subj> falls asleep <obj> cause,cause
+ seizes the  by force intend to get hold of __,<triplet>  seizes the by force <subj> to get hold of __ <obj> intend,intend
+ smells really good intend to impress others.,<triplet>  smells really good <subj> to impress others. <obj> intend,intend
+ visits the park cause Stress levels reduce,<triplet>  visits the park <subj> Stress levels reduce <obj> cause,cause
+ contacts the seller cause waits on the phone,<triplet>  contacts the seller <subj> waits on the phone <obj> cause,cause
+Cleaning your teeth after eating can prevent cavities and tooth decay,<triplet> Cleaning your teeth after eating <subj> cavities and tooth decay <obj> prevent,prevent
+ robs  cause becomes poor,<triplet>  robs  <subj> becomes poor <obj> cause,cause
+ moves  around intend to get rid of junk,<triplet>  moves around <subj> to get rid of junk <obj> intend,intend
+ works each day intend to do a good job,<triplet>  works each day <subj> to do a good job <obj> intend,intend
+ steals from  intend to destroy the evidence,<triplet>  steals from  <subj> to destroy the evidence <obj> intend,intend
+he didnt finish eating it take a short vacation,<triplet> he didnt finish eating it <subj> take a short vacation <obj> no_relation,no_relation
+ knows every trick in the book cause gets called out,<triplet>  knows every trick in the book <subj> gets called out <obj> cause,cause
+is really happy to find it,<triplet>  is really happy <subj> to find it <obj> no_relation,no_relation
+ bleeds profusely intend to get help,<triplet>  bleeds profusely <subj> to get help <obj> intend,intend
+ stresses  intend to calm down,<triplet>  stresses  <subj> to calm down <obj> intend,intend
+When the light is green to seek a reward,<triplet> When the light is green <subj> to seek a reward <obj> no_relation,no_relation
+preventsfrommaking a clean decision to drive safely.,<triplet> prevents <subj> making a clean decision to drive safely. <obj> prevent,prevent
+ would be mad cause starts sweating,<triplet>  would be mad <subj> starts sweating <obj> cause,cause
+never found out to fly a plane,<triplet>  never found out <subj> to fly a plane <obj> no_relation,no_relation
+"The coffee won't be ready without heating it
+turning
+on the stove",<triplet> The coffee wont be ready without heating it <subj> on the stove <obj> enable,enable
+ meets the baby cause gets spoken to,<triplet>  meets the baby <subj> gets spoken to <obj> cause,cause
+"Switched on
+illuminates
+the space and allows the user to see clearly",<triplet> Switched on <subj> the space and allows the user to see clearly <obj> enable,enable
+ finds one  liked cause Buys it,<triplet>  finds one  liked <subj> Buys it <obj> cause,cause
+ takes the plunge intend to live with ,<triplet>  takes the plunge <subj> to live with  <obj> intend,intend
+ gives  the benefit of the doubt intend to do something else,<triplet>  gives  the benefit of the doubt <subj> to do something else <obj> intend,intend
+ plays checkers intend to play another game,<triplet>  plays checkers <subj> to play another game <obj> intend,intend
+"If the road is icy
+is unsafe to
+drive on it without chains or snow tires.",<triplet> If the road is icy <subj> drive on it without chains or snow tires. <obj> enable,enable
+ gets  on the test intend run away,<triplet>  gets on the test <subj> run away <obj> intend,intend
+In order to prevent foodborne illness win the match,<triplet> In order to prevent foodborne illness <subj> win the match <obj> no_relation,no_relation
+ makes the purchase intend get confirmation or purchase identification number,<triplet>  makes the purchase <subj> get confirmation or purchase identification number <obj> intend,intend
+reads six books X talks to that friend.,<triplet>  reads six books <subj> X talks to that friend. <obj> no_relation,no_relation
+ treats  in patients intend prescribe medication,<triplet>  treats in patients <subj> prescribe medication <obj> intend,intend
+is Unerstaning the concept to spend time with them,<triplet> is Unerstaning the concept <subj> to spend time with them <obj> no_relation,no_relation
+ cuts the ribbon intend to applaud,<triplet>  cuts the ribbon <subj> to applaud <obj> intend,intend
+Holding your cellphone in hands-free mode while driving prevents distracted driving accidents caused by texting or making phone calls.,<triplet> Holding your cellphone in hands-free mode while driving <subj> distracted driving accidents caused by texting or making phone calls. <obj> prevent,prevent
+Not eating contaminated food prevents foodborne illnesses such as salmonella or E. coli infections.,<triplet> Not eating contaminated food <subj> foodborne illnesses such as salmonella or E. coli infections. <obj> prevent,prevent
+"Regularly flushing out septic systems or sewage tanks prevents septic tank backups, which can lead to contamination of drinking water or other health hazards.","<triplet> Regularly flushing out septic systems or sewage tanks <subj> septic tank backups, which can lead to contamination of drinking water or other health hazards. <obj> prevent",prevent
+looks for starts driving,<triplet>  looks for  <subj> starts driving <obj> no_relation,no_relation
+ buys apples intend to make apple pie,<triplet>  buys apples <subj> to make apple pie <obj> intend,intend
+ loses  life intend unhappy,<triplet>  loses  life <subj> unhappy <obj> intend,intend
+"The bus
+stopped on the right lane
+creating a safe place for pedestrians to cross the street.",<triplet> The bus <subj> creating a safe place for pedestrians to cross the street. <obj> enable,enable
+helps  clean to forget about it all,<triplet>  helps  clean <subj> to forget about it all <obj> no_relation,no_relation
+ bleeds a lot cause becomes faint,<triplet>  bleeds a lot <subj> becomes faint <obj> cause,cause
+asks what  wanted has the favor returned,<triplet>  asks what  wanted <subj> has the favor returned <obj> no_relation,no_relation
+gives  a couple unintended pregnancy or transmission of sexually transmitted infections,<triplet>  gives  a couple <subj> unintended pregnancy or transmission of sexually transmitted infections <obj> no_relation,no_relation
+If there is enough food pays the deposit for the apartment,<triplet> If there is enough food <subj>  pays the deposit for the apartment <obj> no_relation,no_relation
+ feels grateful cause bows head,<triplet>  feels grateful <subj> bows head <obj> cause,cause
+ is able to drive intend to enjoy the long drive,<triplet>  is able to drive <subj> to enjoy the long drive <obj> intend,intend
+ feels proud intend to ask how  is so great,<triplet>  feels proud <subj> to ask how  is so great <obj> intend,intend
+ permits  to enter cause stops sweating,<triplet>  permits to enter <subj> stops sweating <obj> cause,cause
+Putting the kettle on the stove and walking away prevents burns caused by accidentally leaving it on.,<triplet> Putting the kettle on the stove and walking away <subj> burns caused by accidentally leaving it on. <obj> prevent,prevent
+ pulls an all nighter intend relax,<triplet>  pulls an all nighter <subj> relax <obj> intend,intend
+"If the door is locked,
+you can try opening it with
+a key","<triplet> If the door is locked, <subj> a key <obj> enable",enable
+is If you have a bicycle is  enabling   you to rie it,<triplet> is If you have a bicycle <subj>  you to rie it <obj> enable,enable
+ brings down the hammer intend to build something,<triplet>  brings down the hammer <subj> to build something <obj> intend,intend
+ Refusing to provide sensitive information over the phone prevents identity theft and unauthorized access to personal data,<triplet> Refusing to provide sensitive information over the phone <subj> identity theft and unauthorized access to personal data <obj> prevent,prevent
+ summons another  intend to suggest their ideas,<triplet>  summons another  <subj> to suggest their ideas <obj> intend,intend
+ creates  atmosphere intend to make another date,<triplet>  creates  atmosphere <subj> to make another date <obj> intend,intend
+The doorbell is ringing loudly comes to new realization,<triplet> The doorbell is ringing loudly <subj> comes to new realization <obj> no_relation,no_relation
+ is shot and killed cause mourns,<triplet>  is shot and killed <subj> mourns <obj> cause,cause
+ waits to play intend patient,<triplet>  waits to play <subj> patient <obj> intend,intend
+"the tea can be steeped for a perfect cup of tea
+making possible
+a strong and flavorful brew that will satisfy any tea lover's taste buds",<triplet> the tea can be steeped for a perfect cup of tea <subj> a strong and flavorful brew that will satisfy any tea lovers taste buds <obj> enable,enable
+ wants  to be happy cause gets satisfed,<triplet>  wants  to be happy <subj> gets satisfed <obj> cause,cause
+ gets all wet intend to retrieve her phone,<triplet>  gets all wet <subj> to retrieve her phone <obj> intend,intend
+"When the light
+turns green
+you may cross the street",<triplet> When the light <subj> you may cross the street <obj> enable,enable
+ likes to cook intend eat,<triplet>  likes to cook <subj> eat <obj> intend,intend
+ derives  benefit cause learns more themself,<triplet>  derives  benefit <subj> learns more themself <obj> cause,cause
+ gives a ticket cause pay their fine,<triplet>  gives a ticket <subj> pay their fine <obj> cause,cause
+ introduces  to the cool kids intend persony to have have a good time.,<triplet>  introduces  to the cool kids <subj> persony to have have a good time. <obj> intend,intend
+always brought to enjoy the incentive,<triplet>  always brought  <subj> to enjoy the incentive <obj> no_relation,no_relation
+ breaks the record intend rest on their laurels,<triplet>  breaks the record <subj> rest on their laurels <obj> intend,intend
+misses  already to appreciate Y,<triplet>  misses  already <subj> to appreciate Y <obj> no_relation,no_relation
+likes a boy to get safe themselves,<triplet>  likes a boy <subj> to get safe themselves <obj> no_relation,no_relation
+ holds  up cause gets compliment,<triplet>  holds  up <subj> gets compliment <obj> cause,cause
+ is married for 20 years intend loves their partner,<triplet>  is married for 20 years <subj> loves their partner <obj> intend,intend
+repairs the damage wake up,<triplet>  repairs the damage <subj> wake up <obj> no_relation,no_relation
+ wants to marry  intend to politely decline,<triplet>  wants to marry  <subj> to politely decline <obj> intend,intend
+ looks so good intend to remain looking good.,<triplet>  looks so good <subj> to remain looking good. <obj> intend,intend
+The cars engine is running smoothly has a can make good choicies,<triplet>  The cars engine is running smoothly <subj> has a can make good choicies <obj> no_relation,no_relation
+"Staying hydrated by drinking plenty of water can prevent dehydration, headaches, and fatigue.","<triplet> Staying hydrated by drinking plenty of water <subj> dehydration, headaches, and fatigue. <obj> prevent",prevent
+Using seat belts while driving prevents serious injuries or fatalities in the event of a car accident.,<triplet> Using seat belts while driving <subj> serious injuries or fatalities in the event of a car accident. <obj> prevent,prevent
+ gets the last laugh intend stand up comedy,<triplet>  gets the last laugh <subj> stand up comedy <obj> intend,intend
+Having saved sufficient money permits the vacation of their dreams.,<triplet> Having saved sufficient money <subj> the vacation of their dreams. <obj> enable,enable
+"If a battery
+is connected to a circuit
+then an electrical current",<triplet> If a battery <subj> then an electrical current <obj> enable,enable
+ learns so much cause becomes intelligent,<triplet>  learns so much <subj> becomes intelligent <obj> cause,cause
+The printer ran out of ink which enables,<triplet> The printer ran out of ink <subj> which enables <obj> no_relation,no_relation
+ has to use the restroom cause washes hands,<triplet>  has to use the restroom <subj> washes hands <obj> cause,cause
+ loves the painting intend to meet the painter,<triplet>  loves the painting <subj> to meet the painter <obj> intend,intend
+ sees the point intend to make sure others to do,<triplet>  sees the point <subj> to make sure others to do <obj> intend,intend
+ finds the key cause can get ride from personX,<triplet>  finds the key <subj> can get ride from personX <obj> cause,cause
+Seeking regular medical checkups and preventative care services prevents chronic health conditions or complications from undetected illnesses.,<triplet> Seeking regular medical checkups and preventative care services <subj> chronic health conditions or complications from undetected illnesses. <obj> prevent,prevent
+The security alarm blared loudly to send the note in the mail to,<triplet> The security alarm blared loudly <subj> to send the note in the mail to  <obj> no_relation,no_relation
+Using a condom during sexual activity to find something,<triplet> Using a condom during sexual activity <subj> to find something <obj> no_relation,no_relation
+ decides to cook dinner intend to entertain,<triplet>  decides to cook dinner <subj> to entertain <obj> intend,intend
+ is in bad shape cause gets no date,<triplet>  is in bad shape <subj> gets no date <obj> cause,cause
+"If the car's battery
+is fully charged
+allows for",<triplet> If the cars battery <subj> allows for <obj> enable,enable
+ cooks meal intend to eat food,<triplet>  cooks meal <subj> to eat food <obj> intend,intend
+stinks on ice safely reaching the summit,<triplet>  stinks on ice <subj> safely reaching the summit <obj> no_relation,no_relation
+Installing smoke detectors in the home prevents fatalities caused by house fires.,<triplet> Installing smoke detectors in the home <subj> fatalities caused by house fires. <obj> prevent,prevent
+ puts on airs cause stands straight,<triplet>  puts on airs <subj> stands straight <obj> cause,cause
+"Covering food when cooking outdoors during windy weather prevents foodborne illnesses caused by contamination with dust, debris, or insects","<triplet> Covering food when cooking outdoors during windy weather <subj> foodborne illnesses caused by contamination with dust, debris, or insects <obj> prevent",prevent
+ is a good fit cause accomplishes tasks at work,<triplet>  is a good fit <subj> accomplishes tasks at work <obj> cause,cause
+The printer turns head around,<triplet> The printer <subj> turns head around <obj> no_relation,no_relation
+ tells  to get a job intend help mind,<triplet>  tells  to get a job <subj> help mind <obj> intend,intend
+ holds  in check intend to leave,<triplet>  holds  in check <subj> to leave <obj> intend,intend
+Limiting screen time for children and adolescents Person X looses energy from running,<triplet> Limiting screen time for children and adolescents <subj> Person X looses energy from running <obj> no_relation,no_relation
+ gives  a right cause use of the rights,<triplet>  gives  a right <subj> use of the rights <obj> cause,cause
+ eats  together intend to be fed,<triplet>  eats together <subj> to be fed <obj> intend,intend
+"asks  to help odors and moisture from escaping, which can cause spoilage.","<triplet>  asks  to help <subj> odors and moisture from escaping, which can cause spoilage. <obj> no_relation",no_relation
+"Installing a fence around a swimming pool prevents drowning accidents, especially in households with young children.","<triplet> Installing a fence around a swimming pool <subj> drowning accidents, especially in households with young children. <obj> prevent",prevent
+If there is water put the casserole inside to bake it evenly.,<triplet> If there is water <subj> put the casserole inside to bake it evenly. <obj> no_relation,no_relation
+ rents and managing properties for a fee intend to get the rent,<triplet>  rents and managing properties for a fee <subj> to get the rent <obj> intend,intend
+ holds fast the  cause Person X performs a ritual dance.,<triplet>  holds fast the  <subj> Person X performs a ritual dance. <obj> cause,cause
+ listens to every word intend to absorb the knowledge,<triplet>  listens to every word <subj> to absorb the knowledge <obj> intend,intend
+ cries himself to sleep cause Person X sleeps,<triplet>  cries himself to sleep <subj> Person X sleeps <obj> cause,cause
+spends some time with people go to the beach.,<triplet>  spends some time with  <subj> people go to the beach. <obj> no_relation,no_relation
+Using rechargeable batteries instead of disposable ones gets thrown in a looney bin,<triplet> Using rechargeable batteries instead of disposable ones <subj>  gets thrown in a looney bin <obj> no_relation,no_relation
+"When the light switch is on
+nan
+The room",<triplet> When the light switch is on <subj> The room <obj> enable,enable
+"After you close the door
+will
+the alarm activate",<triplet> After you close the door <subj> the alarm activate <obj> enable,enable
+ The roa is clear   permits  ting theriver to reach theirestination quickly an safely,<triplet>  The roa is clear <subj>  theriver to reach theirestination quickly an safely <obj> enable,enable
+Taking breaks while using a computer for prolonged periods of time to be open minded,<triplet> Taking breaks while using a computer for prolonged periods of time <subj> to be open minded <obj> no_relation,no_relation
+"The internet connection
+is stable,
+enabling for seamless streaming of videos and movies online.",<triplet> The internet connection <subj> enabling for seamless streaming of videos and movies online. <obj> enable,enable
+starts chasing engages in conversation,<triplet>  starts chasing  <subj> engages in conversation <obj> no_relation,no_relation
+Using a water-efficient washing machine to take pictures of the new one,<triplet> Using a water-efficient washing machine <subj> to take pictures of the new one <obj> no_relation,no_relation
+sees up close electrical appliances from malfunctioning during storms or other emergencies.,<triplet>  sees up close <subj> electrical appliances from malfunctioning during storms or other emergencies. <obj> no_relation,no_relation
+When the oven it will escape,<triplet> When the oven <subj> it will escape <obj> no_relation,no_relation
+ prevents  from escaping intend to be powerful,<triplet>  prevents from escaping <subj> to be powerful <obj> intend,intend
+"Installing smoke detectors in the home prevents fatalities caused by house fires, as these devices provide early warning signs to occupants.","<triplet> Installing smoke detectors in the home <subj> fatalities caused by house fires, as these devices provide early warning signs to occupants. <obj> prevent",prevent
+Avoiding exposure to secondhand smoke and indoor pollution to lose weight,<triplet> Avoiding exposure to secondhand smoke and indoor pollution <subj> to lose weight <obj> no_relation,no_relation
+ relaxes and watch intend to rest,<triplet>  relaxes and watch <subj> to rest <obj> intend,intend
+ gets plenty of sleep intend to get ready foe work,<triplet>  gets plenty of sleep <subj> to get ready foe work <obj> intend,intend
+Installing a security system prevents break-ins and thefts,<triplet> Installing a security system <subj> break-ins and thefts <obj> prevent,prevent
+plays a in affairs have a cup of coffee,<triplet>  plays a in affairs <subj> have a cup of coffee <obj> no_relation,no_relation
+"The fire extinguisher
+is easily accessible
+allowing anyone to quickly put out a small fire",<triplet> The fire extinguisher <subj> allowing anyone to quickly put out a small fire <obj> enable,enable
+"Keeping pets away from children prevents allergies, bites, and other potential health hazards.","<triplet> Keeping pets away from children <subj> allergies, bites, and other potential health hazards. <obj> prevent",prevent
+Removing flammable items and securing the building against strong winds during hurricane season test it to ensure that it is fixed,<triplet> Removing flammable items and securing the building against strong winds during hurricane season <subj> test it to ensure that it is fixed <obj> no_relation,no_relation
+ tells  not to intend to save ,<triplet>  tells  not to <subj> to save  <obj> intend,intend
+ takes  to the shop intend to return,<triplet>  takes to the shop <subj> to return <obj> intend,intend
+"Regularly cleaning and maintaining your car's air filter prevents engine damage, improves fuel efficiency, and reduces emissions.","<triplet> Regularly cleaning and maintaining your cars air filter <subj> engine damage, improves fuel efficiency, and reduces emissions. <obj> prevent",prevent
+Avoiding contact with infected animals and humans can prevent the spread of diseases.,<triplet> Avoiding contact with infected animals and humans <subj> the spread of diseases. <obj> prevent,prevent
+"The GPS device
+allows
+Drivers can navigate unfamiliar roads and reach their destination safely",<triplet> The GPS device <subj> Drivers can navigate unfamiliar roads and reach their destination safely <obj> enable,enable
+ exercises  authority cause spend money,<triplet>  exercises  authority <subj> spend money <obj> cause,cause
+ stops on the side of the road cause gets towed,<triplet>  stops on the side of the road <subj> gets towed <obj> cause,cause
+ straps  cause laughs,<triplet>  straps  <subj> laughs <obj> cause,cause
+ urges  to accept cause heart beats fast,<triplet>  urges  to accept <subj> heart beats fast <obj> cause,cause
+makes  call save more,<triplet>  makes  call <subj> save more <obj> no_relation,no_relation
+ makes good grades intend to help them succeed,<triplet>  makes good grades <subj> to help them succeed <obj> intend,intend
+ works two jobs cause is tired,<triplet>  works two jobs <subj> is tired <obj> cause,cause
+ puts  in my wallet intend to gives thanks,<triplet>  puts in my wallet <subj> to gives thanks <obj> intend,intend
+ blinks several times intend to clear their eyes,<triplet>  blinks several times <subj> to clear their eyes <obj> intend,intend
+ sees  outside cause  is thanked,<triplet>  sees outside <subj>  is thanked <obj> cause,cause
+"With sufficient resources and technology available, thumbs ache","<triplet> With sufficient resources and technology available, <subj> thumbs ache <obj> no_relation",no_relation
+"The laptop is fully operational
+allowing
+us to complete our work efficiently and effectively",<triplet> The laptop is fully operational <subj> us to complete our work efficiently and effectively <obj> enable,enable
+"I finish my work on time
+If
+I will be able to leave early",<triplet> I finish my work on time <subj> I will be able to leave early <obj> enable,enable
+ gets some candy cause gets cavities,<triplet>  gets some candy <subj> gets cavities <obj> cause,cause
+crosses the finish line stops because wrist hurts,<triplet>  crosses the finish line <subj> stops because wrist hurts <obj> no_relation,no_relation
+Installing smoke detectors in all rooms can prevent the loss of life due to fires.,<triplet> Installing smoke detectors in all rooms <subj> the loss of life due to fires. <obj> prevent,prevent
+ calls  tomorrow intend to talk,<triplet>  calls  tomorrow <subj> to talk <obj> intend,intend
+ watches television intend to be entertained,<triplet>  watches television <subj> to be entertained <obj> intend,intend
+ finishes the race cause gets applause,<triplet>  finishes the race <subj> gets applause <obj> cause,cause
+loses get a headache,<triplet>  loses  <subj> get a headache <obj> no_relation,no_relation
+ gets new pants intend to go out to a party,<triplet>  gets new pants <subj> to go out to a party <obj> intend,intend
+ buys new clothes intend To wear the clothes,<triplet>  buys new clothes <subj> To wear the clothes <obj> intend,intend
+ undertakes another  cause holds the responsibility,<triplet>  undertakes another  <subj> holds the responsibility <obj> cause,cause
+ plays alone cause gets tired,<triplet>  plays alone <subj> gets tired <obj> cause,cause
+ rides horses intend to enjoy the outdoors,<triplet>  rides horses <subj> to enjoy the outdoors <obj> intend,intend
+ casts  on the validity intend to present information,<triplet>  casts on the validity <subj> to present information <obj> intend,intend
+" Cleaning up spills immediately prevents slips, trips, and falls
+       Cleaning up spills immediately can prevent slips, trips, and falls","<triplet> Cleaning up spills immediately <subj> slips, trips, and falls <obj> prevent",prevent
+If you have a stay warm,<triplet> If you have a <subj> stay warm <obj> no_relation,no_relation
+ chases a rainbow intend to go home,<triplet>  chases a rainbow <subj> to go home <obj> intend,intend
+ shows  around intend to talk to them,<triplet>  shows around <subj> to talk to them <obj> intend,intend
+"Washing hands thoroughly with soap and water or using hand sanitizer when necessary prevents the spread of germs and infections, especially during flu season or other outbreaks.","<triplet> Washing hands thoroughly with soap and water or using hand sanitizer when necessary <subj> the spread of germs and infections, especially during flu season or other outbreaks. <obj> prevent",prevent
+ gives  orders intend to do things,<triplet>  gives  orders <subj> to do things <obj> intend,intend
+ indicates briefly the  intend to understand what  is saying,<triplet>  indicates briefly the  <subj> to understand what  is saying <obj> intend,intend
+fixes the car losses due to theft or burglary,<triplet>  fixes the car <subj> losses due to theft or burglary <obj> no_relation,no_relation
+ drives  insane intend to be a pest,<triplet>  drives  insane <subj> to be a pest <obj> intend,intend
+uses to control to get to know,<triplet>  uses to control <subj> to get to know  <obj> no_relation,no_relation
+Installing a firewall on your computer prevents unauthorized access to your network and data,<triplet> Installing a firewall on your computer <subj> unauthorized access to your network and data <obj> prevent,prevent
+calls the man gains friend,<triplet>  calls the man <subj> gains friend <obj> no_relation,no_relation
+ goes back to normal intend returns to work,<triplet>  goes back to normal <subj> returns to work <obj> intend,intend
+The phone to go to hospital,<triplet> The phone <subj> to go to hospital <obj> no_relation,no_relation
+"When the weather is sunny and clear
+we can go
+hiking in the mountains.",<triplet> When the weather is sunny and clear <subj> hiking in the mountains. <obj> enable,enable
+goes looking for light candles and have dinner.,<triplet>  goes looking for  <subj> light candles and have dinner. <obj> no_relation,no_relation
+ finds a date intend to drive to the date,<triplet>  finds a date <subj> to drive to the date <obj> intend,intend
+"Following proper hygiene practices prevents the spread of infectious diseases such as flu, colds, and COVID-19.","<triplet> Following proper hygiene practices <subj> the spread of infectious diseases such as flu, colds, and COVID-19. <obj> prevent",prevent
+"The musician's instrument
+allows
+her or him",<triplet> The musicians instrument <subj> her or him <obj> enable,enable
+pushes  out she had hiking boots on,<triplet>  pushes  out <subj> she had hiking boots on <obj> no_relation,no_relation
+ wants to test it out cause succeds,<triplet>  wants to test it out <subj> succeds <obj> cause,cause
+Practicing safe sex prevents sexually transmitted infections (STIs) and unwanted pregnancies.,<triplet> Practicing safe sex <subj> sexually transmitted infections (STIs) and unwanted pregnancies. <obj> prevent,prevent
+"The music cannot be heard
+without
+speakers or headphones",<triplet> The music cannot be heard <subj> speakers or headphones <obj> enable,enable
+avoids  possibility to be polite,<triplet>  avoids  possibility <subj> to be polite <obj> no_relation,no_relation
+mans the fort to believe in the quran,<triplet>  mans the fort <subj> to believe in the quran <obj> no_relation,no_relation
+"Wearing protective gear like helmets, gloves, and goggles prevents injuries during sports or dangerous activities","<triplet> Wearing protective gear like helmets, gloves, and goggles <subj> injuries during sports or dangerous activities <obj> prevent",prevent
+"Conducting regular inspections and maintenance on the home's electrical system, appliances, and equipment prevents electrical hazards such as shorts, overloads, or fires.","<triplet> Conducting regular inspections and maintenance on the homes electrical system, appliances, and equipment <subj> electrical hazards such as shorts, overloads, or fires. <obj> prevent",prevent
+ studies for a test intend to prepare for the test,<triplet>  studies for a test <subj> to prepare for the test <obj> intend,intend
+"Taking regular breaks during long hours of work prevents eye strain, back pain, and repetitive motion injuries.","<triplet> Taking regular breaks during long hours of work <subj> eye strain, back pain, and repetitive motion injuries. <obj> prevent",prevent
+ finally saved up intend to save their life from danger,<triplet>  finally saved up <subj> to save their life from danger <obj> intend,intend
+ is six years old cause they go to school,<triplet>  is six years old <subj> they go to school <obj> cause,cause
+drops on the ground to forget last night happened,<triplet>  drops on the ground <subj> to forget last night happened <obj> no_relation,no_relation
+If the weather is good Feels heat,<triplet> If the weather is good <subj> Feels heat <obj> no_relation,no_relation
+obtains by means passengers to arrive at theirestination punctually.,<triplet>  obtains by means <subj>  passengers to arrive at theirestination punctually. <obj> no_relation,no_relation
+ ends up having a lot of fun intend to have the event again.,<triplet>  ends up having a lot of fun <subj> to have the event again. <obj> intend,intend
+lives far away from climb back down,<triplet>  lives far away from  <subj> climb back down <obj> no_relation,no_relation
+never ate to think differently,<triplet>  never ate <subj> to think differently <obj> no_relation,no_relation
+ just got a new job intend to advance his career,<triplet>  just got a new job <subj> to advance his career <obj> intend,intend
+ takes  approach intend to encourage him,<triplet>  takes  approach <subj> to encourage him <obj> intend,intend
+watches for hours which can be inconvenient but ultimately more secure.,<triplet>  watches for hours <subj> which can be inconvenient but ultimately more secure. <obj> no_relation,no_relation
+ is glad to see the back of  intend to gain knowledge,<triplet>  is glad to see the back of  <subj> to gain knowledge <obj> intend,intend
+Applying sunscreen with an SPF of 30 or higher before going outside to grab something,<triplet> Applying sunscreen with an SPF of 30 or higher before going outside <subj> to grab something <obj> no_relation,no_relation
+ loses every game cause  yells in frustration,<triplet>  loses every game <subj>  yells in frustration <obj> cause,cause
+"The car wouldn't start
+so
+he filled up the tank",<triplet> The car wouldnt start <subj> he filled up the tank <obj> enable,enable
+cuts badly NOT TO MOVE,<triplet>  cuts badly <subj> NOT TO MOVE <obj> no_relation,no_relation
+ gets  for christmas intend say thank you,<triplet>  gets for christmas <subj> say thank you <obj> intend,intend
+"The sprinkler system will activate
+if
+there is a drought",<triplet> The sprinkler system will activate <subj> there is a drought <obj> enable,enable
+ quickly grabbed  cause be correct,<triplet>  quickly grabbed  <subj> be correct <obj> cause,cause
+ passes with flying colors intend to be happy joyful,<triplet>  passes with flying colors <subj> to be happy joyful <obj> intend,intend
+revolves around the sun is found,<triplet>  revolves around the sun <subj> is found <obj> no_relation,no_relation
+"The phone's setting
+is
+not on mute",<triplet> The phones setting <subj> not on mute <obj> enable,enable
+takes a drive to stay in bed,<triplet>  takes a drive <subj> to stay in bed <obj> no_relation,no_relation
+packs the car to ask for a recommendation,<triplet>  packs the car <subj> to ask for a recommendation <obj> no_relation,no_relation
+ avoids  much cause loses talents,<triplet>  avoids much <subj> loses talents <obj> cause,cause
+ The balloon's buoyancy   allows   it,<triplet>  The balloons buoyancy <subj>  it <obj> enable,enable
+"Wearing gloves, safety goggles, and protective clothing during hazardous activities or handling dangerous materials prevents exposure to chemicals, radiation, or other hazards that can cause harm or injury.","<triplet> Wearing gloves, safety goggles, and protective clothing during hazardous activities or handling dangerous materials <subj> exposure to chemicals, radiation, or other hazards that can cause harm or injury. <obj> prevent",prevent
+ plays against  cause gets sweaty,<triplet>  plays against  <subj> gets sweaty <obj> cause,cause
+ cuts  intend to hurt Person Y,<triplet>  cuts  <subj> to hurt Person Y <obj> intend,intend
+ invites some friends cause gets a call from the police,<triplet>  invites some friends <subj> gets a call from the police <obj> cause,cause
+ If my frien is free   enabling   we can go to the movies,<triplet>  If my frien is free <subj>  we can go to the movies <obj> enable,enable
+ draws  to the fact cause receives recognition,<triplet>  draws to the fact <subj> receives recognition <obj> cause,cause
+shoots first and ask questions later headlights allow others to see you.,<triplet>  shoots first and ask questions later <subj> headlights allow others to see you. <obj> no_relation,no_relation
+needs extra money the user to run newer applications more efficiently,<triplet>  needs extra money <subj> the user to run newer applications more efficiently <obj> no_relation,no_relation
+is scared and nervous talk,<triplet>  is scared and nervous <subj> talk <obj> no_relation,no_relation
+ recognizes  intend clean the mirror,<triplet>  recognizes  <subj> clean the mirror <obj> intend,intend
+ comes  soon intend Visits for a while,<triplet>  comes soon <subj> Visits for a while <obj> intend,intend
+ buys a new fish intend to eat,<triplet>  buys a new fish <subj> to eat <obj> intend,intend
+ opens  door intend to go back about their business,<triplet>  opens  door <subj> to go back about their business <obj> intend,intend
+ is great for  cause x feels lucky,<triplet>  is great for  <subj> x feels lucky <obj> cause,cause
+makes a funny noise the room,<triplet>  makes a funny noise <subj> the room <obj> no_relation,no_relation
+"If you have an emergency fund
+you can
+cover unexpected expenses and avoid financial stress during difficult times.",<triplet> If you have an emergency fund <subj> cover unexpected expenses and avoid financial stress during difficult times. <obj> enable,enable
+ heads to  intend to visit ,<triplet>  heads to  <subj> to visit  <obj> intend,intend
+never returned make phone calls without using cellular data,<triplet>  never returned <subj> make phone calls without using cellular data <obj> no_relation,no_relation
+hires to help wants to buy personx shoes,<triplet>  hires to help  <subj> wants to buy personx shoes <obj> no_relation,no_relation
+After I have washed my hands thoroughly to wait for their response,<triplet> After I have washed my hands thoroughly <subj> to wait for their response <obj> no_relation,no_relation
+ goes back outside intend to going outside,<triplet>  goes back outside <subj> to going outside <obj> intend,intend
+ sounds like something intend to get away from him,<triplet>  sounds like something <subj> to get away from him <obj> intend,intend
+Having a functional greenhouse ensures an ease in growing plants year-round,<triplet> Having a functional greenhouse <subj> growing plants year-round <obj> enable,enable
+removes  from office The shop employee rings X up.,<triplet>  removes  from office <subj> The shop employee rings X up. <obj> no_relation,no_relation
+Theoor is unlocke. gets back on subject,<triplet>  Theoor is unlocke. <subj> gets back on subject <obj> no_relation,no_relation
+has enough money to buy it to go home and change,<triplet>  has enough money to buy it <subj> to go home and change <obj> no_relation,no_relation
+ applies the  to cases cause  applies the results to cases,<triplet>  applies the to cases <subj>  applies the results to cases <obj> cause,cause
+shows  the door the remote control to work properly,<triplet>  shows  the door <subj>  the remote control to work properly <obj> no_relation,no_relation
+"Wearing a life jacket while swimming in open water accidents, injuries, and fatalities resulting in substantial medical bills or lost wages caused by engaging in high-risk activities.","<triplet> Wearing a life jacket while swimming in open water <subj> accidents, injuries, and fatalities resulting in substantial medical bills or lost wages caused by engaging in high-risk activities. <obj> no_relation",no_relation
+ finds it a new home cause welcomes it home,<triplet>  finds it a new home <subj> welcomes it home <obj> cause,cause
+"A working microwave
+allows for
+quick and easy reheating of leftovers",<triplet> A working microwave <subj> quick and easy reheating of leftovers <obj> enable,enable
+ lives in  area intend to have a BBQ with ,<triplet>  lives in  area <subj> to have a BBQ with  <obj> intend,intend
+If a light switch is on undercooked or overcooked food that could result in health hazards.,<triplet> If a light switch is on <subj> undercooked or overcooked food that could result in health hazards. <obj> no_relation,no_relation
+"He wore a seatbelt in the car
+to avoid injury
+during an accident",<triplet> He wore a seatbelt in the car <subj> during an accident <obj> enable,enable
+Keeping young children away from a swimming pool without adult supervision check the wound,<triplet> Keeping young children away from a swimming pool without adult supervision <subj> check the wound <obj> no_relation,no_relation
+ clears the  away cause is dirty,<triplet>  clears the away <subj> is dirty <obj> cause,cause
+ learns programming intend to be a programmer,<triplet>  learns programming <subj> to be a programmer <obj> intend,intend
+allergic to cats you can easily chop vegetables for your salad.,<triplet>  allergic to cats <subj> you can easily chop vegetables for your salad. <obj> no_relation,no_relation
+ climbs  cause gets dirty,<triplet>  climbs  <subj> gets dirty <obj> cause,cause
+Installing smoke detectors in the home pressing the power button,<triplet> Installing smoke detectors in the home <subj> pressing the power button <obj> no_relation,no_relation
+asks for it dog jumps on this person,<triplet>  asks for it <subj> dog jumps on this person <obj> no_relation,no_relation
+ gets an ipad intend to boot it up,<triplet>  gets an ipad <subj> to boot it up <obj> intend,intend
+ sets eyes on  intend to avoid him,<triplet>  sets eyes on  <subj> to avoid him <obj> intend,intend
+"If the door lock is turned, KNOWLEDGE","<triplet> If the door lock is turned, <subj> KNOWLEDGE <obj> no_relation",no_relation
+ learns the piano cause gets rejected to play in a bend,<triplet>  learns the piano <subj> gets rejected to play in a bend <obj> cause,cause
+"If you want to start a fire
+using
+kindling and dry wood as fuel to make sure it burns properly.",<triplet> If you want to start a fire <subj> kindling and dry wood as fuel to make sure it burns properly. <obj> enable,enable
+ updates every  cause they make sure they made no errors.,<triplet>  updates every  <subj> they make sure they made no errors. <obj> cause,cause
+ swims back to shore intend to be on land,<triplet>  swims back to shore <subj> to be on land <obj> intend,intend
+you can easily open it and enter. to take it back,<triplet> you can easily open it and enter. <subj> to take it back <obj> no_relation,no_relation
+takes some time to take a picture,<triplet>  takes some time <subj> to take a picture <obj> no_relation,no_relation
+ gets the chance intend to demonstrate some ability,<triplet>  gets the chance <subj> to demonstrate some ability <obj> intend,intend
+gets better grades to save him,<triplet>  gets better grades <subj> to save him <obj> no_relation,no_relation
+ needs some extra cash intend for a movie,<triplet>  needs some extra cash <subj> for a movie <obj> intend,intend
+ sends  to the assembly intend sends principle to the assembly,<triplet>  sends to the assembly <subj> sends principle to the assembly <obj> intend,intend
+opens the gate watches TV,<triplet>  opens the gate <subj> watches TV <obj> no_relation,no_relation
+"Seeking timely medical attention for injuries or illnesses prevents the worsening of symptoms, potential complications, and extended hospitalization periods.","<triplet> Seeking timely medical attention for injuries or illnesses <subj> the worsening of symptoms, potential complications, and extended hospitalization periods. <obj> prevent",prevent
+gets a new watch it can be touched without smudging,<triplet>  gets a new watch <subj> it can be touched without smudging <obj> no_relation,no_relation
+passes serious head injuries and fatalities,<triplet>  passes  <subj> serious head injuries and fatalities <obj> no_relation,no_relation
+ hits  in the face cause bleeding from their nose,<triplet>  hits  in the face <subj> bleeding from their nose <obj> cause,cause
+watches the news to relax,<triplet>  watches the news  <subj> to relax <obj> no_relation,no_relation
+"When the light switch is turned on
+allows
+the room to be illuminated",<triplet> When the light switch is turned on <subj> the room to be illuminated <obj> enable,enable
+"go to college cognitive function, memory, and concentration, preventing fatigue, drowsiness, and other negative effects.","<triplet> go to college <subj> cognitive function, memory, and concentration, preventing fatigue, drowsiness, and other negative effects. <obj> no_relation",no_relation
+ starts dancing cause has good time,<triplet>  starts dancing <subj> has good time <obj> cause,cause
+Wearing seatbelts in vehicles accidents that can result in serious injuries or fatalities,<triplet> Wearing seatbelts in vehicles <subj> accidents that can result in serious injuries or fatalities <obj> no_relation,no_relation
+says bye to to avoid walking into more spiderwebs,<triplet>  says bye to  <subj> to avoid walking into more spiderwebs <obj> no_relation,no_relation
+ makes intercession for  intend to tell everyone,<triplet>  makes intercession for  <subj> to tell everyone <obj> intend,intend
+ approaches  intend to speak to personY,<triplet>  approaches  <subj> to speak to personY <obj> intend,intend
+ spends the rest of my life with  intend to be faithful,<triplet>  spends the rest of my life with  <subj> to be faithful <obj> intend,intend
+ commands  view intend to control ,<triplet>  commands  view <subj> to control  <obj> intend,intend
+ asks my wife cause  goes out to eat,<triplet>  asks my wife <subj>  goes out to eat <obj> cause,cause
+ provides  income cause tells  after providing their income,<triplet>  provides  income <subj> tells  after providing their income <obj> cause,cause
+"Taking the stairs instead of using the elevator prevents the buildup of obesity-related health issues, such as heart disease, diabetes, and high blood pressure","<triplet> Taking the stairs instead of using the elevator <subj> the buildup of obesity-related health issues, such as heart disease, diabetes, and high blood pressure <obj> prevent",prevent
+"Due to
+the availability of
+fresh fruits and vegetables",<triplet> Due to <subj> fresh fruits and vegetables <obj> enable,enable
+"If the car's engine
+is running,
+it can move forward.",<triplet> If the cars engine <subj> it can move forward. <obj> enable,enable
+finally convinced to relax on the island,<triplet>  finally convinced  <subj> to relax on the island <obj> no_relation,no_relation
+ gets married a year later intend to move in together,<triplet>  gets married a year later <subj> to move in together <obj> intend,intend
+returns the book to be sociable,<triplet>  returns the book <subj> to be sociable <obj> no_relation,no_relation
+ says unto thee intend to offer encouraging words,<triplet>  says unto thee <subj> to offer encouraging words <obj> intend,intend
+ plays both sides against the middle intend to take advantage of both sides,<triplet>  plays both sides against the middle <subj> to take advantage of both sides <obj> intend,intend
+has great fun permitting the device to operate smoothly.,<triplet>  has great fun <subj> permitting the device to operate smoothly. <obj> no_relation,no_relation
+"If a computer
+has sufficient memory
+then it can run multiple programs simultaneously",<triplet> If a computer <subj> then it can run multiple programs simultaneously <obj> enable,enable
+ Wearing earplugs in a loud environment prevents damage to your hearing over time,<triplet> Wearing earplugs in a loud environment <subj> damage to your hearing over time <obj> prevent,prevent
+pushes into the pool doubt,<triplet>  pushes into the pool <subj> doubt <obj> no_relation,no_relation
+ uses  to support intend to calm down the situation,<triplet>  uses to support <subj> to calm down the situation <obj> intend,intend
+"After you put on the brakes
+is enabling
+your car to stop moving.",<triplet> After you put on the brakes <subj> your car to stop moving. <obj> enable,enable
+ learns to cook intend to practice cooking,<triplet>  learns to cook <subj> to practice cooking <obj> intend,intend
+ looks back at  cause leaves,<triplet>  looks back at  <subj> leaves <obj> cause,cause
+persuades to change to be a role model,<triplet>  persuades to change <subj> to be a role model <obj> no_relation,no_relation
+ lone it it intend to get it back soon.,<triplet>  lone it it <subj> to get it back soon. <obj> intend,intend
+ gives gifts intend to feel good,<triplet>  gives gifts <subj> to feel good <obj> intend,intend
+One holds a valid license  enabling operating heavy equipment on a construction site,<triplet> One holds a valid license <subj> operating heavy equipment on a construction site <obj> enable,enable
+"If a person exercises regularly
+then
+their body will be in good physical shape.",<triplet> If a person exercises regularly <subj> their body will be in good physical shape. <obj> enable,enable
+A well-prepared road picks up a science journal,<triplet> A well-prepared road <subj> picks up a science journal <obj> no_relation,no_relation
+ takes  to disneyland cause sees characters in costumes,<triplet>  takes to disneyland <subj> sees characters in costumes <obj> cause,cause
+ flies out of the traps intend to ampute foot,<triplet>  flies out of the traps <subj> to ampute foot <obj> intend,intend
+ invites to a party intend to buy a new suit,<triplet>  invites to a party <subj> to buy a new suit <obj> intend,intend
+ buys everything cause Carries everything,<triplet>  buys everything <subj> Carries everything <obj> cause,cause
+ makes a long story short intend to be the center of attention,<triplet>  makes a long story short <subj> to be the center of attention <obj> intend,intend
+ The battery   enabling   theevice to function properly without any interruption.,<triplet>  The battery <subj>  theevice to function properly without any interruption. <obj> enable,enable
+"The oven's temperature
+allows
+us",<triplet> The ovens temperature <subj> us <obj> enable,enable
+ The opene winow   allows  for fresh air to circulate insie the room,<triplet>  The opene winow <subj>  fresh air to circulate insie the room <obj> enable,enable
+"Adopting safe sex practices, such as using condoms or getting tested for STDs can prevent the spread of sexually transmitted infections.","<triplet> Adopting safe sex practices, such as using condoms or getting tested for STDs <subj> the spread of sexually transmitted infections. <obj> prevent",prevent
+Avoiding distractions such as texting or talking on the phone while driving sit down,<triplet> Avoiding distractions such as texting or talking on the phone while driving <subj> sit down <obj> no_relation,no_relation
+"Investing in a quality roof for your house prevents water damage caused by heavy rains or snow melting, which can lead to mold growth and structural issues.","<triplet> Investing in a quality roof for your house <subj> water damage caused by heavy rains or snow melting, which can lead to mold growth and structural issues. <obj> prevent",prevent
+prevents the from reaching welcomes,<triplet>  prevents the from reaching <subj> welcomes <obj> no_relation,no_relation
+ kills the  but can not kill intend to make amends,<triplet>  kills the but can not kill <subj> to make amends <obj> intend,intend
+ confines within limits cause experiences boredom,<triplet>  confines within limits <subj> experiences boredom <obj> cause,cause
+gets really bored damage to property due to malfunctioning sprinkler systems or obstructed water flow.,<triplet>  gets really bored <subj> damage to property due to malfunctioning sprinkler systems or obstructed water flow. <obj> no_relation,no_relation
+"When the game
+is over,
+you can pack up your belongings.",<triplet> When the game <subj> you can pack up your belongings. <obj> enable,enable
+tells  something your breath will be fresher.,<triplet>  tells  something <subj> your breath will be fresher. <obj> no_relation,no_relation
+buys for the occasion shake hands with opponent,<triplet>  buys for the occasion <subj> shake hands with opponent <obj> no_relation,no_relation
+The light bulb was burnt out burns fingers,<triplet> The light bulb was burnt out <subj> burns fingers <obj> no_relation,no_relation
+ buys new shoes intend wear the shoes,<triplet>  buys new shoes <subj> wear the shoes <obj> intend,intend
+reminds  of PersonZ death or serious injury caused by smoke inhalation during fires,<triplet>  reminds  of PersonZ <subj> death or serious injury caused by smoke inhalation during fires <obj> no_relation,no_relation
+ is late to class intend to apologize,<triplet>  is late to class <subj> to apologize <obj> intend,intend
+brushes away the To get something fixed,<triplet>  brushes away the  <subj> To get something fixed <obj> no_relation,no_relation
+ takes  in the park intend to be nice to her dog,<triplet>  takes in the park <subj> to be nice to her dog <obj> intend,intend
+decides to do something about it taps foot to the beat,<triplet>  decides to do something about it <subj> taps foot to the beat <obj> no_relation,no_relation
+If you have a valid drivers license listen to it,<triplet> If you have a valid drivers license <subj> listen to it <obj> no_relation,no_relation
+applies for college to thank,<triplet>  applies for college <subj> to thank  <obj> no_relation,no_relation
+"as the proper amount of water helps the plants thrive.
+by
+watering them at regular intervals and avoiding over- or under-watering.",<triplet> as the proper amount of water helps the plants thrive. <subj> watering them at regular intervals and avoiding over- or under-watering. <obj> enable,enable
+Applying sunscreen before going outside prevents skin cancer caused by prolonged exposure to UV rays ,<triplet> Applying sunscreen before going outside <subj> skin cancer caused by prolonged exposure to UV rays  <obj> prevent,prevent
+ wants to fight  cause walks away,<triplet>  wants to fight  <subj> walks away <obj> cause,cause
+ stays home from school intend to watch tv,<triplet>  stays home from school <subj> to watch tv <obj> intend,intend
+"makes some soup nutrient deficiencies, obesity, and associated health conditions such as type 2 diabetes.","<triplet>  makes some soup <subj> nutrient deficiencies, obesity, and associated health conditions such as type 2 diabetes. <obj> no_relation",no_relation
+ wants to make sure intend to make sure,<triplet>  wants <ARG1>to make sure</ARG1> <subj> to make sure <obj> intend,intend
+gives a reward wins the competition,<triplet>  gives a reward <subj> wins the competition <obj> no_relation,no_relation
+is When the water level is low is  enabling   you to easily walk across the river.,<triplet> is When the water level is low <subj>  you to easily walk across the river. <obj> enable,enable
+washes everything gets convicted,<triplet>  washes everything <subj> gets convicted <obj> no_relation,no_relation
+ is good enough intend make good money,<triplet>  is good enough <subj> make good money <obj> intend,intend
+ gets  today cause thanks the giver,<triplet>  gets today <subj> thanks the giver <obj> cause,cause
+see band intend listen to music,<triplet> see band <subj> listen to music <obj> intend,intend
+can get one swim in it during summer,<triplet>  can get one <subj> swim in it during summer <obj> no_relation,no_relation
+Practicing safe sex with a partner who has been tested for STDs drowning or other water-related accidents.,<triplet> Practicing safe sex with a partner who has been tested for STDs <subj> drowning or other water-related accidents. <obj> no_relation,no_relation
+ makes  approach intend Ask personX questions,<triplet>  makes  approach <subj> Ask personX questions <obj> intend,intend
+In good condition to see the sites,<triplet> In good condition <subj> to see the sites <obj> no_relation,no_relation
+brings to a crisis the school work is done,<triplet>  brings to a crisis <subj> the school work is done <obj> no_relation,no_relation
+attend school intend get good job,<triplet> attend school <subj> get good job <obj> intend,intend
+" Conducting regular maintenance on machinery prevents downtime, breakdowns, and accidents due to mechanical failure","<triplet> Conducting regular maintenance on machinery <subj> downtime, breakdowns, and accidents due to mechanical failure <obj> prevent",prevent
+ hears  behind  cause Is hits from behind,<triplet>  hears behind  <subj> Is hits from behind <obj> cause,cause
+ cooks dinner cause has food ready to eat,<triplet>  cooks dinner <subj> has food ready to eat <obj> cause,cause
+ takes a walk  intend get some fresh air,<triplet>  takes a walk  <subj> get some fresh air <obj> intend,intend
+ has a great day intend to have another great day,<triplet>  has a great day <subj> to have another great day <obj> intend,intend
+ has it both ways intend not spend time around them anymore,<triplet>  has it both ways <subj> not spend time around them anymore <obj> intend,intend
+"Eating fruits and vegetables instead of fast food and processed snacks prevents high cholesterol, heart disease, and related health problems from unhealthy eating habits.","<triplet> Eating fruits and vegetables instead of fast food and processed snacks <subj> high cholesterol, heart disease, and related health problems from unhealthy eating habits. <obj> prevent",prevent
+sees for the first time To finish off the work,<triplet>  sees for the first time <subj> To finish off the work <obj> no_relation,no_relation
+ lays the  on the table cause wind blows book off table,<triplet>  lays the on the table <subj> wind blows book off table <obj> cause,cause
+ uses  to keep cause takes action.,<triplet>  uses to keep <subj> takes action. <obj> cause,cause
+ gives  a haircut intend To be famous,<triplet>  gives  a haircut <subj> To be famous <obj> intend,intend
+Implementing strict food safety protocols in restaurants and food processing facilities prevents foodborne illnesses such as salmonella or E. coli outbreaks that can result in health scares and lost revenue for businesses.,<triplet> Implementing strict food safety protocols in restaurants and food processing facilities <subj> foodborne illnesses such as salmonella or E. coli outbreaks that can result in health scares and lost revenue for businesses. <obj> prevent,prevent
+"acts as a barrier, preventing severe sunburns and related skin damages",<triplet> acts as a barrier <subj> severe sunburns and related skin damages <obj> prevent,prevent
+ gets surgery intend to rest at home.,<triplet>  gets surgery <subj> to rest at home. <obj> intend,intend
+ gets treatment cause obeys doctors,<triplet>  gets treatment <subj> obeys doctors <obj> cause,cause
+learns how to play guitar win the match,<triplet>  learns how to play guitar <subj> win the match <obj> no_relation,no_relation
+"The car's tires are properly inflated
+reduces the risk of a blowout while driving
+the risk of a blowout while driving is reduced.",<triplet> The cars tires are properly inflated <subj> the risk of a blowout while driving is reduced. <obj> enable,enable
+ knows  personally intend Tells them more stories.,<triplet>  knows personally <subj> Tells them more stories. <obj> intend,intend
+ takes the plunge intend to relax,<triplet>  takes the plunge <subj> to relax <obj> intend,intend
+ brushes  teeth intend to floss,<triplet>  brushes  teeth <subj> to floss <obj> intend,intend
+"treats in patients drowning or other water-related accidents, especially for young children or weak swimmers","<triplet>  treats in patients <subj> drowning or other water-related accidents, especially for young children or weak swimmers <obj> no_relation",no_relation
+decides to eat it to crush it,<triplet>  decides to eat it <subj> to crush it <obj> no_relation,no_relation
+Keeping a clean work environment can prevent accidents and injuries in the workplace,<triplet> Keeping a clean work environment <subj> accidents and injuries in the workplace <obj> prevent,prevent
+"The stairs are not slippery
+ensuring
+our safety while climbing them.",<triplet> The stairs are not slippery <subj> our safety while climbing them. <obj> enable,enable
+ brings a knife to a gunfight intend to laugh,<triplet>  brings a knife to a gunfight <subj> to laugh <obj> intend,intend
+"Applying sunscreen with an SPF of 30 or higher prevents sunburn, skin cancer, and premature aging caused by UV radiation.","<triplet> Applying sunscreen with an SPF of 30 or higher <subj> sunburn, skin cancer, and premature aging caused by UV radiation. <obj> prevent",prevent
+ sends  a text message intend to talk to someone,<triplet>  sends a text message <subj> to talk to someone <obj> intend,intend
+Having a working air conditioning unit groans in pain,<triplet> Having a working air conditioning unit <subj>  groans in pain <obj> no_relation,no_relation
+Turning off the stove before leaving the kitchen can prevent fires from starting accidentally,<triplet> Turning off the stove before leaving the kitchen <subj> fires from starting accidentally <obj> prevent,prevent
+leaves no stone unturned to eat lunch,<triplet>  leaves no stone unturned <subj> to eat lunch <obj> no_relation,no_relation
+ drives across town cause sees new store,<triplet>  drives across town <subj> sees new store <obj> cause,cause
+The door can be opened to buy some fruit,<triplet> The door can be opened <subj> to buy some fruit <obj> no_relation,no_relation
+ reads comics cause is entertained,<triplet>  reads comics <subj> is entertained <obj> cause,cause
+ has to get a cast cause LOTARY,<triplet>  has to get a cast <subj> LOTARY <obj> cause,cause
+feels strange to get a new phone,<triplet>  feels strange <subj> to get a new phone <obj> no_relation,no_relation
+steals a glance to have a companion,<triplet>  steals a glance <subj> to have a companion <obj> no_relation,no_relation
+draws attention to the fact to deal with persony later,<triplet>  draws attention to the fact <subj> to deal with persony later <obj> no_relation,no_relation
+buys a sweater we can make a cake,<triplet>  buys a sweater <subj> we can make a cake <obj> no_relation,no_relation
+ never tried intend to be lazy,<triplet>  never tried <subj> to be lazy <obj> intend,intend
+Wearing sunscreen with at least SPF 30 while spending time outdoors during daylight hours prevents skin cancer and premature aging due to UV radiation exposure.,<triplet> Wearing sunscreen with at least SPF 30 while spending time outdoors during daylight hours <subj> skin cancer and premature aging due to UV radiation exposure. <obj> prevent,prevent
+ makes the trip intend catch up,<triplet>  makes the trip <subj> catch up <obj> intend,intend
+ finds  way intend to set example,<triplet>  finds  way <subj> to set example <obj> intend,intend
+ smells so good cause others stand closer to  than normal,<triplet>  smells so good <subj> others stand closer to  than normal <obj> cause,cause
+The door is unlocked Person Y to leave them alone.,<triplet> The door is unlocked <subj> Person Y to leave them alone. <obj> no_relation,no_relation
+ files for divorce  intend to be separated from their spouse,<triplet>  files for divorce  <subj> to be separated from their spouse <obj> intend,intend
+an alarm will sound automatically be acknowledged,<triplet> an alarm will sound automatically <subj> be acknowledged <obj> no_relation,no_relation
+ tells  off cause goes to cool off,<triplet>  tells  off <subj> goes to cool off <obj> cause,cause
+gives a present to close the shed,<triplet>  gives a present <subj> to close the shed <obj> no_relation,no_relation
+wants to leave has a conversation,<triplet>  wants to leave <subj>  has a conversation <obj> no_relation,no_relation
+"When the train arrives
+can
+board it",<triplet> When the train arrives <subj> board it <obj> enable,enable
+refuses to listen to hide,<triplet>  refuses to listen <subj> to hide <obj> no_relation,no_relation
+ looks at  closely intend to figure out what they meman,<triplet>  looks at  closely <subj> to figure out what they meman <obj> intend,intend
+When the storm subsides to take speedier mode of transportation,<triplet> When the storm subsides <subj> to take speedier mode of transportation <obj> no_relation,no_relation
+ serves  function intend to be promoted,<triplet>  serves  function <subj> to be promoted <obj> intend,intend
+has to get a cast TO BE HONEST,<triplet>  has to get a cast <subj> TO BE HONEST <obj> no_relation,no_relation
+ decides to take a nap intend to get up and stretch.,<triplet>  decides to take a nap <subj> to get up and stretch. <obj> intend,intend
+learns how to drive you to put the pizza insie,<triplet>  learns how to drive <subj>  you to put the pizza insie <obj> no_relation,no_relation
+ buys  the next day cause is paid,<triplet>  buys the next day <subj> is paid <obj> cause,cause
+ tells  to intend to do a good job,<triplet>  tells  to <subj> to do a good job <obj> intend,intend
+accepts another was enabled to be opened,<triplet>  accepts another  <subj> was enabled to be opened <obj> no_relation,no_relation
+ admits  into the union intend to get to know the union rules,<triplet>  admits into the union <subj> to get to know the union rules <obj> intend,intend
+"When the bus
+arrives at our stop
+we can get off and walk home.",<triplet> When the bus <subj> we can get off and walk home. <obj> enable,enable
+Installing smoke detectors throughout your home prevents house fires from causing fatalities or serious injuries.,<triplet> Installing smoke detectors throughout your home <subj> house fires from causing fatalities or serious injuries. <obj> prevent,prevent
+says  would to spend money,<triplet>  says  would <subj> to spend money <obj> no_relation,no_relation
+ decides to go swimming intend work out,<triplet>  decides to go swimming <subj> work out <obj> intend,intend
+gets  understanding to use what they bought,<triplet>  gets  understanding <subj> to use what they bought <obj> no_relation,no_relation
+patiently waited to relax,<triplet>  patiently waited <subj> to relax <obj> no_relation,no_relation
+ goes from  cause is relieved,<triplet>  goes from  <subj> is relieved <obj> cause,cause
+ loses a bet intend to stop and go do something else,<triplet>  loses a bet <subj> to stop and go do something else <obj> intend,intend
+When a fire alarm is triggered has less envelopes,<triplet> When a fire alarm is triggered <subj> has less envelopes <obj> no_relation,no_relation
+ takes a day trip intend to feel free,<triplet>  takes a day trip <subj> to feel free <obj> intend,intend
+ provides  to help cause gets excersice,<triplet>  provides to help <subj> gets excersice <obj> cause,cause
+"She couldn't open the file
+until
+she entered the correct password",<triplet> She couldnt open the file <subj> she entered the correct password <obj> enable,enable
+Locking the doors and windows prevents break-ins and burglaries,<triplet> Locking the doors and windows <subj> break-ins and burglaries <obj> prevent,prevent
+makes time watch it on TV.,<triplet>  makes time <subj> watch it on TV. <obj> no_relation,no_relation
+"Avoiding the use of tobacco products or exposure to secondhand smoke prevents lung cancer, heart disease, or other smoking-related illnesses.","<triplet> Avoiding the use of tobacco products or exposure to secondhand smoke <subj> lung cancer, heart disease, or other smoking-related illnesses. <obj> prevent",prevent
+is the first one Loses income from missed work,<triplet>  is the first one <subj> Loses income from missed work <obj> no_relation,no_relation
+exchanges gifts says what he needs to,<triplet>  exchanges gifts <subj>  says what he needs to <obj> no_relation,no_relation
+" takes  to work intend Start working, now they are at work and ready to start working.","<triplet>  takes to work <subj> Start working, now they are at work and ready to start working. <obj> intend",intend
+ turns every  cause problem for other people,<triplet>  turns every  <subj> problem for other people <obj> cause,cause
+ loves to draw cause gets paint on themselves,<triplet>  loves to draw <subj> gets paint on themselves <obj> cause,cause
+drops the mic receives a greeting,<triplet>  drops the mic <subj> receives a greeting <obj> no_relation,no_relation
+ If a person has mastere public speaking   enables  they will be more likely to persuae others in their arguments.,<triplet>  If a person has mastere public speaking <subj>  they will be more likely to persuae others in their arguments. <obj> enable,enable
+ names the baby cause Appreciated,<triplet>  names the baby <subj> Appreciated <obj> cause,cause
+ balances the books intend To transport books,<triplet>  balances the books <subj> To transport books <obj> intend,intend
+ pulls  cause gets yelled at,<triplet>  pulls  <subj> gets yelled at <obj> cause,cause
+Conducting regular maintenance on appliances and equipment prevents breakdowns or malfunctions,<triplet> Conducting regular maintenance on appliances and equipment <subj> breakdowns or malfunctions <obj> prevent,prevent
+ teaches the class cause They spend time with students,<triplet>  teaches the class <subj> They spend time with students <obj> cause,cause
+ spends the next week intend go to different locations,<triplet>  spends the next week <subj> go to different locations <obj> intend,intend
+ meets a girl cause blushes,<triplet>  meets a girl <subj> blushes <obj> cause,cause
+"Brushing teeth for two minutes in the morning and at night and flossing daily prevents tooth decay, gum disease, and bad breath.","<triplet> Brushing teeth for two minutes in the morning and at night and flossing daily <subj> tooth decay, gum disease, and bad breath. <obj> prevent",prevent
+ thinks might want intend to be think,<triplet>  thinks might want <subj> to be think <obj> intend,intend
+takes  turn gets a receipt for payment,<triplet>  takes  turn <subj> gets a receipt for payment <obj> no_relation,no_relation
+enters the competition for extended periods of time.,<triplet>  enters the competition <subj> for extended periods of time. <obj> no_relation,no_relation
+ pulls  back cause they get over it better,<triplet>  pulls  back <subj> they get over it better <obj> cause,cause
+"When the light turns green
+you can cross
+the street",<triplet> When the light turns green <subj> the street <obj> enable,enable
+ invites  over intend t give  the invitation,<triplet>  invites  over <subj> t give  the invitation <obj> intend,intend
+ Wearing sunscreen with an SPF of  or higher prevents skin cancer from developing,<triplet> Wearing sunscreen with an SPF of or higher <subj> skin cancer from developing <obj> prevent,prevent
+When its raining and windy it from capsizing or sinking.,<triplet> When its raining and windy <subj> it from capsizing or sinking. <obj> no_relation,no_relation
+ notices a man cause HE WAVES AT HIM,<triplet>  notices a man <subj> HE WAVES AT HIM <obj> cause,cause
+ goes viral intend to make money off it,<triplet>  goes viral <subj> to make money off it <obj> intend,intend
+buys flowers To make a statement,<triplet>  buys flowers <subj> To make a statement <obj> no_relation,no_relation
+ supplies the  with water intend to be helpful,<triplet>  supplies the with water <subj> to be helpful <obj> intend,intend
+"The computer has been restarted
+resolves the issue of:
+the computer not working properly",<triplet> The computer has been restarted <subj> the computer not working properly <obj> enable,enable
+thanks the for allowing eats something,<triplet>  thanks the for allowing <subj> eats something <obj> no_relation,no_relation
+Using a fire extinguisher in the event of a small kitchen fire they get an answer,<triplet> Using a fire extinguisher in the event of a small kitchen fire <subj> they get an answer <obj> no_relation,no_relation
+depends upon the degree does well,<triplet>  depends upon the degree <subj> does well <obj> no_relation,no_relation
+"Once the gas lung cancer, heart disease, and other serious health problems caused by tobacco use.","<triplet> Once the gas <subj> lung cancer, heart disease, and other serious health problems caused by tobacco use. <obj> no_relation",no_relation
+ spends  helping intend to help clean the empty house,<triplet>  spends helping <subj> to help clean the empty house <obj> intend,intend
+ clears  head cause Become clean,<triplet>  clears  head <subj> Become clean <obj> cause,cause
+In order to achieve a desired outcome fell down,<triplet> In order to achieve a desired outcome <subj> fell down <obj> no_relation,no_relation
+"Getting enough sleep prevents exhaustion, mood swings, and memory problems.","<triplet> Getting enough sleep <subj> exhaustion, mood swings, and memory problems. <obj> prevent",prevent
+ becomes very angry intend to rant,<triplet>  becomes very angry <subj> to rant <obj> intend,intend
+ buys a new car intend to be able to drive to work,<triplet>  buys a new car <subj> to be able to drive to work <obj> intend,intend
+knows the of the lord people to be joined,<triplet>  knows the of the lord <subj> people to be joined <obj> no_relation,no_relation
+ looks everywhere cause locates object,<triplet>  looks everywhere <subj> locates object <obj> cause,cause
+ immediately picked it intend to interact with it,<triplet>  immediately picked it <subj> to interact with it <obj> intend,intend
+ begins to feel better intend to feel their best,<triplet>  begins to feel better <subj> to feel their best <obj> intend,intend
+wins the challenge gets tired,<triplet>  wins the challenge <subj> gets tired <obj> no_relation,no_relation
+rushes to the hospital blushes,<triplet>  rushes to the hospital <subj> blushes <obj> no_relation,no_relation
+" finds  to watch intend surprised, grateful, happy","<triplet>  finds to watch <subj> surprised, grateful, happy <obj> intend",intend
+ arranges  interview intend to see if persony is qualified,<triplet>  arranges  interview <subj> to see if persony is qualified <obj> intend,intend
+runs for exercise to continue preventing,<triplet>  runs for exercise <subj> to continue preventing <obj> no_relation,no_relation
+"If you have
+a car
+you can drive to work.",<triplet> If you have <subj> you can drive to work. <obj> enable,enable
+shows  respect to go home,<triplet>  shows  respect <subj> to go home <obj> no_relation,no_relation
+ is doing really well intend continue doing their behaviors,<triplet>  is doing really well <subj> continue doing their behaviors <obj> intend,intend
+ drinks milk intend a cold drink,<triplet>  drinks milk <subj> a cold drink <obj> intend,intend
+"Using a seatbelt while driving can prevent injuries or fatalities in the event of an accident, but also prevents unnecessary expenses for medical bills and car repairs.","<triplet> Using a seatbelt while driving <subj> injuries or fatalities in the event of an accident, but also prevents <ARG1>unnecessary expenses for medical bills and car repairs. <obj> prevent",prevent
+"Once the water is brought to a boil
+and
+noodles can be added and cooked for several minutes.",<triplet> Once the water is brought to a boil <subj> noodles can be added and cooked for several minutes. <obj> enable,enable
+wins first place in the competition The schools will be closed for the day,<triplet>  wins first place in the competition <subj> The schools will be closed for the day <obj> no_relation,no_relation
+ takes a cab intend to go to the airport,<triplet>  takes a cab <subj> to go to the airport <obj> intend,intend
+The widespread use of renewable energy Give it attention.,<triplet> The widespread use of renewable energy <subj> Give it attention. <obj> no_relation,no_relation
+rides a horse smile,<triplet>  rides a horse <subj> smile <obj> no_relation,no_relation
+places in the microwave while cooking the eggs,<triplet>  places in the microwave <subj> while cooking the eggs <obj> no_relation,no_relation
+ plays games on it intend to have fun,<triplet>  plays games on it <subj> to have fun <obj> intend,intend
+ is shopping for groceries cause cook dinner,<triplet>  is shopping for groceries <subj> cook dinner <obj> cause,cause
+ decides to go for a swim intend to jump in the lake,<triplet>  decides to go for a swim <subj> to jump in the lake <obj> intend,intend
+"Wearing a life jacket while swimming in open water prevents drowning, hypothermia, or other injuries associated with accidents or mishaps on the water.","<triplet> Wearing a life jacket while swimming in open water <subj> drowning, hypothermia, or other injuries associated with accidents or mishaps on the water. <obj> prevent",prevent
+uses to control Searches for the book,<triplet>  uses to control <subj> Searches for the book <obj> no_relation,no_relation
+gets popular the chemical reaction between baking powder and acidic ingredients,<triplet>  gets popular <subj> the chemical reaction between baking powder and acidic ingredients <obj> no_relation,no_relation
+"It's Saturday and school is not in session.
+When
+We can have a picnic at the park.",<triplet> Its Saturday and school is not in session. <subj> We can have a picnic at the park. <obj> enable,enable
+kisses  on the forehead go home,<triplet>  kisses  on the forehead <subj> go home <obj> no_relation,no_relation
+ works  at work intend to do a good job,<triplet>  works at work <subj> to do a good job <obj> intend,intend
+Installing smoke alarms and having a fire evacuation plan at home getting stranded in snowstorms or heavy rainfalls,<triplet> Installing smoke alarms and having a fire evacuation plan at home <subj> getting stranded in snowstorms or heavy rainfalls <obj> no_relation,no_relation
+",
+then
+we have to wear boots.","<triplet> , <subj> we have to wear boots. <obj> enable",enable
+decides to get a new haircut uses camera,<triplet>  decides to get a new haircut <subj> uses camera <obj> no_relation,no_relation
+With enough oil in the engine add ingredients,<triplet> With enough oil in the engine <subj> add ingredients <obj> no_relation,no_relation
+ sounds  alarm cause sees people running,<triplet>  sounds  alarm <subj> sees people running <obj> cause,cause
+"When the oven
+is preheated
+to 400 degrees Fahrenheit,","<triplet> When the oven <subj> to 400 degrees Fahrenheit, <obj> enable",enable
+ spills everywhere cause jumps,<triplet>  spills everywhere <subj> jumps <obj> cause,cause
+ takes  to the city intend relax from their trip,<triplet>  takes to the city <subj> relax from their trip <obj> intend,intend
+ takes  at the time intend to be organized,<triplet>  takes at the time <subj> to be organized <obj> intend,intend
+ loses five pounds intend to be healthy,<triplet>  loses five pounds <subj> to be healthy <obj> intend,intend
+"After the teacher gives instructions, makes friends","<triplet> After the teacher gives instructions, <subj> makes friends <obj> no_relation",no_relation
+hits a parked car to start the conversation going,<triplet>  hits a parked car <subj> to start the conversation going <obj> no_relation,no_relation
+takes to a shop not make a big deal out of it,<triplet>  takes to a shop <subj> not make a big deal out of it <obj> no_relation,no_relation
+helps  out learns something,<triplet>  helps  out <subj> learns something <obj> no_relation,no_relation
+ shares  with others cause  runs out of resources,<triplet>  shares with others <subj>  runs out of resources <obj> cause,cause
+ stands beside  cause person y goes somewhere else,<triplet>  stands beside  <subj> person y goes somewhere else <obj> cause,cause
+ serves as  instrument intend to pay person x,<triplet>  serves as  instrument <subj> to pay person x <obj> intend,intend
+Using a fire extinguisher in the event of a small fire to go back,<triplet> Using a fire extinguisher in the event of a small fire <subj> to go back <obj> no_relation,no_relation
+ says bye intend to look forward to her next visit,<triplet>  says bye <subj> to look forward to her next visit <obj> intend,intend
+ shows  off intend meet new people,<triplet>  shows  off <subj> meet new people <obj> intend,intend
+ sheds  on this question cause ask questions,<triplet>  sheds on this question <subj> ask questions <obj> cause,cause
+has so much fun playing stays warm overnight,<triplet>  has so much fun playing <subj> stays warm overnight <obj> no_relation,no_relation
+ gives  up for adoption intend to get rid of someone,<triplet>  gives up for adoption <subj> to get rid of someone <obj> intend,intend
+" throws a tantrum intend upset, mad","<triplet>  throws a tantrum <subj> upset, mad <obj> intend",intend
+ works often intend to continue working,<triplet>  works often <subj> to continue working <obj> intend,intend
+ would not come out intend to coax him,<triplet>  would not come out <subj> to coax him <obj> intend,intend
+Avoiding smoking and secondhand smoke exposure the electronic locking system enables access to the room,<triplet> Avoiding smoking and secondhand smoke exposure <subj> the electronic locking system enables access to the room <obj> no_relation,no_relation
+ pushes  back cause gets anger,<triplet>  pushes  back <subj> gets anger <obj> cause,cause
+Eating a balanced and nutritious diet fatigue-related errors or accidents in the workplace,<triplet> Eating a balanced and nutritious diet <subj> fatigue-related errors or accidents in the workplace <obj> no_relation,no_relation
+"The computer's virus protection software is up to date
+guarantees
+its safety from potential attacks",<triplet> The computers virus protection software is up to date <subj> its safety from potential attacks <obj> enable,enable
+ The laer is stury   allows  the worker enabling the worker to access otherwise unreachable areas an complete their task more efficiently.,<triplet>  The laer is stury <subj>  enabling the worker to access otherwise unreachable areas an complete their task more efficiently. <obj> enable,enable
+comes near to get married,<triplet>  comes near  <subj> to get married <obj> no_relation,no_relation
+ comes a  at the door cause is greeted,<triplet>  comes a at the door <subj> is greeted <obj> cause,cause
+ uses  to defend intend to protect the castle,<triplet>  uses to defend <subj> to protect the castle <obj> intend,intend
+ is gaining weight cause does not exercise,<triplet>  is gaining weight <subj> does not exercise <obj> cause,cause
+"Following safe food handling practices, such as washing hands and utensils potential fires and related devastation","<triplet> Following safe food handling practices, such as washing hands and utensils <subj> potential fires and related devastation <obj> no_relation",no_relation
+ pours the batter cause puts cake in oven,<triplet>  pours the batter <subj> puts cake in oven <obj> cause,cause
+ shuffles off this mortal coil cause gets tired,<triplet>  shuffles off this mortal coil <subj> gets tired <obj> cause,cause
+ knows the answers intend to learn more,<triplet>  knows the answers <subj> to learn more <obj> intend,intend
+The batterys charge to understand the story,<triplet>  The batterys charge <subj> to understand the story <obj> no_relation,no_relation
+"Installing smoke detectors
+alerts
+occupants of a building in the event of a fire",<triplet> Installing smoke detectors <subj> occupants of a building in the event of a fire <obj> enable,enable
+wants to take a vacation thank X,<triplet>  wants to take a vacation <subj> thank X <obj> no_relation,no_relation
+adopts  policy is threatened,<triplet>  adopts  policy <subj> is threatened <obj> no_relation,no_relation
+ votes for the first time cause They tell family and friends about their experience.,<triplet>  votes for the first time <subj> They tell family and friends about their experience. <obj> cause,cause
+ gives  the message intend to thank ,<triplet>  gives  the message <subj> to thank  <obj> intend,intend
+Using a fire extinguisher to put out small fires before they become larger gets headache,<triplet> Using a fire extinguisher to put out small fires before they become larger <subj> gets headache <obj> no_relation,no_relation
+Locking doors and windows before leaving home prevents burglaries or break-ins while away from home.,<triplet> Locking doors and windows before leaving home <subj> burglaries or break-ins while away from home. <obj> prevent,prevent
+leaves my house to help .,<triplet>  leaves my house <subj> to help . <obj> no_relation,no_relation
+Maintaining a healthy body mass index (BMI) through a balanced diet and regular exercise the worsening of chronic conditions and complications from untreated illnesses,<triplet> Maintaining a healthy body mass index (BMI) through a balanced diet and regular exercise <subj> the worsening of chronic conditions and complications from untreated illnesses <obj> no_relation,no_relation
+ hops for the best intend to be optimistic.,<triplet>  hops for the best <subj> to be optimistic. <obj> intend,intend
+go to school intend get better job,<triplet> go to school <subj> get better job <obj> intend,intend
+ takes part in the campaign intend to put up signs,<triplet>  takes part in the campaign <subj> to put up signs <obj> intend,intend
+keeps  appointment to see the rising sun,<triplet>  keeps  appointment <subj> to see the rising sun <obj> no_relation,no_relation
+ returns the dog cause breathes sigh of relief,<triplet>  returns the dog <subj> breathes sigh of relief <obj> cause,cause
+ helps  lose weight intend to retain fitness,<triplet>  helps  lose weight <subj> to retain fitness <obj> intend,intend
+as he needs the proper equipment and skills to produce high-quality items. gets satisfied,<triplet> as he needs the proper equipment and skills to produce high-quality items. <subj> gets satisfied <obj> no_relation,no_relation
+"Installing smoke detectors in the home
+provides
+an early warning system for fires, potentially saving lives and property.","<triplet> Installing smoke detectors in the home <subj> an early warning system for fires, potentially saving lives and property. <obj> enable",enable
+The computers internet connection is stable unintended pregnancies or transmission of sexually transmitted infections,<triplet>  The computers internet connection is stable <subj> unintended pregnancies or transmission of sexually transmitted infections <obj> no_relation,no_relation
+saves by using muscle soreness and injuries that can result from sudden movements or overexertion.,<triplet>  saves by using <subj> muscle soreness and injuries that can result from sudden movements or overexertion. <obj> no_relation,no_relation
+ follows  example intend to attain something,<triplet>  follows  example <subj> to attain something <obj> intend,intend
+ has a glass of water intend to be healthy,<triplet>  has a glass of water <subj> to be healthy <obj> intend,intend
+Following safety procedures when handling hazardous materials can prevent accidents and injuries.,<triplet> Following safety procedures when handling hazardous materials <subj> accidents and injuries. <obj> prevent,prevent
+helps in  way becomes glad,<triplet>  helps in  way <subj> becomes glad <obj> no_relation,no_relation
+Exercising regularly to talk to,<triplet> Exercising regularly <subj> to talk to  <obj> no_relation,no_relation
+" Installing smoke detectors in the home prevents unintentional house fires and carbon monoxide poisoning, both of which can be fatal","<triplet> Installing smoke detectors in the home <subj> unintentional house fires and carbon monoxide poisoning, both of which can be fatal <obj> prevent",prevent
+Quitting smoking to receive assistance,<triplet> Quitting smoking <subj> to receive assistance <obj> no_relation,no_relation
+ gets  after school intend to hire Person X.,<triplet>  gets after school <subj> to hire Person X. <obj> intend,intend
+ gets pulled over intend to pay the fines,<triplet>  gets pulled over <subj> to pay the fines <obj> intend,intend
+"After the cake
+has cooled
+it can be decorated with frosting",<triplet> After the cake <subj> it can be decorated with frosting <obj> enable,enable
+Wearing sunscreen with SPF 30 or higher prevents skin cancer and premature aging caused by prolonged exposure to UV radiation.,<triplet> Wearing sunscreen with SPF 30 or higher <subj> skin cancer and premature aging caused by prolonged exposure to UV radiation. <obj> prevent,prevent
+ eats  at home intend to watch a movie,<triplet>  eats at home <subj> to watch a movie <obj> intend,intend
+ uses the money intend run out of money,<triplet>  uses the money <subj> run out of money <obj> intend,intend
+ fixes the tire cause start their journey,<triplet>  fixes the tire <subj> start their journey <obj> cause,cause
+stops caring serious injuries during car rides for children,<triplet>  stops caring <subj> serious injuries during car rides for children <obj> no_relation,no_relation
+Wearing a seat belt while in a vehicle inhibits serious injuries in case of an accident,<triplet> Wearing a seat belt while in a vehicle <subj> serious injuries in case of an accident <obj> prevent,prevent
+ makes an appointment intend to get an answer,<triplet>  makes an appointment <subj> to get an answer <obj> intend,intend
+"gets a team together the spread of infections such as norovirus, influenza, and staphylococcus.","<triplet>  gets a team together <subj> the spread of infections such as norovirus, influenza, and staphylococcus. <obj> no_relation",no_relation
+"If you have enough money
+you can
+buy anything you want",<triplet> If you have enough money <subj> buy anything you want <obj> enable,enable
+gets some water gets hurt,<triplet>  gets some water <subj> gets hurt <obj> no_relation,no_relation
+ quickly took intend to be done with it,<triplet>  quickly took <subj> to be done with it <obj> intend,intend
+ thinks would try intend for it to go well,<triplet>  thinks would try <subj> for it to go well <obj> intend,intend
+"Wearing a helmet when cycling on busy roads prevents head injuries in the event of an accident, which can be life-threatening or result in long-term impairment","<triplet> Wearing a helmet when cycling on busy roads <subj> head injuries in the event of an accident, which can be life-threatening or result in long-term impairment <obj> prevent",prevent
+"Wearing protective gear while performing dangerous tasks or playing sports prevents serious injuries or fatalities caused by accidents or collisions on the field, job site, or in the home.","<triplet> Wearing protective gear while performing dangerous tasks or playing sports <subj> serious injuries or fatalities caused by accidents or collisions on the field, job site, or in the home. <obj> prevent",prevent
+ puts  in a bag intend to carry it with them,<triplet>  puts in a bag <subj> to carry it with them <obj> intend,intend
+ falls among thieves intend to get personx to steal with them,<triplet>  falls among thieves <subj> to get personx to steal with them <obj> intend,intend
+"When the light turns green
+is enabling
+the car to proceed",<triplet> When the light turns green <subj> the car to proceed <obj> enable,enable
+"A properly inflated tire
+allows for safe driving
+on the road",<triplet> A properly inflated tire <subj> on the road <obj> enable,enable
+ lays to rest intend lay on bed,<triplet>  lays to rest <subj> lay on bed <obj> intend,intend
+is going on a field trip to welcome Y,<triplet>  is going on a field trip <subj> to welcome Y <obj> no_relation,no_relation
+The doorbell rings to nurture the pet,<triplet> The doorbell rings <subj> to nurture the pet <obj> no_relation,no_relation
+ is scared and nervous cause mouth agape on seeing Person X,<triplet>  is scared and nervous <subj> mouth agape on seeing Person X <obj> cause,cause
+ gives  the chance cause GIVE TENDENCY,<triplet>  gives  the chance <subj> GIVE TENDENCY <obj> cause,cause
+leaves the hospital have transportation,<triplet>  leaves the hospital <subj> have transportation <obj> no_relation,no_relation
+If the weather its safe to evacuate,<triplet> If the weather <subj>  its safe to evacuate <obj> no_relation,no_relation
+Installing a firewall on your computer  prevents unauthorized access to your personal information and data.,<triplet> Installing a firewall <subj> unauthorized access to your personal information and data. <obj> prevent,prevent
+"The car's tires
+are properly inflated,
+allowing it",<triplet> The cars tires <subj> allowing it <obj> enable,enable
+sends on the earth falls in love,<triplet>  sends on the earth <subj> falls in love <obj> no_relation,no_relation
+ arouses  interest intend to go shopping,<triplet>  arouses  interest <subj> to go shopping <obj> intend,intend
+Using a password manager and creating strong passwords prevents cybercriminals from stealing your personal information,<triplet> Using a password manager and creating strong passwords <subj> cybercriminals from stealing your personal information <obj> prevent,prevent
+"The phone
+when
+someone called from a remote location",<triplet> The phone <subj> someone called from a remote location <obj> enable,enable
+Using a fire extinguisher in case of emergencies prevents fire-related injuries and fatalities by providing an effective means of extinguishing flames.,<triplet> Using a fire extinguisher in case of emergencies <subj> fire-related injuries and fatalities by providing an effective means of extinguishing flames. <obj> prevent,prevent
+ sets the  in order intend everything organized,<triplet>  sets the in order <subj> everything organized <obj> intend,intend
+"The light switch is turned on
+When
+I can see clearly in the dark room.",<triplet> The light switch is turned on <subj> I can see clearly in the dark room. <obj> enable,enable
+is going out of business the gates can be opened to release water,<triplet>  is going out of business <subj> the gates can be opened to release water <obj> no_relation,no_relation
+When the wind is strong to see them do well again,<triplet> When the wind is strong <subj> to see them do well again <obj> no_relation,no_relation
+ sets up computer systems intend set up system,<triplet>  sets up computer systems <subj> set up system <obj> intend,intend
+"Avoiding processed or refined foods can prevent chronic diseases like high blood pressure, diabetes, and related health complications.","<triplet> Avoiding processed or refined foods <subj> chronic diseases like high blood pressure, diabetes, and related health complications. <obj> prevent",prevent
+ breaks  word intend to apologize,<triplet>  breaks  word <subj> to apologize <obj> intend,intend
+ protects  from competition intend to pay person X,<triplet>  protects from competition <subj> to pay person X <obj> intend,intend
+ smokes a cigarette intend to not quit,<triplet>  smokes a cigarette <subj> to not quit <obj> intend,intend
+is very mean to obtain drugs,<triplet>  is very mean to  <subj> obtain drugs <obj> no_relation,no_relation
+"The internet connection is stable
+allowing
+us to browse the web and stream videos without any interruptions",<triplet> The internet connection is stable <subj> us to browse the web and stream videos without any interruptions <obj> enable,enable
+Wearing seatbelts while driving prevents serious injuries in car accidents or crashes,<triplet> Wearing seatbelts while driving <subj> serious injuries in car accidents or crashes <obj> prevent,prevent
+"Practicing safe sex by using condoms or other forms of birth control prevents unintended pregnancy, sexually transmitted infections (STIs), and HIV/AIDS.","<triplet> Practicing safe sex by using condoms or other forms of birth control <subj> unintended pregnancy, sexually transmitted infections (STIs), and HIV/AIDS. <obj> prevent",prevent
+Installing smoke detectors and alarms in the house prevents fires and carbon monoxide poisoning.,<triplet> Installing smoke detectors and alarms in the house <subj> fires and carbon monoxide poisoning. <obj> prevent,prevent
+ helps the woman intend to give Person X a reward.,<triplet>  helps the woman <subj> to give Person X a reward. <obj> intend,intend
+Taking an umbrella with you when its raining graduating.,<triplet> Taking an umbrella with you when its raining <subj> graduating. <obj> no_relation,no_relation
+Neglecting to properly dispose of hazardous waste prevents contamination of water sources and potential environmental damage.,<triplet> Neglecting to properly dispose of hazardous waste <subj> contamination of water sources and potential environmental damage. <obj> prevent,prevent
+"Reducing exposure to loud noise, especially in occupational settings to eat fish for dinner","<triplet> Reducing exposure to loud noise, especially in occupational settings <subj> to eat fish for dinner <obj> no_relation",no_relation
+never missed to entertain person y,<triplet>  never missed  <subj> to entertain person y <obj> no_relation,no_relation
+groups according appear unique,<triplet>  groups according <subj> appear unique <obj> no_relation,no_relation
+"beats a retreat muscle strain, repetitive motion injuries, or other physical hazards.","<triplet>  beats a retreat <subj> muscle strain, repetitive motion injuries, or other physical hazards. <obj> no_relation",no_relation
+"Practicing safe sex and using contraception prevents unintended pregnancies, sexually transmitted infections (STIs), and other reproductive health complications.","<triplet> Practicing safe sex and using contraception <subj> unintended pregnancies, sexually transmitted infections (STIs), and other reproductive health complications. <obj> prevent",prevent
+is going on a field trip maintains norm,<triplet>  is going on a field trip <subj> maintains norm <obj> no_relation,no_relation
+ adapts the  to the needs cause  changes their views,<triplet>  adapts the to the needs <subj>  changes their views <obj> cause,cause
+finds to help we signalled for everyone to gather in the waiting area.,<triplet>  finds to help <subj> we signalled for everyone to gather in the waiting area. <obj> no_relation,no_relation
+ sends  money intend to thank ,<triplet>  sends  money <subj> to thank  <obj> intend,intend
+is The microwave'soor is  enables  by closing it securely,<triplet> is The microwavesoor <subj>  by closing it securely <obj> enable,enable
+ shares with  intend to help Person X when he can,<triplet>  shares with  <subj> to help Person X when he can <obj> intend,intend
+ takes  aside intend to thank  for the feedback,<triplet>  takes aside <subj> to thank  for the feedback <obj> intend,intend
+ uses drugs intend order more drugs,<triplet>  uses drugs <subj> order more drugs <obj> intend,intend
+"Mowing lawn regularly with the use of safety equipment like gloves, goggles, ear plugs, and steel-toed boots setting an elegant table will be possible.","<triplet> Mowing lawn regularly with the use of safety equipment like gloves, goggles, ear plugs, and steel-toed boots <subj> setting an elegant table will be possible. <obj> no_relation",no_relation
+"If we have enough fuel. obesity, heart disease, and other chronic health problems associated with an unhealthy lifestyle.","<triplet> If we have enough fuel. <subj> obesity, heart disease, and other chronic health problems associated with an unhealthy lifestyle. <obj> no_relation",no_relation
+If the door is unlocked they get a reputation,<triplet> If the door is unlocked <subj> they get a reputation <obj> no_relation,no_relation
+ finds  at the store cause gets a receipt for the book,<triplet>  finds at the store <subj> gets a receipt for the book <obj> cause,cause
+ jumps over the lazy dog intend to get going,<triplet>  jumps over the lazy dog <subj> to get going <obj> intend,intend
+ keeps an eye on  cause have their activities and doings scrutinized,<triplet>  keeps an eye on  <subj> have their activities and doings scrutinized <obj> cause,cause
+Exercising regularly fires from spreading and causing fatalities.,<triplet> Exercising regularly <subj> fires from spreading and causing fatalities. <obj> no_relation,no_relation
+ grins from ear to ear intend happiness,<triplet>  grins from ear to ear <subj> happiness <obj> intend,intend
+The doors lock is broken. to get information,<triplet> The doors lock is broken. <subj> to get information <obj> no_relation,no_relation
+ searches the internet intend to find the answer,<triplet>  searches the internet <subj> to find the answer <obj> intend,intend
+ crawls into bed cause Dreams,<triplet>  crawls into bed <subj> Dreams <obj> cause,cause
+walks around the mall burglaries or break-ins.,<triplet>  walks around the mall <subj> burglaries or break-ins. <obj> no_relation,no_relation
+ plays basketball  intend get exercise,<triplet>  plays basketball  <subj> get exercise <obj> intend,intend
+Quitting smoking we,<triplet> Quitting smoking <subj> we <obj> no_relation,no_relation
+ wins the contest intend to celebrate,<triplet>  wins the contest <subj> to celebrate <obj> intend,intend
+"After taking the recommended dosage of medication
+,
+patients report improved symptoms related to their chronic conditions.",<triplet> After taking the recommended dosage of medication <subj> patients report improved symptoms related to their chronic conditions. <obj> enable,enable
+"When the light switch
+is turned on
+illumination becomes available",<triplet> When the light switch <subj> illumination becomes available <obj> enable,enable
+falls asleep last night the king was going to london,<triplet>  falls asleep last night <subj> the king was going to london <obj> no_relation,no_relation
+ begins to look around intend find item at store,<triplet>  begins to look around <subj> find item at store <obj> intend,intend
+"The internet connection is stable
+allowing
+us to browse the web without any lag or delay",<triplet> The internet connection is stable <subj> us to browse the web without any lag or delay <obj> enable,enable
+ offer  to students intend for students to succeed,<triplet>  offer to students <subj> for students to succeed <obj> intend,intend
+watches the news go to the store,<triplet>  watches the news  <subj> go to the store <obj> no_relation,no_relation
+drinks milk you can enjoy a refreshing shower,<triplet>  drinks milk <subj> you can enjoy a refreshing shower <obj> no_relation,no_relation
+pours  a glass asks questions,<triplet>  pours  a glass <subj> asks questions <obj> no_relation,no_relation
+ finally found it intend keep it safe,<triplet>  finally found it <subj> keep it safe <obj> intend,intend
+Using a fire extinguisher in the event of a small fire lung cancer.,<triplet> Using a fire extinguisher in the event of a small fire <subj> lung cancer. <obj> no_relation,no_relation
+ rides the big roller coaster intend to sit down,<triplet>  rides the big roller coaster <subj> to sit down <obj> intend,intend
+ takes  degree cause loses degree,<triplet>  takes  degree <subj> loses degree <obj> cause,cause
+ goes mini golfing intend to eat,<triplet>  goes mini golfing <subj> to eat <obj> intend,intend
+ evens took  intend to buy a new car,<triplet>  evens took  <subj> to buy a new car <obj> intend,intend
+is eating pizza to remove the bad odor,<triplet>  is eating pizza <subj> to remove the bad odor <obj> no_relation,no_relation
+Keeping food covered or sealed tightly in the fridge prevents spoilage and contamination of the food items.,<triplet> Keeping food covered or sealed tightly in the fridge <subj> spoilage and contamination of the food items. <obj> prevent,prevent
+"The fire extinguisher's pin
+is pulled out,
+which",<triplet> The fire extinguishers pin <subj> which <obj> enable,enable
+ gives  freedom intend to leave personY alone,<triplet>  gives  freedom <subj> to leave personY alone <obj> intend,intend
+brings to the zoo sees something unexpected,<triplet>  brings to the zoo <subj> sees something unexpected <obj> no_relation,no_relation
+Installing a smoke detector to learn something new,<triplet> Installing a smoke detector <subj> to learn something new <obj> no_relation,no_relation
+The book cyber attacks and data breaches,<triplet> The book <subj> cyber attacks and data breaches <obj> no_relation,no_relation
+"A fire can be lit by rubbing
+two sticks together
+which enables cooking food",<triplet> A fire can be lit by rubbing <subj> which enables cooking food <obj> enable,enable
+ misses the test cause losts something,<triplet>  misses the test <subj> losts something <obj> cause,cause
+teaches a lesson the diners can enjoy their food with satisfaction,<triplet>  teaches a lesson <subj> the diners can enjoy their food with satisfaction <obj> no_relation,no_relation
+"Not smoking serious head, neck, or spinal injuries due to falls, collisions, or other accidents.","<triplet> Not smoking <subj> serious head, neck, or spinal injuries due to falls, collisions, or other accidents. <obj> no_relation",no_relation
+pours gasoline on the fire and avoid being outside during the hottest parts of the day.,<triplet>  pours gasoline on the fire <subj> and avoid being outside during the hottest parts of the day. <obj> no_relation,no_relation
+ sings karaoke cause gets taken of stage,<triplet>  sings karaoke <subj> gets taken of stage <obj> cause,cause
+ Covering your mouth when coughing or sneezing prevents the spread of germs and illnesses to others,<triplet> Covering your mouth when coughing or sneezing <subj> the spread of germs and illnesses to others <obj> prevent,prevent
+closes up shop to practice his sign language skill.,<triplet>  closes up shop <subj> to practice his sign language skill. <obj> no_relation,no_relation
+loses  balance stays in background,<triplet>  loses  balance <subj> stays in background <obj> no_relation,no_relation
+makes to sell gets lost often,<triplet>  makes to sell <subj> gets lost often <obj> no_relation,no_relation
+ kneels down beside  intend is proposed to,<triplet>  kneels down beside  <subj> is proposed to <obj> intend,intend
+ A computer's keyboar with proper functioning   allows  the user to type efficiently.,<triplet>  A computers keyboar with proper functioning <subj>  to type efficiently. <obj> enable,enable
+Wearing protective gear when handling hazardous materials He finds the road.,<triplet> Wearing protective gear when handling hazardous materials <subj> He finds the road. <obj> no_relation,no_relation
+ has a fable for  cause Overdoses,<triplet>  has a fable for  <subj> Overdoses <obj> cause,cause
+"In order to unlock the door
+requires
+you need to insert the key and turn it",<triplet> In order to unlock the door <subj> you need to insert the key and turn it <obj> enable,enable
+gets down to business becomes guilty,<triplet>  gets down to business <subj> becomes guilty <obj> no_relation,no_relation
+"When the surgeon's skills
+are exceptional
+ensures successful surgery outcomes.",<triplet> When the surgeons skills <subj> ensures successful surgery outcomes. <obj> enable,enable
+Avoiding or limiting exposure to tobacco smoke injuries caused by heavy lifting or improper handling of objects.,<triplet> Avoiding or limiting exposure to tobacco smoke <subj> injuries caused by heavy lifting or improper handling of objects. <obj> no_relation,no_relation
+loves stories is running,<triplet>  loves stories <subj> is running <obj> no_relation,no_relation
+ uses the internet intend to find information,<triplet>  uses the internet <subj> to find information <obj> intend,intend
+ gives  a job intend to show off his generosity,<triplet>  gives a job <subj> to show off his generosity <obj> intend,intend
+ asks  had happened intend to plead the 5th,<triplet>  asks  had happened <subj> to plead the 5th <obj> intend,intend
+"Heavy rain
+When
+We put out buckets to collect water for our garden.",<triplet> Heavy rain <subj> We put out buckets to collect water for our garden. <obj> enable,enable
+gives  analysis An accurate report,<triplet>  gives  analysis <subj> An accurate report <obj> no_relation,no_relation
+"Regularly inspecting water supply systems for leaks or other damage prevents contamination of the drinking water with pollutants such as bacteria, viruses, and chemicals.","<triplet> Regularly inspecting water supply systems for leaks or other damage <subj> contamination of the drinking water with pollutants such as bacteria, viruses, and chemicals. <obj> prevent",prevent
+walks everywhere to clean it out,<triplet>  walks everywhere <subj> to clean it out <obj> no_relation,no_relation
+never cared To live out a new experience,<triplet>  never cared <subj> To live out a new experience <obj> no_relation,no_relation
+wants to leave a cake,<triplet>  wants to leave  <subj> a cake <obj> no_relation,no_relation
+"scars the hell out of traffic congestion, air pollution, and greenhouse gas emissions, all of which contribute to climate change and other environmental issues.","<triplet>  scars the hell out of  <subj> traffic congestion, air pollution, and greenhouse gas emissions, all of which contribute to climate change and other environmental issues. <obj> no_relation",no_relation
+calls to complain Follows the warning,<triplet>  calls to complain <subj> Follows the warning <obj> no_relation,no_relation
+ carries  everywhere intend to take it somewhere,<triplet>  carries everywhere <subj> to take it somewhere <obj> intend,intend
+begins digging to thank them,<triplet>  begins digging <subj> to thank them <obj> no_relation,no_relation
+"After brushing their teeth
+people rinse their mouths with mouthwash
+to freshen their breath",<triplet> After brushing their teeth <subj> to freshen their breath <obj> enable,enable
+"Installing smoke detectors throughout the house prevents house fires from spreading undetected, giving the occupants enough time to evacuate safely","<triplet> Installing smoke detectors throughout the house <subj> house fires from spreading undetected, giving the occupants enough time to evacuate safely <obj> prevent",prevent
+ takes the bus to school cause push,<triplet>  takes the bus to school <subj> push <obj> cause,cause
+joins the soccer team to work harder,<triplet>  joins the soccer team <subj> to work harder <obj> no_relation,no_relation
+"Eating a healthy breakfast every morning
+helps
+maintain energy levels throughout the day",<triplet> Eating a healthy breakfast every morning <subj> maintain energy levels throughout the day <obj> enable,enable
+ As long as there is gas in the tank   allows   the car can run,<triplet>  As long as there is gas in the tank <subj>  the car can run <obj> enable,enable
+ itches badly cause The person breaks their skin by itching too much.,<triplet>  itches badly <subj> The person breaks their skin by itching too much. <obj> cause,cause
+meets  for the time show them who is boss,<triplet>  meets  for the time <subj> show them who is boss <obj> no_relation,no_relation
+ always told  intend them to stop talking,<triplet>  always told  <subj> them to stop talking <obj> intend,intend
+gives  a right to race away in their car,<triplet>  gives  a right <subj> to race away in their car <obj> no_relation,no_relation
+Closing windows during strong winds prevents damage to property and injury to people,<triplet> Closing windows during strong winds <subj> damage to property and injury to people <obj> prevent,prevent
+Routinely inspecting bridges precludes potentially catastrophic collapses due to aging structures,<triplet> Routinely inspecting bridges <subj> potentially catastrophic collapses due to aging structures <obj> prevent,prevent
+ uses  language intend to communicate with person y,<triplet>  uses  language <subj> to communicate with person y <obj> intend,intend
+ raises  to support intend to donate money,<triplet>  raises to support <subj> to donate money <obj> intend,intend
+provides with regard avoid debt,<triplet>  provides with regard <subj> avoid debt <obj> no_relation,no_relation
+gets grounded you will solve the problem,<triplet>  gets grounded <subj> you will solve the problem <obj> no_relation,no_relation
+purchases tickets take a rest,<triplet>  purchases tickets <subj> take a rest <obj> no_relation,no_relation
+gives  education to close the case,<triplet>  gives  education <subj> to close the case <obj> no_relation,no_relation
+"Once the computer
+has started,
+it will allow us to access the internet.",<triplet> Once the computer <subj> it will allow us to access the internet. <obj> enable,enable
+drives as fast to talk more,<triplet>  drives as fast <subj> to talk more <obj> no_relation,no_relation
+ calls  back inside intend to relax,<triplet>  calls back inside <subj> to relax <obj> intend,intend
+"The sun is shining brightly in the sky
+enabling
+we enjoy a picnic outside.",<triplet> The sun is shining brightly in the sky <subj> we enjoy a picnic outside. <obj> enable,enable
+"After boiling the water, to go to sleep","<triplet> After boiling the water, <subj> to go to sleep <obj> no_relation",no_relation
+ writes about  intend to talk about what Person X has written,<triplet>  writes about  <subj> to talk about what Person X has written <obj> intend,intend
+ becomes very successful intend to compete against ,<triplet>  becomes very successful <subj> to compete against  <obj> intend,intend
+"tries to bite sexually transmitted infections (STIs) such as HIV, chlamydia, or gonorrhea.","<triplet>  tries to bite  <subj> sexually transmitted infections (STIs) such as HIV, chlamydia, or gonorrhea. <obj> no_relation",no_relation
+If the traffic light is will now know the way.,<triplet> If the traffic light is <subj>  will now know the way. <obj> no_relation,no_relation
+ takes a few days intend Finish project,<triplet>  takes a few days <subj> Finish project <obj> intend,intend
+ talks  out of it intend hold  back.,<triplet>  talks  out of it <subj> hold  back. <obj> intend,intend
+ feels very lonely cause calls a friend,<triplet>  feels very lonely <subj> calls a friend <obj> cause,cause
+ shoves  away intend to defend themselves,<triplet>  shoves  away <subj> to defend themselves <obj> intend,intend
+Using a seatbelt when driving Gets killed,<triplet> Using a seatbelt when driving <subj> Gets killed <obj> no_relation,no_relation
