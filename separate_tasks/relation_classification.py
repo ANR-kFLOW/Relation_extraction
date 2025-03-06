@@ -10,7 +10,7 @@ import os
 MODEL_NAME = "FacebookAI/roberta-large"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-# Load datasets
+
 train_file = "/data/Youss/RE/TACL/end_to_end_models/Bert_based_classification/combined.csv"
 dev_file = "/data/Youss/RE/TACL/end_to_end_models/Bert_based_classification/dev.csv"
 test_file = "/data/Youss/RE/TACL/end_to_end_models/Bert_based_classification/test.csv"
@@ -19,12 +19,11 @@ df_train = pd.read_csv(train_file).sample(6790)
 df_dev = pd.read_csv(dev_file).sample(620)
 df_test = pd.read_csv(test_file).sample(630)
 
-# Ensure correct column names
 df_train = df_train.rename(columns={"text": "text", "relation": "label"})
 df_dev = df_dev.rename(columns={"text": "text", "relation": "label"})
 df_test = df_test.rename(columns={"text": "text", "relation": "label"})
 
-# Encode labels
+
 label2id = {label: idx for idx, label in enumerate(pd.concat([df_train, df_dev, df_test])['label'].unique())}
 print("Original labels:", df_train["label"].unique())
 print("Encoded labels:", df_train["label"].map(label2id).unique())
@@ -114,11 +113,11 @@ for epoch in range(epochs):
         model.save_pretrained(best_model_path)
         tokenizer.save_pretrained(best_model_path)
 
-# Free GPU memory
+
 # del model
 # torch.cuda.empty_cache()
 
-# Reload best model for testing
+
 print("Loading best model for evaluation...")
 model = AutoModelForSequenceClassification.from_pretrained(best_model_path).to(device)
 model.eval()
@@ -151,6 +150,6 @@ print(report)
 with open("classification_report_combined_roberta.txt", "w") as f:
     f.write(report)
 
-# # Free GPU memory after evaluation
+
 # del model
 # torch.cuda.empty_cache()
